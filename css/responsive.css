@@ -2,7 +2,7 @@
    GAZEBO E-COMMERCE - RESPONSIVE STYLES & MOBILE APP NAVIGATION
    ========================================================================== */
 
-/* Mobile Bottom Navigation Bar (The Souled Store App Feel) */
+/* Mobile Bottom Navigation Bar (The Souled Store App Feel - Maintained & Functional) */
 .mobile-bottom-bar {
   display: none;
   position: fixed;
@@ -14,10 +14,10 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-top: 1px solid var(--gz-gray-light);
-  z-index: 150;
+  z-index: 1500;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.05);
 }
 
 .mobile-bottom-item {
@@ -34,6 +34,7 @@
   position: relative;
   width: 25%;
   height: 100%;
+  text-decoration: none;
   transition: color var(--trans-fast);
 }
 
@@ -59,14 +60,14 @@
   padding: 0 3px;
 }
 
-/* Mobile Menu Drawer */
+/* Mobile Menu Panel & Overlay (Slide-Down Below Header) */
 .mobile-menu-drawer {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   width: 82%;
-  max-width: 340px;
+  max-width: 360px;
   background-color: var(--gz-white);
   box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
   z-index: 220;
@@ -120,6 +121,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-decoration: none;
+  padding: 6px 0;
 }
 
 .mobile-nav-link:hover {
@@ -127,17 +130,96 @@
 }
 
 .mobile-menu-footer {
-  padding: 20px;
+  padding: 18px 20px;
   border-top: 1px solid var(--gz-gray-light);
   background-color: #FAFAFA;
+}
+
+/* Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--trans-base);
+  z-index: 210;
+}
+
+.mobile-menu-overlay.is-visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* ==========================================================================
    Breakpoints
    ========================================================================== */
 
-/* Tablet (max-width: 1100px) */
-@media (max-width: 1100px) {
+/* Large Desktop (> 1200px) */
+@media (min-width: 1201px) {
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+}
+
+/* Desktop to Tablet Transition: Collapse Nav < 1200px (Requirement 5) */
+@media (max-width: 1200px) {
+  .header-main {
+    padding: 0 28px;
+    gap: 20px;
+  }
+
+  /* Hide Desktop Center Nav Link Bar */
+  .main-nav,
+  .header-zone-center {
+    display: none !important;
+  }
+
+  /* Display Hamburger Toggle in Left Zone */
+  .mobile-menu-toggle {
+    display: flex !important;
+  }
+
+  .header-actions,
+  .header-zone-right {
+    margin-left: auto;
+    gap: 16px;
+  }
+
+  /* Slide-Down Navigation Panel Below Header */
+  .mobile-menu-drawer {
+    position: fixed;
+    top: var(--header-height, 74px);
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    bottom: auto;
+    max-height: calc(100vh - var(--header-height, 74px));
+    background-color: var(--gz-white);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+    border-top: 1px solid var(--gz-gray-light);
+    border-bottom: 3px solid var(--gz-orange);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+    z-index: 999;
+    overflow-y: auto;
+  }
+
+  .mobile-menu-drawer.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-menu-overlay {
+    top: var(--header-height, 74px);
+    z-index: 998;
+  }
+
   .product-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
@@ -156,16 +238,8 @@
   }
 }
 
-/* Small Tablet (max-width: 900px) */
+/* Medium Tablet (max-width: 900px) */
 @media (max-width: 900px) {
-  .main-nav {
-    display: none;
-  }
-
-  .mobile-menu-toggle {
-    display: flex;
-  }
-
   .header-substrip__meta {
     display: none;
   }
@@ -211,23 +285,29 @@
   }
 }
 
-/* Mobile Devices (max-width: 768px) */
+/* Mobile Devices (<= 768px) */
 @media (max-width: 768px) {
   :root {
-    --header-height: 68px;
+    --header-height: 64px;
   }
 
   body {
     padding-bottom: 60px; /* Space for bottom navigation bar */
   }
 
+  /* Existing Mobile Bottom Bar Works Smoothly */
   .mobile-bottom-bar {
-    display: flex;
+    display: flex !important;
   }
 
   .container {
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  .header-main {
+    padding: 0 16px;
+    gap: 12px;
   }
 
   .announcement-bar {
@@ -240,16 +320,37 @@
   }
 
   .brand-logo-img {
-    width: 44px;
-    height: 44px;
+    width: 38px;
+    height: 38px;
   }
 
   .brand-wordmark {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
   }
 
   .brand-subtext {
-    font-size: 0.58rem;
+    font-size: 0.54rem;
+  }
+
+  .header-actions,
+  .header-zone-right {
+    gap: 10px;
+    margin-left: auto;
+  }
+
+  .header-action-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .mobile-menu-drawer {
+    top: var(--header-height, 64px);
+    max-height: calc(100vh - var(--header-height, 64px) - 60px);
+  }
+
+  .mobile-menu-overlay {
+    top: var(--header-height, 64px);
+    bottom: 60px;
   }
 
   .hero-slider {
@@ -267,7 +368,7 @@
   }
 
   .hero-arrow {
-    display: none; /* Swipe gestures on mobile */
+    display: none;
   }
 
   .section-padding {
@@ -302,11 +403,11 @@
   }
 
   .product-card__sizes {
-    display: none; /* Cleaner mobile card */
+    display: none;
   }
 
   .product-card__quick-actions {
-    display: none; /* Click navigates to quickview */
+    display: none;
   }
 
   .footer-top {
@@ -342,19 +443,42 @@
   }
 }
 
-/* Extra Small (max-width: 420px) */
-@media (max-width: 420px) {
-  .hero-slide__title {
-    font-size: 1.8rem;
+/* Extra Small Mobile (<= 375px) */
+@media (max-width: 375px) {
+  .header-main {
+    padding: 0 10px;
+    gap: 6px;
   }
 
-  .header-actions {
+  .brand-identity {
     gap: 8px;
   }
 
+  .brand-logo-img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand-wordmark {
+    font-size: 1.10rem;
+  }
+
+  .brand-subtext {
+    display: none; /* Hide subtitle on very small devices to prevent crowding */
+  }
+
+  .header-actions,
+  .header-zone-right {
+    gap: 6px;
+  }
+
   .header-action-btn {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .hero-slide__title {
+    font-size: 1.7rem;
   }
 
   .perks-grid {

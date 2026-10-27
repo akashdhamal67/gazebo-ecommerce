@@ -59,7 +59,6 @@
           </a>
         </nav>
         <div class="header-substrip__meta">
-          <span class="demo-preview-pill">Storefront Prototype</span>
           <span class="header-substrip__meta-item" onclick="document.getElementById('heritageSection').scrollIntoView({behavior: 'smooth'})">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
@@ -74,39 +73,41 @@
       </div>
     </div>
 
-    <!-- Main Header Navbar -->
-    <div class="container header-main">
-      <!-- Mobile Hamburger Toggle -->
-      <button id="mobileMenuToggle" class="mobile-menu-toggle header-action-btn" aria-label="Open mobile menu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
+    <!-- Main Header Navbar (Three-Zone Flexbox Layout) -->
+    <div class="header-main">
+      <!-- ZONE 1 (Left): Logo + Wordmark (flex-shrink: 0) -->
+      <div class="header-zone-left">
+        <!-- Mobile Hamburger Toggle (Visible < 1200px) -->
+        <button id="mobileMenuToggle" class="mobile-menu-toggle header-action-btn" aria-label="Open mobile menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
 
-      <!-- Brand Logo Emblem + Typography (Using Verified Logo) -->
-      <a href="#" class="brand-identity" title="Gazebo Home">
-        <img class="brand-logo-img" src="assets/images/gazebo-logo.png" alt="Gazibo Authentic Brand Logo" />
-        <div class="brand-text-block">
-          <span class="brand-wordmark">GAZEBO</span>
-          <span class="brand-subtext">ESTD. 1979 • PUNE</span>
-        </div>
-      </a>
+        <a href="#" class="brand-identity" title="Gazebo Home">
+          <img class="brand-logo-img" src="assets/images/gazebo-logo.png" alt="Gazebo Authentic Brand Logo" width="46" height="46" />
+          <div class="brand-text-block">
+            <span class="brand-wordmark">GAZEBO</span>
+            <span class="brand-subtext">ESTD. 1979 • PUNE</span>
+          </div>
+        </a>
+      </div>
 
-      <!-- Desktop Navigation Links -->
-      <nav class="main-nav" aria-label="Main Store Navigation">
+      <!-- ZONE 2 (Center): Desktop Navigation (Shortened Labels: Topwear, Linen, Cargos, Co-ords, Jackets, Accessories, Heritage) -->
+      <nav class="main-nav header-zone-center" aria-label="Main Store Navigation">
         <a href="#productsSection" class="nav-link" onclick="window.filterByCategory('topwear')">Topwear</a>
-        <a href="#productsSection" class="nav-link" onclick="window.filterByCategory('shirts')">Linen Shirts</a>
-        <a href="#productsSection" class="nav-link" onclick="window.filterByCategory('bottomwear')">Cargos & Pants</a>
-        <a href="#productsSection" class="nav-link" onclick="window.filterByCategory('coords')">Co-ord Sets</a>
+        <a href="#productsSection" class="nav-link" onclick="window.filterByCategory('shirts')">Linen</a>
+        <a href="#productsSection" class="nav-link" onclick="window.filterByCategory('bottomwear')">Cargos</a>
+        <a href="#productsSection" class="nav-link" onclick="window.filterByCategory('coords')">Co-ords</a>
         <a href="#productsSection" class="nav-link" onclick="window.filterByCategory('outerwear')">Jackets</a>
         <a href="#productsSection" class="nav-link" onclick="window.filterByCategory('accessories')">Accessories</a>
         <a href="#heritageSection" class="nav-link nav-link--accent">Heritage</a>
       </nav>
 
-      <!-- Action Icons (Search, Account, Wishlist, Shopping Bag) -->
-      <div class="header-actions">
+      <!-- ZONE 3 (Right): Grouped Action Icons (20px gap, >=32px space from nav) -->
+      <div class="header-actions header-zone-right">
         <!-- Search -->
         <button class="header-action-btn" onclick="window.openSearchModal()" title="Search catalog" aria-label="Search catalog">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -115,8 +116,8 @@
           </svg>
         </button>
 
-        <!-- Account (Prototype Info) -->
-        <button class="header-action-btn" onclick="window.gazeboStore.showToast('Customer account integration ready for backend connect.', 'info')" title="Account Profile" aria-label="Account">
+        <!-- Account -->
+        <button class="header-action-btn" onclick="window.gazeboStore.showToast('Customer account integration ready.', 'info')" title="Account Profile" aria-label="Account">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
             <circle cx="12" cy="7" r="4"></circle>
@@ -398,7 +399,7 @@
       <div class="container">
         <div class="heritage-card">
           <div class="heritage-logo-wrap">
-            <img class="heritage-logo-img" src="assets/images/gazebo-logo.png" alt="Gazibo Pune Emblem" />
+            <img class="heritage-logo-img" src="assets/images/gazebo-logo.png" alt="Gazebo Pune Emblem" />
           </div>
           <div class="heritage-info">
             <div style="display: flex; align-items: center; gap: 8px;">
@@ -445,7 +446,7 @@
             <input id="newsletterInput" class="newsletter-input" type="email" placeholder="Enter your email address" required />
             <button type="submit" class="btn btn--accent">Subscribe</button>
           </form>
-          <p class="newsletter-note">Demonstration prototype form. No personal emails are stored on servers.</p>
+          <p class="newsletter-note">Subscribe for new drop previews, seasonal edits, and exclusive in-store Pune updates.</p>
         </div>
       </div>
     </section>
@@ -511,7 +512,7 @@
             <li><a class="footer-link" href="#heritageSection">Our Story: Since 1979</a></li>
             <li><a class="footer-link" href="#heritageSection">M.G. Road Landmark</a></li>
             <li><a class="footer-link" href="javascript:void(0)" onclick="window.gazeboStore.showToast('100% Combed long-staple cotton & French linen.', 'info')">Fabric Standards</a></li>
-            <li><a class="footer-link" href="javascript:void(0)" onclick="window.gazeboStore.showToast('Customized proposal for Gazebo management.', 'info')">Brand Proposal Note</a></li>
+            <li><a class="footer-link" href="#heritageSection">Brand Heritage (1979)</a></li>
           </ul>
         </div>
 
@@ -519,7 +520,7 @@
         <div>
           <h4 class="footer-col-title">Pune Flagship</h4>
           <div style="font-size: 0.84rem; color: var(--gz-gray-dark); line-height: 1.6;">
-            <p><strong>GAZIBO CLOTHING</strong></p>
+            <p><strong>GAZEBO CLOTHING</strong></p>
             <p>M.G. Road, Camp, Pune</p>
             <p>Maharashtra 411001, India</p>
             <p style="margin-top: 10px; color: var(--gz-orange); font-weight: 700;">Open Daily: 10:30 AM – 9:30 PM</p>
@@ -530,7 +531,7 @@
       <!-- Footer Bottom -->
       <div class="footer-bottom">
         <p class="footer-copy">
-          © 2026 GAZEBO CLOTHING (Gazibo®). All rights reserved. • Storefront Prototype & Presentation Proposal.
+          © 2026 GAZEBO CLOTHING. All rights reserved. • Established 1979 • M.G. Road, Pune.
         </p>
         <div class="footer-badges">
           <span class="payment-badge">UPI / RuPay</span>
@@ -606,35 +607,39 @@
     </div>
     <div class="mobile-menu-body">
       <div class="mobile-nav-group">
-        <div class="mobile-nav-group-title">Shop Departments</div>
+        <div class="mobile-nav-group-title">Shop Collection</div>
         <div class="mobile-nav-links">
           <a class="mobile-nav-link" href="#productsSection" onclick="window.closeMobileMenu(); window.filterByCategory('all')">
-            <span>All Styles</span>
+            <span>All Products</span>
             <span>→</span>
           </a>
           <a class="mobile-nav-link" href="#productsSection" onclick="window.closeMobileMenu(); window.filterByCategory('topwear')">
-            <span>Oversized & Heavy Tees</span>
+            <span>Topwear</span>
             <span>→</span>
           </a>
           <a class="mobile-nav-link" href="#productsSection" onclick="window.closeMobileMenu(); window.filterByCategory('shirts')">
-            <span>French Linen Shirts</span>
+            <span>Linen</span>
             <span>→</span>
           </a>
           <a class="mobile-nav-link" href="#productsSection" onclick="window.closeMobileMenu(); window.filterByCategory('bottomwear')">
-            <span>Parachute Cargos & Pants</span>
+            <span>Cargos</span>
             <span>→</span>
           </a>
           <a class="mobile-nav-link" href="#productsSection" onclick="window.closeMobileMenu(); window.filterByCategory('coords')">
-            <span>Co-ord Matching Sets</span>
+            <span>Co-ords</span>
             <span>→</span>
           </a>
           <a class="mobile-nav-link" href="#productsSection" onclick="window.closeMobileMenu(); window.filterByCategory('outerwear')">
-            <span>Jackets & Overshirts</span>
+            <span>Jackets</span>
             <span>→</span>
           </a>
           <a class="mobile-nav-link" href="#productsSection" onclick="window.closeMobileMenu(); window.filterByCategory('accessories')">
-            <span>Garments & Accessories</span>
+            <span>Accessories</span>
             <span>→</span>
+          </a>
+          <a class="mobile-nav-link" href="#heritageSection" onclick="window.closeMobileMenu()">
+            <span>Heritage</span>
+            <span style="color: var(--gz-orange); font-weight: 800;">1979</span>
           </a>
         </div>
       </div>
@@ -654,7 +659,7 @@
       </div>
     </div>
     <div class="mobile-menu-footer">
-      <span class="demo-preview-pill" style="width: 100%; justify-content: center;">Catalog Prototype Active</span>
+      <div style="font-size: 0.76rem; color: var(--gz-gray-med); text-align: center; font-weight: 600;">Pune's Family Fashion Landmark • Estd. 1979</div>
     </div>
   </aside>
 
@@ -738,7 +743,7 @@
         <span id="cartSummaryTotal">₹0</span>
       </div>
 
-      <button class="btn btn--accent btn--full btn--lg" onclick="window.gazeboStore.showToast('Demo Prototype: Checkout flow simulation ready for payment gateway integration.', 'info')">
+      <button class="btn btn--accent btn--full btn--lg" onclick="window.gazeboStore.showToast('Checkout flow simulation ready for payment gateway integration.', 'info')">
         Proceed To Checkout →
       </button>
 

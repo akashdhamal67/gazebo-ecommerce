@@ -9,7 +9,7 @@
 const GAZEBO_CONFIG = {
   brand: {
     name: "GAZEBO",
-    registeredName: "Gazibo®",
+    registeredName: "Gazebo®",
     subName: "GARMENTS & ACCESSORIES",
     estd: "1979",
     location: "M.G. Road, Pune, India",

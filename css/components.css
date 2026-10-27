@@ -173,72 +173,97 @@
   color: var(--gz-orange);
 }
 
-/* Main Header Row */
+/* ==========================================================================
+   Three-Zone Flexbox Header (Requirement 1, 2, 4)
+   ========================================================================== */
 .header-main {
-  height: var(--header-height);
+  height: var(--header-height, 74px);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 32px;
+  padding: 0 40px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
-/* Brand Logo (Using Provided Logo Image) */
+/* ZONE 1 (Left): Logo + Wordmark (flex-shrink: 0) */
+.header-zone-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
 .brand-identity {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .brand-logo-img {
-  width: 52px;
-  height: 52px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
   transition: transform var(--trans-base);
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
+  flex-shrink: 0;
 }
 
 .brand-identity:hover .brand-logo-img {
-  transform: scale(1.05) rotate(-2deg);
+  transform: scale(1.04) rotate(-1deg);
 }
 
 .brand-text-block {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
 }
 
 .brand-wordmark {
-  font-size: 1.65rem;
+  font-size: 1.45rem; /* Refined size to ensure ample breathing room */
   font-weight: 900;
   letter-spacing: 0.08em;
   color: var(--gz-black);
   line-height: 1;
+  white-space: nowrap;
 }
 
 .brand-subtext {
-  font-size: 0.64rem;
+  font-size: 0.60rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   color: var(--gz-gray-med);
   margin-top: 3px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
-/* Desktop Navigation */
-.main-nav {
+/* ZONE 2 (Center): Desktop Navigation */
+.main-nav,
+.header-zone-center {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 28px;
+  flex: 1 1 auto;
 }
 
 .nav-link {
-  font-size: 0.86rem;
+  font-size: 13px; /* 13px as specified */
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.06em; /* 0.06em as specified */
+  white-space: nowrap; /* white-space: nowrap as specified */
   color: var(--gz-black);
-  padding: 12px 0;
+  padding: 10px 0;
   position: relative;
   transition: color var(--trans-fast);
+  text-decoration: none;
 }
 
 .nav-link:hover {
@@ -248,7 +273,7 @@
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: 6px;
+  bottom: 0;
   left: 0;
   width: 0;
   height: 2px;
@@ -264,23 +289,30 @@
   color: var(--gz-orange);
 }
 
-/* Header Action Icons */
-.header-actions {
+/* ZONE 3 (Right): Grouped Action Icons (20px gap, >=32px space from nav) */
+.header-actions,
+.header-zone-right {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 20px; /* 20px gaps as specified */
+  flex-shrink: 0; /* flex-shrink: 0 as specified */
+  margin-left: 32px; /* at least 32px space between nav and icon group */
 }
 
 .header-action-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   color: var(--gz-black);
   position: relative;
   transition: all var(--trans-fast);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
 
 .header-action-btn:hover {
@@ -290,8 +322,8 @@
 
 .header-badge {
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: 3px;
+  right: 3px;
   background-color: var(--gz-orange);
   color: var(--gz-white);
   font-size: 0.65rem;
@@ -985,7 +1017,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   7. Heritage Section (Gazibo M.G. Road Pune Estd. 1979)
+   7. Heritage Section (Gazebo M.G. Road Pune Estd. 1979)
    -------------------------------------------------------------------------- */
 .heritage-section {
   background-color: var(--gz-white);

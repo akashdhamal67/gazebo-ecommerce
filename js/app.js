@@ -558,7 +558,7 @@ window.closeSizeGuide = function() {
 };
 
 /* ==========================================================================
-   8. Mobile Menu Drawer
+   8. Mobile Navigation Drawer & Slide-Down Panel
    ========================================================================== */
 function initMobileMenu() {
   const toggleBtn = document.getElementById('mobileMenuToggle');
@@ -566,22 +566,45 @@ function initMobileMenu() {
   const closeBtn = document.getElementById('mobileMenuClose');
   const overlay = document.getElementById('mobileMenuOverlay');
 
-  if (toggleBtn && drawer) {
-    toggleBtn.addEventListener('click', () => {
-      drawer.classList.add('is-open');
-      if (overlay) overlay.classList.add('is-visible');
-      document.body.classList.add('drawer-locked');
-    });
-  }
-
   window.closeMobileMenu = function() {
     if (drawer) drawer.classList.remove('is-open');
     if (overlay) overlay.classList.remove('is-visible');
+    if (toggleBtn) {
+      toggleBtn.classList.remove('is-active');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    }
     document.body.classList.remove('drawer-locked');
   };
 
+  window.openMobileMenu = function() {
+    if (drawer) drawer.classList.add('is-open');
+    if (overlay) overlay.classList.add('is-visible');
+    if (toggleBtn) {
+      toggleBtn.classList.add('is-active');
+      toggleBtn.setAttribute('aria-expanded', 'true');
+    }
+    document.body.classList.add('drawer-locked');
+  };
+
+  if (toggleBtn && drawer) {
+    toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (drawer.classList.contains('is-open')) {
+        window.closeMobileMenu();
+      } else {
+        window.openMobileMenu();
+      }
+    });
+  }
+
   if (closeBtn) closeBtn.addEventListener('click', window.closeMobileMenu);
   if (overlay) overlay.addEventListener('click', window.closeMobileMenu);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer && drawer.classList.contains('is-open')) {
+      window.closeMobileMenu();
+    }
+  });
 }
 
 /* ==========================================================================
