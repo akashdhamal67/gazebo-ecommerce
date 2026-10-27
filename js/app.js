@@ -88,10 +88,27 @@ function initHeroSlider() {
 
   if (!slides.length) return;
 
+  function loadSlideImage(slide) {
+    if (!slide) return;
+    const img = slide.querySelector('img[data-src]');
+    if (img) {
+      img.src = img.getAttribute('data-src');
+      img.removeAttribute('data-src');
+    }
+    const sources = slide.querySelectorAll('source[data-srcset]');
+    sources.forEach(s => {
+      s.srcset = s.getAttribute('data-srcset');
+      s.removeAttribute('data-srcset');
+    });
+  }
+
   function showSlide(index) {
     if (index >= slides.length) index = 0;
     if (index < 0) index = slides.length - 1;
     heroCurrentSlide = index;
+
+    // Load active slide image on-demand
+    loadSlideImage(slides[index]);
 
     slides.forEach((slide, i) => {
       slide.classList.toggle('is-active', i === index);
@@ -157,7 +174,11 @@ function initHeroSlider() {
     }, { passive: true });
   }
 
-  startAutoPlay();
+  // Delay autoplay start until after critical initial render is complete
+  setTimeout(startAutoPlay, 5000);
+
+  // Delay autoplay start until after critical initial render is complete
+  setTimeout(startAutoPlay, 5000);
 }
 
 /* ==========================================================================
@@ -170,7 +191,7 @@ function initCategorySection() {
   container.innerHTML = window.GAZEBO_CONFIG.categories.map(cat => `
     <div class="category-tile" onclick="window.filterByCategory('${cat.id}')">
       <div class="category-tile__media">
-        <img class="category-tile__img" src="${cat.image}" alt="${cat.title}" loading="lazy" />
+        <img class="category-tile__img" src="${cat.image}" alt="${cat.title}" width="400" height="500" loading="lazy" decoding="async" />
         <span class="category-tile__badge">${cat.tag}</span>
         <div class="category-tile__overlay">
           <span class="category-tile__cta">Explore Collection →</span>
@@ -237,8 +258,8 @@ function renderProducts() {
       <article class="product-card" data-product-id="${product.id}" data-category="${product.category}">
         <div class="product-card__media">
           <div class="product-card__image-wrap" onclick="window.openQuickView('${product.id}')">
-            <img class="product-card__img product-card__img--primary" src="${product.primaryImage}" alt="${product.name}" loading="lazy" />
-            <img class="product-card__img product-card__img--secondary" src="${product.secondaryImage}" alt="${product.name} Alternate View" loading="lazy" />
+            <img class="product-card__img product-card__img--primary" src="${product.primaryImage}" alt="${product.name}" width="600" height="750" loading="lazy" decoding="async" />
+            <img class="product-card__img product-card__img--secondary" src="${product.secondaryImage}" alt="${product.name} Alternate View" width="600" height="750" loading="lazy" decoding="async" />
           </div>
 
           ${product.badge ? `<span class="product-card__badge">${product.badge}</span>` : ''}

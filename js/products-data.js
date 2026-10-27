@@ -34,7 +34,7 @@ const GAZEBO_CONFIG = {
       title: "Oversized & Classic Tees",
       subTitle: "Heavyweight 240+ GSM",
       itemCount: "42 Styles",
-      image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=800&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&q=70&auto=format,compress&fm=webp",
       tag: "POPULAR"
     },
     {
@@ -42,7 +42,7 @@ const GAZEBO_CONFIG = {
       title: "Resort & Linen Shirts",
       subTitle: "Breathable Natural Weaves",
       itemCount: "28 Styles",
-      image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=800&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&q=70&auto=format,compress&fm=webp",
       tag: "SUMMER EDIT"
     },
     {
@@ -50,7 +50,7 @@ const GAZEBO_CONFIG = {
       title: "Cargos & Relaxed Trousers",
       subTitle: "Functional Utility Fits",
       itemCount: "34 Styles",
-      image: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=800&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&q=70&auto=format,compress&fm=webp",
       tag: "TRENDING"
     },
     {
@@ -58,7 +58,7 @@ const GAZEBO_CONFIG = {
       title: "Textured & Knitted Polos",
       subTitle: "Waffle & Ribbed Textures",
       itemCount: "19 Styles",
-      image: "https://images.unsplash.com/photo-1581655353564-df123a1eb820?q=80&w=800&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&q=70&auto=format,compress&fm=webp",
       tag: "ESSENTIAL"
     },
     {
@@ -66,7 +66,7 @@ const GAZEBO_CONFIG = {
       title: "Co-ord Matching Sets",
       subTitle: "Effortless Everyday Outfits",
       itemCount: "16 Styles",
-      image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=70&auto=format,compress&fm=webp",
       tag: "NEW DROP"
     },
     {
@@ -74,7 +74,7 @@ const GAZEBO_CONFIG = {
       title: "Overshirts & Jackets",
       subTitle: "Structured Layering",
       itemCount: "22 Styles",
-      image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=800&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&q=70&auto=format,compress&fm=webp",
       tag: "AUTUMN"
     },
     {
@@ -82,7 +82,7 @@ const GAZEBO_CONFIG = {
       title: "Garments & Accessories",
       subTitle: "Caps, Belts & Canvas Totes",
       itemCount: "31 Styles",
-      image: "https://images.unsplash.com/photo-1576871337622-98d48d1cf531?q=80&w=800&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=600&q=70&auto=format,compress&fm=webp",
       tag: "SIGNATURE"
     }
   ],
@@ -104,8 +104,8 @@ const GAZEBO_CONFIG = {
         { name: "Vintage Ecru", hex: "#E9E5DD", inStock: true }
       ],
       sizes: ["S", "M", "L", "XL", "XXL"],
-      primaryImage: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=700&auto=format&fit=crop",
-      secondaryImage: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=700&auto=format&fit=crop",
+      primaryImage: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=70&auto=format,compress&fm=webp",
+      secondaryImage: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&q=70&auto=format,compress&fm=webp",
       description: "A contemporary boxy silhouette engineered with ultra-dense 240 GSM combed cotton. Retains crisp structural drape wash after wash.",
       details: [
         "100% long-staple combed cotton",
@@ -130,8 +130,8 @@ const GAZEBO_CONFIG = {
         { name: "Terracotta Sand", hex: "#C47B5D", inStock: true }
       ],
       sizes: ["S", "M", "L", "XL"],
-      primaryImage: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?q=80&w=700&auto=format&fit=crop",
-      secondaryImage: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=700&auto=format&fit=crop",
+      primaryImage: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600&q=70&auto=format,compress&fm=webp",
+      secondaryImage: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&q=70&auto=format,compress&fm=webp",
       description: "Crafted from airy, breathable French flax linen with an open camp collar. Delivers natural drape and relaxed sophistication.",
       details: [
         "100% natural European flax linen",
@@ -156,8 +156,8 @@ const GAZEBO_CONFIG = {
         { name: "Desert Tan", hex: "#D2B48C", inStock: true }
       ],
       sizes: ["30", "32", "34", "36"],
-      primaryImage: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=700&auto=format&fit=crop",
-      secondaryImage: "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?q=80&w=700&auto=format&fit=crop",
+      primaryImage: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&q=70&auto=format,compress&fm=webp",
+      secondaryImage: "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?w=600&q=70&auto=format,compress&fm=webp",
       description: "Engineered with durable micro-ripstop twill, 6 tactical ergonomic cargo pockets, and adjustable bungee toggles at the hem.",
       details: [
         "High-density ripstop cotton blend",
@@ -182,8 +182,8 @@ const GAZEBO_CONFIG = {
         { name: "Deep Navy", hex: "#1C2833", inStock: true }
       ],
       sizes: ["S", "M", "L", "XL", "XXL"],
-      primaryImage: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=700&auto=format&fit=crop",
-      secondaryImage: "https://images.unsplash.com/photo-1581655353564-df123a1eb820?q=80&w=700&auto=format&fit=crop",
+      primaryImage: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&q=70&auto=format,compress&fm=webp",
+      secondaryImage: "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&q=70&auto=format,compress&fm=webp",
       description: "A rich tactile waffle texture providing substantial structure and breathable comfort. Finished with a seamless open placket.",
       details: [
         "Heavyweight 280 GSM combed cotton knit",
@@ -207,8 +207,8 @@ const GAZEBO_CONFIG = {
         { name: "Obsidian Black", hex: "#1A1A1A", inStock: true }
       ],
       sizes: ["30", "32", "34", "36"],
-      primaryImage: "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?q=80&w=700&auto=format&fit=crop",
-      secondaryImage: "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?q=80&w=700&auto=format&fit=crop",
+      primaryImage: "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=600&q=70&auto=format,compress&fm=webp",
+      secondaryImage: "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?w=600&q=70&auto=format,compress&fm=webp",
       description: "A modern interpretation of 1970s tailoring. Double front pleats with a relaxed thigh taper down to a clean break.",
       details: [
         "Breathable Tencel-cotton drape",
@@ -232,8 +232,8 @@ const GAZEBO_CONFIG = {
         { name: "Dark Moss", hex: "#3B4D3C", inStock: true }
       ],
       sizes: ["M", "L", "XL", "XXL"],
-      primaryImage: "https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=700&auto=format&fit=crop",
-      secondaryImage: "https://images.unsplash.com/photo-1548883354-7622d03aca27?q=80&w=700&auto=format&fit=crop",
+      primaryImage: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&q=70&auto=format,compress&fm=webp",
+      secondaryImage: "https://images.unsplash.com/photo-1548883354-7622d03aca27?w=600&q=70&auto=format,compress&fm=webp",
       description: "Designed for effortless seasonal transitions. Features dual chest patch pockets, matte horn buttons, and a peach-soft brushed finish.",
       details: [
         "340 GSM heavy twill with peach finish",
@@ -257,8 +257,8 @@ const GAZEBO_CONFIG = {
         { name: "Pebble Dune", hex: "#D8CFC4", inStock: true }
       ],
       sizes: ["S", "M", "L", "XL"],
-      primaryImage: "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=700&auto=format&fit=crop",
-      secondaryImage: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=700&auto=format&fit=crop",
+      primaryImage: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&q=70&auto=format,compress&fm=webp",
+      secondaryImage: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=70&auto=format,compress&fm=webp",
       description: "A coordinated two-piece outfit featuring a boxy short-sleeve shirt and matching relaxed drawstring shorts.",
       details: [
         "Includes both top and bottom",
@@ -282,8 +282,8 @@ const GAZEBO_CONFIG = {
         { name: "Faded Onyx", hex: "#2E2E2E", inStock: true }
       ],
       sizes: ["S", "M", "L", "XL", "XXL"],
-      primaryImage: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=700&auto=format&fit=crop",
-      secondaryImage: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=700&auto=format&fit=crop",
+      primaryImage: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&q=70&auto=format,compress&fm=webp",
+      secondaryImage: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&q=70&auto=format,compress&fm=webp",
       description: "Individually garment-dyed and mineral washed for an authentic lived-in vintage patina with Gazebo's signature heritage heft.",
       details: [
         "260 GSM combed cotton jersey",
@@ -307,8 +307,8 @@ const GAZEBO_CONFIG = {
         { name: "Classic Navy", hex: "#1B2A4A", inStock: true }
       ],
       sizes: ["M", "L", "XL"],
-      primaryImage: "https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=700&auto=format&fit=crop",
-      secondaryImage: "https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=700&auto=format&fit=crop",
+      primaryImage: "https://images.unsplash.com/photo-1544441893-675973e31985?w=600&q=70&auto=format,compress&fm=webp",
+      secondaryImage: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&q=70&auto=format,compress&fm=webp",
       description: "A clean modern silhouette featuring a stand collar with horn buttons, two-way YKK front zipper, and internal storm flaps.",
       details: [
         "Water-repellent matte outer shell",
@@ -333,8 +333,8 @@ const GAZEBO_CONFIG = {
         { name: "Pitch Black", hex: "#1A1A1A", inStock: true }
       ],
       sizes: ["One Size (Adjustable)"],
-      primaryImage: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?q=80&w=700&auto=format&fit=crop",
-      secondaryImage: "https://images.unsplash.com/photo-1576871337622-98d48d1cf531?q=80&w=700&auto=format&fit=crop",
+      primaryImage: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&q=70&auto=format,compress&fm=webp",
+      secondaryImage: "https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=600&q=70&auto=format,compress&fm=webp",
       description: "Structured crown with pre-curved visor, embroidered eyelets, and an antique brass buckle adjustment strap.",
       details: [
         "100% cotton chino twill",
@@ -358,8 +358,8 @@ const GAZEBO_CONFIG = {
         { name: "Washed Black", hex: "#222222", inStock: true }
       ],
       sizes: ["Standard (22L)"],
-      primaryImage: "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=700&auto=format&fit=crop",
-      secondaryImage: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=700&auto=format&fit=crop",
+      primaryImage: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&q=70&auto=format,compress&fm=webp",
+      secondaryImage: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600&q=70&auto=format,compress&fm=webp",
       description: "Built to last decades. Heavy 16oz duck canvas with reinforced box-stitched handles, key lanyard, and interior zip compartment.",
       details: [
         "16oz organic unbleached canvas",
@@ -383,8 +383,8 @@ const GAZEBO_CONFIG = {
         { name: "Olive Tint", hex: "#556B2F", inStock: true }
       ],
       sizes: ["30", "32", "34", "36"],
-      primaryImage: "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?q=80&w=700&auto=format&fit=crop",
-      secondaryImage: "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?q=80&w=700&auto=format&fit=crop",
+      primaryImage: "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=600&q=70&auto=format,compress&fm=webp",
+      secondaryImage: "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=600&q=70&auto=format,compress&fm=webp",
       description: "Relaxed mid-thigh length cut from textured slub linen. Finished with an internal drawcord and deep slash side pockets.",
       details: [
         "100% breathable slub linen",

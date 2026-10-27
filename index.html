@@ -10,15 +10,24 @@
   <link rel="icon" type="image/png" href="assets/images/favicon.png" />
   <link rel="apple-touch-icon" href="assets/images/gazebo-logo.png" />
 
-  <!-- Google Fonts: Plus Jakarta Sans & Syne -->
+  <!-- Preconnect to Font Host -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet" />
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/main.css?v=2.0" />
-  <link rel="stylesheet" href="css/components.css?v=2.0" />
-  <link rel="stylesheet" href="css/responsive.css?v=2.0" />
+  <!-- Preload Critical LCP Hero Image -->
+  <link rel="preload" as="image" href="assets/images/hero-1-1200w.webp" imagesrcset="assets/images/hero-1-800w.webp 800w, assets/images/hero-1-1200w.webp 1200w" imagesizes="100vw" fetchpriority="high" />
+
+  <!-- Preload Main Latin WOFF2 Font -->
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/plusjakartasans/v12/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_Tkn9TR_VMq2oRsWk.woff2" crossorigin />
+
+  <!-- Google Font: Plus Jakarta Sans (Only Weights 500,600,700,800) -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Inline Critical Above-The-Fold CSS -->
+  <style>:root{--gz-black:#0E0E0E;--gz-white:#FFFFFF;--gz-orange:#EE5824;--gz-gray-light:#EEEEEE;--gz-gray-med:#666666;--header-height:74px;--font-sans:'Plus Jakarta Sans',sans-serif}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html,body{overflow-x:hidden;max-width:100vw;font-family:var(--font-sans);background-color:var(--gz-white);color:var(--gz-black)}.announcement-bar{background-color:var(--gz-black);color:var(--gz-white);padding:7px 24px;font-size:0.75rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase}.announcement-bar__inner{display:flex;align-items:center;justify-content:space-between;max-width:1380px;margin:0 auto}.site-header{position:sticky;top:0;left:0;width:100%;background:rgba(255,255,255,0.98);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);z-index:1000;border-bottom:1px solid var(--gz-gray-light)}.header-main{height:var(--header-height);display:flex;align-items:center;justify-content:space-between;gap:32px;padding:0 40px;width:100%;max-width:1440px;margin:0 auto}.header-zone-left{display:flex;align-items:center;gap:16px;flex-shrink:0}.brand-identity{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}.brand-logo-img{width:46px;height:46px;object-fit:contain}.brand-text-block{display:flex;flex-direction:column}.brand-wordmark{font-size:1.45rem;font-weight:900;letter-spacing:0.08em;color:var(--gz-black);line-height:1}.brand-subtext{font-size:0.60rem;font-weight:700;letter-spacing:0.16em;color:var(--gz-gray-med);margin-top:3px}.main-nav{display:flex;align-items:center;justify-content:center;gap:28px;flex:1 1 auto}.nav-link{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap;color:var(--gz-black);padding:10px 0;text-decoration:none}.nav-link:hover,.nav-link--accent{color:var(--gz-orange)}.header-actions{display:flex;align-items:center;gap:20px;flex-shrink:0;margin-left:32px}.header-action-btn{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;color:var(--gz-black);background:none;border:none;cursor:pointer}.mobile-menu-toggle{display:none}.hero-section{position:relative;background:var(--gz-black);color:var(--gz-white);overflow:hidden}.hero-slider{position:relative;height:80vh;min-height:560px;max-height:760px;aspect-ratio:16/9}.hero-slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .5s ease}.hero-slide.is-active{opacity:1;visibility:visible}.hero-slide__bg{width:100%;height:100%;object-fit:cover;object-position:center}@media(max-width:1200px){.main-nav{display:none!important}.mobile-menu-toggle{display:flex!important}.header-main{padding:0 24px;gap:20px}.header-actions{margin-left:auto}}@media(max-width:768px){:root{--header-height:64px}.header-main{padding:0 16px}.brand-logo-img{width:38px;height:38px}.brand-wordmark{font-size:1.25rem}.brand-subtext{font-size:0.54rem}}</style>
+
+  <!-- Complete Bundled & Minified Stylesheet (v=3.0) -->
+  <link rel="stylesheet" href="css/bundle.min.css?v=3.0" />
 </head>
 <body>
 
@@ -87,7 +96,7 @@
         </button>
 
         <a href="#" class="brand-identity" title="Gazebo Home">
-          <img class="brand-logo-img" src="assets/images/gazebo-logo.png" alt="Gazebo Authentic Brand Logo" width="46" height="46" />
+          <img class="brand-logo-img" src="assets/images/gazebo-logo.webp" alt="Gazebo Authentic Brand Logo" width="46" height="46" />
           <div class="brand-text-block">
             <span class="brand-wordmark">GAZEBO</span>
             <span class="brand-subtext">ESTD. 1979 • PUNE</span>
@@ -152,11 +161,19 @@
          ========================================================================= -->
     <section class="hero-section" aria-label="Featured Campaigns">
       <div class="hero-slider">
-        <!-- Slide 1: Contemporary Casuals -->
+        <!-- Slide 1: Contemporary Casuals (Eager Loaded WebP with Picture Tag) -->
         <div class="hero-slide is-active">
-          <img class="hero-slide__bg" 
-               src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1800&auto=format&fit=crop" 
-               alt="Gazebo Contemporary Casuals Collection" />
+          <picture>
+            <source media="(max-width: 768px)" srcset="assets/images/hero-1-800w.webp" type="image/webp" />
+            <source srcset="assets/images/hero-1-1200w.webp" type="image/webp" />
+            <img class="hero-slide__bg" 
+                 src="assets/images/hero-1-1200w.webp" 
+                 alt="Gazebo Contemporary Casuals Collection"
+                 width="1200" height="600"
+                 fetchpriority="high"
+                 loading="eager"
+                 decoding="sync" />
+          </picture>
           <div class="hero-slide__overlay"></div>
           <div class="container hero-slide__content">
             <span class="hero-slide__eyebrow">Autumn / Winter Edit • 2026</span>
@@ -171,11 +188,18 @@
           </div>
         </div>
 
-        <!-- Slide 2: The Heavyweight Essentials -->
+        <!-- Slide 2: The Heavyweight Essentials (Lazy-loaded on demand: data-src) -->
         <div class="hero-slide">
-          <img class="hero-slide__bg" 
-               src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1800&auto=format&fit=crop" 
-               alt="Gazebo Streetwear & Heavyweight Drops" />
+          <picture>
+            <source media="(max-width: 768px)" data-srcset="assets/images/hero-2-800w.webp" type="image/webp" />
+            <source data-srcset="assets/images/hero-2-1200w.webp" type="image/webp" />
+            <img class="hero-slide__bg" 
+                 data-src="assets/images/hero-2-1200w.webp" 
+                 alt="Gazebo Streetwear & Heavyweight Drops"
+                 width="1200" height="600"
+                 loading="lazy"
+                 decoding="async" />
+          </picture>
           <div class="hero-slide__overlay"></div>
           <div class="container hero-slide__content">
             <span class="hero-slide__eyebrow">Dense 280 GSM Waffle & Jersey</span>
@@ -190,11 +214,18 @@
           </div>
         </div>
 
-        <!-- Slide 3: Heritage Meets Contemporary -->
+        <!-- Slide 3: Heritage Meets Contemporary (Lazy-loaded on demand: data-src) -->
         <div class="hero-slide">
-          <img class="hero-slide__bg" 
-               src="https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=1800&auto=format&fit=crop" 
-               alt="Gazebo Heritage M.G. Road Pune" />
+          <picture>
+            <source media="(max-width: 768px)" data-srcset="assets/images/hero-3-800w.webp" type="image/webp" />
+            <source data-srcset="assets/images/hero-3-1200w.webp" type="image/webp" />
+            <img class="hero-slide__bg" 
+                 data-src="assets/images/hero-3-1200w.webp" 
+                 alt="Gazebo Heritage M.G. Road Pune"
+                 width="1200" height="600"
+                 loading="lazy"
+                 decoding="async" />
+          </picture>
           <div class="hero-slide__overlay"></div>
           <div class="container hero-slide__content">
             <span class="hero-slide__eyebrow">Pune Landmark • Estd. 1979</span>
@@ -358,10 +389,16 @@
     <section class="editorial-section" aria-label="Brand Campaign">
       <div class="editorial-grid">
         <div class="editorial-media">
-          <img class="editorial-img" 
-               src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1600&auto=format&fit=crop" 
-               alt="Gazebo Street Tailoring Campaign" 
-               loading="lazy" />
+          <picture>
+            <source media="(max-width: 768px)" srcset="assets/images/editorial-800w.webp" type="image/webp" />
+            <source srcset="assets/images/editorial-1200w.webp" type="image/webp" />
+            <img class="editorial-img" 
+                 src="assets/images/editorial-1200w.webp" 
+                 alt="Gazebo Street Tailoring Campaign"
+                 width="1200" height="750" 
+                 loading="lazy"
+                 decoding="async" />
+          </picture>
         </div>
         <div class="editorial-content">
           <span class="editorial-tag">Pune's Fashion Landmark</span>
@@ -399,7 +436,7 @@
       <div class="container">
         <div class="heritage-card">
           <div class="heritage-logo-wrap">
-            <img class="heritage-logo-img" src="assets/images/gazebo-logo.png" alt="Gazebo Pune Emblem" />
+            <img class="heritage-logo-img" src="assets/images/gazebo-logo.webp" alt="Gazebo Pune Emblem" width="80" height="80" loading="lazy" decoding="async" />
           </div>
           <div class="heritage-info">
             <div style="display: flex; align-items: center; gap: 8px;">
@@ -462,7 +499,7 @@
         <!-- Col 1: Brand Info -->
         <div class="footer-brand">
           <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-            <img class="brand-logo-img" src="assets/images/gazebo-logo.png" alt="Gazebo" />
+            <img class="brand-logo-img" src="assets/images/gazebo-logo.webp" alt="Gazebo" width="46" height="46" loading="lazy" decoding="async" />
             <span class="brand-wordmark" style="font-size: 1.4rem;">GAZEBO</span>
           </div>
           <p class="footer-brand-desc">
@@ -595,7 +632,7 @@
   <aside id="mobileMenuDrawer" class="mobile-menu-drawer" aria-label="Mobile Navigation Drawer">
     <div class="mobile-menu-header">
       <div style="display: flex; align-items: center; gap: 10px;">
-        <img src="assets/images/gazebo-logo.png" style="width: 38px; height: 38px;" alt="Gazebo" />
+        <img src="assets/images/gazebo-logo.webp" width="38" height="38" style="width: 38px; height: 38px;" alt="Gazebo" loading="lazy" decoding="async" />
         <span style="font-weight: 900; font-size: 1.2rem;">GAZEBO</span>
       </div>
       <button id="mobileMenuClose" class="drawer-close-btn" aria-label="Close menu">
@@ -923,10 +960,10 @@
     </div>
   </div>
 
-  <!-- Scripts -->
-  <script src="js/products-data.js?v=2.0"></script>
-  <script src="js/cart.js?v=2.0"></script>
-  <script src="js/search.js?v=2.0"></script>
-  <script src="js/app.js?v=2.0"></script>
+  <!-- Deferred Minified Core Modules -->
+  <script defer src="js/products-data.min.js?v=3.0"></script>
+  <script defer src="js/cart.min.js?v=3.0"></script>
+  <script defer src="js/search.min.js?v=3.0"></script>
+  <script defer src="js/app.min.js?v=3.0"></script>
 </body>
 </html>
