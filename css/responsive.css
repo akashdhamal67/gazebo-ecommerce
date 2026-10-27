@@ -384,6 +384,7 @@
 
   .hero-slide__poster {
     display: block !important;
+    object-position: 65% 25% !important;
   }
 
   .section-padding {
