@@ -414,6 +414,11 @@
   object-position: 68% 28%;
 }
 
+.hero-slide__poster--hero3,
+.hero-slide__video--hero3 {
+  object-position: 72% 25%;
+}
+
 .hero-slide__poster {
   filter: brightness(0.80);
   z-index: 0;

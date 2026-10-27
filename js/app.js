@@ -74,7 +74,7 @@ function initGenderTabs() {
 }
 
 /* ==========================================================================
-   3. Hero Banner Slider (Dual Video Backgrounds + Lazy Loading)
+   3. Hero Banner Slider (Triple Video Backgrounds + Lazy Loading)
    ========================================================================== */
 let heroCurrentSlide = 0;
 let heroTimer = null;
@@ -82,6 +82,8 @@ let isHeroUserPaused = false;
 let heroVideo1Ready = false;
 let heroVideo2Loaded = false;
 let heroVideo2Ready = false;
+let heroVideo3Loaded = false;
+let heroVideo3Ready = false;
 
 function initHeroSlider() {
   const slider = document.querySelector('.hero-slider');
@@ -91,6 +93,7 @@ function initHeroSlider() {
   const nextBtn = document.querySelector('.hero-arrow--next');
   const heroVideo1 = document.getElementById('heroVideo1');
   const heroVideo2 = document.getElementById('heroVideo2');
+  const heroVideo3 = document.getElementById('heroVideo3');
   const playbackBtn = document.getElementById('heroPlaybackBtn');
 
   if (!slides.length) return;
@@ -141,11 +144,38 @@ function initHeroSlider() {
     });
   }
 
+  // Load Slide 3's video on demand (when it becomes the next slide or is navigated to)
+  function loadHeroVideo3() {
+    if (heroVideo3Loaded || !heroVideo3 || !canPlayVideo) return;
+    heroVideo3Loaded = true;
+
+    const sources = heroVideo3.querySelectorAll('source[data-src]');
+    sources.forEach(s => {
+      s.src = s.getAttribute('data-src');
+      s.removeAttribute('data-src');
+    });
+
+    heroVideo3.preload = 'metadata';
+    heroVideo3.load();
+
+    heroVideo3.addEventListener('playing', () => {
+      heroVideo3.classList.add('is-ready');
+      heroVideo3Ready = true;
+    }, { once: true });
+
+    heroVideo3.addEventListener('canplay', () => {
+      if (!isHeroUserPaused && heroCurrentSlide === 2) {
+        heroVideo3.play().catch(() => {});
+      }
+    });
+  }
+
   function setupHeroVideos() {
     if (!canPlayVideo) {
       // Under 768px, reduced motion, or data saver: show only posters, never download video
       if (heroVideo1) heroVideo1.style.display = 'none';
       if (heroVideo2) heroVideo2.style.display = 'none';
+      if (heroVideo3) heroVideo3.style.display = 'none';
       if (playbackBtn) playbackBtn.style.display = 'none';
       return;
     }
@@ -207,22 +237,30 @@ function initHeroSlider() {
     // Handle Slide Video Playback & Switching
     if (canPlayVideo) {
       if (index === 0) {
-        // Slide 1 active: play heroVideo1, pause heroVideo2
+        // Slide 1 active: play heroVideo1, pause others, preload next slide video
+        loadHeroVideo2();
         if (heroVideo2 && !heroVideo2.paused) heroVideo2.pause();
+        if (heroVideo3 && !heroVideo3.paused) heroVideo3.pause();
         if (heroVideo1 && !isHeroUserPaused && !document.hidden) {
           heroVideo1.play().catch(() => {});
         }
       } else if (index === 1) {
-        // Slide 2 active: make sure video 2 is loaded, play heroVideo2, pause heroVideo1
+        // Slide 2 active: make sure video 2 is loaded, play heroVideo2, preload video 3
         loadHeroVideo2();
+        loadHeroVideo3();
         if (heroVideo1 && !heroVideo1.paused) heroVideo1.pause();
+        if (heroVideo3 && !heroVideo3.paused) heroVideo3.pause();
         if (heroVideo2 && !isHeroUserPaused && !document.hidden) {
           heroVideo2.play().catch(() => {});
         }
-      } else {
-        // Slide 3 active: pause all videos
+      } else if (index === 2) {
+        // Slide 3 active: make sure video 3 is loaded, play heroVideo3, pause others
+        loadHeroVideo3();
         if (heroVideo1 && !heroVideo1.paused) heroVideo1.pause();
         if (heroVideo2 && !heroVideo2.paused) heroVideo2.pause();
+        if (heroVideo3 && !isHeroUserPaused && !document.hidden) {
+          heroVideo3.play().catch(() => {});
+        }
       }
     }
   }
@@ -231,8 +269,8 @@ function initHeroSlider() {
     stopAutoPlay();
     if (isHeroUserPaused) return;
 
-    // 8.2s for video slides (0 and 1), 5.5s for static slide (2)
-    const interval = ((heroCurrentSlide === 0 || heroCurrentSlide === 1) && canPlayVideo) ? 8200 : 5500;
+    // 8.2s for video slides on desktop, 5.5s on mobile/reduced motion
+    const interval = canPlayVideo ? 8200 : 5500;
     heroTimer = setTimeout(() => {
       showSlide(heroCurrentSlide + 1);
       startAutoPlay();
@@ -253,7 +291,7 @@ function initHeroSlider() {
       const playIcon = playbackBtn.querySelector('.icon-play');
 
       // Identify active video for current slide
-      const activeVideo = (heroCurrentSlide === 0) ? heroVideo1 : (heroCurrentSlide === 1 ? heroVideo2 : null);
+      const activeVideo = (heroCurrentSlide === 0) ? heroVideo1 : (heroCurrentSlide === 1 ? heroVideo2 : heroVideo3);
 
       if (isHeroUserPaused) {
         isHeroUserPaused = false;
@@ -269,6 +307,7 @@ function initHeroSlider() {
         isHeroUserPaused = true;
         if (heroVideo1) heroVideo1.pause();
         if (heroVideo2) heroVideo2.pause();
+        if (heroVideo3) heroVideo3.pause();
         stopAutoPlay();
         if (pauseIcon) pauseIcon.style.display = 'none';
         if (playIcon) playIcon.style.display = 'block';
@@ -331,6 +370,7 @@ function initHeroSlider() {
     if (document.hidden) {
       if (heroVideo1 && !heroVideo1.paused) heroVideo1.pause();
       if (heroVideo2 && !heroVideo2.paused) heroVideo2.pause();
+      if (heroVideo3 && !heroVideo3.paused) heroVideo3.pause();
       stopAutoPlay();
     } else {
       if (!isHeroUserPaused) {
@@ -338,6 +378,8 @@ function initHeroSlider() {
           heroVideo1.play().catch(() => {});
         } else if (heroCurrentSlide === 1 && heroVideo2 && canPlayVideo) {
           heroVideo2.play().catch(() => {});
+        } else if (heroCurrentSlide === 2 && heroVideo3 && canPlayVideo) {
+          heroVideo3.play().catch(() => {});
         }
         startAutoPlay();
       }
