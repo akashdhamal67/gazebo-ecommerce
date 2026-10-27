@@ -371,6 +371,21 @@
     display: none;
   }
 
+  .hero-playback-btn {
+    bottom: 18px;
+    right: 18px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .hero-slide__video {
+    display: none !important;
+  }
+
+  .hero-slide__poster {
+    display: block !important;
+  }
+
   .section-padding {
     padding-top: 44px;
     padding-bottom: 44px;

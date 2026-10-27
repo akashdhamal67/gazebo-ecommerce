@@ -78,6 +78,8 @@ function initGenderTabs() {
    ========================================================================== */
 let heroCurrentSlide = 0;
 let heroTimer = null;
+let heroVideoInitialized = false;
+let isHeroUserPaused = false;
 
 function initHeroSlider() {
   const slider = document.querySelector('.hero-slider');
@@ -85,8 +87,16 @@ function initHeroSlider() {
   const dots = document.querySelectorAll('.hero-dot');
   const prevBtn = document.querySelector('.hero-arrow--prev');
   const nextBtn = document.querySelector('.hero-arrow--next');
+  const heroVideo = document.getElementById('heroVideo');
+  const playbackBtn = document.getElementById('heroPlaybackBtn');
 
   if (!slides.length) return;
+
+  // Gate video playback based on mobile (<768px), prefers-reduced-motion, or data saver
+  const isMobile = window.innerWidth < 768;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const saveData = Boolean(navigator.connection && navigator.connection.saveData);
+  const canPlayVideo = !isMobile && !prefersReducedMotion && !saveData;
 
   function loadSlideImage(slide) {
     if (!slide) return;
@@ -102,12 +112,54 @@ function initHeroSlider() {
     });
   }
 
+  function setupHeroVideo() {
+    if (!heroVideo) return;
+
+    if (!canPlayVideo) {
+      // Under 768px, reduced motion, or data saver: show only poster, never download video
+      heroVideo.style.display = 'none';
+      if (playbackBtn) playbackBtn.style.display = 'none';
+      return;
+    }
+
+    // Populate video sources from data-src to start fetch on desktop
+    const sources = heroVideo.querySelectorAll('source[data-src]');
+    sources.forEach(s => {
+      s.src = s.getAttribute('data-src');
+      s.removeAttribute('data-src');
+    });
+
+    heroVideo.load();
+    heroVideoInitialized = true;
+
+    const onVideoReady = () => {
+      heroVideo.classList.add('is-ready');
+      if (!isHeroUserPaused && !heroTimer) {
+        startAutoPlay();
+      }
+    };
+
+    heroVideo.addEventListener('playing', onVideoReady, { once: true });
+    heroVideo.addEventListener('canplay', () => {
+      if (!isHeroUserPaused && heroCurrentSlide === 0) {
+        heroVideo.play().catch(() => {});
+      }
+    });
+
+    const playPromise = heroVideo.play();
+    if (playPromise !== undefined) {
+      playPromise.then(onVideoReady).catch(() => {
+        // Autoplay policy fallback (video stays on poster until interaction)
+      });
+    }
+  }
+
   function showSlide(index) {
     if (index >= slides.length) index = 0;
     if (index < 0) index = slides.length - 1;
     heroCurrentSlide = index;
 
-    // Load active slide image on-demand
+    // Load active slide media on-demand
     loadSlideImage(slides[index]);
 
     slides.forEach((slide, i) => {
@@ -117,19 +169,63 @@ function initHeroSlider() {
     dots.forEach((dot, i) => {
       dot.classList.toggle('is-active', i === index);
     });
+
+    // Pause video when slide 1 is not active; play when slide 1 returns
+    if (heroVideo && heroVideoInitialized) {
+      if (index === 0 && !isHeroUserPaused && !document.hidden) {
+        heroVideo.play().catch(() => {});
+      } else {
+        heroVideo.pause();
+      }
+    }
   }
 
   function startAutoPlay() {
     stopAutoPlay();
-    heroTimer = setInterval(() => {
+    if (isHeroUserPaused) return;
+
+    // Wait for 8.04s video duration on slide 0, 5.5s on slides 2 & 3
+    const interval = (heroCurrentSlide === 0 && canPlayVideo) ? 8200 : 5500;
+    heroTimer = setTimeout(() => {
       showSlide(heroCurrentSlide + 1);
-    }, 5500);
+      startAutoPlay();
+    }, interval);
   }
 
   function stopAutoPlay() {
-    if (heroTimer) clearInterval(heroTimer);
+    if (heroTimer) {
+      clearTimeout(heroTimer);
+      heroTimer = null;
+    }
   }
 
+  // Playback & Pause Accessibility Button
+  if (playbackBtn && heroVideo) {
+    playbackBtn.addEventListener('click', () => {
+      const pauseIcon = playbackBtn.querySelector('.icon-pause');
+      const playIcon = playbackBtn.querySelector('.icon-play');
+
+      if (heroVideo.paused) {
+        isHeroUserPaused = false;
+        heroVideo.play().catch(() => {});
+        startAutoPlay();
+        if (pauseIcon) pauseIcon.style.display = 'block';
+        if (playIcon) playIcon.style.display = 'none';
+        playbackBtn.setAttribute('aria-label', 'Pause background video');
+        playbackBtn.setAttribute('title', 'Pause background video');
+      } else {
+        isHeroUserPaused = true;
+        heroVideo.pause();
+        stopAutoPlay();
+        if (pauseIcon) pauseIcon.style.display = 'none';
+        if (playIcon) playIcon.style.display = 'block';
+        playbackBtn.setAttribute('aria-label', 'Play background video');
+        playbackBtn.setAttribute('title', 'Play background video');
+      }
+    });
+  }
+
+  // Navigation Arrows
   if (prevBtn) {
     prevBtn.addEventListener('click', () => {
       showSlide(heroCurrentSlide - 1);
@@ -144,6 +240,7 @@ function initHeroSlider() {
     });
   }
 
+  // Navigation Dots
   dots.forEach(dot => {
     dot.addEventListener('click', () => {
       const idx = parseInt(dot.dataset.slide, 10);
@@ -152,11 +249,13 @@ function initHeroSlider() {
     });
   });
 
+  // Slider Mouse & Touch Gestures
   if (slider) {
     slider.addEventListener('mouseenter', stopAutoPlay);
-    slider.addEventListener('mouseleave', startAutoPlay);
+    slider.addEventListener('mouseleave', () => {
+      if (!isHeroUserPaused) startAutoPlay();
+    });
 
-    // Touch swipe support
     let touchStartX = 0;
     slider.addEventListener('touchstart', (e) => {
       touchStartX = e.changedTouches[0].screenX;
@@ -170,15 +269,34 @@ function initHeroSlider() {
         if (diff > 0) showSlide(heroCurrentSlide + 1);
         else showSlide(heroCurrentSlide - 1);
       }
-      startAutoPlay();
+      if (!isHeroUserPaused) startAutoPlay();
     }, { passive: true });
   }
 
-  // Delay autoplay start until after critical initial render is complete
-  setTimeout(startAutoPlay, 5000);
+  // Page Visibility API: Pause video and slider when tab is hidden, resume when tab returns
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      if (heroVideo && !heroVideo.paused) {
+        heroVideo.pause();
+      }
+      stopAutoPlay();
+    } else {
+      if (heroCurrentSlide === 0 && heroVideo && !isHeroUserPaused && heroVideoInitialized) {
+        heroVideo.play().catch(() => {});
+      }
+      if (!isHeroUserPaused) {
+        startAutoPlay();
+      }
+    }
+  });
 
-  // Delay autoplay start until after critical initial render is complete
-  setTimeout(startAutoPlay, 5000);
+  // Initialize video asynchronously without delaying first paint
+  setupHeroVideo();
+
+  // If video is not loaded (mobile / reduced motion), start autoplay after initial paint
+  if (!canPlayVideo) {
+    setTimeout(startAutoPlay, 5000);
+  }
 }
 
 /* ==========================================================================

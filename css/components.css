@@ -347,6 +347,8 @@
    -------------------------------------------------------------------------- */
 .hero-section {
   position: relative;
+  width: 100%;
+  max-width: 100%;
   background-color: var(--gz-black);
   color: var(--gz-white);
   overflow: hidden;
@@ -354,6 +356,8 @@
 
 .hero-slider {
   position: relative;
+  width: 100%;
+  max-width: 100%;
   height: 82vh;
   min-height: 580px;
   max-height: 780px;
@@ -362,10 +366,13 @@
 .hero-slide {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
   opacity: 0;
   visibility: hidden;
+  overflow: hidden;
   transition: opacity 0.8s cubic-bezier(0.2, 0, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0, 0.2, 1);
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .hero-slide.is-active {
@@ -374,25 +381,53 @@
   transform: scale(1);
 }
 
-.hero-slide__bg {
+.hero-slide__bg,
+.hero-slide__poster,
+.hero-slide__video {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 30%;
+  border: none;
+}
+
+.hero-slide__bg {
   filter: brightness(0.78);
+}
+
+.hero-slide__poster {
+  filter: brightness(0.78);
+  z-index: 0;
+}
+
+.hero-slide__video {
+  filter: brightness(0.82);
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.hero-slide__video.is-ready {
+  opacity: 1;
 }
 
 .hero-slide__overlay {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(
     90deg,
-    rgba(14, 14, 14, 0.75) 0%,
-    rgba(14, 14, 14, 0.45) 50%,
-    rgba(14, 14, 14, 0.2) 100%
+    rgba(14, 14, 14, 0.84) 0%,
+    rgba(14, 14, 14, 0.62) 38%,
+    rgba(14, 14, 14, 0.35) 75%,
+    rgba(14, 14, 14, 0.20) 100%
   );
+  z-index: 1;
+  pointer-events: none;
 }
 
 .hero-slide__content {
@@ -499,6 +534,37 @@
 .hero-dot.is-active {
   width: 28px;
   background-color: var(--gz-orange);
+}
+
+.hero-playback-btn {
+  position: absolute;
+  bottom: 24px;
+  right: 28px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.50);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  color: var(--gz-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 6;
+  transition: all var(--trans-fast);
+}
+
+.hero-playback-btn:hover {
+  background: var(--gz-orange);
+  border-color: var(--gz-orange);
+  transform: scale(1.08);
+}
+
+.hero-playback-btn:focus-visible {
+  outline: 2px solid var(--gz-orange);
+  outline-offset: 2px;
 }
 
 /* --------------------------------------------------------------------------
