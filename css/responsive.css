@@ -261,9 +261,8 @@
 
   .hero-slide__poster--hero3,
   .hero-slide__video--hero3 {
-    object-position: 78% 0% !important;
-    transform: scale(0.92) translateY(12px) !important;
-    transform-origin: 78% top !important;
+    object-position: 75% 12% !important;
+    transform: none !important;
   }
 
   .hero-slide__content--slide3 .hero-slide__title {
@@ -445,9 +444,8 @@
   }
 
   .hero-slide__poster--hero3 {
-    object-position: 78% 0% !important;
-    transform: scale(0.92) translateY(12px) !important;
-    transform-origin: 78% top !important;
+    object-position: 75% 12% !important;
+    transform: none !important;
   }
 
   .section-padding {
