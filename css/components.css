@@ -414,9 +414,23 @@
   object-position: 68% 28%;
 }
 
+.hero-slide--slide3 {
+  background-color: #27483a;
+}
+
 .hero-slide__poster--hero3,
 .hero-slide__video--hero3 {
-  object-position: 72% 25%;
+  object-position: 80% 0%;
+  transform: scale(0.9) translateY(4%);
+  transform-origin: right top;
+}
+
+.hero-slide__content--slide3 {
+  max-width: 55%;
+}
+
+.hero-slide__content--slide3 .hero-slide__title {
+  font-size: clamp(2rem, 4vw, 4rem);
 }
 
 .hero-slide__poster {
