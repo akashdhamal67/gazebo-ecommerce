@@ -74,12 +74,14 @@ function initGenderTabs() {
 }
 
 /* ==========================================================================
-   3. Hero Banner Slider
+   3. Hero Banner Slider (Dual Video Backgrounds + Lazy Loading)
    ========================================================================== */
 let heroCurrentSlide = 0;
 let heroTimer = null;
-let heroVideoInitialized = false;
 let isHeroUserPaused = false;
+let heroVideo1Ready = false;
+let heroVideo2Loaded = false;
+let heroVideo2Ready = false;
 
 function initHeroSlider() {
   const slider = document.querySelector('.hero-slider');
@@ -87,7 +89,8 @@ function initHeroSlider() {
   const dots = document.querySelectorAll('.hero-dot');
   const prevBtn = document.querySelector('.hero-arrow--prev');
   const nextBtn = document.querySelector('.hero-arrow--next');
-  const heroVideo = document.getElementById('heroVideo');
+  const heroVideo1 = document.getElementById('heroVideo1');
+  const heroVideo2 = document.getElementById('heroVideo2');
   const playbackBtn = document.getElementById('heroPlaybackBtn');
 
   if (!slides.length) return;
@@ -112,45 +115,76 @@ function initHeroSlider() {
     });
   }
 
-  function setupHeroVideo() {
-    if (!heroVideo) return;
+  // Load Slide 2's video on demand (when it becomes the next slide or is navigated to)
+  function loadHeroVideo2() {
+    if (heroVideo2Loaded || !heroVideo2 || !canPlayVideo) return;
+    heroVideo2Loaded = true;
 
-    if (!canPlayVideo) {
-      // Under 768px, reduced motion, or data saver: show only poster, never download video
-      heroVideo.style.display = 'none';
-      if (playbackBtn) playbackBtn.style.display = 'none';
-      return;
-    }
-
-    // Populate video sources from data-src to start fetch on desktop
-    const sources = heroVideo.querySelectorAll('source[data-src]');
+    const sources = heroVideo2.querySelectorAll('source[data-src]');
     sources.forEach(s => {
       s.src = s.getAttribute('data-src');
       s.removeAttribute('data-src');
     });
 
-    heroVideo.load();
-    heroVideoInitialized = true;
+    heroVideo2.preload = 'metadata';
+    heroVideo2.load();
 
-    const onVideoReady = () => {
-      heroVideo.classList.add('is-ready');
-      if (!isHeroUserPaused && !heroTimer) {
-        startAutoPlay();
-      }
-    };
+    heroVideo2.addEventListener('playing', () => {
+      heroVideo2.classList.add('is-ready');
+      heroVideo2Ready = true;
+    }, { once: true });
 
-    heroVideo.addEventListener('playing', onVideoReady, { once: true });
-    heroVideo.addEventListener('canplay', () => {
-      if (!isHeroUserPaused && heroCurrentSlide === 0) {
-        heroVideo.play().catch(() => {});
+    heroVideo2.addEventListener('canplay', () => {
+      if (!isHeroUserPaused && heroCurrentSlide === 1) {
+        heroVideo2.play().catch(() => {});
       }
     });
+  }
 
-    const playPromise = heroVideo.play();
-    if (playPromise !== undefined) {
-      playPromise.then(onVideoReady).catch(() => {
-        // Autoplay policy fallback (video stays on poster until interaction)
+  function setupHeroVideos() {
+    if (!canPlayVideo) {
+      // Under 768px, reduced motion, or data saver: show only posters, never download video
+      if (heroVideo1) heroVideo1.style.display = 'none';
+      if (heroVideo2) heroVideo2.style.display = 'none';
+      if (playbackBtn) playbackBtn.style.display = 'none';
+      return;
+    }
+
+    // Populate Slide 1's video sources immediately on page load
+    if (heroVideo1) {
+      const sources1 = heroVideo1.querySelectorAll('source[data-src]');
+      sources1.forEach(s => {
+        s.src = s.getAttribute('data-src');
+        s.removeAttribute('data-src');
       });
+
+      heroVideo1.preload = 'metadata';
+      heroVideo1.load();
+
+      const onVideo1Ready = () => {
+        heroVideo1.classList.add('is-ready');
+        heroVideo1Ready = true;
+        if (!isHeroUserPaused && !heroTimer) {
+          startAutoPlay();
+        }
+        // Preload next slide's video (Slide 2) after Slide 1 is playing smoothly
+        setTimeout(loadHeroVideo2, 1200);
+      };
+
+      heroVideo1.addEventListener('playing', onVideo1Ready, { once: true });
+      heroVideo1.addEventListener('canplay', () => {
+        if (!isHeroUserPaused && heroCurrentSlide === 0) {
+          heroVideo1.play().catch(() => {});
+        }
+      });
+
+      const p1 = heroVideo1.play();
+      if (p1 !== undefined) {
+        p1.then(onVideo1Ready).catch(() => {
+          // Autoplay policy fallback: preload video 2 anyway after initial delay
+          setTimeout(loadHeroVideo2, 2000);
+        });
+      }
     }
   }
 
@@ -170,12 +204,25 @@ function initHeroSlider() {
       dot.classList.toggle('is-active', i === index);
     });
 
-    // Pause video when slide 1 is not active; play when slide 1 returns
-    if (heroVideo && heroVideoInitialized) {
-      if (index === 0 && !isHeroUserPaused && !document.hidden) {
-        heroVideo.play().catch(() => {});
+    // Handle Slide Video Playback & Switching
+    if (canPlayVideo) {
+      if (index === 0) {
+        // Slide 1 active: play heroVideo1, pause heroVideo2
+        if (heroVideo2 && !heroVideo2.paused) heroVideo2.pause();
+        if (heroVideo1 && !isHeroUserPaused && !document.hidden) {
+          heroVideo1.play().catch(() => {});
+        }
+      } else if (index === 1) {
+        // Slide 2 active: make sure video 2 is loaded, play heroVideo2, pause heroVideo1
+        loadHeroVideo2();
+        if (heroVideo1 && !heroVideo1.paused) heroVideo1.pause();
+        if (heroVideo2 && !isHeroUserPaused && !document.hidden) {
+          heroVideo2.play().catch(() => {});
+        }
       } else {
-        heroVideo.pause();
+        // Slide 3 active: pause all videos
+        if (heroVideo1 && !heroVideo1.paused) heroVideo1.pause();
+        if (heroVideo2 && !heroVideo2.paused) heroVideo2.pause();
       }
     }
   }
@@ -184,8 +231,8 @@ function initHeroSlider() {
     stopAutoPlay();
     if (isHeroUserPaused) return;
 
-    // Wait for 8.04s video duration on slide 0, 5.5s on slides 2 & 3
-    const interval = (heroCurrentSlide === 0 && canPlayVideo) ? 8200 : 5500;
+    // 8.2s for video slides (0 and 1), 5.5s for static slide (2)
+    const interval = ((heroCurrentSlide === 0 || heroCurrentSlide === 1) && canPlayVideo) ? 8200 : 5500;
     heroTimer = setTimeout(() => {
       showSlide(heroCurrentSlide + 1);
       startAutoPlay();
@@ -200,14 +247,19 @@ function initHeroSlider() {
   }
 
   // Playback & Pause Accessibility Button
-  if (playbackBtn && heroVideo) {
+  if (playbackBtn) {
     playbackBtn.addEventListener('click', () => {
       const pauseIcon = playbackBtn.querySelector('.icon-pause');
       const playIcon = playbackBtn.querySelector('.icon-play');
 
-      if (heroVideo.paused) {
+      // Identify active video for current slide
+      const activeVideo = (heroCurrentSlide === 0) ? heroVideo1 : (heroCurrentSlide === 1 ? heroVideo2 : null);
+
+      if (isHeroUserPaused) {
         isHeroUserPaused = false;
-        heroVideo.play().catch(() => {});
+        if (activeVideo && canPlayVideo) {
+          activeVideo.play().catch(() => {});
+        }
         startAutoPlay();
         if (pauseIcon) pauseIcon.style.display = 'block';
         if (playIcon) playIcon.style.display = 'none';
@@ -215,7 +267,8 @@ function initHeroSlider() {
         playbackBtn.setAttribute('title', 'Pause background video');
       } else {
         isHeroUserPaused = true;
-        heroVideo.pause();
+        if (heroVideo1) heroVideo1.pause();
+        if (heroVideo2) heroVideo2.pause();
         stopAutoPlay();
         if (pauseIcon) pauseIcon.style.display = 'none';
         if (playIcon) playIcon.style.display = 'block';
@@ -276,22 +329,23 @@ function initHeroSlider() {
   // Page Visibility API: Pause video and slider when tab is hidden, resume when tab returns
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
-      if (heroVideo && !heroVideo.paused) {
-        heroVideo.pause();
-      }
+      if (heroVideo1 && !heroVideo1.paused) heroVideo1.pause();
+      if (heroVideo2 && !heroVideo2.paused) heroVideo2.pause();
       stopAutoPlay();
     } else {
-      if (heroCurrentSlide === 0 && heroVideo && !isHeroUserPaused && heroVideoInitialized) {
-        heroVideo.play().catch(() => {});
-      }
       if (!isHeroUserPaused) {
+        if (heroCurrentSlide === 0 && heroVideo1 && canPlayVideo) {
+          heroVideo1.play().catch(() => {});
+        } else if (heroCurrentSlide === 1 && heroVideo2 && canPlayVideo) {
+          heroVideo2.play().catch(() => {});
+        }
         startAutoPlay();
       }
     }
   });
 
-  // Initialize video asynchronously without delaying first paint
-  setupHeroVideo();
+  // Initialize videos asynchronously without delaying first paint
+  setupHeroVideos();
 
   // If video is not loaded (mobile / reduced motion), start autoplay after initial paint
   if (!canPlayVideo) {
