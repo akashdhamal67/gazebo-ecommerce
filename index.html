@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GAZEBO | Contemporary Fashion & Heritage Garments • Estd. 1979</title>
+  <meta name="description" content="Discover Gazebo - Pune's iconic fashion landmark on M.G. Road since 1979. Shop heavyweight oversized tees, French linen resort shirts, utility cargos, and curated accessories." />
+  
+  <!-- Favicon using extracted brand logo -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/gazebo-logo.png" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Syne -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. Announcement Bar
+       ========================================================================= -->
+  <aside id="announcementBar" class="announcement-bar" role="region" aria-label="Announcement">
+    <div class="announcement-bar__inner">
+      <div class="announcement-bar__text">
+        <span class="announcement-bar__tag">FLAGSHIP</span>
+        <span>M.G. ROAD, PUNE • ESTD. 1979 • CONTEMPORARY GARMENTS & ACCESSORIES</span>
+      </div>
+      <div class="announcement-bar__actions">
+        <a href="#heritageSection" class="announcement-bar__link">Visit Flagship Store</a>
+        <button id="announcementClose" class="announcement-bar__close" aria-label="Close announcement">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       2. Site Header (The Souled Store Structure)
+       ========================================================================= -->
+  <header class="site-header" role="banner">
+    <!-- Substrip: Gender Selector Tabs & Quick Store Meta -->
+    <div class="header-substrip">
+      <div class="container header-substrip__inner">
+        <nav class="gender-tabs" aria-label="Gender categories">
+          <a href="#productsSection" class="gender-tab is-active" data-gender="men">MEN</a>
+          <a href="#productsSection" class="gender-tab" data-gender="women">WOMEN</a>
+          <a href="#productsSection" class="gender-tab" data-gender="kids">KIDS</a>
+          <a href="#heritageSection" class="gender-tab" data-gender="heritage">
+            HERITAGE 1979 <span class="gender-tab__badge">PUNE</span>
+          </a>
+        </nav>
+        <div class="header-substrip__meta">
+          <span class="demo-preview-pill">Storefront Prototype</span>
+          <span class="header-substrip__meta-item" onclick="document.getElementById('heritageSection').scrollIntoView({behavior: 'smooth'})">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            M.G. Road, Pune
+          </span>
+          <span class="header-substrip__meta-item" onclick="window.gazeboStore.showToast('Track Order: Enter your phone or order ID at checkout.', 'info')">
+            Track Order
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Header Navbar -->
+    <div class="container header-main">
+      <!-- Mobile Hamburger Toggle -->
+      <button id="mobileMenuToggle" class="mobile-menu-toggle header-action-btn" aria-label="Open mobile menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Brand Logo Emblem + Typography (Using Verified Logo) -->
+      <a href="#" class="brand-identity" title="Gazebo Home">
+        <img class="brand-logo-img" src="assets/images/gazebo-logo.png" alt="Gazibo Authentic Brand Logo" />
+        <div class="brand-text-block">
+          <span class="brand-wordmark">GAZEBO</span>
+          <span class="brand-subtext">ESTD. 1979 • PUNE</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="main-nav" aria-label="Main Store Navigation">
+        <a href="#productsSection" class="nav-link" onclick="window.filterByCategory('topwear')">Topwear</a>
+        <a href="#productsSection" class="nav-link" onclick="window.filterByCategory('shirts')">Linen Shirts</a>
+        <a href="#productsSection" class="nav-link" onclick="window.filterByCategory('bottomwear')">Cargos & Pants</a>
+        <a href="#productsSection" class="nav-link" onclick="window.filterByCategory('coords')">Co-ord Sets</a>
+        <a href="#productsSection" class="nav-link" onclick="window.filterByCategory('outerwear')">Jackets</a>
+        <a href="#productsSection" class="nav-link" onclick="window.filterByCategory('accessories')">Accessories</a>
+        <a href="#heritageSection" class="nav-link nav-link--accent">Heritage</a>
+      </nav>
+
+      <!-- Action Icons (Search, Account, Wishlist, Shopping Bag) -->
+      <div class="header-actions">
+        <!-- Search -->
+        <button class="header-action-btn" onclick="window.openSearchModal()" title="Search catalog" aria-label="Search catalog">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <!-- Account (Prototype Info) -->
+        <button class="header-action-btn" onclick="window.gazeboStore.showToast('Customer account integration ready for backend connect.', 'info')" title="Account Profile" aria-label="Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </button>
+
+        <!-- Wishlist -->
+        <button class="header-action-btn" onclick="window.gazeboStore.openWishlistDrawer()" title="View Wishlist" aria-label="Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="header-badge wishlist-badge-count" style="display: none;">0</span>
+        </button>
+
+        <!-- Shopping Bag -->
+        <button class="header-action-btn" onclick="window.gazeboStore.openCartDrawer()" title="View Shopping Bag" aria-label="Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="header-badge cart-badge-count" style="display: none;">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- =========================================================================
+         3. Hero Banner Slider (Cinematic Fashion Editorial)
+         ========================================================================= -->
+    <section class="hero-section" aria-label="Featured Campaigns">
+      <div class="hero-slider">
+        <!-- Slide 1: Contemporary Casuals -->
+        <div class="hero-slide is-active">
+          <img class="hero-slide__bg" 
+               src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1800&auto=format&fit=crop" 
+               alt="Gazebo Contemporary Casuals Collection" />
+          <div class="hero-slide__overlay"></div>
+          <div class="container hero-slide__content">
+            <span class="hero-slide__eyebrow">Autumn / Winter Edit • 2026</span>
+            <h1 class="hero-slide__title">Elevated Casuals For Modern Living</h1>
+            <p class="hero-slide__desc">
+              Precision-tailored silhouettes crafted with heavyweight 240+ GSM combed cotton and airy European linens. Designed for effortless urban movement.
+            </p>
+            <div class="hero-slide__actions">
+              <a href="#productsSection" class="btn btn--accent btn--lg" onclick="window.filterByCategory('topwear')">Explore Collection</a>
+              <a href="#categorySection" class="btn btn--outline-white btn--lg">Browse Categories</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2: The Heavyweight Essentials -->
+        <div class="hero-slide">
+          <img class="hero-slide__bg" 
+               src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1800&auto=format&fit=crop" 
+               alt="Gazebo Streetwear & Heavyweight Drops" />
+          <div class="hero-slide__overlay"></div>
+          <div class="container hero-slide__content">
+            <span class="hero-slide__eyebrow">Dense 280 GSM Waffle & Jersey</span>
+            <h2 class="hero-slide__title">The Heavyweight Drop Shoulder Series</h2>
+            <p class="hero-slide__desc">
+              Dense structural drape that retains its architectural form all day. Finished with double-stitched ribbed necklines and pre-shrunk bio-wash.
+            </p>
+            <div class="hero-slide__actions">
+              <a href="#productsSection" class="btn btn--accent btn--lg" onclick="window.filterByCategory('topwear')">Shop Heavyweight Tees</a>
+              <a href="#heritageSection" class="btn btn--outline-white btn--lg">Gazebo Legacy</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: Heritage Meets Contemporary -->
+        <div class="hero-slide">
+          <img class="hero-slide__bg" 
+               src="https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=1800&auto=format&fit=crop" 
+               alt="Gazebo Heritage M.G. Road Pune" />
+          <div class="hero-slide__overlay"></div>
+          <div class="container hero-slide__content">
+            <span class="hero-slide__eyebrow">Pune Landmark • Estd. 1979</span>
+            <h2 class="hero-slide__title">Rooted In M.G. Road. Reimagined For Today.</h2>
+            <p class="hero-slide__desc">
+              For more than four decades, Gazebo has defined elevated menswear, womenswear, and premium garments in the heart of Pune.
+            </p>
+            <div class="hero-slide__actions">
+              <a href="#heritageSection" class="btn btn--accent btn--lg">Visit Our Flagship</a>
+              <a href="#productsSection" class="btn btn--outline-white btn--lg">Shop Curated Edit</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <button class="hero-arrow hero-arrow--prev" aria-label="Previous slide">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button class="hero-arrow hero-arrow--next" aria-label="Next slide">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+
+        <!-- Slider Dots -->
+        <div class="hero-dots">
+          <button class="hero-dot is-active" data-slide="0" aria-label="Go to slide 1"></button>
+          <button class="hero-dot" data-slide="1" aria-label="Go to slide 2"></button>
+          <button class="hero-dot" data-slide="2" aria-label="Go to slide 3"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. Value Perks Bar
+         ========================================================================= -->
+    <section class="perks-bar" aria-label="Brand Guarantees">
+      <div class="container">
+        <div class="perks-grid">
+          <div class="perk-card">
+            <div class="perk-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <div>
+              <h4 class="perk-card__title">Express Pan-India Shipping</h4>
+              <p class="perk-card__desc">Dispatches direct from Pune flagship</p>
+            </div>
+          </div>
+
+          <div class="perk-card">
+            <div class="perk-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div>
+              <h4 class="perk-card__title">Estd. 1979 Heritage Quality</h4>
+              <p class="perk-card__desc">Over 40 years of garment mastery</p>
+            </div>
+          </div>
+
+          <div class="perk-card">
+            <div class="perk-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div>
+              <h4 class="perk-card__title">Hassle-Free 7-Day Exchange</h4>
+              <p class="perk-card__desc">Doorstep reverse pickups available</p>
+            </div>
+          </div>
+
+          <div class="perk-card">
+            <div class="perk-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <div>
+              <h4 class="perk-card__title">100% Verified Premium Fabrics</h4>
+              <p class="perk-card__desc">Combed long-staple cotton & linen</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. Shop By Category (The Souled Store Style Grid)
+         ========================================================================= -->
+    <section id="categorySection" class="section-padding" aria-label="Shop by Category">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header__left">
+            <span class="subheading-section">Curated Wardrobe Architecture</span>
+            <h2 class="heading-section">Explore By Category</h2>
+          </div>
+          <span class="demo-preview-pill">Modular Categories</span>
+        </div>
+
+        <!-- Horizontal scrollable category tiles populated via JS -->
+        <div id="categoryRail" class="category-rail"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. Curated Drops / Featured Collection Grid
+         ========================================================================= -->
+    <section id="productsSection" class="section-padding" style="background-color: var(--gz-white);" aria-label="Curated Products Showcase">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header__left">
+            <span class="subheading-section">The Flagship Catalog Edit</span>
+            <h2 class="heading-section">Featured Drops</h2>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <span id="productCountBadge" class="demo-preview-pill">12 Styles</span>
+          </div>
+        </div>
+
+        <!-- Filter Pills & Sorting Strip -->
+        <div class="filter-bar">
+          <div class="filter-pills" role="tablist">
+            <button class="filter-pill is-active" data-filter="all">All Styles</button>
+            <button class="filter-pill" data-filter="topwear">Oversized & Tees</button>
+            <button class="filter-pill" data-filter="shirts">Linen Shirts</button>
+            <button class="filter-pill" data-filter="bottomwear">Cargos & Trousers</button>
+            <button class="filter-pill" data-filter="coords">Co-ord Sets</button>
+            <button class="filter-pill" data-filter="outerwear">Jackets & Overshirts</button>
+            <button class="filter-pill" data-filter="accessories">Accessories</button>
+          </div>
+
+          <div class="sort-wrapper">
+            <label for="sortSelect" class="sort-label">Sort By:</label>
+            <select id="sortSelect" class="sort-select">
+              <option value="featured">Featured Edit</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="newest">New Arrivals First</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Dynamic Product Grid -->
+        <div id="productGrid" class="product-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. Editorial Fashion Campaign (Lifestyle & Heritage)
+         ========================================================================= -->
+    <section class="editorial-section" aria-label="Brand Campaign">
+      <div class="editorial-grid">
+        <div class="editorial-media">
+          <img class="editorial-img" 
+               src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1600&auto=format&fit=crop" 
+               alt="Gazebo Street Tailoring Campaign" 
+               loading="lazy" />
+        </div>
+        <div class="editorial-content">
+          <span class="editorial-tag">Pune's Fashion Landmark</span>
+          <h2 class="editorial-title">The Art Of Effortless Everyday Dressing</h2>
+          <p class="editorial-text">
+            Rooted on M.G. Road in Pune since 1979, Gazebo has spent four decades refining what authentic quality feels like. We merge timeless tailoring with relaxed streetwear cuts engineered for real everyday life.
+          </p>
+
+          <div class="editorial-stats">
+            <div class="stat-item">
+              <div class="stat-item__num">1979</div>
+              <div class="stat-item__label">Year Established</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-item__num">100%</div>
+              <div class="stat-item__label">Combed Long Cotton</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-item__num">40+</div>
+              <div class="stat-item__label">Years of Heritage</div>
+            </div>
+          </div>
+
+          <div>
+            <a href="#productsSection" class="btn btn--accent btn--lg" onclick="window.filterByCategory('all')">Explore All Styles</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. Heritage Showcase & M.G. Road Pune Flagship
+         ========================================================================= -->
+    <section id="heritageSection" class="section-padding heritage-section" aria-label="Flagship Store Locator">
+      <div class="container">
+        <div class="heritage-card">
+          <div class="heritage-logo-wrap">
+            <img class="heritage-logo-img" src="assets/images/gazebo-logo.png" alt="Gazibo Pune Emblem" />
+          </div>
+          <div class="heritage-info">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span class="demo-preview-pill">Iconic Flagship</span>
+              <span style="font-size: 0.8rem; font-weight: 700; color: var(--gz-gray-med);">M.G. ROAD, PUNE</span>
+            </div>
+            <h3>Gazebo Garments & Accessories</h3>
+            <p>
+              Located in Pune's prestigious shopping boulevard on Mahatma Gandhi Road. Since 1979, Gazebo has been the trusted destination for Men's, Women's, and Kids' everyday style and accessories.
+            </p>
+            <div class="heritage-badge-pills">
+              <span class="heritage-badge-pill">Estd. 1979</span>
+              <span class="heritage-badge-pill">M.G. Road, Pune, India</span>
+              <span class="heritage-badge-pill">Verified @gazibo_clothing</span>
+              <span class="heritage-badge-pill">In-Store & Digital</span>
+            </div>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/gazibo_clothing/" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              Follow @gazibo_clothing
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. Newsletter Section
+         ========================================================================= -->
+    <section class="newsletter-section" aria-label="Newsletter Signup">
+      <div class="container">
+        <div class="newsletter-box">
+          <span class="newsletter-tag">Gazebo Insiders</span>
+          <h2 class="newsletter-title">Be The First To Access New Drops</h2>
+          <p class="newsletter-desc">
+            Sign up for private seasonal previews, archival restocks, and exclusive Pune flagship events.
+          </p>
+          <form id="newsletterForm" class="newsletter-form" novalidate>
+            <input id="newsletterInput" class="newsletter-input" type="email" placeholder="Enter your email address" required />
+            <button type="submit" class="btn btn--accent">Subscribe</button>
+          </form>
+          <p class="newsletter-note">Demonstration prototype form. No personal emails are stored on servers.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       10. Complete Footer (Inspiring The Souled Store Architecture)
+       ========================================================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <img class="brand-logo-img" src="assets/images/gazebo-logo.png" alt="Gazebo" />
+            <span class="brand-wordmark" style="font-size: 1.4rem;">GAZEBO</span>
+          </div>
+          <p class="footer-brand-desc">
+            Gazebo Garments & Accessories — Estd. 1979. M.G. Road, Pune, India. Crafted for effortless daily elegance across Men, Women & Kids.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://www.instagram.com/gazibo_clothing/" target="_blank" rel="noopener noreferrer" class="footer-social-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              @gazibo_clothing
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Shop Navigation -->
+        <div>
+          <h4 class="footer-col-title">Shop Collection</h4>
+          <ul class="footer-links">
+            <li><a class="footer-link" href="#productsSection" onclick="window.filterByCategory('topwear')">Oversized T-Shirts</a></li>
+            <li><a class="footer-link" href="#productsSection" onclick="window.filterByCategory('shirts')">Linen Resort Shirts</a></li>
+            <li><a class="footer-link" href="#productsSection" onclick="window.filterByCategory('bottomwear')">Utility Cargo Pants</a></li>
+            <li><a class="footer-link" href="#productsSection" onclick="window.filterByCategory('coords')">Co-ord Sets</a></li>
+            <li><a class="footer-link" href="#productsSection" onclick="window.filterByCategory('outerwear')">Jackets & Overshirts</a></li>
+            <li><a class="footer-link" href="#productsSection" onclick="window.filterByCategory('accessories')">Garments & Accessories</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Customer Care -->
+        <div>
+          <h4 class="footer-col-title">Customer Care</h4>
+          <ul class="footer-links">
+            <li><a class="footer-link" href="javascript:void(0)" onclick="window.openSizeGuide()">Size & Fit Guide</a></li>
+            <li><a class="footer-link" href="javascript:void(0)" onclick="window.gazeboStore.showToast('Track Order module configured for Pune dispatches.', 'info')">Track Your Order</a></li>
+            <li><a class="footer-link" href="javascript:void(0)" onclick="window.gazeboStore.showToast('Easy 7-day exchange available.', 'info')">Returns & Exchanges</a></li>
+            <li><a class="footer-link" href="javascript:void(0)" onclick="window.gazeboStore.showToast('Free Express shipping on orders above ₹1,999.', 'info')">Shipping Policy</a></li>
+            <li><a class="footer-link" href="#heritageSection">Visit Pune Flagship</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: The Brand -->
+        <div>
+          <h4 class="footer-col-title">The Brand</h4>
+          <ul class="footer-links">
+            <li><a class="footer-link" href="#heritageSection">Our Story: Since 1979</a></li>
+            <li><a class="footer-link" href="#heritageSection">M.G. Road Landmark</a></li>
+            <li><a class="footer-link" href="javascript:void(0)" onclick="window.gazeboStore.showToast('100% Combed long-staple cotton & French linen.', 'info')">Fabric Standards</a></li>
+            <li><a class="footer-link" href="javascript:void(0)" onclick="window.gazeboStore.showToast('Customized proposal for Gazebo management.', 'info')">Brand Proposal Note</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Pune Flagship Details -->
+        <div>
+          <h4 class="footer-col-title">Pune Flagship</h4>
+          <div style="font-size: 0.84rem; color: var(--gz-gray-dark); line-height: 1.6;">
+            <p><strong>GAZIBO CLOTHING</strong></p>
+            <p>M.G. Road, Camp, Pune</p>
+            <p>Maharashtra 411001, India</p>
+            <p style="margin-top: 10px; color: var(--gz-orange); font-weight: 700;">Open Daily: 10:30 AM – 9:30 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          © 2026 GAZEBO CLOTHING (Gazibo®). All rights reserved. • Storefront Prototype & Presentation Proposal.
+        </p>
+        <div class="footer-badges">
+          <span class="payment-badge">UPI / RuPay</span>
+          <span class="payment-badge">Visa & Mastercard</span>
+          <span class="payment-badge">Net Banking</span>
+          <span class="payment-badge">COD Available</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       11. Mobile Bottom Navigation Bar (The Souled Store App Experience)
+       ========================================================================= -->
+  <nav class="mobile-bottom-bar" aria-label="Mobile Navigation">
+    <a href="#" class="mobile-bottom-item is-active">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+      </svg>
+      <span>Home</span>
+    </a>
+    <a href="#categorySection" class="mobile-bottom-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="3" width="7" height="7"></rect>
+        <rect x="14" y="3" width="7" height="7"></rect>
+        <rect x="14" y="14" width="7" height="7"></rect>
+        <rect x="3" y="14" width="7" height="7"></rect>
+      </svg>
+      <span>Categories</span>
+    </a>
+    <button class="mobile-bottom-item" onclick="window.openSearchModal()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <span>Search</span>
+    </button>
+    <button class="mobile-bottom-item" onclick="window.gazeboStore.openWishlistDrawer()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+      </svg>
+      <span class="mobile-bottom-badge wishlist-badge-count" style="display: none;">0</span>
+      <span>Wishlist</span>
+    </button>
+    <button class="mobile-bottom-item" onclick="window.gazeboStore.openCartDrawer()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <path d="M16 10a4 4 0 0 1-8 0"></path>
+      </svg>
+      <span class="mobile-bottom-badge cart-badge-count" style="display: none;">0</span>
+      <span>Bag</span>
+    </button>
+  </nav>
+
+  <!-- =========================================================================
+       12. Mobile Menu Drawer
+       ========================================================================= -->
+  <div id="mobileMenuOverlay" class="drawer-overlay"></div>
+  <aside id="mobileMenuDrawer" class="mobile-menu-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-menu-header">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <img src="assets/images/gazebo-logo.png" style="width: 38px; height: 38px;" alt="Gazebo" />
+        <span style="font-weight: 900; font-size: 1.2rem;">GAZEBO</span>
+      </div>
+      <button id="mobileMenuClose" class="drawer-close-btn" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-menu-body">
+      <div class="mobile-nav-group">
+        <div class="mobile-nav-group-title">Shop Departments</div>
+        <div class="mobile-nav-links">
+          <a class="mobile-nav-link" href="#productsSection" onclick="window.closeMobileMenu(); window.filterByCategory('all')">
+            <span>All Styles</span>
+            <span>→</span>
+          </a>
+          <a class="mobile-nav-link" href="#productsSection" onclick="window.closeMobileMenu(); window.filterByCategory('topwear')">
+            <span>Oversized & Heavy Tees</span>
+            <span>→</span>
+          </a>
+          <a class="mobile-nav-link" href="#productsSection" onclick="window.closeMobileMenu(); window.filterByCategory('shirts')">
+            <span>French Linen Shirts</span>
+            <span>→</span>
+          </a>
+          <a class="mobile-nav-link" href="#productsSection" onclick="window.closeMobileMenu(); window.filterByCategory('bottomwear')">
+            <span>Parachute Cargos & Pants</span>
+            <span>→</span>
+          </a>
+          <a class="mobile-nav-link" href="#productsSection" onclick="window.closeMobileMenu(); window.filterByCategory('coords')">
+            <span>Co-ord Matching Sets</span>
+            <span>→</span>
+          </a>
+          <a class="mobile-nav-link" href="#productsSection" onclick="window.closeMobileMenu(); window.filterByCategory('outerwear')">
+            <span>Jackets & Overshirts</span>
+            <span>→</span>
+          </a>
+          <a class="mobile-nav-link" href="#productsSection" onclick="window.closeMobileMenu(); window.filterByCategory('accessories')">
+            <span>Garments & Accessories</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="mobile-nav-group">
+        <div class="mobile-nav-group-title">The Gazebo Legacy</div>
+        <div class="mobile-nav-links">
+          <a class="mobile-nav-link" href="#heritageSection" onclick="window.closeMobileMenu()">
+            <span>M.G. Road Pune Flagship (1979)</span>
+            <span style="color: var(--gz-orange); font-weight: 800;">ESTD. 1979</span>
+          </a>
+          <a class="mobile-nav-link" href="https://www.instagram.com/gazibo_clothing/" target="_blank">
+            <span>Official Instagram</span>
+            <span>@gazibo_clothing</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-menu-footer">
+      <span class="demo-preview-pill" style="width: 100%; justify-content: center;">Catalog Prototype Active</span>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       13. Shopping Bag Slide-out Drawer
+       ========================================================================= -->
+  <div id="drawerOverlay" class="drawer-overlay"></div>
+  <aside id="cartDrawer" class="slide-drawer" aria-label="Shopping Bag">
+    <div class="drawer-header">
+      <div class="drawer-title">
+        <span>Shopping Bag</span>
+        <span id="cartDrawerTotalCount" class="drawer-count">(0 items)</span>
+      </div>
+      <button class="drawer-close-btn" onclick="window.gazeboStore.closeCartDrawer()" aria-label="Close cart drawer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Free Shipping Progress Meter -->
+    <div class="drawer-shipping-meter">
+      <div id="freeShippingNotice" class="shipping-meter-text">Add items for FREE Shipping</div>
+      <div class="shipping-progress-track">
+        <div id="freeShippingProgressBar" class="shipping-progress-fill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Drawer Body -->
+    <div class="drawer-body">
+      <!-- Empty Bag State -->
+      <div id="cartEmptyState" class="drawer-empty-state">
+        <div class="drawer-empty-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+        </div>
+        <h3>Your Shopping Bag Is Empty</h3>
+        <p>Explore our new seasonal drop of heavyweight tees and linen shirts.</p>
+        <button class="btn btn--primary" onclick="window.gazeboStore.closeCartDrawer(); window.filterByCategory('all')">
+          Explore Collection
+        </button>
+      </div>
+
+      <!-- Dynamic Item List -->
+      <div id="cartDrawerItems"></div>
+    </div>
+
+    <!-- Drawer Footer (Summary & Checkout Demo) -->
+    <div id="cartDrawerFooter" class="drawer-footer" style="display: none;">
+      <!-- Promo Code Section -->
+      <div class="drawer-promo-box">
+        <input id="cartPromoInput" class="drawer-promo-input" type="text" placeholder="Enter coupon code (try GAZEBO10)" />
+        <button class="btn btn--outline btn--sm" onclick="window.gazeboStore.applyPromo(document.getElementById('cartPromoInput').value)">
+          Apply
+        </button>
+      </div>
+
+      <div id="cartPromoApplied" class="promo-applied-tag" style="display: none;"></div>
+
+      <div class="drawer-summary-row">
+        <span>Subtotal</span>
+        <span id="cartSummarySubtotal">₹0</span>
+      </div>
+
+      <div id="cartSummaryDiscountRow" class="drawer-summary-row" style="display: none; color: var(--gz-orange);">
+        <span>Special Discount</span>
+        <span id="cartSummaryDiscount">-₹0</span>
+      </div>
+
+      <div class="drawer-summary-row">
+        <span>Express Delivery</span>
+        <span id="cartSummaryShipping">FREE</span>
+      </div>
+
+      <div class="drawer-summary-row drawer-summary-row--total">
+        <span>Estimated Total</span>
+        <span id="cartSummaryTotal">₹0</span>
+      </div>
+
+      <button class="btn btn--accent btn--full btn--lg" onclick="window.gazeboStore.showToast('Demo Prototype: Checkout flow simulation ready for payment gateway integration.', 'info')">
+        Proceed To Checkout →
+      </button>
+
+      <p class="checkout-preview-note">
+        Catalog Preview • Secure 256-bit SSL Ready • Estd. 1979 Pune Flagship
+      </p>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       14. Wishlist Slide-out Drawer
+       ========================================================================= -->
+  <aside id="wishlistDrawer" class="slide-drawer" aria-label="Saved Wishlist">
+    <div class="drawer-header">
+      <div class="drawer-title">
+        <span>Saved Wishlist</span>
+        <span id="wishlistDrawerTotalCount" class="drawer-count">(0 items)</span>
+      </div>
+      <button class="drawer-close-btn" onclick="window.gazeboStore.closeWishlistDrawer()" aria-label="Close wishlist drawer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <div id="wishlistEmptyState" class="drawer-empty-state">
+        <div class="drawer-empty-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </div>
+        <h3>No Saved Items</h3>
+        <p>Save your favorite styles for easy shopping later.</p>
+        <button class="btn btn--primary" onclick="window.gazeboStore.closeWishlistDrawer()">
+          Discover Styles
+        </button>
+      </div>
+
+      <div id="wishlistDrawerItems"></div>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       15. Live Search Overlay Modal
+       ========================================================================= -->
+  <div id="searchModal" class="search-modal" role="dialog" aria-modal="true" aria-label="Search catalog">
+    <div class="search-modal__header">
+      <div class="container">
+        <div class="search-input-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input id="searchInputField" class="search-input-field" type="text" placeholder="Search for oversized tees, linen shirts, cargos..." autocomplete="off" />
+          <button id="searchClearBtn" class="search-clear-btn" style="display: none;">Clear</button>
+          <button class="drawer-close-btn" onclick="window.closeSearchModal()" aria-label="Close search">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-modal__body">
+      <div class="container">
+        <!-- Popular Search Suggestions -->
+        <div id="searchPopularTags" class="search-popular-tags">
+          <h4>Popular In Gazebo</h4>
+          <div class="search-tag-chips">
+            <span class="search-tag-chip" data-query="Heavyweight">Heavyweight Tees</span>
+            <span class="search-tag-chip" data-query="Linen">French Linen Shirts</span>
+            <span class="search-tag-chip" data-query="Cargo">Utility Cargos</span>
+            <span class="search-tag-chip" data-query="Polo">Waffle Polos</span>
+            <span class="search-tag-chip" data-query="Co-ord">Matching Sets</span>
+            <span class="search-tag-chip" data-query="Heritage">Heritage 1979</span>
+            <span class="search-tag-chip" data-query="Jacket">Harrington Jackets</span>
+          </div>
+        </div>
+
+        <!-- Empty Query State -->
+        <div id="searchEmptyState" style="display: none; text-align: center; padding: 48px 0;">
+          <h3 style="font-size: 1.2rem; font-weight: 800; text-transform: uppercase;">No Matches Found For <span id="searchEmptyQuery"></span></h3>
+          <p style="color: var(--gz-gray-med); margin-top: 6px;">Try searching for "tee", "cargo", "linen", or "jacket".</p>
+        </div>
+
+        <!-- Results List -->
+        <div id="searchResultsList"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       16. Product Quick View Modal
+       ========================================================================= -->
+  <div id="quickViewOverlay" class="modal-overlay"></div>
+  <div id="quickViewModal" class="quickview-modal" role="dialog" aria-modal="true" aria-label="Product Details">
+    <button id="quickViewClose" class="modal-close-btn" aria-label="Close product view">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div id="quickViewBody"></div>
+  </div>
+
+  <!-- =========================================================================
+       17. Size & Fit Guide Modal
+       ========================================================================= -->
+  <div id="sizeGuideOverlay" class="modal-overlay"></div>
+  <div id="sizeGuideModal" class="size-guide-modal" role="dialog" aria-modal="true" aria-label="Size Guide">
+    <button id="sizeGuideClose" class="modal-close-btn" aria-label="Close size guide">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <h3 style="font-size: 1.4rem; font-weight: 800; text-transform: uppercase;">Gazebo Garment Size Guide</h3>
+    <p style="color: var(--gz-gray-med); font-size: 0.88rem; margin-top: 4px;">
+      All measurements are body measurements in inches. Gazebo apparel features relaxed contemporary tailoring.
+    </p>
+
+    <table class="size-table">
+      <thead>
+        <tr>
+          <th>Size</th>
+          <th>Chest (in)</th>
+          <th>Length (in)</th>
+          <th>Shoulder (in)</th>
+          <th>Waist (Bottoms)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>S (Small)</strong></td>
+          <td>38 - 40"</td>
+          <td>28.5"</td>
+          <td>19.5"</td>
+          <td>28 - 30"</td>
+        </tr>
+        <tr>
+          <td><strong>M (Medium)</strong></td>
+          <td>41 - 43"</td>
+          <td>29.5"</td>
+          <td>20.5"</td>
+          <td>31 - 32"</td>
+        </tr>
+        <tr>
+          <td><strong>L (Large)</strong></td>
+          <td>44 - 46"</td>
+          <td>30.5"</td>
+          <td>21.5"</td>
+          <td>33 - 34"</td>
+        </tr>
+        <tr>
+          <td><strong>XL (Extra Large)</strong></td>
+          <td>47 - 49"</td>
+          <td>31.5"</td>
+          <td>22.5"</td>
+          <td>35 - 36"</td>
+        </tr>
+        <tr>
+          <td><strong>XXL (Double XL)</strong></td>
+          <td>50 - 52"</td>
+          <td>32.5"</td>
+          <td>23.5"</td>
+          <td>37 - 38"</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="margin-top: 24px; padding: 14px; background-color: var(--gz-gray-soft); border-radius: var(--radius-sm); font-size: 0.82rem; color: var(--gz-gray-dark);">
+      <strong>Fitting Note:</strong> For an oversized boxy streetwear aesthetic, order true to size. For a regular classic fit, choose one size down.
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
