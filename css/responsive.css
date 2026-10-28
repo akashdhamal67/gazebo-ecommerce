@@ -1476,3 +1476,18 @@ img, video {
     font-size: 1.2rem !important;
   }
 }
+
+
+@media (max-width: 768px) {
+  .dept-nav-bar {
+    top: 60px !important;
+    padding: 10px 0 8px !important;
+  }
+  .dept-nav-btn {
+    padding: 8px 18px !important;
+    font-size: 0.78rem !important;
+  }
+  .wear-section__header-sticky {
+    top: calc(60px + 52px) !important;
+  }
+}

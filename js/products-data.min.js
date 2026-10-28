@@ -476,7 +476,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Regular Fit"
-    ]
+    ],
+    "primaryImage": "assets/products/men/t-shirts/textured-flat-knit-polo-t-shirt-1.webp",
+    "secondaryImage": "assets/products/men/t-shirts/textured-flat-knit-polo-t-shirt-2.webp"
   },
   {
     "id": "gz-m-t-sh-02",
@@ -513,7 +515,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Slim Fit"
-    ]
+    ],
+    "primaryImage": "assets/products/men/t-shirts/bio-washed-combed-cotton-crew-tee-1.webp",
+    "secondaryImage": "assets/products/men/t-shirts/bio-washed-combed-cotton-crew-tee-2.webp"
   },
   {
     "id": "gz-m-t-sh-03",
@@ -550,7 +554,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Graphic Print"
-    ]
+    ],
+    "primaryImage": "assets/products/men/t-shirts/ribbed-collar-minimalist-t-shirt-1.webp",
+    "secondaryImage": "assets/products/men/t-shirts/ribbed-collar-minimalist-t-shirt-2.webp"
   },
   {
     "id": "gz-m-t-sh-04",
@@ -587,7 +593,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Stripes"
-    ]
+    ],
+    "primaryImage": "assets/products/men/t-shirts/double-mercerized-solid-tee-1.webp",
+    "secondaryImage": "assets/products/men/t-shirts/double-mercerized-solid-tee-2.webp"
   },
   {
     "id": "gz-m-t-sh-05",
@@ -624,7 +632,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/men/t-shirts/waffle-knit-casual-henley-tee-1.webp",
+    "secondaryImage": "assets/products/men/t-shirts/waffle-knit-casual-henley-tee-2.webp"
   },
   {
     "id": "gz-m-t-sh-06",
@@ -661,7 +671,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Blue"
-    ]
+    ],
+    "primaryImage": "assets/products/men/t-shirts/slub-yarn-everyday-crew-t-shirt-1.webp",
+    "secondaryImage": "assets/products/men/t-shirts/slub-yarn-everyday-crew-t-shirt-2.webp"
   },
   {
     "id": "gz-m-over-01",
@@ -698,7 +710,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Graphic Print"
-    ]
+    ],
+    "primaryImage": "assets/products/men/oversized-tees/heavyweight-280-gsm-boxy-tee-1.webp",
+    "secondaryImage": "assets/products/men/oversized-tees/heavyweight-280-gsm-boxy-tee-2.webp"
   },
   {
     "id": "gz-m-over-02",
@@ -735,7 +749,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Textured"
-    ]
+    ],
+    "primaryImage": "assets/products/men/oversized-tees/acid-washed-drop-shoulder-tee-1.webp",
+    "secondaryImage": "assets/products/men/oversized-tees/acid-washed-drop-shoulder-tee-2.webp"
   },
   {
     "id": "gz-m-over-03",
@@ -772,7 +788,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/men/oversized-tees/distressed-hem-streetwear-tee-1.webp",
+    "secondaryImage": "assets/products/men/oversized-tees/distressed-hem-streetwear-tee-2.webp"
   },
   {
     "id": "gz-m-over-04",
@@ -809,7 +827,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Green"
-    ]
+    ],
+    "primaryImage": "assets/products/men/oversized-tees/vintage-typography-oversized-tee-1.webp",
+    "secondaryImage": "assets/products/men/oversized-tees/vintage-typography-oversized-tee-2.webp"
   },
   {
     "id": "gz-m-over-05",
@@ -846,7 +866,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "White"
-    ]
+    ],
+    "primaryImage": "assets/products/men/oversized-tees/raw-edge-architectural-drop-tee-1.webp",
+    "secondaryImage": "assets/products/men/oversized-tees/raw-edge-architectural-drop-tee-2.webp"
   },
   {
     "id": "gz-m-over-06",
@@ -883,7 +905,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Graphic Print"
-    ]
+    ],
+    "primaryImage": "assets/products/men/oversized-tees/dense-waffle-boxy-silhouette-tee-1.webp",
+    "secondaryImage": "assets/products/men/oversized-tees/dense-waffle-boxy-silhouette-tee-2.webp"
   },
   {
     "id": "gz-m-polo-01",
@@ -920,7 +944,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Slim Fit"
-    ]
+    ],
+    "primaryImage": "assets/products/men/polos/structured-flat-knit-stripes-polo-1.webp",
+    "secondaryImage": "assets/products/men/polos/structured-flat-knit-stripes-polo-2.webp"
   },
   {
     "id": "gz-m-polo-02",
@@ -957,7 +983,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Textured"
-    ]
+    ],
+    "primaryImage": "assets/products/men/polos/french-ribbed-zip-collar-polo-1.webp",
+    "secondaryImage": "assets/products/men/polos/french-ribbed-zip-collar-polo-2.webp"
   },
   {
     "id": "gz-m-polo-03",
@@ -994,7 +1022,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Stripes"
-    ]
+    ],
+    "primaryImage": "assets/products/men/polos/pure-pima-cotton-classic-polo-1.webp",
+    "secondaryImage": "assets/products/men/polos/pure-pima-cotton-classic-polo-2.webp"
   },
   {
     "id": "gz-m-polo-04",
@@ -1031,7 +1061,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Blue"
-    ]
+    ],
+    "primaryImage": "assets/products/men/polos/contrast-tipped-collar-polo-1.webp",
+    "secondaryImage": "assets/products/men/polos/contrast-tipped-collar-polo-2.webp"
   },
   {
     "id": "gz-m-polo-05",
@@ -1068,7 +1100,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Green"
-    ]
+    ],
+    "primaryImage": "assets/products/men/polos/open-collar-resort-knit-polo-1.webp",
+    "secondaryImage": "assets/products/men/polos/open-collar-resort-knit-polo-2.webp"
   },
   {
     "id": "gz-m-polo-06",
@@ -1105,7 +1139,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "White"
-    ]
+    ],
+    "primaryImage": "assets/products/men/polos/textured-geometric-weave-polo-1.webp",
+    "secondaryImage": "assets/products/men/polos/textured-geometric-weave-polo-2.webp"
   },
   {
     "id": "gz-m-hood-01",
@@ -1142,7 +1178,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Regular Fit"
-    ]
+    ],
+    "primaryImage": "assets/products/men/hoodies/brushed-fleece-heavyweight-hoodie-1.webp",
+    "secondaryImage": "assets/products/men/hoodies/brushed-fleece-heavyweight-hoodie-2.webp"
   },
   {
     "id": "gz-m-hood-02",
@@ -1179,7 +1217,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Graphic Print"
-    ]
+    ],
+    "primaryImage": "assets/products/men/hoodies/french-terry-washed-boxy-hoodie-1.webp",
+    "secondaryImage": "assets/products/men/hoodies/french-terry-washed-boxy-hoodie-2.webp"
   },
   {
     "id": "gz-m-hood-03",
@@ -1216,7 +1256,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/men/hoodies/raglan-sleeve-oversized-hoodie-1.webp",
+    "secondaryImage": "assets/products/men/hoodies/raglan-sleeve-oversized-hoodie-2.webp"
   },
   {
     "id": "gz-m-hood-04",
@@ -1253,7 +1295,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Green"
-    ]
+    ],
+    "primaryImage": "assets/products/men/hoodies/garment-dyed-raw-seam-hoodie-1.webp",
+    "secondaryImage": "assets/products/men/hoodies/garment-dyed-raw-seam-hoodie-2.webp"
   },
   {
     "id": "gz-m-hood-05",
@@ -1290,7 +1334,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Blue"
-    ]
+    ],
+    "primaryImage": "assets/products/men/hoodies/thermal-lined-streetwear-hoodie-1.webp",
+    "secondaryImage": "assets/products/men/hoodies/thermal-lined-streetwear-hoodie-2.webp"
   },
   {
     "id": "gz-m-hood-06",
@@ -1327,7 +1373,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Regular Fit"
-    ]
+    ],
+    "primaryImage": "assets/products/men/hoodies/minimalist-minimal-stitch-hoodie-1.webp",
+    "secondaryImage": "assets/products/men/hoodies/minimalist-minimal-stitch-hoodie-2.webp"
   },
   {
     "id": "gz-m-swea-01",
@@ -1364,7 +1412,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Oversized"
-    ]
+    ],
+    "primaryImage": "assets/products/men/sweatshirts/relaxed-drop-shoulder-sweatshirt-1.webp",
+    "secondaryImage": "assets/products/men/sweatshirts/relaxed-drop-shoulder-sweatshirt-2.webp"
   },
   {
     "id": "gz-m-swea-02",
@@ -1401,7 +1451,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Textured"
-    ]
+    ],
+    "primaryImage": "assets/products/men/sweatshirts/dense-loopback-cotton-crewneck-1.webp",
+    "secondaryImage": "assets/products/men/sweatshirts/dense-loopback-cotton-crewneck-2.webp"
   },
   {
     "id": "gz-m-swea-03",
@@ -1438,7 +1490,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/men/sweatshirts/pigment-washed-casual-sweatshirt-1.webp",
+    "secondaryImage": "assets/products/men/sweatshirts/pigment-washed-casual-sweatshirt-2.webp"
   },
   {
     "id": "gz-m-swea-04",
@@ -1475,7 +1529,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "White"
-    ]
+    ],
+    "primaryImage": "assets/products/men/sweatshirts/ribbed-hem-heritage-sweatshirt-1.webp",
+    "secondaryImage": "assets/products/men/sweatshirts/ribbed-hem-heritage-sweatshirt-2.webp"
   },
   {
     "id": "gz-m-swea-05",
@@ -1512,7 +1568,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Blue"
-    ]
+    ],
+    "primaryImage": "assets/products/men/sweatshirts/oversized-diagonal-french-terry-crew-1.webp",
+    "secondaryImage": "assets/products/men/sweatshirts/oversized-diagonal-french-terry-crew-2.webp"
   },
   {
     "id": "gz-m-swea-06",
@@ -1549,7 +1607,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Oversized"
-    ]
+    ],
+    "primaryImage": "assets/products/men/sweatshirts/washed-charcoal-minimal-sweatshirt-1.webp",
+    "secondaryImage": "assets/products/men/sweatshirts/washed-charcoal-minimal-sweatshirt-2.webp"
   },
   {
     "id": "gz-m-shir-01",
@@ -1586,7 +1646,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Slim Fit"
-    ]
+    ],
+    "primaryImage": "assets/products/men/shirts/poplin-spread-collar-formal-shirt-1.webp",
+    "secondaryImage": "assets/products/men/shirts/poplin-spread-collar-formal-shirt-2.webp"
   },
   {
     "id": "gz-m-shir-02",
@@ -1623,7 +1685,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Stripes"
-    ]
+    ],
+    "primaryImage": "assets/products/men/shirts/textured-oxford-cotton-button-down-1.webp",
+    "secondaryImage": "assets/products/men/shirts/textured-oxford-cotton-button-down-2.webp"
   },
   {
     "id": "gz-m-shir-03",
@@ -1660,7 +1724,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Textured"
-    ]
+    ],
+    "primaryImage": "assets/products/men/shirts/cuban-camp-collar-casual-shirt-1.webp",
+    "secondaryImage": "assets/products/men/shirts/cuban-camp-collar-casual-shirt-2.webp"
   },
   {
     "id": "gz-m-shir-04",
@@ -1697,7 +1763,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "White"
-    ]
+    ],
+    "primaryImage": "assets/products/men/shirts/fine-corduroy-overshirt-1.webp",
+    "secondaryImage": "assets/products/men/shirts/fine-corduroy-overshirt-2.webp"
   },
   {
     "id": "gz-m-shir-05",
@@ -1734,7 +1802,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Blue"
-    ]
+    ],
+    "primaryImage": "assets/products/men/shirts/tailored-flannel-plaid-shirt-1.webp",
+    "secondaryImage": "assets/products/men/shirts/tailored-flannel-plaid-shirt-2.webp"
   },
   {
     "id": "gz-m-shir-06",
@@ -1771,7 +1841,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/men/shirts/minimalist-mandarin-collar-shirt-1.webp",
+    "secondaryImage": "assets/products/men/shirts/minimalist-mandarin-collar-shirt-2.webp"
   },
   {
     "id": "gz-m-line-01",
@@ -1808,7 +1880,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Oversized"
-    ]
+    ],
+    "primaryImage": "assets/products/men/linen-shirts/pure-french-linen-camp-collar-shirt-1.webp",
+    "secondaryImage": "assets/products/men/linen-shirts/pure-french-linen-camp-collar-shirt-2.webp"
   },
   {
     "id": "gz-m-line-02",
@@ -1845,7 +1919,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Textured"
-    ]
+    ],
+    "primaryImage": "assets/products/men/linen-shirts/relaxed-breezy-linen-overshirt-1.webp",
+    "secondaryImage": "assets/products/men/linen-shirts/relaxed-breezy-linen-overshirt-2.webp"
   },
   {
     "id": "gz-m-line-03",
@@ -1882,7 +1958,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "White"
-    ]
+    ],
+    "primaryImage": "assets/products/men/linen-shirts/textured-slub-linen-button-down-1.webp",
+    "secondaryImage": "assets/products/men/linen-shirts/textured-slub-linen-button-down-2.webp"
   },
   {
     "id": "gz-m-line-04",
@@ -1919,7 +1997,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Green"
-    ]
+    ],
+    "primaryImage": "assets/products/men/linen-shirts/mandarin-band-collar-linen-shirt-1.webp",
+    "secondaryImage": "assets/products/men/linen-shirts/mandarin-band-collar-linen-shirt-2.webp"
   },
   {
     "id": "gz-m-line-05",
@@ -1956,7 +2036,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Blue"
-    ]
+    ],
+    "primaryImage": "assets/products/men/linen-shirts/garment-washed-pure-linen-shirt-1.webp",
+    "secondaryImage": "assets/products/men/linen-shirts/garment-washed-pure-linen-shirt-2.webp"
   },
   {
     "id": "gz-m-line-06",
@@ -1993,7 +2075,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Oversized"
-    ]
+    ],
+    "primaryImage": "assets/products/men/linen-shirts/striped-coastal-linen-casual-shirt-1.webp",
+    "secondaryImage": "assets/products/men/linen-shirts/striped-coastal-linen-casual-shirt-2.webp"
   },
   {
     "id": "gz-m-jean-01",
@@ -2030,7 +2114,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Slim Fit"
-    ]
+    ],
+    "primaryImage": "assets/products/men/jeans/straight-leg-selvedge-indigo-jeans-1.webp",
+    "secondaryImage": "assets/products/men/jeans/straight-leg-selvedge-indigo-jeans-2.webp"
   },
   {
     "id": "gz-m-jean-02",
@@ -2067,7 +2153,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Oversized"
-    ]
+    ],
+    "primaryImage": "assets/products/men/jeans/flared-retro-light-wash-jeans-1.webp",
+    "secondaryImage": "assets/products/men/jeans/flared-retro-light-wash-jeans-2.webp"
   },
   {
     "id": "gz-m-jean-03",
@@ -2104,7 +2192,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Blue"
-    ]
+    ],
+    "primaryImage": "assets/products/men/jeans/washed-baggy-relaxed-denim-1.webp",
+    "secondaryImage": "assets/products/men/jeans/washed-baggy-relaxed-denim-2.webp"
   },
   {
     "id": "gz-m-jean-04",
@@ -2141,7 +2231,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/men/jeans/vintage-faded-black-denim-1.webp",
+    "secondaryImage": "assets/products/men/jeans/vintage-faded-black-denim-2.webp"
   },
   {
     "id": "gz-m-jean-05",
@@ -2178,7 +2270,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Slim Fit"
-    ]
+    ],
+    "primaryImage": "assets/products/men/jeans/clean-tapered-raw-denim-jeans-1.webp",
+    "secondaryImage": "assets/products/men/jeans/clean-tapered-raw-denim-jeans-2.webp"
   },
   {
     "id": "gz-m-jean-06",
@@ -2215,7 +2309,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Oversized"
-    ]
+    ],
+    "primaryImage": "assets/products/men/jeans/carpenter-seam-relaxed-jeans-1.webp",
+    "secondaryImage": "assets/products/men/jeans/carpenter-seam-relaxed-jeans-2.webp"
   },
   {
     "id": "gz-m-carg-01",
@@ -2252,7 +2348,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Regular Fit"
-    ]
+    ],
+    "primaryImage": "assets/products/men/cargos/tactical-multi-pocket-cargo-pants-1.webp",
+    "secondaryImage": "assets/products/men/cargos/tactical-multi-pocket-cargo-pants-2.webp"
   },
   {
     "id": "gz-m-carg-02",
@@ -2289,7 +2387,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Green"
-    ]
+    ],
+    "primaryImage": "assets/products/men/cargos/relaxed-drawstring-cotton-cargos-1.webp",
+    "secondaryImage": "assets/products/men/cargos/relaxed-drawstring-cotton-cargos-2.webp"
   },
   {
     "id": "gz-m-carg-03",
@@ -2326,7 +2426,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/men/cargos/pleated-wide-leg-utilitarian-cargos-1.webp",
+    "secondaryImage": "assets/products/men/cargos/pleated-wide-leg-utilitarian-cargos-2.webp"
   },
   {
     "id": "gz-m-carg-04",
@@ -2363,7 +2465,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Regular Fit"
-    ]
+    ],
+    "primaryImage": "assets/products/men/cargos/heavy-twill-parachute-cargo-pants-1.webp",
+    "secondaryImage": "assets/products/men/cargos/heavy-twill-parachute-cargo-pants-2.webp"
   },
   {
     "id": "gz-m-carg-05",
@@ -2400,7 +2504,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Green"
-    ]
+    ],
+    "primaryImage": "assets/products/men/cargos/tapered-cuff-modular-cargos-1.webp",
+    "secondaryImage": "assets/products/men/cargos/tapered-cuff-modular-cargos-2.webp"
   },
   {
     "id": "gz-m-carg-06",
@@ -2437,7 +2543,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/men/cargos/washed-olive-ripstop-cargo-trousers-1.webp",
+    "secondaryImage": "assets/products/men/cargos/washed-olive-ripstop-cargo-trousers-2.webp"
   },
   {
     "id": "gz-m-trou-01",
@@ -2474,7 +2582,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Slim Fit",
       "Regular Fit"
-    ]
+    ],
+    "primaryImage": "assets/products/men/trousers/pleated-relaxed-tailored-trousers-1.webp",
+    "secondaryImage": "assets/products/men/trousers/pleated-relaxed-tailored-trousers-2.webp"
   },
   {
     "id": "gz-m-trou-02",
@@ -2511,7 +2621,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Slim Fit",
       "Textured"
-    ]
+    ],
+    "primaryImage": "assets/products/men/trousers/clean-minimalist-ankle-trousers-1.webp",
+    "secondaryImage": "assets/products/men/trousers/clean-minimalist-ankle-trousers-2.webp"
   },
   {
     "id": "gz-m-trou-03",
@@ -2548,7 +2660,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Slim Fit",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/men/trousers/fluid-viscose-blend-drape-pants-1.webp",
+    "secondaryImage": "assets/products/men/trousers/fluid-viscose-blend-drape-pants-2.webp"
   },
   {
     "id": "gz-m-trou-04",
@@ -2585,7 +2699,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Slim Fit",
       "Blue"
-    ]
+    ],
+    "primaryImage": "assets/products/men/trousers/structured-wool-touch-straight-trousers-1.webp",
+    "secondaryImage": "assets/products/men/trousers/structured-wool-touch-straight-trousers-2.webp"
   },
   {
     "id": "gz-m-trou-05",
@@ -2622,7 +2738,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Slim Fit",
       "Regular Fit"
-    ]
+    ],
+    "primaryImage": "assets/products/men/trousers/elasticated-waist-formal-trousers-1.webp",
+    "secondaryImage": "assets/products/men/trousers/elasticated-waist-formal-trousers-2.webp"
   },
   {
     "id": "gz-m-trou-06",
@@ -2659,7 +2777,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Slim Fit",
       "Textured"
-    ]
+    ],
+    "primaryImage": "assets/products/men/trousers/herringbone-weave-classic-trousers-1.webp",
+    "secondaryImage": "assets/products/men/trousers/herringbone-weave-classic-trousers-2.webp"
   },
   {
     "id": "gz-m-jack-01",
@@ -2696,7 +2816,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Oversized"
-    ]
+    ],
+    "primaryImage": "assets/products/men/jackets/varsity-bomber-wool-blend-jacket-1.webp",
+    "secondaryImage": "assets/products/men/jackets/varsity-bomber-wool-blend-jacket-2.webp"
   },
   {
     "id": "gz-m-jack-02",
@@ -2733,7 +2855,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/men/jackets/heavy-trucker-washed-denim-jacket-1.webp",
+    "secondaryImage": "assets/products/men/jackets/heavy-trucker-washed-denim-jacket-2.webp"
   },
   {
     "id": "gz-m-jack-03",
@@ -2770,7 +2894,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Green"
-    ]
+    ],
+    "primaryImage": "assets/products/men/jackets/harrington-minimalist-zip-jacket-1.webp",
+    "secondaryImage": "assets/products/men/jackets/harrington-minimalist-zip-jacket-2.webp"
   },
   {
     "id": "gz-m-jack-04",
@@ -2807,7 +2933,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Blue"
-    ]
+    ],
+    "primaryImage": "assets/products/men/jackets/quilted-overshirt-utility-jacket-1.webp",
+    "secondaryImage": "assets/products/men/jackets/quilted-overshirt-utility-jacket-2.webp"
   },
   {
     "id": "gz-m-jack-05",
@@ -2844,7 +2972,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Oversized"
-    ]
+    ],
+    "primaryImage": "assets/products/men/jackets/boxy-twill-worker-overshirt-jacket-1.webp",
+    "secondaryImage": "assets/products/men/jackets/boxy-twill-worker-overshirt-jacket-2.webp"
   },
   {
     "id": "gz-m-jack-06",
@@ -2881,7 +3011,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/men/jackets/padded-shell-minimalist-jacket-1.webp",
+    "secondaryImage": "assets/products/men/jackets/padded-shell-minimalist-jacket-2.webp"
   },
   {
     "id": "gz-m-swea-01",
@@ -2918,7 +3050,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Textured"
-    ]
+    ],
+    "primaryImage": "assets/products/men/sweaters/ribbed-fishermans-wool-sweater-1.webp",
+    "secondaryImage": "assets/products/men/sweaters/ribbed-fishermans-wool-sweater-2.webp"
   },
   {
     "id": "gz-m-swea-02",
@@ -2955,7 +3089,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Stripes"
-    ]
+    ],
+    "primaryImage": "assets/products/men/sweaters/chunky-cable-knit-crew-sweater-1.webp",
+    "secondaryImage": "assets/products/men/sweaters/chunky-cable-knit-crew-sweater-2.webp"
   },
   {
     "id": "gz-m-swea-03",
@@ -2992,7 +3128,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/men/sweaters/fine-merino-blend-minimal-sweater-1.webp",
+    "secondaryImage": "assets/products/men/sweaters/fine-merino-blend-minimal-sweater-2.webp"
   },
   {
     "id": "gz-m-swea-04",
@@ -3029,7 +3167,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "White"
-    ]
+    ],
+    "primaryImage": "assets/products/men/sweaters/textured-waffle-stitch-knit-sweater-1.webp",
+    "secondaryImage": "assets/products/men/sweaters/textured-waffle-stitch-knit-sweater-2.webp"
   },
   {
     "id": "gz-m-swea-05",
@@ -3066,7 +3206,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Green"
-    ]
+    ],
+    "primaryImage": "assets/products/men/sweaters/brushed-mohair-touch-stripe-sweater-1.webp",
+    "secondaryImage": "assets/products/men/sweaters/brushed-mohair-touch-stripe-sweater-2.webp"
   },
   {
     "id": "gz-m-swea-06",
@@ -3103,7 +3245,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Textured"
-    ]
+    ],
+    "primaryImage": "assets/products/men/sweaters/relaxed-drop-shoulder-knit-sweater-1.webp",
+    "secondaryImage": "assets/products/men/sweaters/relaxed-drop-shoulder-knit-sweater-2.webp"
   },
   {
     "id": "gz-m-shor-01",
@@ -3140,7 +3284,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Oversized"
-    ]
+    ],
+    "primaryImage": "assets/products/men/shorts/heavy-french-terry-lounge-shorts-1.webp",
+    "secondaryImage": "assets/products/men/shorts/heavy-french-terry-lounge-shorts-2.webp"
   },
   {
     "id": "gz-m-shor-02",
@@ -3177,7 +3323,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/men/shorts/tailored-linen-drawstring-shorts-1.webp",
+    "secondaryImage": "assets/products/men/shorts/tailored-linen-drawstring-shorts-2.webp"
   },
   {
     "id": "gz-m-shor-03",
@@ -3214,7 +3362,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Green"
-    ]
+    ],
+    "primaryImage": "assets/products/men/shorts/utility-cargo-pocket-cotton-shorts-1.webp",
+    "secondaryImage": "assets/products/men/shorts/utility-cargo-pocket-cotton-shorts-2.webp"
   },
   {
     "id": "gz-m-shor-04",
@@ -3251,7 +3401,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Blue"
-    ]
+    ],
+    "primaryImage": "assets/products/men/shorts/pleated-relaxed-everyday-shorts-1.webp",
+    "secondaryImage": "assets/products/men/shorts/pleated-relaxed-everyday-shorts-2.webp"
   },
   {
     "id": "gz-m-shor-05",
@@ -3288,7 +3440,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Oversized"
-    ]
+    ],
+    "primaryImage": "assets/products/men/shorts/washed-denim-raw-cut-shorts-1.webp",
+    "secondaryImage": "assets/products/men/shorts/washed-denim-raw-cut-shorts-2.webp"
   },
   {
     "id": "gz-m-shor-06",
@@ -3325,7 +3479,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Regular Fit",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/men/shorts/breezy-seersucker-resort-shorts-1.webp",
+    "secondaryImage": "assets/products/men/shorts/breezy-seersucker-resort-shorts-2.webp"
   },
   {
     "id": "gz-w-co-o-01",
@@ -3362,7 +3518,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Linen",
       "Printed"
-    ]
+    ],
+    "primaryImage": "assets/products/women/co-ords/pure-linen-camp-shirt-trouser-set-1.webp",
+    "secondaryImage": "assets/products/women/co-ords/pure-linen-camp-shirt-trouser-set-2.webp"
   },
   {
     "id": "gz-w-co-o-02",
@@ -3399,7 +3557,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Linen",
       "Oversized"
-    ]
+    ],
+    "primaryImage": "assets/products/women/co-ords/ribbed-knit-crop-top-flared-pant-set-1.webp",
+    "secondaryImage": "assets/products/women/co-ords/ribbed-knit-crop-top-flared-pant-set-2.webp"
   },
   {
     "id": "gz-w-co-o-03",
@@ -3436,7 +3596,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Linen",
       "Pastel"
-    ]
+    ],
+    "primaryImage": "assets/products/women/co-ords/textured-cotton-blazer-short-set-1.webp",
+    "secondaryImage": "assets/products/women/co-ords/textured-cotton-blazer-short-set-2.webp"
   },
   {
     "id": "gz-w-co-o-04",
@@ -3473,7 +3635,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Linen",
       "White"
-    ]
+    ],
+    "primaryImage": "assets/products/women/co-ords/fluid-printed-resort-co-ord-set-1.webp",
+    "secondaryImage": "assets/products/women/co-ords/fluid-printed-resort-co-ord-set-2.webp"
   },
   {
     "id": "gz-w-co-o-05",
@@ -3510,7 +3674,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Linen",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/women/co-ords/oversized-poplin-shirt-short-set-1.webp",
+    "secondaryImage": "assets/products/women/co-ords/oversized-poplin-shirt-short-set-2.webp"
   },
   {
     "id": "gz-w-co-o-06",
@@ -3547,7 +3713,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Linen",
       "Printed"
-    ]
+    ],
+    "primaryImage": "assets/products/women/co-ords/monochrome-tailored-vest-trouser-set-1.webp",
+    "secondaryImage": "assets/products/women/co-ords/monochrome-tailored-vest-trouser-set-2.webp"
   },
   {
     "id": "gz-w-tops-01",
@@ -3584,7 +3752,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cropped",
       "Printed"
-    ]
+    ],
+    "primaryImage": "assets/products/women/tops/ribbed-square-neck-fitted-crop-top-1.webp",
+    "secondaryImage": "assets/products/women/tops/ribbed-square-neck-fitted-crop-top-2.webp"
   },
   {
     "id": "gz-w-tops-02",
@@ -3621,7 +3791,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cropped",
       "Floral"
-    ]
+    ],
+    "primaryImage": "assets/products/women/tops/asymmetrical-drape-halter-top-1.webp",
+    "secondaryImage": "assets/products/women/tops/asymmetrical-drape-halter-top-2.webp"
   },
   {
     "id": "gz-w-tops-03",
@@ -3658,7 +3830,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cropped",
       "White"
-    ]
+    ],
+    "primaryImage": "assets/products/women/tops/textured-knit-sleeveless-tank-top-1.webp",
+    "secondaryImage": "assets/products/women/tops/textured-knit-sleeveless-tank-top-2.webp"
   },
   {
     "id": "gz-w-tops-04",
@@ -3695,7 +3869,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cropped",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/women/tops/sculpted-sweetheart-neckline-top-1.webp",
+    "secondaryImage": "assets/products/women/tops/sculpted-sweetheart-neckline-top-2.webp"
   },
   {
     "id": "gz-w-tops-05",
@@ -3732,7 +3908,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cropped",
       "Pastel"
-    ]
+    ],
+    "primaryImage": "assets/products/women/tops/gathered-linen-cap-sleeve-top-1.webp",
+    "secondaryImage": "assets/products/women/tops/gathered-linen-cap-sleeve-top-2.webp"
   },
   {
     "id": "gz-w-tops-06",
@@ -3769,7 +3947,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cropped",
       "Printed"
-    ]
+    ],
+    "primaryImage": "assets/products/women/tops/button-front-minimal-ribbed-top-1.webp",
+    "secondaryImage": "assets/products/women/tops/button-front-minimal-ribbed-top-2.webp"
   },
   {
     "id": "gz-w-over-01",
@@ -3806,7 +3986,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Printed"
-    ]
+    ],
+    "primaryImage": "assets/products/women/oversized-tees/heavyweight-boxy-graphic-tee-1.webp",
+    "secondaryImage": "assets/products/women/oversized-tees/heavyweight-boxy-graphic-tee-2.webp"
   },
   {
     "id": "gz-w-over-02",
@@ -3843,7 +4025,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/women/oversized-tees/vintage-mineral-washed-drop-tee-1.webp",
+    "secondaryImage": "assets/products/women/oversized-tees/vintage-mineral-washed-drop-tee-2.webp"
   },
   {
     "id": "gz-w-over-03",
@@ -3880,7 +4064,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "White"
-    ]
+    ],
+    "primaryImage": "assets/products/women/oversized-tees/botanical-floral-oversized-t-shirt-1.webp",
+    "secondaryImage": "assets/products/women/oversized-tees/botanical-floral-oversized-t-shirt-2.webp"
   },
   {
     "id": "gz-w-over-04",
@@ -3917,7 +4103,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Pastel"
-    ]
+    ],
+    "primaryImage": "assets/products/women/oversized-tees/distressed-raw-edge-boyfriend-tee-1.webp",
+    "secondaryImage": "assets/products/women/oversized-tees/distressed-raw-edge-boyfriend-tee-2.webp"
   },
   {
     "id": "gz-w-over-05",
@@ -3954,7 +4142,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Printed"
-    ]
+    ],
+    "primaryImage": "assets/products/women/oversized-tees/dense-cotton-minimal-typo-tee-1.webp",
+    "secondaryImage": "assets/products/women/oversized-tees/dense-cotton-minimal-typo-tee-2.webp"
   },
   {
     "id": "gz-w-over-06",
@@ -3991,7 +4181,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/women/oversized-tees/acid-washed-slouched-silhouette-tee-1.webp",
+    "secondaryImage": "assets/products/women/oversized-tees/acid-washed-slouched-silhouette-tee-2.webp"
   },
   {
     "id": "gz-w-hood-01",
@@ -4028,7 +4220,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Cropped"
-    ]
+    ],
+    "primaryImage": "assets/products/women/hoodies/cropped-french-terry-streetwear-hoodie-1.webp",
+    "secondaryImage": "assets/products/women/hoodies/cropped-french-terry-streetwear-hoodie-2.webp"
   },
   {
     "id": "gz-w-hood-02",
@@ -4065,7 +4259,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Pastel"
-    ]
+    ],
+    "primaryImage": "assets/products/women/hoodies/slouched-drop-shoulder-pastel-hoodie-1.webp",
+    "secondaryImage": "assets/products/women/hoodies/slouched-drop-shoulder-pastel-hoodie-2.webp"
   },
   {
     "id": "gz-w-hood-03",
@@ -4102,7 +4298,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/women/hoodies/brushed-fleece-relaxed-fit-hoodie-1.webp",
+    "secondaryImage": "assets/products/women/hoodies/brushed-fleece-relaxed-fit-hoodie-2.webp"
   },
   {
     "id": "gz-w-hood-04",
@@ -4139,7 +4337,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "White"
-    ]
+    ],
+    "primaryImage": "assets/products/women/hoodies/drawstring-hem-boxy-crop-hoodie-1.webp",
+    "secondaryImage": "assets/products/women/hoodies/drawstring-hem-boxy-crop-hoodie-2.webp"
   },
   {
     "id": "gz-w-hood-05",
@@ -4176,7 +4376,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Cropped"
-    ]
+    ],
+    "primaryImage": "assets/products/women/hoodies/acid-washed-charcoal-cotton-hoodie-1.webp",
+    "secondaryImage": "assets/products/women/hoodies/acid-washed-charcoal-cotton-hoodie-2.webp"
   },
   {
     "id": "gz-w-hood-06",
@@ -4213,7 +4415,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Pastel"
-    ]
+    ],
+    "primaryImage": "assets/products/women/hoodies/zip-up-oversized-minimalist-hoodie-1.webp",
+    "secondaryImage": "assets/products/women/hoodies/zip-up-oversized-minimalist-hoodie-2.webp"
   },
   {
     "id": "gz-w-swea-01",
@@ -4250,7 +4454,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Cropped"
-    ]
+    ],
+    "primaryImage": "assets/products/women/sweatshirts/relaxed-slouch-crewneck-sweatshirt-1.webp",
+    "secondaryImage": "assets/products/women/sweatshirts/relaxed-slouch-crewneck-sweatshirt-2.webp"
   },
   {
     "id": "gz-w-swea-02",
@@ -4287,7 +4493,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "White"
-    ]
+    ],
+    "primaryImage": "assets/products/women/sweatshirts/cropped-raw-hem-cotton-pullover-1.webp",
+    "secondaryImage": "assets/products/women/sweatshirts/cropped-raw-hem-cotton-pullover-2.webp"
   },
   {
     "id": "gz-w-swea-03",
@@ -4324,7 +4532,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Pastel"
-    ]
+    ],
+    "primaryImage": "assets/products/women/sweatshirts/vintage-collegiate-print-sweatshirt-1.webp",
+    "secondaryImage": "assets/products/women/sweatshirts/vintage-collegiate-print-sweatshirt-2.webp"
   },
   {
     "id": "gz-w-swea-04",
@@ -4361,7 +4571,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/women/sweatshirts/french-terry-dropped-shoulder-crew-1.webp",
+    "secondaryImage": "assets/products/women/sweatshirts/french-terry-dropped-shoulder-crew-2.webp"
   },
   {
     "id": "gz-w-swea-05",
@@ -4398,7 +4610,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Cropped"
-    ]
+    ],
+    "primaryImage": "assets/products/women/sweatshirts/washed-olive-everyday-sweatshirt-1.webp",
+    "secondaryImage": "assets/products/women/sweatshirts/washed-olive-everyday-sweatshirt-2.webp"
   },
   {
     "id": "gz-w-swea-06",
@@ -4435,7 +4649,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "White"
-    ]
+    ],
+    "primaryImage": "assets/products/women/sweatshirts/soft-brushed-minimalist-sweatshirt-1.webp",
+    "secondaryImage": "assets/products/women/sweatshirts/soft-brushed-minimalist-sweatshirt-2.webp"
   },
   {
     "id": "gz-w-shir-01",
@@ -4472,7 +4688,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Linen",
       "Oversized"
-    ]
+    ],
+    "primaryImage": "assets/products/women/shirts/oversized-crisp-poplin-boyfriend-shirt-1.webp",
+    "secondaryImage": "assets/products/women/shirts/oversized-crisp-poplin-boyfriend-shirt-2.webp"
   },
   {
     "id": "gz-w-shir-02",
@@ -4509,7 +4727,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Linen",
       "Printed"
-    ]
+    ],
+    "primaryImage": "assets/products/women/shirts/textured-cotton-camp-collar-shirt-1.webp",
+    "secondaryImage": "assets/products/women/shirts/textured-cotton-camp-collar-shirt-2.webp"
   },
   {
     "id": "gz-w-shir-03",
@@ -4546,7 +4766,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Linen",
       "White"
-    ]
+    ],
+    "primaryImage": "assets/products/women/shirts/striped-relaxed-tailored-shirt-1.webp",
+    "secondaryImage": "assets/products/women/shirts/striped-relaxed-tailored-shirt-2.webp"
   },
   {
     "id": "gz-w-shir-04",
@@ -4583,7 +4805,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Linen",
       "Pastel"
-    ]
+    ],
+    "primaryImage": "assets/products/women/shirts/breezy-viscose-fluid-drape-shirt-1.webp",
+    "secondaryImage": "assets/products/women/shirts/breezy-viscose-fluid-drape-shirt-2.webp"
   },
   {
     "id": "gz-w-shir-05",
@@ -4620,7 +4844,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Linen",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/women/shirts/tie-front-cropped-linen-shirt-1.webp",
+    "secondaryImage": "assets/products/women/shirts/tie-front-cropped-linen-shirt-2.webp"
   },
   {
     "id": "gz-w-shir-06",
@@ -4657,7 +4883,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Linen",
       "Oversized"
-    ]
+    ],
+    "primaryImage": "assets/products/women/shirts/pleated-back-modern-minimal-shirt-1.webp",
+    "secondaryImage": "assets/products/women/shirts/pleated-back-modern-minimal-shirt-2.webp"
   },
   {
     "id": "gz-w-dres-01",
@@ -4694,7 +4922,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Floral",
       "Printed"
-    ]
+    ],
+    "primaryImage": "assets/products/women/dresses/tiered-cotton-midi-day-dress-1.webp",
+    "secondaryImage": "assets/products/women/dresses/tiered-cotton-midi-day-dress-2.webp"
   },
   {
     "id": "gz-w-dres-02",
@@ -4731,7 +4961,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Floral",
       "Linen"
-    ]
+    ],
+    "primaryImage": "assets/products/women/dresses/fluted-hem-linen-sundress-1.webp",
+    "secondaryImage": "assets/products/women/dresses/fluted-hem-linen-sundress-2.webp"
   },
   {
     "id": "gz-w-dres-03",
@@ -4768,7 +5000,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Floral",
       "Pastel"
-    ]
+    ],
+    "primaryImage": "assets/products/women/dresses/ribbed-knit-bodycon-midi-dress-1.webp",
+    "secondaryImage": "assets/products/women/dresses/ribbed-knit-bodycon-midi-dress-2.webp"
   },
   {
     "id": "gz-w-dres-04",
@@ -4805,7 +5039,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Floral",
       "White"
-    ]
+    ],
+    "primaryImage": "assets/products/women/dresses/puff-sleeve-floral-cottage-dress-1.webp",
+    "secondaryImage": "assets/products/women/dresses/puff-sleeve-floral-cottage-dress-2.webp"
   },
   {
     "id": "gz-w-dres-05",
@@ -4842,7 +5078,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Floral",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/women/dresses/pleated-belted-shirt-dress-1.webp",
+    "secondaryImage": "assets/products/women/dresses/pleated-belted-shirt-dress-2.webp"
   },
   {
     "id": "gz-w-dres-06",
@@ -4879,7 +5117,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Floral",
       "Printed"
-    ]
+    ],
+    "primaryImage": "assets/products/women/dresses/minimalist-straight-cut-slip-dress-1.webp",
+    "secondaryImage": "assets/products/women/dresses/minimalist-straight-cut-slip-dress-2.webp"
   },
   {
     "id": "gz-w-jean-01",
@@ -4916,7 +5156,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Cropped"
-    ]
+    ],
+    "primaryImage": "assets/products/women/jeans/high-waist-wide-leg-flared-jeans-1.webp",
+    "secondaryImage": "assets/products/women/jeans/high-waist-wide-leg-flared-jeans-2.webp"
   },
   {
     "id": "gz-w-jean-02",
@@ -4953,7 +5195,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/women/jeans/vintage-relaxed-straight-leg-denim-1.webp",
+    "secondaryImage": "assets/products/women/jeans/vintage-relaxed-straight-leg-denim-2.webp"
   },
   {
     "id": "gz-w-jean-03",
@@ -4990,7 +5234,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "White"
-    ]
+    ],
+    "primaryImage": "assets/products/women/jeans/curved-balloon-leg-washed-jeans-1.webp",
+    "secondaryImage": "assets/products/women/jeans/curved-balloon-leg-washed-jeans-2.webp"
   },
   {
     "id": "gz-w-jean-04",
@@ -5027,7 +5273,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Cropped"
-    ]
+    ],
+    "primaryImage": "assets/products/women/jeans/90s-baggy-slouched-denim-pants-1.webp",
+    "secondaryImage": "assets/products/women/jeans/90s-baggy-slouched-denim-pants-2.webp"
   },
   {
     "id": "gz-w-jean-05",
@@ -5064,7 +5312,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/women/jeans/raw-hem-ankle-flare-jeans-1.webp",
+    "secondaryImage": "assets/products/women/jeans/raw-hem-ankle-flare-jeans-2.webp"
   },
   {
     "id": "gz-w-jean-06",
@@ -5101,7 +5351,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "White"
-    ]
+    ],
+    "primaryImage": "assets/products/women/jeans/faded-charcoal-high-rise-jeans-1.webp",
+    "secondaryImage": "assets/products/women/jeans/faded-charcoal-high-rise-jeans-2.webp"
   },
   {
     "id": "gz-w-wide-01",
@@ -5138,7 +5390,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Linen",
       "Oversized"
-    ]
+    ],
+    "primaryImage": "assets/products/women/wide-leg-pants/pleated-tailored-wide-leg-trousers-1.webp",
+    "secondaryImage": "assets/products/women/wide-leg-pants/pleated-tailored-wide-leg-trousers-2.webp"
   },
   {
     "id": "gz-w-wide-02",
@@ -5175,7 +5429,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Linen",
       "White"
-    ]
+    ],
+    "primaryImage": "assets/products/women/wide-leg-pants/pure-linen-high-waist-palazzos-1.webp",
+    "secondaryImage": "assets/products/women/wide-leg-pants/pure-linen-high-waist-palazzos-2.webp"
   },
   {
     "id": "gz-w-wide-03",
@@ -5212,7 +5468,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Linen",
       "Pastel"
-    ]
+    ],
+    "primaryImage": "assets/products/women/wide-leg-pants/drawstring-viscose-flowy-trousers-1.webp",
+    "secondaryImage": "assets/products/women/wide-leg-pants/drawstring-viscose-flowy-trousers-2.webp"
   },
   {
     "id": "gz-w-wide-04",
@@ -5249,7 +5507,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Linen",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/women/wide-leg-pants/fluid-modal-clean-cut-wide-pants-1.webp",
+    "secondaryImage": "assets/products/women/wide-leg-pants/fluid-modal-clean-cut-wide-pants-2.webp"
   },
   {
     "id": "gz-w-wide-05",
@@ -5286,7 +5546,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Linen",
       "Oversized"
-    ]
+    ],
+    "primaryImage": "assets/products/women/wide-leg-pants/structured-wool-touch-wide-legs-1.webp",
+    "secondaryImage": "assets/products/women/wide-leg-pants/structured-wool-touch-wide-legs-2.webp"
   },
   {
     "id": "gz-w-wide-06",
@@ -5323,7 +5585,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Linen",
       "White"
-    ]
+    ],
+    "primaryImage": "assets/products/women/wide-leg-pants/striped-coastal-relaxed-pants-1.webp",
+    "secondaryImage": "assets/products/women/wide-leg-pants/striped-coastal-relaxed-pants-2.webp"
   },
   {
     "id": "gz-w-carg-01",
@@ -5360,7 +5624,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/women/cargos/low-rise-baggy-parachute-cargos-1.webp",
+    "secondaryImage": "assets/products/women/cargos/low-rise-baggy-parachute-cargos-2.webp"
   },
   {
     "id": "gz-w-carg-02",
@@ -5397,7 +5663,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "White"
-    ]
+    ],
+    "primaryImage": "assets/products/women/cargos/high-waist-tailored-utility-cargos-1.webp",
+    "secondaryImage": "assets/products/women/cargos/high-waist-tailored-utility-cargos-2.webp"
   },
   {
     "id": "gz-w-carg-03",
@@ -5434,7 +5702,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Pastel"
-    ]
+    ],
+    "primaryImage": "assets/products/women/cargos/satin-finish-wide-leg-cargo-pants-1.webp",
+    "secondaryImage": "assets/products/women/cargos/satin-finish-wide-leg-cargo-pants-2.webp"
   },
   {
     "id": "gz-w-carg-04",
@@ -5471,7 +5741,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/women/cargos/drawstring-hem-multi-pocket-cargos-1.webp",
+    "secondaryImage": "assets/products/women/cargos/drawstring-hem-multi-pocket-cargos-2.webp"
   },
   {
     "id": "gz-w-carg-05",
@@ -5508,7 +5780,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "White"
-    ]
+    ],
+    "primaryImage": "assets/products/women/cargos/washed-cotton-casual-street-cargos-1.webp",
+    "secondaryImage": "assets/products/women/cargos/washed-cotton-casual-street-cargos-2.webp"
   },
   {
     "id": "gz-w-carg-06",
@@ -5545,7 +5819,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Oversized",
       "Pastel"
-    ]
+    ],
+    "primaryImage": "assets/products/women/cargos/twill-cargo-trousers-with-d-ring-1.webp",
+    "secondaryImage": "assets/products/women/cargos/twill-cargo-trousers-with-d-ring-2.webp"
   },
   {
     "id": "gz-w-jack-01",
@@ -5582,7 +5858,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cropped",
       "Oversized"
-    ]
+    ],
+    "primaryImage": "assets/products/women/jackets/cropped-denim-trucker-jacket-1.webp",
+    "secondaryImage": "assets/products/women/jackets/cropped-denim-trucker-jacket-2.webp"
   },
   {
     "id": "gz-w-jack-02",
@@ -5619,7 +5897,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cropped",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/women/jackets/oversized-tailored-casual-blazer-1.webp",
+    "secondaryImage": "assets/products/women/jackets/oversized-tailored-casual-blazer-2.webp"
   },
   {
     "id": "gz-w-jack-03",
@@ -5656,7 +5936,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cropped",
       "Pastel"
-    ]
+    ],
+    "primaryImage": "assets/products/women/jackets/boxy-faux-leather-moto-jacket-1.webp",
+    "secondaryImage": "assets/products/women/jackets/boxy-faux-leather-moto-jacket-2.webp"
   },
   {
     "id": "gz-w-jack-04",
@@ -5693,7 +5975,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cropped",
       "Oversized"
-    ]
+    ],
+    "primaryImage": "assets/products/women/jackets/quilted-lightweight-utility-jacket-1.webp",
+    "secondaryImage": "assets/products/women/jackets/quilted-lightweight-utility-jacket-2.webp"
   },
   {
     "id": "gz-w-jack-05",
@@ -5730,7 +6014,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cropped",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/women/jackets/relaxed-bomber-zip-up-jacket-1.webp",
+    "secondaryImage": "assets/products/women/jackets/relaxed-bomber-zip-up-jacket-2.webp"
   },
   {
     "id": "gz-w-jack-06",
@@ -5767,7 +6053,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cropped",
       "Pastel"
-    ]
+    ],
+    "primaryImage": "assets/products/women/jackets/heavy-twill-shacket-with-flap-pockets-1.webp",
+    "secondaryImage": "assets/products/women/jackets/heavy-twill-shacket-with-flap-pockets-2.webp"
   },
   {
     "id": "gz-w-skir-01",
@@ -5804,7 +6092,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Floral",
       "Printed"
-    ]
+    ],
+    "primaryImage": "assets/products/women/skirts/a-line-denim-front-slit-midi-skirt-1.webp",
+    "secondaryImage": "assets/products/women/skirts/a-line-denim-front-slit-midi-skirt-2.webp"
   },
   {
     "id": "gz-w-skir-02",
@@ -5841,7 +6131,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Floral",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/women/skirts/pleated-flowy-floral-maxi-skirt-1.webp",
+    "secondaryImage": "assets/products/women/skirts/pleated-flowy-floral-maxi-skirt-2.webp"
   },
   {
     "id": "gz-w-skir-03",
@@ -5878,7 +6170,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Floral",
       "White"
-    ]
+    ],
+    "primaryImage": "assets/products/women/skirts/bias-cut-satin-slip-midi-skirt-1.webp",
+    "secondaryImage": "assets/products/women/skirts/bias-cut-satin-slip-midi-skirt-2.webp"
   },
   {
     "id": "gz-w-skir-04",
@@ -5915,7 +6209,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Floral",
       "Pastel"
-    ]
+    ],
+    "primaryImage": "assets/products/women/skirts/cargo-utility-drawstring-skirt-1.webp",
+    "secondaryImage": "assets/products/women/skirts/cargo-utility-drawstring-skirt-2.webp"
   },
   {
     "id": "gz-w-skir-05",
@@ -5952,7 +6248,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Floral",
       "Printed"
-    ]
+    ],
+    "primaryImage": "assets/products/women/skirts/textured-ribbed-knit-column-skirt-1.webp",
+    "secondaryImage": "assets/products/women/skirts/textured-ribbed-knit-column-skirt-2.webp"
   },
   {
     "id": "gz-w-skir-06",
@@ -5989,7 +6287,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Floral",
       "Black"
-    ]
+    ],
+    "primaryImage": "assets/products/women/skirts/tiered-cotton-tiered-day-skirt-1.webp",
+    "secondaryImage": "assets/products/women/skirts/tiered-cotton-tiered-day-skirt-2.webp"
   },
   {
     "id": "gz-k-boys-01",
@@ -6025,7 +6325,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Graphic Print"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/boys/boys-colorblock-graphic-t-shirt-1.webp",
+    "secondaryImage": "assets/products/kids/boys/boys-colorblock-graphic-t-shirt-2.webp"
   },
   {
     "id": "gz-k-boys-02",
@@ -6061,7 +6363,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 2-4"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/boys/boys-french-terry-cargo-joggers-1.webp",
+    "secondaryImage": "assets/products/kids/boys/boys-french-terry-cargo-joggers-2.webp"
   },
   {
     "id": "gz-k-boys-03",
@@ -6097,7 +6401,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 5-8"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/boys/boys-plaid-flannel-hooded-shirt-1.webp",
+    "secondaryImage": "assets/products/kids/boys/boys-plaid-flannel-hooded-shirt-2.webp"
   },
   {
     "id": "gz-k-boys-04",
@@ -6133,7 +6439,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 9-12"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/boys/boys-washed-denim-stretch-jeans-1.webp",
+    "secondaryImage": "assets/products/kids/boys/boys-washed-denim-stretch-jeans-2.webp"
   },
   {
     "id": "gz-k-boys-05",
@@ -6169,7 +6477,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Graphic Print"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/boys/boys-varsity-letterman-jacket-1.webp",
+    "secondaryImage": "assets/products/kids/boys/boys-varsity-letterman-jacket-2.webp"
   },
   {
     "id": "gz-k-boys-06",
@@ -6205,7 +6515,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 2-4"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/boys/boys-striped-pocket-casual-polo-1.webp",
+    "secondaryImage": "assets/products/kids/boys/boys-striped-pocket-casual-polo-2.webp"
   },
   {
     "id": "gz-k-girl-01",
@@ -6241,7 +6553,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Graphic Print"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/girls/girls-floral-cotton-tiered-dress-1.webp",
+    "secondaryImage": "assets/products/kids/girls/girls-floral-cotton-tiered-dress-2.webp"
   },
   {
     "id": "gz-k-girl-02",
@@ -6277,7 +6591,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 2-4"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/girls/girls-ruffle-sleeve-ribbed-top-1.webp",
+    "secondaryImage": "assets/products/kids/girls/girls-ruffle-sleeve-ribbed-top-2.webp"
   },
   {
     "id": "gz-k-girl-03",
@@ -6313,7 +6629,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 5-8"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/girls/girls-pastel-embroidered-sweatshirt-1.webp",
+    "secondaryImage": "assets/products/kids/girls/girls-pastel-embroidered-sweatshirt-2.webp"
   },
   {
     "id": "gz-k-girl-04",
@@ -6349,7 +6667,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 9-12"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/girls/girls-wide-leg-denim-paperbag-jeans-1.webp",
+    "secondaryImage": "assets/products/kids/girls/girls-wide-leg-denim-paperbag-jeans-2.webp"
   },
   {
     "id": "gz-k-girl-05",
@@ -6385,7 +6705,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Graphic Print"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/girls/girls-corduroy-pinafore-dress-1.webp",
+    "secondaryImage": "assets/products/kids/girls/girls-corduroy-pinafore-dress-2.webp"
   },
   {
     "id": "gz-k-girl-06",
@@ -6421,7 +6743,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 2-4"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/girls/girls-soft-knit-cardigan-sweater-1.webp",
+    "secondaryImage": "assets/products/kids/girls/girls-soft-knit-cardigan-sweater-2.webp"
   },
   {
     "id": "gz-k-t-sh-01",
@@ -6457,7 +6781,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Graphic Print"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/t-shirts/kids-dinosaur-graphic-cotton-tee-1.webp",
+    "secondaryImage": "assets/products/kids/t-shirts/kids-dinosaur-graphic-cotton-tee-2.webp"
   },
   {
     "id": "gz-k-t-sh-02",
@@ -6493,7 +6819,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Oversized"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/t-shirts/kids-pocket-striped-everyday-tee-1.webp",
+    "secondaryImage": "assets/products/kids/t-shirts/kids-pocket-striped-everyday-tee-2.webp"
   },
   {
     "id": "gz-k-t-sh-03",
@@ -6529,7 +6857,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 2-4"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/t-shirts/kids-sun-waves-typography-tee-1.webp",
+    "secondaryImage": "assets/products/kids/t-shirts/kids-sun-waves-typography-tee-2.webp"
   },
   {
     "id": "gz-k-t-sh-04",
@@ -6565,7 +6895,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 5-8"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/t-shirts/kids-bio-washed-solid-pastel-tee-1.webp",
+    "secondaryImage": "assets/products/kids/t-shirts/kids-bio-washed-solid-pastel-tee-2.webp"
   },
   {
     "id": "gz-k-t-sh-05",
@@ -6601,7 +6933,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 9-12"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/t-shirts/kids-skate-culture-drop-shoulder-tee-1.webp",
+    "secondaryImage": "assets/products/kids/t-shirts/kids-skate-culture-drop-shoulder-tee-2.webp"
   },
   {
     "id": "gz-k-t-sh-06",
@@ -6637,7 +6971,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Graphic Print"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/t-shirts/kids-organic-cotton-crew-t-shirt-1.webp",
+    "secondaryImage": "assets/products/kids/t-shirts/kids-organic-cotton-crew-t-shirt-2.webp"
   },
   {
     "id": "gz-k-hood-01",
@@ -6673,7 +7009,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Oversized"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/hoodies/kids-kangaroo-pocket-fleece-hoodie-1.webp",
+    "secondaryImage": "assets/products/kids/hoodies/kids-kangaroo-pocket-fleece-hoodie-2.webp"
   },
   {
     "id": "gz-k-hood-02",
@@ -6709,7 +7047,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 5-8"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/hoodies/kids-colorblock-pullover-hoodie-1.webp",
+    "secondaryImage": "assets/products/kids/hoodies/kids-colorblock-pullover-hoodie-2.webp"
   },
   {
     "id": "gz-k-hood-03",
@@ -6745,7 +7085,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 9-12"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/hoodies/kids-animal-ear-hooded-sweatshirt-1.webp",
+    "secondaryImage": "assets/products/kids/hoodies/kids-animal-ear-hooded-sweatshirt-2.webp"
   },
   {
     "id": "gz-k-hood-04",
@@ -6781,7 +7123,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Oversized"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/hoodies/kids-slouched-french-terry-hoodie-1.webp",
+    "secondaryImage": "assets/products/kids/hoodies/kids-slouched-french-terry-hoodie-2.webp"
   },
   {
     "id": "gz-k-hood-05",
@@ -6817,7 +7161,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 5-8"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/hoodies/kids-zip-up-hooded-track-jacket-1.webp",
+    "secondaryImage": "assets/products/kids/hoodies/kids-zip-up-hooded-track-jacket-2.webp"
   },
   {
     "id": "gz-k-hood-06",
@@ -6853,7 +7199,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 9-12"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/hoodies/kids-mountain-trail-printed-hoodie-1.webp",
+    "secondaryImage": "assets/products/kids/hoodies/kids-mountain-trail-printed-hoodie-2.webp"
   },
   {
     "id": "gz-k-sets-01",
@@ -6889,7 +7237,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 2-4"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/sets/kids-two-piece-waffle-lounge-set-1.webp",
+    "secondaryImage": "assets/products/kids/sets/kids-two-piece-waffle-lounge-set-2.webp"
   },
   {
     "id": "gz-k-sets-02",
@@ -6925,7 +7275,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 5-8"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/sets/kids-cotton-tee-cargo-short-set-1.webp",
+    "secondaryImage": "assets/products/kids/sets/kids-cotton-tee-cargo-short-set-2.webp"
   },
   {
     "id": "gz-k-sets-03",
@@ -6961,7 +7313,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 9-12"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/sets/kids-fleece-sweatshirt-jogger-set-1.webp",
+    "secondaryImage": "assets/products/kids/sets/kids-fleece-sweatshirt-jogger-set-2.webp"
   },
   {
     "id": "gz-k-sets-04",
@@ -6997,7 +7351,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 2-4"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/sets/kids-denim-shirt-chino-pants-set-1.webp",
+    "secondaryImage": "assets/products/kids/sets/kids-denim-shirt-chino-pants-set-2.webp"
   },
   {
     "id": "gz-k-sets-05",
@@ -7033,7 +7389,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 5-8"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/sets/kids-terry-zip-hoodie-short-set-1.webp",
+    "secondaryImage": "assets/products/kids/sets/kids-terry-zip-hoodie-short-set-2.webp"
   },
   {
     "id": "gz-k-sets-06",
@@ -7069,7 +7427,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 9-12"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/sets/kids-coordinated-weekend-tracksuit-1.webp",
+    "secondaryImage": "assets/products/kids/sets/kids-coordinated-weekend-tracksuit-2.webp"
   },
   {
     "id": "gz-k-jean-01",
@@ -7105,7 +7465,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 5-8"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/jeans/kids-elastic-waist-comfort-jeans-1.webp",
+    "secondaryImage": "assets/products/kids/jeans/kids-elastic-waist-comfort-jeans-2.webp"
   },
   {
     "id": "gz-k-jean-02",
@@ -7141,7 +7503,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 9-12"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/jeans/kids-relaxed-fit-light-wash-denim-1.webp",
+    "secondaryImage": "assets/products/kids/jeans/kids-relaxed-fit-light-wash-denim-2.webp"
   },
   {
     "id": "gz-k-jean-03",
@@ -7177,7 +7541,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 5-8"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/jeans/kids-distressed-vintage-denim-pants-1.webp",
+    "secondaryImage": "assets/products/kids/jeans/kids-distressed-vintage-denim-pants-2.webp"
   },
   {
     "id": "gz-k-jean-04",
@@ -7213,7 +7579,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 9-12"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/jeans/kids-cargo-pocket-stretch-jeans-1.webp",
+    "secondaryImage": "assets/products/kids/jeans/kids-cargo-pocket-stretch-jeans-2.webp"
   },
   {
     "id": "gz-k-jean-05",
@@ -7249,7 +7617,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 5-8"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/jeans/kids-paperbag-waist-denim-trousers-1.webp",
+    "secondaryImage": "assets/products/kids/jeans/kids-paperbag-waist-denim-trousers-2.webp"
   },
   {
     "id": "gz-k-jean-06",
@@ -7285,7 +7655,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 9-12"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/jeans/kids-classic-straight-blue-jeans-1.webp",
+    "secondaryImage": "assets/products/kids/jeans/kids-classic-straight-blue-jeans-2.webp"
   },
   {
     "id": "gz-k-carg-01",
@@ -7321,7 +7693,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Oversized"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/cargos/kids-heavy-twill-multi-pocket-cargos-1.webp",
+    "secondaryImage": "assets/products/kids/cargos/kids-heavy-twill-multi-pocket-cargos-2.webp"
   },
   {
     "id": "gz-k-carg-02",
@@ -7357,7 +7731,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 5-8"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/cargos/kids-drawstring-cuffed-cargo-joggers-1.webp",
+    "secondaryImage": "assets/products/kids/cargos/kids-drawstring-cuffed-cargo-joggers-2.webp"
   },
   {
     "id": "gz-k-carg-03",
@@ -7393,7 +7769,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 9-12"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/cargos/kids-ripstop-utility-adventure-pants-1.webp",
+    "secondaryImage": "assets/products/kids/cargos/kids-ripstop-utility-adventure-pants-2.webp"
   },
   {
     "id": "gz-k-carg-04",
@@ -7429,7 +7807,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Oversized"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/cargos/kids-soft-french-terry-cargo-pants-1.webp",
+    "secondaryImage": "assets/products/kids/cargos/kids-soft-french-terry-cargo-pants-2.webp"
   },
   {
     "id": "gz-k-carg-05",
@@ -7465,7 +7845,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 5-8"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/cargos/kids-parachute-relaxed-cargo-trousers-1.webp",
+    "secondaryImage": "assets/products/kids/cargos/kids-parachute-relaxed-cargo-trousers-2.webp"
   },
   {
     "id": "gz-k-carg-06",
@@ -7501,7 +7883,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 9-12"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/cargos/kids-elasticated-outdoor-cargo-pants-1.webp",
+    "secondaryImage": "assets/products/kids/cargos/kids-elasticated-outdoor-cargo-pants-2.webp"
   },
   {
     "id": "gz-k-dres-01",
@@ -7537,7 +7921,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Graphic Print"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/dresses/kids-puff-sleeve-smocked-floral-dress-1.webp",
+    "secondaryImage": "assets/products/kids/dresses/kids-puff-sleeve-smocked-floral-dress-2.webp"
   },
   {
     "id": "gz-k-dres-02",
@@ -7573,7 +7959,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 2-4"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/dresses/kids-tiered-cotton-gingham-dress-1.webp",
+    "secondaryImage": "assets/products/kids/dresses/kids-tiered-cotton-gingham-dress-2.webp"
   },
   {
     "id": "gz-k-dres-03",
@@ -7609,7 +7997,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 5-8"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/dresses/kids-broderie-anglaise-white-dress-1.webp",
+    "secondaryImage": "assets/products/kids/dresses/kids-broderie-anglaise-white-dress-2.webp"
   },
   {
     "id": "gz-k-dres-04",
@@ -7645,7 +8035,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Graphic Print"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/dresses/kids-long-sleeve-ribbed-skater-dress-1.webp",
+    "secondaryImage": "assets/products/kids/dresses/kids-long-sleeve-ribbed-skater-dress-2.webp"
   },
   {
     "id": "gz-k-dres-05",
@@ -7681,7 +8073,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 2-4"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/dresses/kids-striped-sailor-collar-sundress-1.webp",
+    "secondaryImage": "assets/products/kids/dresses/kids-striped-sailor-collar-sundress-2.webp"
   },
   {
     "id": "gz-k-dres-06",
@@ -7717,7 +8111,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 5-8"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/dresses/kids-party-tulle-ruffle-dress-1.webp",
+    "secondaryImage": "assets/products/kids/dresses/kids-party-tulle-ruffle-dress-2.webp"
   },
   {
     "id": "gz-k-jack-01",
@@ -7753,7 +8149,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 5-8"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/jackets/kids-denim-trucker-jacket-with-hood-1.webp",
+    "secondaryImage": "assets/products/kids/jackets/kids-denim-trucker-jacket-with-hood-2.webp"
   },
   {
     "id": "gz-k-jack-02",
@@ -7789,7 +8187,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 9-12"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/jackets/kids-padded-quilted-puffer-jacket-1.webp",
+    "secondaryImage": "assets/products/kids/jackets/kids-padded-quilted-puffer-jacket-2.webp"
   },
   {
     "id": "gz-k-jack-03",
@@ -7825,7 +8225,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 5-8"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/jackets/kids-varsity-letterman-baseball-jacket-1.webp",
+    "secondaryImage": "assets/products/kids/jackets/kids-varsity-letterman-baseball-jacket-2.webp"
   },
   {
     "id": "gz-k-jack-04",
@@ -7861,7 +8263,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 9-12"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/jackets/kids-lightweight-windbreaker-zip-jacket-1.webp",
+    "secondaryImage": "assets/products/kids/jackets/kids-lightweight-windbreaker-zip-jacket-2.webp"
   },
   {
     "id": "gz-k-jack-05",
@@ -7897,7 +8301,9 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 5-8"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/jackets/kids-corduroy-sherpa-collar-jacket-1.webp",
+    "secondaryImage": "assets/products/kids/jackets/kids-corduroy-sherpa-collar-jacket-2.webp"
   },
   {
     "id": "gz-k-jack-06",
@@ -7933,6 +8339,8 @@ window.GAZEBO_PRODUCTS = [
     "tags": [
       "Cotton",
       "Ages 9-12"
-    ]
+    ],
+    "primaryImage": "assets/products/kids/jackets/kids-fleece-lined-utility-parka-1.webp",
+    "secondaryImage": "assets/products/kids/jackets/kids-fleece-lined-utility-parka-2.webp"
   }
 ];

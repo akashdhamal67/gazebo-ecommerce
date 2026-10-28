@@ -1682,3 +1682,31 @@ window.toggleProductWishlist = function(e, productId, btn) {
     svg.setAttribute('stroke', isSaved ? '#EE5824' : '#111111');
   }
 };
+
+
+window.switchDepartment = function(dept) {
+  document.querySelectorAll('.dept-nav-btn').forEach(b => {
+    b.classList.toggle('is-active', b.dataset.dept === dept);
+  });
+  ['men', 'women', 'kids'].forEach(sec => {
+    const el = document.getElementById(`section_${sec}`);
+    if (el) {
+      if (sec === dept) {
+        el.style.display = 'block';
+      } else {
+        el.style.display = 'none';
+      }
+    }
+  });
+  const activeSec = document.getElementById(`section_${dept}`);
+  if (activeSec) {
+    const headerOffset = 130;
+    const elementPosition = activeSec.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    window.scrollTo({
+      top: Math.max(0, offsetPosition),
+      behavior: 'smooth'
+    });
+  }
+  try { localStorage.setItem('gazebo_active_dept', dept); } catch(e) {}
+};
