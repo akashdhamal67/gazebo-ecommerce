@@ -877,6 +877,186 @@
     "reviewsCount": 54
   },
   {
+    "id": "gz-m-sw-01",
+    "name": "Gazebo Abstract Geometric Crew Neck Sweatshirt",
+    "section": "men",
+    "subCategory": "sweatshirts",
+    "price": 1199,
+    "mrp": 1999,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Washed Black",
+        "hex": "#1B1B1D"
+      },
+      {
+        "name": "Ivory Cream",
+        "hex": "#F2EFE9"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/sweatshirts/gazebo-abstract-geometric-crew-neck-sweatshirt.jpg",
+      "secondary": "assets/products/men/sweatshirts/gazebo-abstract-geometric-crew-neck-sweatshirt.jpg"
+    },
+    "tags": [
+      "Sweatshirt",
+      "Crew Neck",
+      "Graphic",
+      "Heavyweight Fleece",
+      "Relaxed Fit",
+      "Bestseller",
+      "Dark Shades",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/sweatshirts/gazebo-abstract-geometric-crew-neck-sweatshirt.jpg",
+    "description": "Heavyweight washed black fleece sweatshirt featuring an ivory abstract geometric cutout motif, finished with a ribbed crew neckline and relaxed dropped shoulders.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 78
+  },
+  {
+    "id": "gz-m-sw-02",
+    "name": "Gazebo Sunset Mountain Graphic Sweatshirt",
+    "section": "men",
+    "subCategory": "sweatshirts",
+    "price": 899,
+    "mrp": 1499,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Warm Cream",
+        "hex": "#F6F0E7"
+      },
+      {
+        "name": "Terracotta Rust",
+        "hex": "#A85138"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/sweatshirts/gazebo-sunset-mountain-graphic-sweatshirt.jpg",
+      "secondary": "assets/products/men/sweatshirts/gazebo-sunset-mountain-graphic-sweatshirt.jpg"
+    },
+    "tags": [
+      "Sweatshirt",
+      "Crew Neck",
+      "Graphic",
+      "V-Stitch",
+      "Neutral Tones",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/sweatshirts/gazebo-sunset-mountain-graphic-sweatshirt.jpg",
+    "description": "Vintage-inspired warm cream sweatshirt tailored with a classic triangular collar V-stitch and scenic alpine sunset ridge print on premium brushed loopback cotton.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 86
+  },
+  {
+    "id": "gz-m-sw-03",
+    "name": "Gazebo Forest Green Minimalist Sweatshirt",
+    "section": "men",
+    "subCategory": "sweatshirts",
+    "price": 1299,
+    "mrp": 2199,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Forest Green",
+        "hex": "#1E4D38"
+      },
+      {
+        "name": "Ecru White",
+        "hex": "#EFEBE1"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/sweatshirts/gazebo-forest-green-minimalist-sweatshirt.jpg",
+      "secondary": "assets/products/men/sweatshirts/gazebo-forest-green-minimalist-sweatshirt.jpg"
+    },
+    "tags": [
+      "Sweatshirt",
+      "Crew Neck",
+      "Minimalist",
+      "Embroidered",
+      "Relaxed Fit",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/sweatshirts/gazebo-forest-green-minimalist-sweatshirt.jpg",
+    "description": "Understated luxury crewneck sweatshirt in rich forest green 400 GSM loopback cotton, accented by tonal geometric chest embroidery and ribbed trims.",
+    "category": "men",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 42
+  },
+  {
+    "id": "gz-m-sw-04",
+    "name": "Gazebo Baroque Crest Heavyweight Sweatshirt",
+    "section": "men",
+    "subCategory": "sweatshirts",
+    "price": 1599,
+    "mrp": 2599,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Deep Burgundy",
+        "hex": "#681B2B"
+      },
+      {
+        "name": "Antique Gold",
+        "hex": "#D4AF37"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/sweatshirts/gazebo-baroque-crest-heavyweight-sweatshirt.jpg",
+      "secondary": "assets/products/men/sweatshirts/gazebo-baroque-crest-heavyweight-sweatshirt.jpg"
+    },
+    "tags": [
+      "Sweatshirt",
+      "Crew Neck",
+      "Heavyweight Fleece",
+      "Baroque Crest",
+      "Embroidered",
+      "Relaxed Fit"
+    ],
+    "primaryImage": "assets/products/men/sweatshirts/gazebo-baroque-crest-heavyweight-sweatshirt.jpg",
+    "description": "Opulent deep burgundy heavyweight sweatshirt showcasing an elaborate antique gold baroque crest emblem across the chest in ultra-soft 450 GSM fleece.",
+    "category": "men",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 57
+  },
+  {
     "id": "gz-w-co-o-01",
     "name": "Pure Linen Camp Shirt & Trouser Set",
     "section": "women",
