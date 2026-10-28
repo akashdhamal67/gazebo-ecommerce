@@ -2,25 +2,31 @@
  * Gazebo E-Commerce - Core Application Logic & Micro-Interactions
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-  initAnnouncementBar();
-  initHeaderScroll();
-  initGenderTabs();
-  initHeroSlider();
-  initCategorySection();
-  initOccasionSection();
-  initPromosSection();
-  initCutSizeBanner();
-  initProductGrid();
-  initFilterAndSort();
-  initQuickViewModal();
-  initSizeGuideModal();
-  initMobileMenu();
-  initNewsletter();
-  initPDPPage();
-  initPLPPage();
-  initWearSections();
-});
+function initApp() {
+  try { initAnnouncementBar(); } catch(e) {}
+  try { initHeaderScroll(); } catch(e) {}
+  try { initGenderTabs(); } catch(e) {}
+  try { initHeroSlider(); } catch(e) {}
+  try { initCategorySection(); } catch(e) {}
+  try { initOccasionSection(); } catch(e) {}
+  try { initPromosSection(); } catch(e) {}
+  try { initCutSizeBanner(); } catch(e) {}
+  try { initProductGrid(); } catch(e) {}
+  try { initFilterAndSort(); } catch(e) {}
+  try { initQuickViewModal(); } catch(e) {}
+  try { initSizeGuideModal(); } catch(e) {}
+  try { initMobileMenu(); } catch(e) {}
+  try { initNewsletter(); } catch(e) {}
+  try { initPDPPage(); } catch(e) {}
+  try { initPLPPage(); } catch(e) {}
+  try { initWearSections(); } catch(e) {}
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
 
 /* ==========================================================================
    1. Announcement Bar
@@ -1525,6 +1531,7 @@ function renderWearContent(section) {
   const container = document.getElementById(`content_${section}`);
   if (!container) return;
   const allProds = window.GAZEBO_PRODUCTS || [];
+  if (!allProds.length) return;
   const secProds = allProds.filter(p => p.section === section);
   const cfg = WEAR_CONFIG[section];
   const activeTab = WEAR_STATE[section].activeTab;
@@ -1574,11 +1581,25 @@ function renderWearContent(section) {
 }
 
 function initWearSections() {
-  ['men', 'women', 'kids'].forEach(sec => {
-    renderWearTabs(sec);
-    renderWearChips(sec);
-    renderWearContent(sec);
-  });
+  function renderAll() {
+    ['men', 'women', 'kids'].forEach(sec => {
+      renderWearTabs(sec);
+      renderWearChips(sec);
+      renderWearContent(sec);
+    });
+  }
+
+  if (!window.GAZEBO_PRODUCTS || !window.GAZEBO_PRODUCTS.length) {
+    fetch('products.json')
+      .then(res => res.json())
+      .then(data => {
+        window.GAZEBO_PRODUCTS = data;
+        renderAll();
+      })
+      .catch(() => {});
+  } else {
+    renderAll();
+  }
 
   // Global click listener to close open quick-add drawers when clicking outside
   document.addEventListener('click', (e) => {
