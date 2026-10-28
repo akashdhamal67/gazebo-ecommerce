@@ -1819,6 +1819,145 @@
     "reviewsCount": 48
   },
   {
+    "id": "gz-m-jk-01",
+    "name": "Gazebo Slate Quilted Puffer Jacket",
+    "section": "men",
+    "subCategory": "jackets",
+    "price": 1499,
+    "mrp": 2499,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Slate Grey",
+        "hex": "#5C6068"
+      },
+      {
+        "name": "Charcoal",
+        "hex": "#3A3C42"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/jackets/gazebo-slate-quilted-puffer-jacket.jpg",
+      "secondary": "assets/products/men/jackets/gazebo-slate-quilted-puffer-jacket.jpg"
+    },
+    "tags": [
+      "Jackets",
+      "Puffer",
+      "Quilted",
+      "Slate Grey",
+      "Zip-Up",
+      "Bestseller",
+      "Under ₹1,499",
+      "Dark Shades",
+      "Outerwear"
+    ],
+    "primaryImage": "assets/products/men/jackets/gazebo-slate-quilted-puffer-jacket.jpg",
+    "description": "Lightweight quilted puffer jacket in slate grey featuring a stand collar, smooth zip-front closure, and heat-retaining insulation.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 84
+  },
+  {
+    "id": "gz-m-jk-02",
+    "name": "Gazebo Midnight Black Bomber Jacket",
+    "section": "men",
+    "subCategory": "jackets",
+    "price": 1999,
+    "mrp": 3299,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Midnight Black",
+        "hex": "#1A1A1C"
+      },
+      {
+        "name": "Jet Black",
+        "hex": "#0F0F10"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/jackets/gazebo-midnight-black-bomber-jacket.jpg",
+      "secondary": "assets/products/men/jackets/gazebo-midnight-black-bomber-jacket.jpg"
+    },
+    "tags": [
+      "Jackets",
+      "Bomber",
+      "Midnight Black",
+      "Zip-Up",
+      "Bestseller",
+      "Dark Shades",
+      "Minimalist",
+      "Outerwear"
+    ],
+    "primaryImage": "assets/products/men/jackets/gazebo-midnight-black-bomber-jacket.jpg",
+    "description": "Minimalist urban bomber jacket in midnight black with ribbed baseball collar, elasticated cuffs, and side zip pockets.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 92
+  },
+  {
+    "id": "gz-m-jk-03",
+    "name": "Gazebo Sand Suede Harrington Jacket",
+    "section": "men",
+    "subCategory": "jackets",
+    "price": 2499,
+    "mrp": 3999,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Sand Beige",
+        "hex": "#CBB79F"
+      },
+      {
+        "name": "Camel Tan",
+        "hex": "#B69E81"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/jackets/gazebo-sand-suede-harrington-jacket.jpg",
+      "secondary": "assets/products/men/jackets/gazebo-sand-suede-harrington-jacket.jpg"
+    },
+    "tags": [
+      "Jackets",
+      "Harrington",
+      "Suede",
+      "Sand Beige",
+      "Zip-Up",
+      "Neutral Tones",
+      "Tailored",
+      "Outerwear"
+    ],
+    "primaryImage": "assets/products/men/jackets/gazebo-sand-suede-harrington-jacket.jpg",
+    "description": "Premium faux suede Harrington jacket in warm sand beige featuring a spread collar, silver zip closure, and tailored welt pockets.",
+    "category": "men",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.7,
+    "reviewsCount": 56
+  },
+  {
     "id": "gz-w-co-o-01",
     "name": "Pure Linen Camp Shirt & Trouser Set",
     "section": "women",

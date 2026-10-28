@@ -1388,7 +1388,7 @@ function getChipsForTab(section, tabId) {
   if (['t-shirts', 'oversized-tees', 'polos', 'tops'].includes(tabId)) {
     return ['All', 'Oversized', 'Regular Fit', 'Drop Shoulder', 'Heavyweight', 'Textured', 'Neutral Tones', 'Dark Shades'];
   }
-  if (['hoodies', 'sweatshirts', 'jackets', 'sweaters'].includes(tabId)) {
+  if (['hoodies', 'sweatshirts', 'sweaters'].includes(tabId)) {
     return ['All', 'Varsity', 'Bomber', 'Denim', 'Heavyweight Fleece', 'Relaxed Fit', 'Zip-Up', 'Bestseller'];
   }
   if (tabId === 'jeans') {
@@ -1399,6 +1399,9 @@ function getChipsForTab(section, tabId) {
   }
   if (tabId === 'trousers') {
     return ['All', 'Tailored', 'Formal', 'Bestsellers', 'Under ₹999', 'Under ₹1,499', 'Dark Shades'];
+  }
+  if (tabId === 'jackets') {
+    return ['All', 'Bomber', 'Puffer', 'Zip-Up', 'Bestsellers', 'Under ₹1,499', 'Dark Shades'];
   }
   if (['wide-leg-pants', 'shorts', 'skirts'].includes(tabId)) {
     return ['All', 'Wide Leg', 'Straight Fit', 'Baggy', 'Relaxed', 'Cargo Utility', 'Dark Wash', 'Light Wash'];
@@ -1570,8 +1573,10 @@ function renderWearContent(section) {
       prodsToShow = allProds.filter(p => p.section === 'men' && p.subCategory === 'cargos');
     } else if (activeTab === 'trousers') {
       prodsToShow = allProds.filter(p => p.section === 'men' && p.subCategory === 'trousers');
+    } else if (activeTab === 'jackets') {
+      prodsToShow = allProds.filter(p => p.section === 'men' && p.subCategory === 'jackets');
     } else {
-      // Any other tab (jackets, sweaters, shorts, etc.) must stay completely empty
+      // Any other tab (sweaters, shorts, etc.) must stay completely empty
       container.innerHTML = '';
       return;
     }
