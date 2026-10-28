@@ -3160,3 +3160,449 @@
 .pdp-accordion-item.is-open .pdp-accordion-body {
   display: block;
 }
+
+
+/* ==========================================================================
+   9. Snitch-Style Wear Sections (Men's, Women's, Kids')
+   ========================================================================== */
+.wear-section {
+  width: 100%;
+  position: relative;
+  padding-bottom: 64px;
+  background-color: #FFFFFF;
+}
+
+.wear-section__header-sticky {
+  position: sticky;
+  top: var(--header-height, 72px);
+  z-index: 80;
+  background: #FFFFFF;
+  padding: 22px 0 14px;
+  border-bottom: 1px solid #EEEEEE;
+  transition: top 0.2s ease;
+}
+
+.wear-section__title {
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+  color: #000000;
+  line-height: 1.1;
+}
+
+.wear-tabs-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 8px;
+  -webkit-overflow-scrolling: touch;
+}
+.wear-tabs-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.wear-tab {
+  background: transparent;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #555555;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 6px 4px;
+  transition: all 0.15s ease;
+}
+.wear-tab:hover {
+  color: #000000;
+}
+.wear-tab.is-active {
+  color: #000000;
+  font-weight: 700;
+  border-bottom: 2px solid #000000;
+}
+.wear-tab.is-active-subcat {
+  color: #000000;
+  font-weight: 700;
+  border: 1.5px solid #000000;
+  padding: 4px 12px;
+  border-radius: 2px;
+}
+
+.wear-chips-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin-top: 10px;
+  padding: 4px 0 2px;
+  -webkit-overflow-scrolling: touch;
+}
+.wear-chips-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.wear-chip {
+  background: #F4F4F4;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 5px 12px;
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: #333333;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+.wear-chip:hover {
+  background: #E8E8E8;
+  color: #000000;
+}
+.wear-chip.is-active {
+  background: #000000;
+  color: #FFFFFF;
+  font-weight: 600;
+  border-color: #000000;
+}
+
+.wear-content {
+  margin-top: 28px;
+}
+
+/* Sub-category Row on ALL tab */
+.subcat-row {
+  margin-bottom: 48px;
+  position: relative;
+}
+.subcat-row__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  padding: 0 4px;
+}
+.subcat-row__title {
+  font-size: 0.96rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #111111;
+}
+.subcat-row__view-all {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #666666;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+.subcat-row__view-all:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+/* 5 Cards horizontal slider rail */
+.subcat-rail-wrap {
+  position: relative;
+  width: 100%;
+}
+.subcat-rail {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(20% - 11.2px);
+  gap: 14px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  padding: 4px 2px 14px;
+  -webkit-overflow-scrolling: touch;
+}
+.subcat-rail::-webkit-scrollbar {
+  display: none;
+}
+
+.rail-arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #D5D5D5;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: #111111;
+  transition: all 0.2s ease;
+}
+.rail-arrow:hover {
+  background: #000000;
+  color: #FFFFFF;
+  border-color: #000000;
+}
+.rail-arrow--prev {
+  left: -16px;
+}
+.rail-arrow--next {
+  right: -16px;
+}
+
+/* 5-Column Grid on Specific Tab */
+.subcat-grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin-top: 16px;
+}
+
+/* Product Card (Snitch proportions & design) */
+.p-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: transparent;
+  scroll-snap-align: start;
+}
+.p-card__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-color: #F5F5F5;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.p-card__img-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.p-card__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: opacity 0.3s ease;
+}
+.p-card__img--secondary {
+  opacity: 0;
+}
+.p-card:hover .p-card__img--secondary {
+  opacity: 1;
+}
+
+.p-card__badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 3;
+  background: #000000;
+  color: #FFFFFF;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+
+.p-card__wishlist-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 3;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: transform 0.15s ease;
+}
+.p-card__wishlist-btn:hover {
+  transform: scale(1.18);
+}
+
+.p-card__details {
+  padding: 8px 2px 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.p-card__title-row {
+  width: 100%;
+}
+.p-card__title {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #111111;
+  cursor: pointer;
+  line-height: 1.25;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.p-card__title:hover {
+  color: #EE5824;
+}
+
+.p-card__meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2px;
+}
+.p-card__price-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.p-card__price {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #000000;
+}
+.p-card__mrp {
+  font-size: 0.74rem;
+  color: #888888;
+  text-decoration: line-through;
+}
+
+.p-card__plus-btn {
+  background: transparent;
+  border: none;
+  color: #000000;
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1;
+  padding: 0 4px;
+  cursor: pointer;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+.p-card__plus-btn:hover {
+  transform: scale(1.25);
+  color: #EE5824;
+}
+
+.p-card__colors {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 2px;
+}
+.p-card__color-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  display: inline-block;
+}
+
+/* Quick Add Size Drawer on Product Card */
+.p-card__quick-add {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(8px);
+  padding: 12px;
+  z-index: 6;
+  border-top: 1px solid #EBEBEB;
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+}
+.p-card__quick-add.is-open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.quick-add__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #555555;
+  margin-bottom: 8px;
+}
+.quick-add__close {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  color: #666666;
+}
+.quick-add__sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.quick-add__size-pill {
+  flex: 1;
+  min-width: 38px;
+  height: 32px;
+  border: 1px solid #D5D5D5;
+  background: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.quick-add__size-pill:hover {
+  border-color: #000000;
+}
+.quick-add__size-pill.is-selected {
+  background: #000000;
+  color: #FFFFFF;
+  border-color: #000000;
+}
+.quick-add__submit-btn {
+  width: 100%;
+  height: 34px;
+  background: #000000;
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.quick-add__submit-btn:hover {
+  background: #EE5824;
+}

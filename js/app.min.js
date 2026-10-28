@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNewsletter();
   initPDPPage();
   initPLPPage();
+  initWearSections();
 });
 
 /* ==========================================================================
@@ -1306,5 +1307,357 @@ window.checkPincode = function() {
       res.style.color = '#F44336';
       res.textContent = 'Please enter a valid 6-digit Indian pincode.';
     }
+  }
+};
+
+/* ==========================================================================
+   Wear Sections Architecture (Men's, Women's, Kids' Wear)
+   ========================================================================== */
+
+const WEAR_CONFIG = {
+  men: {
+    title: "MEN'S WEAR",
+    tabs: [
+      { id: 'all', label: 'ALL' },
+      { id: 't-shirts', label: 'T-SHIRTS' },
+      { id: 'oversized-tees', label: 'OVERSIZED TEES' },
+      { id: 'polos', label: 'POLOS' },
+      { id: 'hoodies', label: 'HOODIES' },
+      { id: 'sweatshirts', label: 'SWEATSHIRTS' },
+      { id: 'shirts', label: 'SHIRTS' },
+      { id: 'linen-shirts', label: 'LINEN SHIRTS' },
+      { id: 'jeans', label: 'JEANS' },
+      { id: 'cargos', label: 'CARGOS' },
+      { id: 'trousers', label: 'TROUSERS' },
+      { id: 'jackets', label: 'JACKETS' },
+      { id: 'sweaters', label: 'SWEATERS' },
+      { id: 'shorts', label: 'SHORTS' }
+    ]
+  },
+  women: {
+    title: "WOMEN'S WEAR",
+    tabs: [
+      { id: 'all', label: 'ALL' },
+      { id: 'co-ords', label: 'CO-ORDS' },
+      { id: 'tops', label: 'TOPS' },
+      { id: 'oversized-tees', label: 'OVERSIZED TEES' },
+      { id: 'hoodies', label: 'HOODIES' },
+      { id: 'sweatshirts', label: 'SWEATSHIRTS' },
+      { id: 'shirts', label: 'SHIRTS' },
+      { id: 'dresses', label: 'DRESSES' },
+      { id: 'jeans', label: 'JEANS' },
+      { id: 'wide-leg-pants', label: 'WIDE-LEG PANTS' },
+      { id: 'cargos', label: 'CARGOS' },
+      { id: 'jackets', label: 'JACKETS' },
+      { id: 'skirts', label: 'SKIRTS' }
+    ]
+  },
+  kids: {
+    title: "KIDS' WEAR",
+    tabs: [
+      { id: 'all', label: 'ALL' },
+      { id: 'boys', label: 'BOYS' },
+      { id: 'girls', label: 'GIRLS' },
+      { id: 't-shirts', label: 'T-SHIRTS' },
+      { id: 'hoodies', label: 'HOODIES' },
+      { id: 'sets', label: 'SETS' },
+      { id: 'jeans', label: 'JEANS' },
+      { id: 'cargos', label: 'CARGOS' },
+      { id: 'dresses', label: 'DRESSES' },
+      { id: 'jackets', label: 'JACKETS' }
+    ]
+  }
+};
+
+const WEAR_STATE = {
+  men: { activeTab: 'all', activeChip: 'All Items' },
+  women: { activeTab: 'all', activeChip: 'All Items' },
+  kids: { activeTab: 'all', activeChip: 'All Items' }
+};
+
+function getChipsForTab(section, tabId) {
+  if (tabId === 'all') {
+    return ['All Items', 'New In', 'Bestsellers', 'Under ₹999', 'Under ₹1,499', 'Heavyweight', 'Relaxed Fit'];
+  }
+  if (['t-shirts', 'oversized-tees', 'polos', 'tops'].includes(tabId)) {
+    return ['All', 'Oversized', 'Regular Fit', 'Drop Shoulder', 'Heavyweight', 'Textured', 'Neutral Tones', 'Dark Shades'];
+  }
+  if (['hoodies', 'sweatshirts', 'jackets', 'sweaters'].includes(tabId)) {
+    return ['All', 'Varsity', 'Bomber', 'Denim', 'Heavyweight Fleece', 'Relaxed Fit', 'Zip-Up', 'Bestseller'];
+  }
+  if (['jeans', 'cargos', 'trousers', 'wide-leg-pants', 'shorts', 'skirts'].includes(tabId)) {
+    return ['All', 'Wide Leg', 'Straight Fit', 'Baggy', 'Relaxed', 'Cargo Utility', 'Dark Wash', 'Light Wash'];
+  }
+  if (['co-ords', 'sets', 'dresses'].includes(tabId)) {
+    return ['All', 'Matching Sets', 'Casual', 'Evening', 'Minimalist', 'Floral & Print', 'New In'];
+  }
+  if (['boys', 'girls'].includes(tabId)) {
+    return ['All', 'Everyday Cotton', 'Active Casual', 'Co-ord Sets', 'Festive', 'Under ₹999'];
+  }
+  return ['All', 'New In', 'Bestsellers', 'Under ₹999', 'Relaxed Fit'];
+}
+
+function filterProductsByChip(products, chip) {
+  if (!chip || chip === 'All' || chip === 'All Items') return products;
+
+  if (chip === 'New In') {
+    const res = products.filter(p => p.badge === 'New');
+    return res.length ? res : products;
+  }
+  if (chip === 'Bestsellers' || chip === 'Bestseller') {
+    const res = products.filter(p => p.badge === 'Bestseller');
+    return res.length ? res : products;
+  }
+  if (chip === 'Under ₹999') {
+    const res = products.filter(p => p.price <= 999);
+    return res.length ? res : products;
+  }
+  if (chip === 'Under ₹1,499') {
+    const res = products.filter(p => p.price <= 1499);
+    return res.length ? res : products;
+  }
+  if (chip === 'Dark Shades') {
+    const res = products.filter(p => p.colors && p.colors.some(c => /black|charcoal|onyx|navy|dark/i.test(c.name)));
+    return res.length ? res : products;
+  }
+  if (chip === 'Neutral Tones') {
+    const res = products.filter(p => p.colors && p.colors.some(c => /beige|cream|sand|off white|taupe|ecru|olive/i.test(c.name)));
+    return res.length ? res : products;
+  }
+
+  const query = chip.toLowerCase();
+  const matched = products.filter(p => {
+    const inTags = p.tags && p.tags.some(t => t.toLowerCase().includes(query));
+    const inName = p.name && p.name.toLowerCase().includes(query);
+    return inTags || inName;
+  });
+  return matched.length ? matched : products;
+}
+
+function renderProductCardHtml(p) {
+  const pImg = p.images?.primary || p.primaryImage || '';
+  const sImg = p.images?.secondary || pImg;
+  const badgeHtml = p.badge ? `<span class="p-card__badge">${p.badge}</span>` : '';
+  const wishlist = (window.gazeboStore && window.gazeboStore.wishlist) ? window.gazeboStore.wishlist : [];
+  const isSaved = wishlist.includes(p.id);
+
+  const colorsHtml = (p.colors && p.colors.length) ? `
+    <div class="p-card__colors">
+      ${p.colors.map(c => `<span class="p-card__color-dot" style="background-color: ${c.hex};" title="${c.name}"></span>`).join('')}
+    </div>
+  ` : '';
+
+  const sizes = p.sizes || ['S', 'M', 'L', 'XL'];
+  const sizesHtml = sizes.map((s, idx) => `
+    <button type="button" class="quick-add__size-pill ${idx === 0 ? 'is-selected' : ''}" onclick="window.selectCardSize(event, '${p.id}', '${s}', this)">${s}</button>
+  `).join('');
+
+  return `
+    <article class="p-card" data-product-id="${p.id}">
+      <div class="p-card__media">
+        <a class="p-card__img-wrap" href="product.html?id=${encodeURIComponent(p.id)}" aria-label="${p.name}">
+          <img class="p-card__img" src="${pImg}" alt="${p.name}" width="600" height="800" loading="lazy" decoding="async" />
+          <img class="p-card__img p-card__img--secondary" src="${sImg}" alt="${p.name}" width="600" height="800" loading="lazy" decoding="async" />
+        </a>
+        ${badgeHtml}
+        <button type="button" class="p-card__wishlist-btn ${isSaved ? 'is-active' : ''}" onclick="window.toggleProductWishlist(event, '${p.id}', this)" aria-label="Save to Wishlist">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="${isSaved ? '#EE5824' : 'none'}" stroke="${isSaved ? '#EE5824' : '#111111'}" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </button>
+
+        <div class="p-card__quick-add" id="qa_${p.id}">
+          <div class="quick-add__header">
+            <span>Select Size</span>
+            <button type="button" class="quick-add__close" onclick="window.closeCardQuickAdd(event, '${p.id}')" aria-label="Close size selector">&times;</button>
+          </div>
+          <div class="quick-add__sizes">
+            ${sizesHtml}
+          </div>
+          <button type="button" class="quick-add__submit-btn" onclick="window.executeCardQuickAdd(event, '${p.id}')">Add To Bag</button>
+        </div>
+      </div>
+
+      <div class="p-card__details">
+        <div class="p-card__title-row">
+          <h3 class="p-card__title" onclick="location.href='product.html?id=${encodeURIComponent(p.id)}'">${p.name}</h3>
+        </div>
+        <div class="p-card__meta-row">
+          <div class="p-card__price-wrap">
+            <span class="p-card__price">₹${p.price.toLocaleString('en-IN')}</span>
+            ${p.mrp ? `<span class="p-card__mrp">₹${p.mrp.toLocaleString('en-IN')}</span>` : ''}
+          </div>
+          <button type="button" class="p-card__plus-btn" onclick="window.toggleCardQuickAdd(event, '${p.id}')" aria-label="Quick Add to Bag">+</button>
+        </div>
+        ${colorsHtml}
+      </div>
+    </article>
+  `;
+}
+
+function renderWearTabs(section) {
+  const container = document.getElementById(`tabs_${section}`);
+  if (!container) return;
+  const cfg = WEAR_CONFIG[section];
+  const activeTab = WEAR_STATE[section].activeTab;
+
+  container.innerHTML = cfg.tabs.map(t => {
+    const isAct = t.id === activeTab;
+    const cls = isAct ? (t.id === 'all' ? 'wear-tab is-active' : 'wear-tab is-active-subcat') : 'wear-tab';
+    return `<button type="button" class="${cls}" onclick="window.switchWearTab('${section}', '${t.id}')">${t.label}</button>`;
+  }).join('');
+}
+
+function renderWearChips(section) {
+  const container = document.getElementById(`chips_${section}`);
+  if (!container) return;
+  const activeTab = WEAR_STATE[section].activeTab;
+  const activeChip = WEAR_STATE[section].activeChip;
+  const chips = getChipsForTab(section, activeTab);
+
+  container.innerHTML = chips.map(c => {
+    const isAct = c === activeChip;
+    return `<button type="button" class="wear-chip ${isAct ? 'is-active' : ''}" onclick="window.switchWearChip('${section}', '${c.replace(/'/g, "\\'")}')">${c}</button>`;
+  }).join('');
+}
+
+function renderWearContent(section) {
+  const container = document.getElementById(`content_${section}`);
+  if (!container) return;
+  const allProds = window.GAZEBO_PRODUCTS || [];
+  const secProds = allProds.filter(p => p.section === section);
+  const cfg = WEAR_CONFIG[section];
+  const activeTab = WEAR_STATE[section].activeTab;
+  const activeChip = WEAR_STATE[section].activeChip;
+
+  if (activeTab === 'all') {
+    // ONE ROW PER SUB-CATEGORY
+    const subcats = cfg.tabs.filter(t => t.id !== 'all');
+    let html = '';
+
+    subcats.forEach(sub => {
+      const subItems = secProds.filter(p => p.subCategory === sub.id);
+      const filtered = filterProductsByChip(subItems, activeChip);
+      if (!filtered.length) return;
+      const displayItems = filtered.slice(0, 5);
+      const railId = `rail_${section}_${sub.id}`;
+
+      html += `
+        <div class="subcat-row">
+          <div class="subcat-row__header">
+            <h3 class="subcat-row__title">${sub.label}</h3>
+            <button type="button" class="subcat-row__view-all" onclick="window.switchWearTab('${section}', '${sub.id}')">View All &rarr;</button>
+          </div>
+          <div class="subcat-rail-wrap">
+            <button type="button" class="rail-arrow rail-arrow--prev" onclick="window.scrollSubcatRail('${railId}', -1)" aria-label="Previous products in ${sub.label}">&lsaquo;</button>
+            <div class="subcat-rail" id="${railId}">
+              ${displayItems.map(p => renderProductCardHtml(p)).join('')}
+            </div>
+            <button type="button" class="rail-arrow rail-arrow--next" onclick="window.scrollSubcatRail('${railId}', 1)" aria-label="Next products in ${sub.label}">&rsaquo;</button>
+          </div>
+        </div>
+      `;
+    });
+
+    container.innerHTML = html;
+  } else {
+    // SINGLE 5-COLUMN GRID ON SPECIFIC TAB
+    const subItems = secProds.filter(p => p.subCategory === activeTab);
+    const filtered = filterProductsByChip(subItems, activeChip);
+
+    container.innerHTML = `
+      <div class="subcat-grid-5">
+        ${filtered.map(p => renderProductCardHtml(p)).join('')}
+      </div>
+    `;
+  }
+}
+
+function initWearSections() {
+  ['men', 'women', 'kids'].forEach(sec => {
+    renderWearTabs(sec);
+    renderWearChips(sec);
+    renderWearContent(sec);
+  });
+
+  // Global click listener to close open quick-add drawers when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.p-card__quick-add') && !e.target.closest('.p-card__plus-btn')) {
+      document.querySelectorAll('.p-card__quick-add.is-open').forEach(q => q.classList.remove('is-open'));
+    }
+  });
+}
+
+// Global Handlers
+window.switchWearTab = function(section, tabId) {
+  WEAR_STATE[section].activeTab = tabId;
+  WEAR_STATE[section].activeChip = (tabId === 'all' ? 'All Items' : 'All');
+  renderWearTabs(section);
+  renderWearChips(section);
+  renderWearContent(section);
+};
+
+window.switchWearChip = function(section, chipLabel) {
+  WEAR_STATE[section].activeChip = chipLabel;
+  renderWearChips(section);
+  renderWearContent(section);
+};
+
+window.scrollSubcatRail = function(railId, direction) {
+  const rail = document.getElementById(railId);
+  if (!rail) return;
+  const scrollAmount = Math.max(300, rail.clientWidth * 0.75) * direction;
+  rail.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+};
+
+window.toggleCardQuickAdd = function(e, productId) {
+  e.stopPropagation();
+  const qa = document.getElementById(`qa_${productId}`);
+  if (!qa) return;
+  const wasOpen = qa.classList.contains('is-open');
+  document.querySelectorAll('.p-card__quick-add.is-open').forEach(q => q.classList.remove('is-open'));
+  if (!wasOpen) {
+    qa.classList.add('is-open');
+  }
+};
+
+window.closeCardQuickAdd = function(e, productId) {
+  e.stopPropagation();
+  const qa = document.getElementById(`qa_${productId}`);
+  if (qa) qa.classList.remove('is-open');
+};
+
+window.selectCardSize = function(e, productId, size, btn) {
+  e.stopPropagation();
+  const qa = document.getElementById(`qa_${productId}`);
+  if (!qa) return;
+  qa.querySelectorAll('.quick-add__size-pill').forEach(b => b.classList.remove('is-selected'));
+  btn.classList.add('is-selected');
+  qa.dataset.selectedSize = size;
+};
+
+window.executeCardQuickAdd = function(e, productId) {
+  e.stopPropagation();
+  const qa = document.getElementById(`qa_${productId}`);
+  const selSize = (qa && qa.dataset.selectedSize) || (qa && qa.querySelector('.quick-add__size-pill.is-selected')?.textContent.trim()) || 'M';
+  const prod = window.getProductById ? window.getProductById(productId) : null;
+  const colorName = (prod && prod.colors && prod.colors[0]?.name) || 'Default';
+
+  if (window.gazeboStore) {
+    window.gazeboStore.addToCart(productId, selSize, colorName, 1);
+  }
+  if (qa) qa.classList.remove('is-open');
+};
+
+window.toggleProductWishlist = function(e, productId, btn) {
+  e.stopPropagation();
+  if (!window.gazeboStore) return;
+  window.gazeboStore.toggleWishlist(productId);
+  const isSaved = window.gazeboStore.wishlist.includes(productId);
+  btn.classList.toggle('is-active', isSaved);
+  const svg = btn.querySelector('svg');
+  if (svg) {
+    svg.setAttribute('fill', isSaved ? '#EE5824' : 'none');
+    svg.setAttribute('stroke', isSaved ? '#EE5824' : '#111111');
   }
 };

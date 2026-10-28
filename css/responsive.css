@@ -1415,3 +1415,64 @@ img, video {
     padding: 32px 0;
   }
 }
+
+
+/* Snitch Wear Sections Responsive Rules */
+@media (max-width: 1024px) {
+  .subcat-rail {
+    grid-auto-columns: calc(33.333% - 10px) !important;
+  }
+  .subcat-grid-5 {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .wear-section__header-sticky {
+    top: 60px !important;
+    padding: 14px 0 10px !important;
+  }
+  .wear-section__title {
+    font-size: 1.5rem !important;
+    margin-bottom: 8px !important;
+  }
+  .wear-tabs-bar {
+    gap: 14px !important;
+    padding-bottom: 6px !important;
+  }
+  .wear-tab {
+    font-size: 0.78rem !important;
+  }
+  .wear-chips-bar {
+    gap: 6px !important;
+    margin-top: 8px !important;
+  }
+  .wear-chip {
+    padding: 4px 10px !important;
+    font-size: 0.72rem !important;
+  }
+  .subcat-rail {
+    grid-auto-columns: calc(50% - 6px) !important;
+    gap: 8px !important;
+    padding-bottom: 8px !important;
+  }
+  .subcat-grid-5 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+  .rail-arrow {
+    display: none !important;
+  }
+  .p-card__details {
+    padding: 6px 2px 2px !important;
+  }
+  .p-card__title {
+    font-size: 0.76rem !important;
+  }
+  .p-card__price {
+    font-size: 0.82rem !important;
+  }
+  .p-card__plus-btn {
+    font-size: 1.2rem !important;
+  }
+}
