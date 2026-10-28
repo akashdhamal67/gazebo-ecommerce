@@ -1682,6 +1682,143 @@
     "reviewsCount": 51
   },
   {
+    "id": "gz-m-tr-01",
+    "name": "Gazebo Tailored Khaki Formal Trousers",
+    "section": "men",
+    "subCategory": "trousers",
+    "price": 999,
+    "mrp": 1599,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Classic Khaki",
+        "hex": "#C9B596"
+      },
+      {
+        "name": "Sand Dune",
+        "hex": "#DDD1BE"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/trousers/gazebo-tailored-khaki-formal-trousers.jpg",
+      "secondary": "assets/products/men/trousers/gazebo-tailored-khaki-formal-trousers.jpg"
+    },
+    "tags": [
+      "Trousers",
+      "Tailored",
+      "Formal",
+      "Khaki",
+      "Slim Fit",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499",
+      "Neutral Tones"
+    ],
+    "primaryImage": "assets/products/men/trousers/gazebo-tailored-khaki-formal-trousers.jpg",
+    "description": "Sharp tailored flat-front formal trousers in classic khaki cotton-blend with a crisp pressed crease and comfortable mid-rise fit.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 79
+  },
+  {
+    "id": "gz-m-tr-02",
+    "name": "Gazebo Charcoal Slate Formal Trousers",
+    "section": "men",
+    "subCategory": "trousers",
+    "price": 1299,
+    "mrp": 2199,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Charcoal Slate",
+        "hex": "#404245"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#5C6066"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/trousers/gazebo-charcoal-slate-formal-trousers.jpg",
+      "secondary": "assets/products/men/trousers/gazebo-charcoal-slate-formal-trousers.jpg"
+    },
+    "tags": [
+      "Trousers",
+      "Tailored",
+      "Formal",
+      "Charcoal Slate",
+      "Tapered Fit",
+      "Bestseller",
+      "Under ₹1,499",
+      "Dark Shades"
+    ],
+    "primaryImage": "assets/products/men/trousers/gazebo-charcoal-slate-formal-trousers.jpg",
+    "description": "Refined charcoal slate dress trousers woven from premium wrinkle-resistant suiting fabric, featuring slant side pockets and tapered hem.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 64
+  },
+  {
+    "id": "gz-m-tr-03",
+    "name": "Gazebo Midnight Black Slim Trousers",
+    "section": "men",
+    "subCategory": "trousers",
+    "price": 1699,
+    "mrp": 2799,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Midnight Black",
+        "hex": "#18191A"
+      },
+      {
+        "name": "Onyx",
+        "hex": "#0D0D0E"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/trousers/gazebo-midnight-black-slim-trousers.jpg",
+      "secondary": "assets/products/men/trousers/gazebo-midnight-black-slim-trousers.jpg"
+    },
+    "tags": [
+      "Trousers",
+      "Tailored",
+      "Formal",
+      "Midnight Black",
+      "Slim Fit",
+      "Dark Shades"
+    ],
+    "primaryImage": "assets/products/men/trousers/gazebo-midnight-black-slim-trousers.jpg",
+    "description": "Modern slim-fit formal trousers in deep midnight black with clean tailored drape, concealed hook closure, and elegant rear welt pockets.",
+    "category": "men",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.7,
+    "reviewsCount": 48
+  },
+  {
     "id": "gz-w-co-o-01",
     "name": "Pure Linen Camp Shirt & Trouser Set",
     "section": "women",
