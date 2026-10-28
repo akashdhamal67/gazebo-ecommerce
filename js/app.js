@@ -1533,25 +1533,31 @@ function renderWearContent(section) {
   if (section === 'men') {
     const activeTab = WEAR_STATE[section]?.activeTab || 'all';
     const activeChip = WEAR_STATE[section]?.activeChip || 'All Items';
+    const allProds = window.GAZEBO_PRODUCTS || [];
 
-    // Show t-shirt products ONLY on 'all' or 't-shirts' tab
-    if (activeTab === 'all' || activeTab === 't-shirts') {
-      const allProds = window.GAZEBO_PRODUCTS || [];
-      const menTshirts = allProds.filter(p => p.section === 'men' && p.subCategory === 't-shirts');
-      const filtered = filterProductsByChip(menTshirts, activeChip);
-
-      if (filtered.length) {
-        container.innerHTML = `
-          <div class="plp-grid-4">
-            ${filtered.map(p => renderProductCardHtml(p)).join('')}
-          </div>
-        `;
-      } else {
-        container.innerHTML = `<div style="padding: 60px 0; text-align: center; color: #888888; font-size: 0.88rem;">No products found matching "${activeChip}".</div>`;
-      }
+    let prodsToShow = [];
+    if (activeTab === 'all') {
+      prodsToShow = allProds.filter(p => p.section === 'men');
+    } else if (activeTab === 't-shirts') {
+      prodsToShow = allProds.filter(p => p.section === 'men' && p.subCategory === 't-shirts');
+    } else if (activeTab === 'oversized-tees') {
+      prodsToShow = allProds.filter(p => p.section === 'men' && p.subCategory === 'oversized-tees');
     } else {
-      // Any other tab (oversized-tees, polos, hoodies, etc.) must stay completely empty
+      // Any other tab (polos, hoodies, etc.) must stay completely empty
       container.innerHTML = '';
+      return;
+    }
+
+    const filtered = filterProductsByChip(prodsToShow, activeChip);
+
+    if (filtered.length) {
+      container.innerHTML = `
+        <div class="plp-grid-4">
+          ${filtered.map(p => renderProductCardHtml(p)).join('')}
+        </div>
+      `;
+    } else {
+      container.innerHTML = `<div style="padding: 60px 0; text-align: center; color: #888888; font-size: 0.88rem;">No products found matching "${activeChip}".</div>`;
     }
     return;
   }

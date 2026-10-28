@@ -217,6 +217,226 @@
     "reviewsCount": 51
   },
   {
+    "id": "gz-m-ot-01",
+    "name": "Gazebo Baroque Crest Oversized Tee",
+    "section": "men",
+    "subCategory": "oversized-tees",
+    "price": 999,
+    "mrp": 1599,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Burgundy",
+        "hex": "#6B2D38"
+      },
+      {
+        "name": "Washed Charcoal",
+        "hex": "#2C2C2E"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/oversized-tees/gazebo-baroque-crest-oversized-tee.jpg",
+      "secondary": "assets/products/men/oversized-tees/gazebo-baroque-crest-oversized-tee.jpg"
+    },
+    "tags": [
+      "Oversized",
+      "Heavyweight",
+      "Graphic Print",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/oversized-tees/gazebo-baroque-crest-oversized-tee.jpg",
+    "description": "Heavyweight 240 GSM dense cotton oversized t-shirt in rich vintage burgundy with an ornate antique baroque crest graphic emblem across the chest.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 73
+  },
+  {
+    "id": "gz-m-ot-02",
+    "name": "Gazebo Abstract Fluid Oversized Tee",
+    "section": "men",
+    "subCategory": "oversized-tees",
+    "price": 899,
+    "mrp": 1499,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Washed Black",
+        "hex": "#2B2C2F"
+      },
+      {
+        "name": "Ecru Cream",
+        "hex": "#E9E3D3"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/oversized-tees/gazebo-abstract-fluid-oversized-tee.jpg",
+      "secondary": "assets/products/men/oversized-tees/gazebo-abstract-fluid-oversized-tee.jpg"
+    },
+    "tags": [
+      "Oversized",
+      "Heavyweight",
+      "Graphic Print",
+      "Relaxed Fit",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/oversized-tees/gazebo-abstract-fluid-oversized-tee.jpg",
+    "description": "Drop-shoulder vintage washed black oversized tee featuring an organic fluid abstract calligraphic artwork on premium combed cotton.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 65
+  },
+  {
+    "id": "gz-m-ot-03",
+    "name": "Gazebo Sage Mineral Oversized Tee",
+    "section": "men",
+    "subCategory": "oversized-tees",
+    "price": 799,
+    "mrp": 1299,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Sage Green",
+        "hex": "#8A9A86"
+      },
+      {
+        "name": "Off White",
+        "hex": "#F2EFE9"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/oversized-tees/gazebo-sage-mineral-oversized-tee.jpg",
+      "secondary": "assets/products/men/oversized-tees/gazebo-sage-mineral-oversized-tee.jpg"
+    },
+    "tags": [
+      "Oversized",
+      "Heavyweight",
+      "Minimalist",
+      "Relaxed Fit",
+      "Under ₹999",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/oversized-tees/gazebo-sage-mineral-oversized-tee.jpg",
+    "description": "Clean mineral-washed sage green boxy tee crafted from ultra-soft heavyweight jersey with subtle geometric architectural line art at the chest.",
+    "category": "men",
+    "isBestseller": false,
+    "isNew": true,
+    "rating": 4.8,
+    "reviewsCount": 42
+  },
+  {
+    "id": "gz-m-ot-04",
+    "name": "Gazebo Alpine Horizon Oversized Tee",
+    "section": "men",
+    "subCategory": "oversized-tees",
+    "price": 849,
+    "mrp": 1399,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Cream Ecru",
+        "hex": "#F5EFE6"
+      },
+      {
+        "name": "Earth Brown",
+        "hex": "#4A3728"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/oversized-tees/gazebo-alpine-horizon-oversized-tee.jpg",
+      "secondary": "assets/products/men/oversized-tees/gazebo-alpine-horizon-oversized-tee.jpg"
+    },
+    "tags": [
+      "Oversized",
+      "Heavyweight",
+      "Graphic Print",
+      "Relaxed Fit",
+      "Under ₹999",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/oversized-tees/gazebo-alpine-horizon-oversized-tee.jpg",
+    "description": "Relaxed street-fit ecru t-shirt screen-printed with a retro mountain sunrise landscape graphic in warm earthy brown and terracotta tones.",
+    "category": "men",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.7,
+    "reviewsCount": 38
+  },
+  {
+    "id": "gz-m-ot-05",
+    "name": "Gazebo Ocean Swell Oversized Tee",
+    "section": "men",
+    "subCategory": "oversized-tees",
+    "price": 1099,
+    "mrp": 1799,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Slate Blue",
+        "hex": "#5C7D99"
+      },
+      {
+        "name": "Onyx Black",
+        "hex": "#1B1C1E"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/oversized-tees/gazebo-ocean-swell-oversized-tee.jpg",
+      "secondary": "assets/products/men/oversized-tees/gazebo-ocean-swell-oversized-tee.jpg"
+    },
+    "tags": [
+      "Oversized",
+      "Heavyweight",
+      "Graphic Print",
+      "Relaxed Fit",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/oversized-tees/gazebo-ocean-swell-oversized-tee.jpg",
+    "description": "Heavyweight premium cotton jersey in muted slate blue, displaying an artistic rolling ocean swell wave woodblock-inspired chest print.",
+    "category": "men",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 54
+  },
+  {
     "id": "gz-w-co-o-01",
     "name": "Pure Linen Camp Shirt & Trouser Set",
     "section": "women",
