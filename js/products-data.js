@@ -1633,6 +1633,182 @@ window.GAZEBO_PRODUCTS = [
     "reviewsCount": 63
   },
   {
+    "id": "gz-m-ls-01",
+    "name": "Gazebo Sky Blue Resort Linen Shirt",
+    "section": "men",
+    "subCategory": "linen-shirts",
+    "price": 999,
+    "mrp": 1599,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Sky Blue",
+        "hex": "#87CEEB"
+      },
+      {
+        "name": "Off White",
+        "hex": "#F0EDE4"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/linen-shirts/gazebo-sky-blue-resort-linen-shirt.jpg",
+      "secondary": "assets/products/men/linen-shirts/gazebo-sky-blue-resort-linen-shirt.jpg"
+    },
+    "tags": [
+      "Linen Shirt",
+      "Resort",
+      "Full Sleeve",
+      "Pure Linen",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/linen-shirts/gazebo-sky-blue-resort-linen-shirt.jpg",
+    "description": "Breezy resort-style long sleeve linen shirt crafted from 100% natural breathable European flax linen in a crisp sky blue tone.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 78
+  },
+  {
+    "id": "gz-m-ls-02",
+    "name": "Gazebo Sand Beige Relaxed Linen Shirt",
+    "section": "men",
+    "subCategory": "linen-shirts",
+    "price": 1299,
+    "mrp": 2199,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Sand Beige",
+        "hex": "#D8C7A5"
+      },
+      {
+        "name": "Warm Cream",
+        "hex": "#F4EFE6"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/linen-shirts/gazebo-sand-beige-relaxed-linen-shirt.jpg",
+      "secondary": "assets/products/men/linen-shirts/gazebo-sand-beige-relaxed-linen-shirt.jpg"
+    },
+    "tags": [
+      "Linen Shirt",
+      "Relaxed Fit",
+      "Full Sleeve",
+      "Pure Linen",
+      "Neutral Tones",
+      "Bestseller",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/linen-shirts/gazebo-sand-beige-relaxed-linen-shirt.jpg",
+    "description": "Understated sand beige relaxed linen button-up shirt featuring a soft spread collar and relaxed fit for laid-back refined layering.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 65
+  },
+  {
+    "id": "gz-m-ls-03",
+    "name": "Gazebo Olive Sage Casual Linen Shirt",
+    "section": "men",
+    "subCategory": "linen-shirts",
+    "price": 1499,
+    "mrp": 2499,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Olive Sage",
+        "hex": "#8A9A7B"
+      },
+      {
+        "name": "Off White",
+        "hex": "#ECE8DF"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/linen-shirts/gazebo-olive-sage-casual-linen-shirt.jpg",
+      "secondary": "assets/products/men/linen-shirts/gazebo-olive-sage-casual-linen-shirt.jpg"
+    },
+    "tags": [
+      "Linen Shirt",
+      "Casual",
+      "Full Sleeve",
+      "Pure Linen",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/linen-shirts/gazebo-olive-sage-casual-linen-shirt.jpg",
+    "description": "Versatile earth-toned olive sage linen shirt tailored with a structured collar, clean French placket, and garment-washed finish.",
+    "category": "men",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.7,
+    "reviewsCount": 52
+  },
+  {
+    "id": "gz-m-ls-04",
+    "name": "Gazebo Charcoal Slate Tailored Linen Shirt",
+    "section": "men",
+    "subCategory": "linen-shirts",
+    "price": 1699,
+    "mrp": 2799,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Charcoal Slate",
+        "hex": "#4A4D52"
+      },
+      {
+        "name": "Stone Grey",
+        "hex": "#8E9298"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/linen-shirts/gazebo-charcoal-slate-tailored-linen-shirt.jpg",
+      "secondary": "assets/products/men/linen-shirts/gazebo-charcoal-slate-tailored-linen-shirt.jpg"
+    },
+    "tags": [
+      "Linen Shirt",
+      "Tailored Fit",
+      "Full Sleeve",
+      "Pure Linen",
+      "Dark Shades"
+    ],
+    "primaryImage": "assets/products/men/linen-shirts/gazebo-charcoal-slate-tailored-linen-shirt.jpg",
+    "description": "Sophisticated deep charcoal slate tailored linen shirt made from premium slub linen yarns with a rich textured weave.",
+    "category": "men",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 44
+  },
+  {
     "id": "gz-w-co-o-01",
     "name": "Pure Linen Camp Shirt & Trouser Set",
     "section": "women",

@@ -1400,6 +1400,9 @@ function getChipsForTab(section, tabId) {
   if (['boys', 'girls'].includes(tabId)) {
     return ['All', 'Everyday Cotton', 'Active Casual', 'Co-ord Sets', 'Festive', 'Under ₹999'];
   }
+  if (['shirts', 'linen-shirts'].includes(tabId)) {
+    return ['All', 'New In', 'Bestsellers', 'Under ₹999', 'Under ₹1,499', 'Relaxed Fit'];
+  }
   return ['All', 'New In', 'Bestsellers', 'Under ₹999', 'Relaxed Fit'];
 }
 
@@ -1550,8 +1553,10 @@ function renderWearContent(section) {
       prodsToShow = allProds.filter(p => p.section === 'men' && p.subCategory === 'sweatshirts');
     } else if (activeTab === 'shirts') {
       prodsToShow = allProds.filter(p => p.section === 'men' && p.subCategory === 'shirts');
+    } else if (activeTab === 'linen-shirts') {
+      prodsToShow = allProds.filter(p => p.section === 'men' && p.subCategory === 'linen-shirts');
     } else {
-      // Any other tab (linen-shirts, etc.) must stay completely empty
+      // Any other tab (cargos, jeans, jackets, etc.) must stay completely empty
       container.innerHTML = '';
       return;
     }
