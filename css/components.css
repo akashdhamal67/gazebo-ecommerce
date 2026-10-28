@@ -5,77 +5,18 @@
 /* --------------------------------------------------------------------------
    1. Announcement Bar
    -------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+   1. Announcement Bar (Removed)
+   -------------------------------------------------------------------------- */
 .announcement-bar {
-  background-color: var(--gz-black);
-  color: var(--gz-white);
-  padding: 8px 24px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  position: relative;
-  z-index: 101;
-  transition: all var(--trans-base);
-}
-
-.announcement-bar__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: var(--container-max);
-  margin: 0 auto;
-}
-
-.announcement-bar__text {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex: 1;
-  justify-content: center;
-}
-
-.announcement-bar__tag {
-  background-color: var(--gz-orange);
-  color: var(--gz-white);
-  padding: 2px 6px;
-  font-size: 0.68rem;
-  font-weight: 800;
-  border-radius: var(--radius-xs);
-}
-
-.announcement-bar__actions {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.announcement-bar__link {
-  color: var(--gz-gray-med);
-  transition: color var(--trans-fast);
-  font-size: 0.74rem;
-}
-
-.announcement-bar__link:hover {
-  color: var(--gz-white);
-}
-
-.announcement-bar__close {
-  color: var(--gz-gray-med);
-  display: flex;
-  align-items: center;
-  padding: 2px;
-  transition: color var(--trans-fast);
-}
-
-.announcement-bar__close:hover {
-  color: var(--gz-white);
+  display: none !important;
 }
 
 /* --------------------------------------------------------------------------
-   2. Site Header (Snitch-Style Sticky Black Bar with Gazebo Branding)
+   2. Site Header (Clean White 72px Sticky Bar with Gazebo Branding)
    -------------------------------------------------------------------------- */
 :root {
-  --header-height: 80px;
+  --header-height: 72px;
 }
 
 .site-header {
@@ -83,24 +24,24 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
-  background-color: #000000 !important;
-  color: #ffffff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  height: 72px;
+  background-color: #FFFFFF !important;
+  color: #000000;
+  border-bottom: 1px solid #E5E5E5;
   z-index: 1000;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
-  transition: background-color 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .site-header.is-scrolled {
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .header-main {
-  height: 80px;
+  height: 72px;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -108,11 +49,11 @@
   box-sizing: border-box;
 }
 
-/* ZONE 1 (Left): Hamburger Toggle + Round Logo (~52px, circular) */
+/* ZONE 1 (Left): Hamburger Toggle + Round Logo (~48px, circular) */
 .header-zone-left {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
   flex-shrink: 0;
   z-index: 2;
 }
@@ -121,11 +62,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   background: none;
   border: none;
-  color: #ffffff;
+  color: #000000;
   cursor: pointer;
   padding: 0;
   border-radius: 50%;
@@ -133,7 +74,7 @@
 }
 
 .header-hamburger-btn:hover {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .header-hamburger-btn:active {
@@ -143,7 +84,7 @@
 .header-hamburger-btn svg {
   width: 24px;
   height: 24px;
-  stroke: #ffffff;
+  stroke: #000000;
 }
 
 .header-round-logo {
@@ -152,15 +93,18 @@
   justify-content: center;
   text-decoration: none;
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .header-round-logo-img {
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   transition: transform 0.2s ease;
 }
 
@@ -168,7 +112,7 @@
   transform: scale(1.05);
 }
 
-/* ZONE 2 (Center): Chrome/Silver Gothic Brand Wordmark (centered like Snitch) */
+/* ZONE 2 (Center): Solid Black Gothic Brand Wordmark (centered) */
 .header-zone-center {
   position: absolute;
   left: 50%;
@@ -187,20 +131,21 @@
   justify-content: center;
   text-decoration: none;
   line-height: 1;
-  transition: transform 0.2s ease, filter 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .header-wordmark-link:hover {
-  transform: scale(1.03);
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
+  transform: scale(1.02);
+  opacity: 0.85;
 }
 
 .header-wordmark-img {
-  height: 44px;
+  height: 42px;
   width: auto;
-  max-height: 48px;
+  max-height: 44px;
   display: block;
   object-fit: contain;
+  filter: brightness(0);
 }
 
 /* ZONE 3 (Right): Search, Cart, Wishlist, Account */
@@ -208,7 +153,7 @@
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   flex-shrink: 0;
   z-index: 2;
   margin-left: auto;
@@ -218,12 +163,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: transparent;
   border: none;
-  color: #ffffff;
+  color: #000000;
   position: relative;
   transition: background-color 0.2s ease, transform 0.15s ease, color 0.2s ease;
   cursor: pointer;
@@ -231,8 +176,8 @@
 }
 
 .header-action-btn:hover {
-  background-color: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #000000;
 }
 
 .header-action-btn:active {
@@ -242,13 +187,13 @@
 .header-action-btn svg {
   width: 20px;
   height: 20px;
-  stroke: #ffffff;
+  stroke: #000000;
 }
 
 .header-badge {
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: 3px;
+  right: 3px;
   background-color: var(--gz-orange, #EE5824);
   color: #ffffff;
   font-size: 0.65rem;
@@ -260,7 +205,7 @@
   align-items: center;
   justify-content: center;
   padding: 0 4px;
-  border: 1.5px solid #000000;
+  border: 1.5px solid #FFFFFF;
   line-height: 1;
 }
 
