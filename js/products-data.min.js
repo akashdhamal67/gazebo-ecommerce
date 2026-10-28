@@ -1989,6 +1989,141 @@ window.GAZEBO_PRODUCTS = [
     "reviewsCount": 54
   },
   {
+    "id": "gz-m-c-01",
+    "name": "Gazebo Jet Black Utility Cargo",
+    "section": "men",
+    "subCategory": "cargos",
+    "price": 999,
+    "mrp": 1599,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Jet Black",
+        "hex": "#1B1B1B"
+      },
+      {
+        "name": "Charcoal",
+        "hex": "#333333"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/cargos/gazebo-jet-black-utility-cargo.jpg",
+      "secondary": "assets/products/men/cargos/gazebo-jet-black-utility-cargo.jpg"
+    },
+    "tags": [
+      "Cargo",
+      "Cargo Utility",
+      "Jet Black",
+      "Relaxed Fit",
+      "Straight Fit",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499",
+      "Dark Shades"
+    ],
+    "primaryImage": "assets/products/men/cargos/gazebo-jet-black-utility-cargo.jpg",
+    "description": "Modern tactical utility cargo pants crafted from durable cotton twill featuring dual side bellow flap pockets and a relaxed straight cut.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 82
+  },
+  {
+    "id": "gz-m-c-02",
+    "name": "Gazebo Military Olive Utility Cargo",
+    "section": "men",
+    "subCategory": "cargos",
+    "price": 1299,
+    "mrp": 2199,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Olive Green",
+        "hex": "#606A4F"
+      },
+      {
+        "name": "Khaki Green",
+        "hex": "#748062"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/cargos/gazebo-military-olive-utility-cargo.jpg",
+      "secondary": "assets/products/men/cargos/gazebo-military-olive-utility-cargo.jpg"
+    },
+    "tags": [
+      "Cargo",
+      "Cargo Utility",
+      "Military Olive",
+      "Relaxed Fit",
+      "Earth Tones",
+      "Bestseller",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/cargos/gazebo-military-olive-utility-cargo.jpg",
+    "description": "Heritage military-inspired cargo pants in authentic army olive green, tailored with heavy-duty pocket flaps and reinforced knee articulation.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 68
+  },
+  {
+    "id": "gz-m-c-03",
+    "name": "Gazebo Sand Khaki Relaxed Cargo",
+    "section": "men",
+    "subCategory": "cargos",
+    "price": 1699,
+    "mrp": 2799,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Sand Khaki",
+        "hex": "#CBB99E"
+      },
+      {
+        "name": "Desert Beige",
+        "hex": "#B5A285"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/cargos/gazebo-sand-khaki-relaxed-cargo.jpg",
+      "secondary": "assets/products/men/cargos/gazebo-sand-khaki-relaxed-cargo.jpg"
+    },
+    "tags": [
+      "Cargo",
+      "Cargo Utility",
+      "Sand Khaki",
+      "Relaxed Fit",
+      "Neutral Tones"
+    ],
+    "primaryImage": "assets/products/men/cargos/gazebo-sand-khaki-relaxed-cargo.jpg",
+    "description": "Versatile desert sand khaki utility cargo trousers woven from breathable stretch cotton with spacious flap cargo compartments.",
+    "category": "men",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.7,
+    "reviewsCount": 51
+  },
+  {
     "id": "gz-w-co-o-01",
     "name": "Pure Linen Camp Shirt & Trouser Set",
     "section": "women",

@@ -1394,7 +1394,10 @@ function getChipsForTab(section, tabId) {
   if (tabId === 'jeans') {
     return ['All', 'Straight Fit', 'Slim Fit', 'Bestsellers', 'Under ₹999', 'Under ₹1,499', 'Dark Shades'];
   }
-  if (['cargos', 'trousers', 'wide-leg-pants', 'shorts', 'skirts'].includes(tabId)) {
+  if (tabId === 'cargos') {
+    return ['All', 'Cargo Utility', 'Relaxed Fit', 'Bestsellers', 'Under ₹999', 'Under ₹1,499', 'Dark Shades'];
+  }
+  if (['trousers', 'wide-leg-pants', 'shorts', 'skirts'].includes(tabId)) {
     return ['All', 'Wide Leg', 'Straight Fit', 'Baggy', 'Relaxed', 'Cargo Utility', 'Dark Wash', 'Light Wash'];
   }
   if (['co-ords', 'sets', 'dresses'].includes(tabId)) {
@@ -1560,8 +1563,10 @@ function renderWearContent(section) {
       prodsToShow = allProds.filter(p => p.section === 'men' && p.subCategory === 'linen-shirts');
     } else if (activeTab === 'jeans') {
       prodsToShow = allProds.filter(p => p.section === 'men' && p.subCategory === 'jeans');
+    } else if (activeTab === 'cargos') {
+      prodsToShow = allProds.filter(p => p.section === 'men' && p.subCategory === 'cargos');
     } else {
-      // Any other tab (cargos, trousers, jackets, etc.) must stay completely empty
+      // Any other tab (trousers, jackets, sweaters, shorts, etc.) must stay completely empty
       container.innerHTML = '';
       return;
     }
