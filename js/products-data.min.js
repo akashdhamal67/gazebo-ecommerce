@@ -879,6 +879,224 @@ window.GAZEBO_PRODUCTS = [
     "reviewsCount": 54
   },
   {
+    "id": "gz-m-p-01",
+    "name": "Gazebo Burgundy Tipped Pique Polo Tee",
+    "section": "men",
+    "subCategory": "polos",
+    "price": 999,
+    "mrp": 1599,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Burgundy",
+        "hex": "#722F37"
+      },
+      {
+        "name": "Off White",
+        "hex": "#F1EBE1"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/polos/gazebo-burgundy-tipped-pique-polo-tee.jpg",
+      "secondary": "assets/products/men/polos/gazebo-burgundy-tipped-pique-polo-tee.jpg"
+    },
+    "tags": [
+      "Polo",
+      "Pique Cotton",
+      "Tipped Collar",
+      "Embroidery",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/polos/gazebo-burgundy-tipped-pique-polo-tee.jpg",
+    "description": "Rich burgundy combed pique cotton polo tee tailored with contrast cream tipping along the collar and cuffs, finished with fine chest embroidery.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 68
+  },
+  {
+    "id": "gz-m-p-02",
+    "name": "Gazebo Emerald Twin-Tipped Polo Tee",
+    "section": "men",
+    "subCategory": "polos",
+    "price": 1099,
+    "mrp": 1799,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Emerald Green",
+        "hex": "#1E593E"
+      },
+      {
+        "name": "Off White",
+        "hex": "#EDEAE1"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/polos/gazebo-emerald-twin-tipped-polo-tee.jpg",
+      "secondary": "assets/products/men/polos/gazebo-emerald-twin-tipped-polo-tee.jpg"
+    },
+    "tags": [
+      "Polo",
+      "Pique Cotton",
+      "Tipped Collar",
+      "Bestseller",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/polos/gazebo-emerald-twin-tipped-polo-tee.jpg",
+    "description": "Premium emerald green pique polo shirt featuring dual contrast white stripe tipping on the spread rib collar and tailored short sleeves.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 79
+  },
+  {
+    "id": "gz-m-p-03",
+    "name": "Gazebo Navy Crest Pique Polo Tee",
+    "section": "men",
+    "subCategory": "polos",
+    "price": 899,
+    "mrp": 1499,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Deep Navy",
+        "hex": "#1D3354"
+      },
+      {
+        "name": "Sand Khaki",
+        "hex": "#D9C5A3"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/polos/gazebo-navy-crest-pique-polo-tee.jpg",
+      "secondary": "assets/products/men/polos/gazebo-navy-crest-pique-polo-tee.jpg"
+    },
+    "tags": [
+      "Polo",
+      "Pique Cotton",
+      "Embroidery",
+      "Dark Shades",
+      "Under ₹999",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/polos/gazebo-navy-crest-pique-polo-tee.jpg",
+    "description": "Classic midnight navy polo shirt crafted from breathable cotton pique with an embroidered minimalist crest insignia at the chest.",
+    "category": "men",
+    "isBestseller": false,
+    "isNew": true,
+    "rating": 4.8,
+    "reviewsCount": 46
+  },
+  {
+    "id": "gz-m-p-04",
+    "name": "Gazebo Botanical Print Resort Polo Tee",
+    "section": "men",
+    "subCategory": "polos",
+    "price": 1199,
+    "mrp": 1899,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Warm Cream",
+        "hex": "#F6F3EB"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1C2A44"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/polos/gazebo-botanical-print-resort-polo-tee.jpg",
+      "secondary": "assets/products/men/polos/gazebo-botanical-print-resort-polo-tee.jpg"
+    },
+    "tags": [
+      "Polo",
+      "Printed",
+      "Resort Collar",
+      "Neutral Tones",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/polos/gazebo-botanical-print-resort-polo-tee.jpg",
+    "description": "Breezy resort-style polo in warm cream with an all-over navy botanical leaf illustration on soft mercerized cotton jersey.",
+    "category": "men",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.7,
+    "reviewsCount": 35
+  },
+  {
+    "id": "gz-m-p-05",
+    "name": "Gazebo Steel Blue Textured Polo Tee",
+    "section": "men",
+    "subCategory": "polos",
+    "price": 849,
+    "mrp": 1399,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Steel Blue",
+        "hex": "#557A95"
+      },
+      {
+        "name": "Charcoal Grey",
+        "hex": "#3A3E45"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/polos/gazebo-steel-blue-textured-polo-tee.jpg",
+      "secondary": "assets/products/men/polos/gazebo-steel-blue-textured-polo-tee.jpg"
+    },
+    "tags": [
+      "Polo",
+      "Textured Knit",
+      "Micro Waffle",
+      "Under ₹999",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/polos/gazebo-steel-blue-textured-polo-tee.jpg",
+    "description": "Micro-textured waffle knit polo shirt in sophisticated steel blue, featuring a clean placket and structured self-fabric collar.",
+    "category": "men",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 52
+  },
+  {
     "id": "gz-w-co-o-01",
     "name": "Pure Linen Camp Shirt & Trouser Set",
     "section": "women",
