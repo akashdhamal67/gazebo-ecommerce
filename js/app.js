@@ -1548,8 +1548,10 @@ function renderWearContent(section) {
       prodsToShow = allProds.filter(p => p.section === 'men' && p.subCategory === 'hoodies');
     } else if (activeTab === 'sweatshirts') {
       prodsToShow = allProds.filter(p => p.section === 'men' && p.subCategory === 'sweatshirts');
+    } else if (activeTab === 'shirts') {
+      prodsToShow = allProds.filter(p => p.section === 'men' && p.subCategory === 'shirts');
     } else {
-      // Any other tab (shirts, etc.) must stay completely empty
+      // Any other tab (linen-shirts, etc.) must stay completely empty
       container.innerHTML = '';
       return;
     }
