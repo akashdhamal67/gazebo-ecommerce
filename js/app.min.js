@@ -1544,8 +1544,10 @@ function renderWearContent(section) {
       prodsToShow = allProds.filter(p => p.section === 'men' && p.subCategory === 'oversized-tees');
     } else if (activeTab === 'polos') {
       prodsToShow = allProds.filter(p => p.section === 'men' && p.subCategory === 'polos');
+    } else if (activeTab === 'hoodies') {
+      prodsToShow = allProds.filter(p => p.section === 'men' && p.subCategory === 'hoodies');
     } else {
-      // Any other tab (hoodies, sweatshirts, etc.) must stay completely empty
+      // Any other tab (sweatshirts, etc.) must stay completely empty
       container.innerHTML = '';
       return;
     }

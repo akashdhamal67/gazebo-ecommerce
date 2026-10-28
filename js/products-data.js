@@ -1097,6 +1097,228 @@ window.GAZEBO_PRODUCTS = [
     "reviewsCount": 52
   },
   {
+    "id": "gz-m-h-01",
+    "name": "Gazebo Burgundy Heavyweight Zip-Up Hoodie",
+    "section": "men",
+    "subCategory": "hoodies",
+    "price": 1299,
+    "mrp": 2199,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Burgundy",
+        "hex": "#6D1A2C"
+      },
+      {
+        "name": "Off White",
+        "hex": "#ECE8DF"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/hoodies/gazebo-burgundy-heavyweight-zip-up-hoodie.jpg",
+      "secondary": "assets/products/men/hoodies/gazebo-burgundy-heavyweight-zip-up-hoodie.jpg"
+    },
+    "tags": [
+      "Hoodie",
+      "Zip-Up",
+      "Heavyweight Fleece",
+      "Relaxed Fit",
+      "Bestseller",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/hoodies/gazebo-burgundy-heavyweight-zip-up-hoodie.jpg",
+    "description": "Premium heavyweight fleece zip-up hoodie in deep burgundy, featuring a split kangaroo pocket, silver-finish zipper, and relaxed dropped shoulders.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 84
+  },
+  {
+    "id": "gz-m-h-02",
+    "name": "Gazebo Noir Brushstroke Graphic Hoodie",
+    "section": "men",
+    "subCategory": "hoodies",
+    "price": 1399,
+    "mrp": 2299,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Washed Black",
+        "hex": "#1E1E20"
+      },
+      {
+        "name": "Ivory Cream",
+        "hex": "#F1EEE6"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/hoodies/gazebo-noir-brushstroke-graphic-hoodie.jpg",
+      "secondary": "assets/products/men/hoodies/gazebo-noir-brushstroke-graphic-hoodie.jpg"
+    },
+    "tags": [
+      "Hoodie",
+      "Pullover",
+      "Graphic",
+      "Heavyweight Fleece",
+      "Relaxed Fit",
+      "Bestseller",
+      "Dark Shades",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/hoodies/gazebo-noir-brushstroke-graphic-hoodie.jpg",
+    "description": "Heavyweight washed black pullover hoodie showcasing an expressive ivory brushstroke calligraphy artwork across the chest with a cozy fleece lining.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 92
+  },
+  {
+    "id": "gz-m-h-03",
+    "name": "Gazebo Sunset Mountain Graphic Hoodie",
+    "section": "men",
+    "subCategory": "hoodies",
+    "price": 999,
+    "mrp": 1699,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Warm Cream",
+        "hex": "#F5EFEB"
+      },
+      {
+        "name": "Rust Terracotta",
+        "hex": "#A0522D"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/hoodies/gazebo-sunset-mountain-graphic-hoodie.jpg",
+      "secondary": "assets/products/men/hoodies/gazebo-sunset-mountain-graphic-hoodie.jpg"
+    },
+    "tags": [
+      "Hoodie",
+      "Pullover",
+      "Graphic",
+      "Heavyweight Fleece",
+      "Neutral Tones",
+      "Under ₹999",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/hoodies/gazebo-sunset-mountain-graphic-hoodie.jpg",
+    "description": "Artisan pullover hoodie crafted from warm cream fleece, featuring a detailed alpine mountain and setting sun graphic printed in earthy rust tones.",
+    "category": "men",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 61
+  },
+  {
+    "id": "gz-m-h-04",
+    "name": "Gazebo Forest Green Minimalist Hoodie",
+    "section": "men",
+    "subCategory": "hoodies",
+    "price": 1499,
+    "mrp": 2499,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Forest Green",
+        "hex": "#1E4D38"
+      },
+      {
+        "name": "Ecru White",
+        "hex": "#F0EDE4"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/hoodies/gazebo-forest-green-minimalist-hoodie.jpg",
+      "secondary": "assets/products/men/hoodies/gazebo-forest-green-minimalist-hoodie.jpg"
+    },
+    "tags": [
+      "Hoodie",
+      "Pullover",
+      "Minimalist",
+      "Heavyweight Fleece",
+      "Relaxed Fit",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/hoodies/gazebo-forest-green-minimalist-hoodie.jpg",
+    "description": "Clean, elevated pullover hoodie in rich forest green 420 GSM brushed fleece with subtle tonal geometric embroidery on the chest and a roomy kangaroo pouch.",
+    "category": "men",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 47
+  },
+  {
+    "id": "gz-m-h-05",
+    "name": "Gazebo Ocean Wave Graphic Oversized Hoodie",
+    "section": "men",
+    "subCategory": "hoodies",
+    "price": 1699,
+    "mrp": 2799,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Slate Blue",
+        "hex": "#607B8B"
+      },
+      {
+        "name": "Deep Navy",
+        "hex": "#1D2E42"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/hoodies/gazebo-ocean-wave-graphic-oversized-hoodie.jpg",
+      "secondary": "assets/products/men/hoodies/gazebo-ocean-wave-graphic-oversized-hoodie.jpg"
+    },
+    "tags": [
+      "Hoodie",
+      "Pullover",
+      "Graphic",
+      "Heavyweight Fleece",
+      "Relaxed Fit"
+    ],
+    "primaryImage": "assets/products/men/hoodies/gazebo-ocean-wave-graphic-oversized-hoodie.jpg",
+    "description": "Streetwear statement hoodie in slate blue featuring high-definition Great Wave artwork across the chest, dropped shoulders, and ultra-plush fleece interior.",
+    "category": "men",
+    "isBestseller": false,
+    "isNew": true,
+    "rating": 4.9,
+    "reviewsCount": 54
+  },
+  {
     "id": "gz-w-co-o-01",
     "name": "Pure Linen Camp Shirt & Trouser Set",
     "section": "women",
