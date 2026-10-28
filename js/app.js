@@ -427,6 +427,40 @@ let activeSort = 'featured';
 
 function initProductGrid() {
   renderProducts();
+  renderCategoryPageGrid();
+}
+
+function renderCategoryPageGrid() {
+  const catGrid = document.getElementById('categoryProductGrid');
+  if (!catGrid) return;
+  const category = catGrid.dataset.category || 'all';
+  const products = (typeof window.getProductsByCategory === 'function') 
+    ? window.getProductsByCategory(category)
+    : (window.GAZEBO_PRODUCTS || []).filter(p => p.category === category);
+  
+  if (!products || products.length === 0) return;
+  
+  catGrid.innerHTML = products.map(product => `
+    <article class="product-card" data-product-id="${product.id}" data-category="${product.category}">
+      <div class="product-card__media">
+        <div class="product-card__image-wrap" onclick="location.href='product.html'">
+          <img class="product-card__img product-card__img--primary" 
+               src="${product.image || product.primaryImage}" 
+               alt="${product.name}" 
+               width="1000" height="1250" 
+               loading="lazy" decoding="async"
+               style="object-fit: cover; object-position: center top;" />
+        </div>
+      </div>
+      <div class="product-card__info">
+        <h3 class="product-card__title"><a href="product.html">${product.name}</a></h3>
+        <div class="product-card__price-row">
+          <span class="product-card__price">${product.priceDisplay || '₹ ' + (product.price || 0).toFixed(2)}</span>
+        </div>
+        <button class="btn btn-sm btn-outline w-100" onclick="window.gazeboCart ? window.gazeboCart.addItem('${product.id}') : null">Add to Cart</button>
+      </div>
+    </article>
+  `).join('');
 }
 
 function renderProducts() {

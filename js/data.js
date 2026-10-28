@@ -46,7 +46,7 @@ const GAZEBO_PRODUCTS = [
     priceDisplay: "₹ 0.00",
     comparePriceDisplay: "₹ 0.00",
     badge: "New Arrival",
-    image: "images/product-placeholder-1.svg",
+    image: "assets/images/store/men-01.webp",
     sizes: ["S", "M", "L", "XL", "XXL"],
     colors: [
       { name: "Neutral Black", hex: "#1A1A1A" },
@@ -65,7 +65,7 @@ const GAZEBO_PRODUCTS = [
     priceDisplay: "₹ 0.00",
     comparePriceDisplay: "₹ 0.00",
     badge: "Best Seller",
-    image: "images/product-placeholder-2.svg",
+    image: "assets/images/store/men-02.webp",
     sizes: ["S", "M", "L", "XL"],
     colors: [
       { name: "Off White", hex: "#EAE7DF" },
@@ -83,7 +83,7 @@ const GAZEBO_PRODUCTS = [
     priceDisplay: "₹ 0.00",
     comparePriceDisplay: "₹ 0.00",
     badge: "Popular",
-    image: "images/product-placeholder-3.svg",
+    image: "assets/images/store/men-03.webp",
     sizes: ["30", "32", "34", "36"],
     colors: [
       { name: "Olive Green", hex: "#4B5320" },
@@ -101,7 +101,7 @@ const GAZEBO_PRODUCTS = [
     priceDisplay: "₹ 0.00",
     comparePriceDisplay: "₹ 0.00",
     badge: "Classic",
-    image: "images/product-placeholder-4.svg",
+    image: "assets/images/store/men-04.webp",
     sizes: ["S", "M", "L", "XL"],
     colors: [
       { name: "Navy Blue", hex: "#1B2A4A" },
@@ -121,7 +121,7 @@ const GAZEBO_PRODUCTS = [
     priceDisplay: "₹ 0.00",
     comparePriceDisplay: "₹ 0.00",
     badge: "New Arrival",
-    image: "images/product-placeholder-5.svg",
+    image: "assets/images/store/women-01.webp",
     sizes: ["XS", "S", "M", "L", "XL"],
     colors: [
       { name: "Soft Ecru", hex: "#F3EFE6" },
@@ -139,7 +139,7 @@ const GAZEBO_PRODUCTS = [
     priceDisplay: "₹ 0.00",
     comparePriceDisplay: "₹ 0.00",
     badge: "Best Seller",
-    image: "images/product-placeholder-6.svg",
+    image: "assets/images/store/women-02.webp",
     sizes: ["S", "M", "L", "XL"],
     colors: [
       { name: "Warm Terracotta", hex: "#C47B5D" },
@@ -157,7 +157,7 @@ const GAZEBO_PRODUCTS = [
     priceDisplay: "₹ 0.00",
     comparePriceDisplay: "₹ 0.00",
     badge: "Trending",
-    image: "images/product-placeholder-7.svg",
+    image: "assets/images/store/women-03.webp",
     sizes: ["S", "M", "L"],
     colors: [
       { name: "Vintage Olive", hex: "#606B56" },
@@ -175,7 +175,7 @@ const GAZEBO_PRODUCTS = [
     priceDisplay: "₹ 0.00",
     comparePriceDisplay: "₹ 0.00",
     badge: "Essential",
-    image: "images/product-placeholder-8.svg",
+    image: "assets/images/store/women-04.webp",
     sizes: ["XS", "S", "M", "L"],
     colors: [
       { name: "Midnight", hex: "#111111" },
@@ -195,7 +195,7 @@ const GAZEBO_PRODUCTS = [
     priceDisplay: "₹ 0.00",
     comparePriceDisplay: "₹ 0.00",
     badge: "New Arrival",
-    image: "images/product-placeholder-1.svg",
+    image: "assets/images/store/kids-01.webp",
     sizes: ["4-5Y", "6-7Y", "8-9Y", "10-11Y", "12-13Y"],
     colors: [
       { name: "Sunshine Yellow", hex: "#F4C430" },
@@ -214,7 +214,7 @@ const GAZEBO_PRODUCTS = [
     priceDisplay: "₹ 0.00",
     comparePriceDisplay: "₹ 0.00",
     badge: "Best Seller",
-    image: "images/product-placeholder-2.svg",
+    image: "assets/images/store/kids-02.webp",
     sizes: ["4-5Y", "6-7Y", "8-9Y", "10-11Y"],
     colors: [
       { name: "Navy Heather", hex: "#2C3E50" },
@@ -232,7 +232,7 @@ const GAZEBO_PRODUCTS = [
     priceDisplay: "₹ 0.00",
     comparePriceDisplay: "₹ 0.00",
     badge: "Comfort Fit",
-    image: "images/product-placeholder-3.svg",
+    image: "assets/images/store/kids-03.webp",
     sizes: ["6-7Y", "8-9Y", "10-11Y", "12-13Y"],
     colors: [
       { name: "Sage", hex: "#9CAF88" },
@@ -250,7 +250,7 @@ const GAZEBO_PRODUCTS = [
     priceDisplay: "₹ 0.00",
     comparePriceDisplay: "₹ 0.00",
     badge: "Everyday",
-    image: "images/product-placeholder-4.svg",
+    image: "assets/images/store/kids-04.webp",
     sizes: ["4-5Y", "6-7Y", "8-9Y", "10-11Y"],
     colors: [
       { name: "Charcoal", hex: "#333333" },
