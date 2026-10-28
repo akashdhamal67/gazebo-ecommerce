@@ -279,73 +279,32 @@ img, video {
    ========================================================================== */
 @media (max-width: 1024px) {
   :root {
-    --header-height: 60px;
+    --header-height: 72px;
   }
 
-  /* Header compact styling */
+  /* Header Snitch-Style Sticky Black Bar */
   .site-header {
-    height: auto;
+    height: 72px;
   }
 
-  .header-main {
-    height: 60px;
+  .header-main,
+  .header-container {
+    height: 72px;
     padding: 0 20px;
     gap: 16px;
     justify-content: space-between;
   }
 
-  /* Hide Desktop Center Navigation */
-  .main-nav,
-  .header-zone-center {
-    display: none !important;
+  .header-round-logo-img {
+    width: 46px;
+    height: 46px;
   }
 
-  /* Show Hamburger in right zone */
-  .mobile-menu-toggle {
-    display: flex !important;
-  }
-
-  /* Zone 1: Logo stays cleanly on the left */
-  .header-zone-left {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    min-width: 0;
-    flex-shrink: 1;
-  }
-
-  .brand-identity {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    min-width: 0;
-  }
-
-  .brand-logo-img {
-    width: 38px;
+  .header-wordmark-img {
     height: 38px;
-    flex-shrink: 0;
-    object-fit: contain;
+    max-height: 40px;
   }
 
-  .brand-text-block {
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-  }
-
-  .brand-wordmark {
-    font-size: clamp(1.15rem, 3.5vw, 1.35rem);
-    white-space: nowrap;
-    line-height: 1;
-  }
-
-  .brand-subtext {
-    font-size: 0.54rem;
-    white-space: nowrap;
-  }
-
-  /* Zone 3: Search, Wishlist, Cart + Hamburger Menu on the right */
   .header-actions,
   .header-zone-right {
     display: flex;
@@ -355,9 +314,10 @@ img, video {
     flex-shrink: 0;
   }
 
-  .header-action-btn {
-    width: 38px;
-    height: 38px;
+  .header-action-btn,
+  .header-icon-btn {
+    width: 40px;
+    height: 40px;
     padding: 0;
   }
 
@@ -474,9 +434,34 @@ img, video {
     padding-right: 16px;
   }
 
-  .header-main {
-    padding: 0 16px;
-    gap: 10px;
+  .site-header {
+    height: 64px !important;
+  }
+
+  .header-main,
+  .header-container {
+    height: 64px !important;
+    padding: 0 16px !important;
+  }
+
+  /* On mobile: round logo hidden, wordmark centered, hamburger on left */
+  .header-round-logo {
+    display: none !important;
+  }
+
+  .header-zone-left {
+    gap: 0 !important;
+  }
+
+  .header-hamburger-btn,
+  .mobile-hamburger-btn {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .header-wordmark-img {
+    height: 32px !important;
+    max-height: 34px !important;
   }
 
   .announcement-bar {
@@ -489,29 +474,19 @@ img, video {
     display: none;
   }
 
-  .brand-logo-img {
-    width: 36px;
-    height: 36px;
+  .header-actions,
+  .header-zone-right {
+    gap: 6px !important;
   }
 
-  .brand-wordmark {
-    font-size: 1.22rem;
+  .header-action-btn,
+  .header-icon-btn {
+    width: 38px !important;
+    height: 38px !important;
   }
 
-  .brand-subtext {
-    font-size: 0.52rem;
-  }
-
-  .header-actions {
-    gap: 6px;
-  }
-
-  .header-action-btn {
-    width: 36px;
-    height: 36px;
-  }
-
-  .header-action-btn--account {
+  .header-action-btn--account,
+  .header-icon-btn--account {
     display: none !important;
   }
 

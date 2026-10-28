@@ -53,139 +53,151 @@
   color: var(--color-white);
 }
 
-/* Site Header Main (Sticky) */
+/* Site Header Main (Sticky Black Snitch-Style Bar) */
 .site-header {
   position: sticky;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  z-index: 100;
-  border-bottom: 1px solid var(--color-gray-light);
-  transition: box-shadow var(--trans-base);
+  height: 80px;
+  background-color: #000000 !important;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  z-index: 1000;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+  transition: background-color var(--trans-base), box-shadow var(--trans-base);
 }
 
 .site-header.is-scrolled {
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.55);
 }
 
-/* Three-Zone Header Flexbox Container */
-.header-container {
+/* Three-Zone Header Container */
+.header-container,
+.header-main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 82px;
-  max-width: var(--container-width);
+  height: 80px;
+  max-width: var(--container-width, 1440px);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
+  position: relative;
+  box-sizing: border-box;
 }
 
-/* ZONE 1 (Left): Brand Identity (Logo + Wordmark) */
+/* ZONE 1 (Left): Hamburger Toggle + Round Logo (~52px, circular) */
 .header-zone-left {
   display: flex;
   align-items: center;
+  gap: 16px;
   flex-shrink: 0;
-  margin-right: 40px; /* At least 40px gap between wordmark and nav */
+  z-index: 2;
+  margin-right: 0;
 }
 
-.brand-link {
-  display: flex;
+.header-hamburger-btn,
+.mobile-hamburger-btn {
+  display: flex !important;
   align-items: center;
-  gap: 12px;
-  text-decoration: none;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 50%;
+  transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
-.brand-logo-img {
-  width: 46px;
-  height: 46px;
-  object-fit: contain;
-  transition: transform var(--trans-fast);
+.header-hamburger-btn:hover,
+.mobile-hamburger-btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
 }
 
-.brand-link:hover .brand-logo-img {
-  transform: scale(1.05);
+.header-hamburger-btn:active,
+.mobile-hamburger-btn:active {
+  transform: scale(0.95);
 }
 
-.brand-text {
-  display: flex;
-  flex-direction: column;
+.header-hamburger-btn svg,
+.mobile-hamburger-btn svg {
+  width: 24px;
+  height: 24px;
+  stroke: #ffffff;
 }
 
-.brand-wordmark {
-  font-size: 1.55rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  color: var(--color-black);
-  line-height: 1;
-}
-
-.brand-estd {
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  color: var(--color-gray-med);
-  margin-top: 3px;
-  text-transform: uppercase;
-}
-
-/* ZONE 2 (Center): Desktop Navigation */
-.header-zone-center {
+.header-round-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 1;
+  text-decoration: none;
+  line-height: 1;
 }
 
-.main-desktop-nav {
+.header-round-logo-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease;
+}
+
+.header-round-logo:hover .header-round-logo-img {
+  transform: scale(1.05);
+}
+
+/* ZONE 2 (Center): Chrome/Silver Gothic Brand Wordmark (centered like Snitch) */
+.header-zone-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
-  gap: 26px; /* Evenly spaced navigation items */
+  justify-content: center;
+  pointer-events: auto;
+  z-index: 1;
 }
 
-.nav-item-link {
-  font-size: 0.86rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color-black);
-  white-space: nowrap; /* All nav items single line */
-  padding: 10px 0;
-  position: relative;
-  transition: color var(--trans-fast);
+.header-wordmark-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  line-height: 1;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-.nav-item-link:hover,
-.nav-item-link.is-active {
-  color: var(--color-primary);
+.header-wordmark-link:hover {
+  transform: scale(1.03);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
 }
 
-.nav-item-link::after {
-  content: '';
-  position: absolute;
-  bottom: 2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--color-primary);
-  transition: width var(--trans-base);
-}
-
-.nav-item-link:hover::after,
-.nav-item-link.is-active::after {
-  width: 100%;
+.header-wordmark-img {
+  height: 44px;
+  width: auto;
+  max-height: 48px;
+  display: block;
+  object-fit: contain;
 }
 
 /* ZONE 3 (Right): Grouped Action Icons */
-.header-zone-right {
+.header-zone-right,
+.header-actions {
   display: flex;
   align-items: center;
-  gap: 20px; /* Grouped with about 20px gaps */
+  gap: 12px;
   flex-shrink: 0;
-  margin-left: 40px; /* Clear separation from center nav */
+  z-index: 2;
+  margin-left: auto;
 }
 
+.header-action-btn,
 .header-icon-btn {
   display: flex;
   align-items: center;
@@ -193,49 +205,51 @@
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  color: var(--color-black);
+  background: transparent;
+  border: none;
+  color: #ffffff;
   position: relative;
-  transition: all var(--trans-fast);
+  transition: background-color 0.2s ease, transform 0.15s ease, color 0.2s ease;
   cursor: pointer;
+  padding: 0;
 }
 
+.header-action-btn:hover,
 .header-icon-btn:hover {
-  background-color: var(--color-gray-soft);
-  color: var(--color-primary);
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
 }
 
+.header-action-btn:active,
+.header-icon-btn:active {
+  transform: scale(0.94);
+}
+
+.header-action-btn svg,
 .header-icon-svg {
   width: 20px;
   height: 20px;
+  stroke: #ffffff;
 }
 
+.header-badge,
 .header-icon-badge {
   position: absolute;
   top: 4px;
   right: 4px;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  font-size: 0.62rem;
+  background-color: var(--color-primary, #EE5824);
+  color: #ffffff;
+  font-size: 0.65rem;
   font-weight: 800;
   min-width: 17px;
   height: 17px;
-  border-radius: var(--radius-pill);
+  border-radius: 999px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 3px;
-  border: 1.5px solid var(--color-white);
-}
-
-/* Hamburger Toggle Button (Hidden on wide desktop, shows < 1200px) */
-.mobile-hamburger-btn {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  color: var(--color-black);
-  cursor: pointer;
+  padding: 0 4px;
+  border: 1.5px solid #000000;
+  line-height: 1;
 }
 
 /* Mobile Menu Drawer */
@@ -320,28 +334,13 @@
 }
 
 /* ==========================================================================
-   BREAKPOINTS: Collapse below 1200px
+   BREAKPOINTS: Snitch-Style Header Responsive Adjustments
    ========================================================================== */
-@media (max-width: 1200px) {
-  .header-zone-center {
-    display: none; /* Collapse center nav completely below 1200px */
-  }
-
-  .mobile-hamburger-btn {
-    display: flex; /* Show hamburger button */
-  }
-
-  .header-zone-left {
-    margin-right: 0;
-  }
-
-  .header-zone-right {
-    margin-left: 0;
-    gap: 14px;
-  }
-}
-
 @media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+  }
+
   .announcement-links {
     display: none;
   }
@@ -351,30 +350,71 @@
     padding: 6px 14px;
   }
 
-  .header-container {
-    height: 70px;
-    padding: 0 16px;
+  .site-header {
+    height: 64px !important;
   }
 
-  .brand-logo-img {
-    width: 38px;
-    height: 38px;
+  .header-container,
+  .header-main {
+    height: 64px !important;
+    padding: 0 16px !important;
   }
 
-  .brand-wordmark {
-    font-size: 1.3rem;
+  /* On mobile: round logo hidden, wordmark centered, hamburger on left */
+  .header-round-logo {
+    display: none !important;
   }
 
-  .brand-estd {
-    font-size: 0.55rem;
+  .header-zone-left {
+    gap: 0 !important;
   }
 
-  .header-zone-right {
-    gap: 8px;
+  .header-hamburger-btn,
+  .mobile-hamburger-btn {
+    width: 40px !important;
+    height: 40px !important;
   }
 
+  .header-wordmark-img {
+    height: 32px !important;
+    max-height: 34px !important;
+  }
+
+  .header-zone-right,
+  .header-actions {
+    gap: 6px !important;
+  }
+
+  .header-action-btn,
   .header-icon-btn {
-    width: 38px;
-    height: 38px;
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .header-action-btn--account,
+  .header-icon-btn--account {
+    display: none !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .header-container,
+  .header-main {
+    padding: 0 12px !important;
+  }
+
+  .header-wordmark-img {
+    height: 28px !important;
+  }
+
+  .header-action-btn,
+  .header-icon-btn {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  .header-zone-right,
+  .header-actions {
+    gap: 4px !important;
   }
 }
