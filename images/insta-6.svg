@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F6F6F3"/>
+      <stop offset="100%" stop-color="#ECECE7"/>
+    </linearGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(0,0,0,0.015)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="600" fill="url(#grad)"/>
+  <rect width="600" height="600" fill="url(#grid)"/>
+  <rect x="16" y="16" width="568" height="568" fill="none" stroke="#E2E2DC" stroke-width="1.5" stroke-dasharray="4 4" rx="4"/>
+  
+        <rect x="230" y="230" width="140" height="140" rx="36" fill="none" stroke="#EE5824" stroke-width="4" opacity="0.6"/>
+        <circle cx="300" cy="300" r="38" fill="none" stroke="#B8B8B0" stroke-width="4"/>
+        <circle cx="342" cy="258" r="8" fill="#EE5824"/>
+        
+  <text x="50%" y="372" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="21" font-weight="700" fill="#6E6E66" letter-spacing="2">@GAZIBO_CLOTHING</text>
+  <text x="50%" y="408" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="500" fill="#999990" letter-spacing="1">PUNE LIFESTYLE • 06</text>
+</svg>

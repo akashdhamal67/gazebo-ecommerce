@@ -1,0 +1,11 @@
+# GAZEBO ROBOTS.TXT
+# -----------------------------------------------------------------------------
+# LAUNCH INSTRUCTION:
+# 1. To enable search engine indexing at live launch, change "Disallow: /" to "Allow: /".
+# 2. Update the domain "https://gazebo-ecommerce.vercel.app" to your final live domain.
+# -----------------------------------------------------------------------------
+
+User-agent: *
+Disallow: /
+
+Sitemap: https://gazebo-ecommerce.vercel.app/sitemap.xml

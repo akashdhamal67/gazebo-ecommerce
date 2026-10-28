@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <!-- LINE 6: Change to "index, follow" upon live domain launch -->
+  <meta name="robots" content="noindex, nofollow" />
+  
+  <title>Checkout | Gazebo Pune | Secure Family Clothing Order</title>
+  <meta name="description" content="Complete your order with Gazebo Pune. Fast Pan-India dispatch from our M.G. Road flagship store. 100% secure encrypted demo checkout process." />
+  <link rel="canonical" href="https://www.gazebo-ecommerce.vercel.app/checkout.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <aside class="announcement-bar" role="region" aria-label="Announcement">
+    <div class="announcement-inner">
+      <div class="announcement-text">
+        <span class="announcement-tag">FLAGSHIP</span>
+        <span>M.G. ROAD, PUNE • ESTABLISHED 1979 • 100% SECURE DEMO CHECKOUT</span>
+      </div>
+      <div class="announcement-links">
+        <a href="about.html" class="announcement-link">Heritage Story</a>
+        <a href="contact.html" class="announcement-link">Store Desk</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Header -->
+  <header class="site-header" role="banner">
+    <div class="header-container">
+      <div class="header-zone-left">
+        <a href="index.html" class="brand-link" title="Gazebo Home">
+          <img src="images/logo.png" alt="Gazebo Logo Badge" width="46" height="46" class="brand-logo-img" />
+          <div class="brand-text">
+            <span class="brand-wordmark">GAZEBO</span>
+            <span class="brand-estd">ESTD. 1979 • PUNE</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="header-zone-center" aria-label="Main Navigation">
+        <div class="main-desktop-nav">
+          <a href="men.html" class="nav-item-link">Men</a>
+          <a href="women.html" class="nav-item-link">Women</a>
+          <a href="kids.html" class="nav-item-link">Kids</a>
+          <a href="cart.html" class="nav-item-link">Shopping Bag</a>
+        </div>
+      </nav>
+
+      <div class="header-zone-right">
+        <span style="font-size: 0.8rem; font-weight: 800; color: #2E7D32; display: flex; align-items: center; gap: 6px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          256-Bit SSL Encrypted
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent" class="checkout-page-section">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="cart.html">Shopping Bag</a>
+        <span>/</span>
+        <strong>Checkout</strong>
+      </nav>
+
+      <h1 class="h2-title" style="margin-bottom: 32px;">Secure Checkout</h1>
+
+      <div class="checkout-grid">
+        <!-- Left: Checkout Forms -->
+        <div>
+          <form id="checkoutForm">
+            <!-- 1. Contact -->
+            <div style="background-color: var(--color-white); border: 1px solid var(--color-gray-light); border-radius: var(--radius-sm); padding: 24px; margin-bottom: 24px;">
+              <h2 style="font-size: 1.15rem; font-weight: 800; text-transform: uppercase; margin-bottom: 16px;">1. Contact Information</h2>
+              <div class="form-group-grid">
+                <div class="form-group">
+                  <label class="form-label" for="custEmail">Email Address *</label>
+                  <input id="custEmail" type="email" class="form-input" placeholder="patron@example.com" autocomplete="email" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="custPhone">Phone Number *</label>
+                  <input id="custPhone" type="tel" class="form-input" placeholder="+91 98000 00000" autocomplete="tel" required />
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Shipping Address -->
+            <div style="background-color: var(--color-white); border: 1px solid var(--color-gray-light); border-radius: var(--radius-sm); padding: 24px; margin-bottom: 24px;">
+              <h2 style="font-size: 1.15rem; font-weight: 800; text-transform: uppercase; margin-bottom: 16px;">2. Shipping Address</h2>
+              <div class="form-group-grid">
+                <div class="form-group">
+                  <label class="form-label" for="custFirstName">First Name *</label>
+                  <input id="custFirstName" type="text" class="form-input" placeholder="First Name" autocomplete="given-name" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="custLastName">Last Name *</label>
+                  <input id="custLastName" type="text" class="form-input" placeholder="Last Name" autocomplete="family-name" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="custStreet">Street Address *</label>
+                <input id="custStreet" type="text" class="form-input" placeholder="House / Flat / Building and Street" autocomplete="street-address" required />
+              </div>
+
+              <div class="form-group-grid">
+                <div class="form-group">
+                  <label class="form-label" for="custCity">City *</label>
+                  <input id="custCity" type="text" class="form-input" value="Pune" autocomplete="address-level2" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="custState">State *</label>
+                  <input id="custState" type="text" class="form-input" value="Maharashtra" autocomplete="address-level1" required />
+                </div>
+              </div>
+
+              <div class="form-group-grid">
+                <div class="form-group">
+                  <label class="form-label" for="custPin">PIN Code *</label>
+                  <input id="custPin" type="text" inputmode="numeric" pattern="[0-9]*" class="form-input" placeholder="411001" autocomplete="postal-code" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="custCountry">Country</label>
+                  <input id="custCountry" type="text" class="form-input" value="India" autocomplete="country-name" readonly />
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Shipping Options -->
+            <div style="background-color: var(--color-white); border: 1px solid var(--color-gray-light); border-radius: var(--radius-sm); padding: 24px; margin-bottom: 24px;">
+              <h2 style="font-size: 1.15rem; font-weight: 800; text-transform: uppercase; margin-bottom: 16px;">3. Delivery Method</h2>
+              <div style="display: flex; flex-direction: column; gap: 12px;">
+                <label style="display: flex; align-items: center; justify-content: space-between; padding: 14px; border: 1px solid var(--color-primary); background-color: var(--color-primary-light); border-radius: var(--radius-xs); cursor: pointer;">
+                  <span style="display: flex; align-items: center; gap: 10px;">
+                    <input type="radio" name="shippingMethod" value="free" checked />
+                    <span style="font-weight: 700; font-size: 0.88rem;">Standard Pan-India Delivery (Dispatches from Pune)</span>
+                  </span>
+                  <span style="color: #2E7D32; font-weight: 800;">FREE</span>
+                </label>
+                <label style="display: flex; align-items: center; justify-content: space-between; padding: 14px; border: 1px solid var(--color-gray-light); border-radius: var(--radius-xs); cursor: pointer;">
+                  <span style="display: flex; align-items: center; gap: 10px;">
+                    <input type="radio" name="shippingMethod" value="express" />
+                    <span style="font-weight: 700; font-size: 0.88rem;">Express Same-Day Store Pickup (M.G. Road Flagship)</span>
+                  </span>
+                  <span style="color: var(--color-primary); font-weight: 800;">FREE</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 4. Payment Options (UI Only) -->
+            <div style="background-color: var(--color-white); border: 1px solid var(--color-gray-light); border-radius: var(--radius-sm); padding: 24px; margin-bottom: 32px;">
+              <h2 style="font-size: 1.15rem; font-weight: 800; text-transform: uppercase; margin-bottom: 16px;">4. Payment Method (Demo Pitch UI)</h2>
+              <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 18px;">
+                <label style="display: flex; align-items: center; gap: 10px; padding: 12px; border: 1px solid var(--color-primary); border-radius: var(--radius-xs); background-color: var(--color-primary-light);">
+                  <input type="radio" name="payOption" value="upi" checked />
+                  <span style="font-weight: 700; font-size: 0.88rem;">UPI / QR Code (Google Pay, PhonePe, Paytm)</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; padding: 12px; border: 1px solid var(--color-gray-light); border-radius: var(--radius-xs);">
+                  <input type="radio" name="payOption" value="card" />
+                  <span style="font-weight: 700; font-size: 0.88rem;">Credit / Debit Card (Visa, Mastercard, RuPay)</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; padding: 12px; border: 1px solid var(--color-gray-light); border-radius: var(--radius-xs);">
+                  <input type="radio" name="payOption" value="netbanking" />
+                  <span style="font-weight: 700; font-size: 0.88rem;">Net Banking (All Major Indian Banks)</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; padding: 12px; border: 1px solid var(--color-gray-light); border-radius: var(--radius-xs);">
+                  <input type="radio" name="payOption" value="cod" />
+                  <span style="font-weight: 700; font-size: 0.88rem;">Cash on Delivery (COD)</span>
+                </label>
+              </div>
+              <p style="font-size: 0.76rem; color: var(--color-gray-med);">Note: This is a client-ready pitch prototype. Payment gateway integration will connect directly to Gazebo's business account upon launch.</p>
+            </div>
+
+            <button type="submit" class="btn btn-accent btn-lg w-100" style="font-size: 1rem;">
+              Place Order (Pitch Simulation) →
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: Order Summary Sidebar -->
+        <div>
+          <div class="cart-summary-box" style="position: sticky; top: 104px;">
+            <h3 class="h3-title" style="text-transform: uppercase; margin-bottom: 20px;">Order Summary</h3>
+            <div id="checkoutSummaryItems" style="margin-bottom: 20px; border-bottom: 1px solid var(--color-gray-light); padding-bottom: 16px;"></div>
+
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span id="checkoutSubtotal">₹ 0.00</span>
+            </div>
+            <div class="summary-row">
+              <span>Shipping</span>
+              <span style="color: #2E7D32; font-weight: 700;">FREE</span>
+            </div>
+            <div class="summary-row">
+              <span>Taxes</span>
+              <span>Included</span>
+            </div>
+
+            <div class="summary-row summary-total">
+              <span>Total to Pay</span>
+              <span id="checkoutTotal">₹ 0.00</span>
+            </div>
+
+            <div style="background-color: var(--color-gray-soft); padding: 14px; border-radius: var(--radius-xs); font-size: 0.78rem; color: var(--color-gray-dark);">
+              <strong>Gazebo M.G. Road Assurance:</strong>
+              <div style="margin-top: 4px;">• Direct dispatch from Pune Flagship</div>
+              <div>• Free 7-Day Exchange available</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom-row" style="border-top: none; padding-top: 0;">
+        <div>© 2026 GAZEBO CLOTHING. All rights reserved. • Established 1979, M.G. Road, Pune.</div>
+        <div class="payment-badges"><span class="pay-badge">UPI / RuPay</span><span class="pay-badge">Visa</span><span class="pay-badge">Mastercard</span></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile Checkout Bar -->
+  <div class="checkout-sticky-bar">
+    <div>
+      <span style="font-size: 0.72rem; color: var(--color-gray-med); display: block; text-transform: uppercase;">Total Payable</span>
+      <span id="checkoutStickyTotal" style="font-size: 1.15rem; font-weight: 900; color: var(--color-primary);">₹ 0.00</span>
+    </div>
+    <button type="submit" form="checkoutForm" class="btn btn-accent btn-lg" style="flex: 1; max-width: 220px; height: 48px;">
+      Place Order →
+    </button>
+  </div>
+
+  <!-- Floating WhatsApp Contact Button -->
+  <a href="https://wa.me/912026130000" target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" aria-label="Chat on WhatsApp with Gazebo">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="#FFFFFF">
+      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"/>
+    </svg>
+    <span class="whatsapp-float-label">Chat</span>
+  </a>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.gazeboCart) {
+        window.gazeboCart.renderCheckoutSummary();
+        const total = document.getElementById('checkoutTotal');
+        const stickyTotal = document.getElementById('checkoutStickyTotal');
+        if (total && stickyTotal) {
+          stickyTotal.textContent = total.textContent;
+          const observer = new MutationObserver(() => {
+            stickyTotal.textContent = total.textContent;
+          });
+          observer.observe(total, { childList: true, characterData: true, subtree: true });
+        }
+      }
+    });
+  </script>
+</body>
+</html>

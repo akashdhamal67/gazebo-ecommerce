@@ -428,4 +428,5 @@ class GazeboStore {
 // Global initialization
 window.addEventListener('DOMContentLoaded', () => {
   window.gazeboStore = new GazeboStore();
+  window.gazeboCart = window.gazeboStore;
 });

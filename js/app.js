@@ -98,11 +98,12 @@ function initHeroSlider() {
 
   if (!slides.length) return;
 
-  // Gate video playback based on mobile (<768px), prefers-reduced-motion, or data saver
-  const isMobile = window.innerWidth < 768;
+  // Gate video playback based on mobile (<=768px unless fast connection and no data saver), prefers-reduced-motion, or data saver
+  const isMobile = window.innerWidth <= 768;
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const saveData = Boolean(navigator.connection && navigator.connection.saveData);
-  const canPlayVideo = !isMobile && !prefersReducedMotion && !saveData;
+  const isFastConnection = Boolean(navigator.connection && navigator.connection.effectiveType === '4g');
+  const canPlayVideo = (!isMobile || (isFastConnection && !saveData)) && !prefersReducedMotion && !saveData;
 
   function loadSlideImage(slide) {
     if (!slide) return;
@@ -521,6 +522,13 @@ function renderProducts() {
               <span class="product-card__discount">${discountPercent}% OFF</span>
             ` : ''}
           </div>
+
+          <!-- Mobile + Add to Bag Button -->
+          <button class="product-card__mobile-btn" 
+                  onclick="event.stopPropagation(); window.gazeboStore.addToCart('${product.id}', '${product.sizes[0]}', '${product.colors[0]?.name}')"
+                  aria-label="Add ${product.name} to Bag">
+            + Add to Bag
+          </button>
 
           <!-- Quick Sizes Strip -->
           <div class="product-card__sizes">

@@ -1,145 +1,113 @@
-# GAZEBO — Premium Fashion E-Commerce Storefront
+# GAZEBO — Client-Ready E-Commerce Pitch Storefront
 
-An elevated, modern, Indian fashion e-commerce storefront designed for **GAZEBO** (Gazibo®), inspired by the shopping architecture and visual polish of [The Souled Store](https://www.thesouledstore.com/).
-
----
-
-## 1. Brand Identity & Heritage
-
-- **Brand**: GAZEBO (Gazibo®)
-- **Tagline**: Pune's Iconic Fashion Landmark • Estd. 1979
-- **Heritage Location**: M.G. Road, Camp, Pune, Maharashtra, India
-- **Departments**: Men's, Women's, Kids' Garments & Accessories
-- **Verified Social**: [@gazibo_clothing](https://www.instagram.com/gazibo_clothing/)
-- **Brand Aesthetic**: Minimalist contemporary streetwear meets timeless tailoring, high-contrast typography, and rich Gazibo Heritage Orange (`#EE5824`).
-
-> **Note on Logo**: The official Gazibo logo was extracted directly from the verified brand profile screenshot. Proportions, typography, and original orange badge styling are preserved.
+An elevated, client-ready pitch version of the **GAZEBO** e-commerce storefront. Designed for the iconic family clothing brand established in 1979 on M.G. Road, Pune.
 
 ---
 
-## 2. Key Shopping Experience Features
+## 1. Brand & Presentation Standards
 
-### A. Navigation & Header
-- **Announcement Bar**: Slim, minimalist top strip highlighting the M.G. Road Pune flagship and brand heritage.
-- **Gender Segmentation Bar**: Top switcher tabs (`MEN` | `WOMEN` | `KIDS` | `HERITAGE 1979`) inspired by The Souled Store's signature layout.
-- **Brand Identity**: Prominent authentic Gazibo circular logo badge paired with bold uppercase wordmark `GAZEBO • ESTD. 1979`.
-- **Navigation Bar**: Direct category filters with subtle animated underline hover transitions.
-- **Action Icons**: Instant live search modal, wishlist drawer with badge count, and shopping bag with live badge counter.
-
-### B. Hero Banner Carousel
-- Full-bleed cinematic fashion banner with auto-slide timer (5.5s), pause on hover, previous/next controls, and touch swipe gesture support for mobile.
-- Features editorial slides with bold typography, refined supporting copy, and direct category CTAs.
-
-### C. Shop by Category
-- High-impact category rail showcasing 7 departments:
-  1. *Oversized & Classic Tees* (240+ GSM)
-  2. *Resort & Linen Shirts* (French Flax)
-  3. *Cargos & Relaxed Trousers* (Utility Ripstop)
-  4. *Textured & Knitted Polos* (Waffle Knit)
-  5. *Co-ord Matching Sets* (Two-piece Outfits)
-  6. *Overshirts & Jackets* (Heavyweight Twill)
-  7. *Garments & Accessories* (Caps, Belts, Totes)
-
-### D. Featured Collection & Interactive Product Grid
-- **Category Filter Tabs**: One-click switching between categories with instant re-render.
-- **Sort Controls**: Sort by *Featured Edit*, *Price: Low to High*, *Price: High to Low*, or *Newest*.
-- **Product Cards**:
-  - 3:4 fashion portrait aspect ratio.
-  - Secondary image hover flip (instant preview of back/alternate pose).
-  - Floating badge pills (`BESTSELLER`, `NEW SEASON`, `HERITAGE 1979`, `TRENDING`).
-  - Interactive Wishlist heart button with pulse animation and persistent `localStorage` sync.
-  - Hover action strip with `Quick View` and `+ Quick Add`.
-  - Color swatches with tooltips.
-  - Mini quick-size strip (`S`, `M`, `L`, `XL`, `XXL`).
-  - Indian Rupee (`₹`) pricing with strikethrough MRP and discount percentage badge.
-
-### E. E-Commerce Micro-Interactions
-- **Slide-out Cart Drawer**:
-  - Live Free Express Shipping progress meter.
-  - Item cards with image thumbnail, title, selected size, color, and price.
-  - Quantity adjusters (`+` / `−`) and remove action.
-  - Demo coupon engine (try code **`GAZEBO10`** for an instant 10% discount).
-  - Order summary (Subtotal, Savings, Delivery, Estimated Total).
-  - Clear empty-cart state.
-- **Wishlist Drawer**:
-  - Saved favorites view with instant "Move to Bag" button.
-- **Live Search Modal**:
-  - Real-time search across product titles, categories, fabrics, and colors as you type.
-  - Popular search tags (`Heavyweight Tees`, `French Linen`, `Cargos`, `Co-ord`, `Heritage 1979`).
-- **Product Quick View Modal**:
-  - Multi-image gallery with thumbnail switcher.
-  - Detailed fabric, fit, and care specifications.
-  - Interactive color swatch selector and size picker.
-  - Built-in **Size Guide** modal with Chest, Length, Shoulder, and Waist measurements.
-- **Mobile Bottom Navigation Bar**:
-  - Fixed bottom bar on mobile screens (`Home`, `Categories`, `Search`, `Wishlist`, `Bag`) for an authentic mobile app experience.
+- **Brand Name**: GAZEBO (Gazebo®)
+- **Tagline**: Men, Women & Kids Clothing in Pune | Since 1979
+- **Heritage**: Established 1979, M.G. Road, Camp, Pune, Maharashtra, India
+- **Departments**: Men, Women (Girls) and Kids
+- **Official Instagram**: [@gazibo_clothing](https://www.instagram.com/gazibo_clothing/)
+- **Placeholder Domain**: `https://www.gazebo-ecommerce.vercel.app`
+- **Product Placeholders**: Neutral image boxes, `"Product Name"`, `"₹ 0.00"` (zero fabricated products, zero external copyrighted content).
+- **Primary Colorway**: Gazebo Orange (`#EE5824`), Midnight Black (`#0E0E0E`), Warm Cream (`#FBFBFA`), and Neutral Grey (`#E5E5DE`).
 
 ---
 
-## 3. Project Structure
+## 2. Header Architecture (Decongested Layout)
 
-```
-gazebo-ecommerce/
-├── index.html                   # Master semantic storefront markup
-├── server.py                    # Zero-dependency local dev server (port 8080)
-├── README.md                    # Documentation & customization guide
-├── assets/
-│   └── images/
-│       ├── gazebo-logo.png      # Clean extracted circular brand emblem (transparent PNG)
-│       └── favicon.png          # Generated brand favicon (64x64)
-├── css/
-│   ├── main.css                 # Design tokens, variables, resets, typography, buttons
-│   ├── components.css           # Header, hero, category rail, product cards, modals, drawers
-│   └── responsive.css           # Mobile app bottom bar, drawers, tablet & phone layouts
-└── js/
-    ├── products-data.js         # Decoupled catalog data (easily replaceable)
-    ├── cart.js                  # Cart & Wishlist state manager (localStorage sync, promo codes)
-    ├── search.js                # Instant debounced search modal
-    └── app.js                   # Hero slider, category filters, quick view, size guide, toasts
-```
+- **Three-Zone Flexbox**:
+  - **Zone 1 (Left)**: Authentic brand logo (`images/logo.png`) + `GAZEBO` bold wordmark + `ESTD. 1979 • PUNE` subtitle.
+  - **Zone 2 (Center)**: Desktop navigation links (`Men`, `Women`, `Kids`, `New Arrivals`, `Best Sellers`, `Heritage`, `Contact`). Separated from the wordmark by at least **40px**, strictly single line (`white-space: nowrap`), vertically aligned.
+  - **Zone 3 (Right)**: Grouped action icons (Search, Account, Wishlist, Cart) with **20px** gaps and clear separation from nav.
+- **Responsive Collapse (< 1200px)**: The desktop navigation cleanly collapses into a modern hamburger menu drawer below 1200px, preventing wrapping or congestion on laptops and tablets.
+- **Top Bar**: Minimalist announcement with Pune flagship information; prototype labels removed.
 
 ---
 
-## 4. How to Run Locally
+## 3. Site Map & Included Pages
 
-### Option 1: Using the Included Python Server (Recommended)
+| Page File | Page Purpose | Canonical URL |
+| :--- | :--- | :--- |
+| [`index.html`](file:///Users/akash/.gemini/antigravity/scratch/gazebo-ecommerce/index.html) | Homepage (Hero, Trust Strip, Category Tiles, Product Rows, Story, Testimonials, Instagram, Newsletter) | `https://www.gazebo-ecommerce.vercel.app/` |
+| [`men.html`](file:///Users/akash/.gemini/antigravity/scratch/gazebo-ecommerce/men.html) | Men's Category Page (Banner, Breadcrumbs, Size Filters, Sort, Product Grid) | `https://www.gazebo-ecommerce.vercel.app/men.html` |
+| [`women.html`](file:///Users/akash/.gemini/antigravity/scratch/gazebo-ecommerce/women.html) | Women & Girls Category Page (Banner, Breadcrumbs, Size Filters, Sort, Product Grid) | `https://www.gazebo-ecommerce.vercel.app/women.html` |
+| [`kids.html`](file:///Users/akash/.gemini/antigravity/scratch/gazebo-ecommerce/kids.html) | Kids' Category Page (Banner, Breadcrumbs, Age/Size Filters, Sort, Product Grid) | `https://www.gazebo-ecommerce.vercel.app/kids.html` |
+| [`product.html`](file:///Users/akash/.gemini/antigravity/scratch/gazebo-ecommerce/product.html) | Product Page Template (Gallery, Size Selector, Size Guide Modal, Color Swatches, Quantity, Tabs, Related) | `https://www.gazebo-ecommerce.vercel.app/product.html` |
+| [`cart.html`](file:///Users/akash/.gemini/antigravity/scratch/gazebo-ecommerce/cart.html) | Dedicated Shopping Bag Page (Interactive Table, Stepper, Promo Code, Subtotal) | `https://www.gazebo-ecommerce.vercel.app/cart.html` |
+| [`checkout.html`](file:///Users/akash/.gemini/antigravity/scratch/gazebo-ecommerce/checkout.html) | Checkout Page (Contact, Shipping Address, Delivery Options, Payment UI, Order Summary) | `https://www.gazebo-ecommerce.vercel.app/checkout.html` |
+| [`about.html`](file:///Users/akash/.gemini/antigravity/scratch/gazebo-ecommerce/about.html) | Heritage & Story Page (Estd. 1979 on M.G. Road, Pune, Four Decades of Quality) | `https://www.gazebo-ecommerce.vercel.app/about.html` |
+| [`contact.html`](file:///Users/akash/.gemini/antigravity/scratch/gazebo-ecommerce/contact.html) | Contact & Store Locator (Store address, timings, phone, email, contact form) | `https://www.gazebo-ecommerce.vercel.app/contact.html` |
+| [`faq.html`](file:///Users/akash/.gemini/antigravity/scratch/gazebo-ecommerce/faq.html) | Frequently Asked Questions (Orders, Sizing, Pune Store, Returns) | `https://www.gazebo-ecommerce.vercel.app/faq.html` |
+| [`shipping-returns.html`](file:///Users/akash/.gemini/antigravity/scratch/gazebo-ecommerce/shipping-returns.html) | Shipping & Returns Policy (Pan-India delivery, Pune dispatch, 7-day exchange) | `https://www.gazebo-ecommerce.vercel.app/shipping-returns.html` |
+| [`privacy.html`](file:///Users/akash/.gemini/antigravity/scratch/gazebo-ecommerce/privacy.html) | Privacy Policy (Data protection, SSL encryption, RBI compliance) | `https://www.gazebo-ecommerce.vercel.app/privacy.html` |
+| [`terms.html`](file:///Users/akash/.gemini/antigravity/scratch/gazebo-ecommerce/terms.html) | Terms of Service (Store conditions, intellectual property, Pune jurisdiction) | `https://www.gazebo-ecommerce.vercel.app/terms.html` |
+| [`404.html`](file:///Users/akash/.gemini/antigravity/scratch/gazebo-ecommerce/404.html) | Custom 404 Page (Helpful navigation and catalog search trigger) | `https://www.gazebo-ecommerce.vercel.app/404.html` |
+
+---
+
+## 4. How to Preview Locally
+
+### Option A: Using the Included Python Server (Recommended)
 ```bash
 cd /Users/akash/.gemini/antigravity/scratch/gazebo-ecommerce
 python3 server.py
 ```
-Then open your browser at **`http://localhost:8080`**.
+Open your browser at `http://localhost:8080`.
 
-### Option 2: Direct File Open
-You can directly open `index.html` in Safari, Google Chrome, or any modern web browser:
+### Option B: Direct Browser Open
+You can open any file directly in Google Chrome, Safari, or Microsoft Edge:
 ```bash
 open /Users/akash/.gemini/antigravity/scratch/gazebo-ecommerce/index.html
 ```
 
 ---
 
-## 5. Easy Product Catalog Replacement
+## 5. How to Add Real Products
 
-To update the catalog with Gazebo's actual inventory when provided, simply edit [`js/products-data.js`](file:///Users/akash/.gemini/antigravity/scratch/gazebo-ecommerce/js/products-data.js).
+All product catalog data is decoupled from the UI and centralized in [`js/data.js`](file:///Users/akash/.gemini/antigravity/scratch/gazebo-ecommerce/js/data.js).
 
-Example structure:
+To replace placeholder items with authentic Gazebo inventory, open `js/data.js` and edit or append to the `GAZEBO_PRODUCTS` array:
+
 ```javascript
 {
-  id: "gz-custom-01",
-  name: "Your Actual Product Name",
-  subtitle: "Fit / Style Description",
-  category: "topwear", // or "shirts", "bottomwear", "coords", "outerwear", "accessories"
-  price: 1499,
-  originalPrice: 2199,
-  badge: "NEW ARRIVAL",
-  fabric: "100% Cotton",
+  id: "gz-men-101",
+  name: "Authentic Product Title",
+  category: "men", // "men", "women", or "kids"
+  categoryLabel: "Men",
+  price: 1499.00,
+  priceDisplay: "₹ 1,499.00",
+  comparePriceDisplay: "₹ 2,199.00",
+  badge: "New Arrival",
+  image: "images/your-product-image.webp", // or .jpg/.png
+  sizes: ["S", "M", "L", "XL", "XXL"],
   colors: [
-    { name: "Black", hex: "#111111", inStock: true }
+    { name: "Navy Blue", hex: "#1C2833" },
+    { name: "Oatmeal", hex: "#EAE5D9" }
   ],
-  sizes: ["S", "M", "L", "XL"],
-  primaryImage: "path/to/image.jpg",
-  secondaryImage: "path/to/back-image.jpg",
-  description: "Product description...",
-  details: ["Detail 1", "Detail 2"]
+  sku: "GZ-MEN-101",
+  description: "Detailed description of the garment, yarn count, fabric blend and fit."
 }
 ```
-No HTML or CSS modifications are necessary to update or add products.
+All category pages, the homepage New Arrivals/Best Sellers, search modal, cart drawer, and quick-view modals will automatically update.
+
+---
+
+## 6. How to Launch & Change Domain
+
+1. **Robots Indexing Meta Tag**:
+   On all HTML pages, **Line 6** currently contains:
+   ```html
+   <meta name="robots" content="noindex, nofollow" />
+   ```
+   At live commercial launch, change this single line to:
+   ```html
+   <meta name="robots" content="index, follow" />
+   ```
+2. **Domain Placeholder Replacement**:
+   - In [`js/data.js`](file:///Users/akash/.gemini/antigravity/scratch/gazebo-ecommerce/js/data.js): Update `domain: "https://www.gazebo-ecommerce.vercel.app"` to your live URL.
+   - In [`robots.txt`](file:///Users/akash/.gemini/antigravity/scratch/gazebo-ecommerce/robots.txt): Change `Disallow: /` to `Allow: /` and update the sitemap URL.
+   - In [`sitemap.xml`](file:///Users/akash/.gemini/antigravity/scratch/gazebo-ecommerce/sitemap.xml): Replace `https://www.gazebo-ecommerce.vercel.app` with your live domain.
