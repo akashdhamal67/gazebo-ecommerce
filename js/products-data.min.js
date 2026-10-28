@@ -2400,6 +2400,143 @@ window.GAZEBO_PRODUCTS = [
     "reviewsCount": 56
   },
   {
+    "id": "gz-m-swtr-01",
+    "name": "Gazebo Burgundy Relaxed Crew Neck Sweater",
+    "section": "men",
+    "subCategory": "sweaters",
+    "price": 999,
+    "mrp": 1599,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Burgundy",
+        "hex": "#5B1D28"
+      },
+      {
+        "name": "Wine Red",
+        "hex": "#722533"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/sweaters/gazebo-burgundy-relaxed-crew-neck-sweater.jpg",
+      "secondary": "assets/products/men/sweaters/gazebo-burgundy-relaxed-crew-neck-sweater.jpg"
+    },
+    "tags": [
+      "Sweaters",
+      "Crew Neck",
+      "Burgundy",
+      "Relaxed Fit",
+      "Knit",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499",
+      "Dark Shades"
+    ],
+    "primaryImage": "assets/products/men/sweaters/gazebo-burgundy-relaxed-crew-neck-sweater.jpg",
+    "description": "Relaxed-fit crew neck sweater knitted from soft combed cotton blend in rich burgundy wine, featuring ribbed collar, cuffs, and hem.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 76
+  },
+  {
+    "id": "gz-m-swtr-02",
+    "name": "Gazebo Cable Knit Forest Green Sweater",
+    "section": "men",
+    "subCategory": "sweaters",
+    "price": 1299,
+    "mrp": 2199,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Forest Green",
+        "hex": "#1E3B2B"
+      },
+      {
+        "name": "Pine Green",
+        "hex": "#142B1F"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/sweaters/gazebo-cable-knit-forest-green-sweater.jpg",
+      "secondary": "assets/products/men/sweaters/gazebo-cable-knit-forest-green-sweater.jpg"
+    },
+    "tags": [
+      "Sweaters",
+      "Cable Knit",
+      "Crew Neck",
+      "Forest Green",
+      "Textured",
+      "Bestseller",
+      "Under ₹1,499",
+      "Dark Shades"
+    ],
+    "primaryImage": "assets/products/men/sweaters/gazebo-cable-knit-forest-green-sweater.jpg",
+    "description": "Classic heavy cable knit sweater in rich forest green with intricate vertical cable patterns and insulating ribbed trims.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 88
+  },
+  {
+    "id": "gz-m-swtr-03",
+    "name": "Gazebo Midnight Navy V-Neck Sweater",
+    "section": "men",
+    "subCategory": "sweaters",
+    "price": 1699,
+    "mrp": 2799,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Midnight Navy",
+        "hex": "#18233C"
+      },
+      {
+        "name": "Deep Indigo",
+        "hex": "#111A2E"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/sweaters/gazebo-midnight-navy-v-neck-sweater.jpg",
+      "secondary": "assets/products/men/sweaters/gazebo-midnight-navy-v-neck-sweater.jpg"
+    },
+    "tags": [
+      "Sweaters",
+      "V-Neck",
+      "Midnight Navy",
+      "Fine Knit",
+      "Tailored",
+      "Dark Shades"
+    ],
+    "primaryImage": "assets/products/men/sweaters/gazebo-midnight-navy-v-neck-sweater.jpg",
+    "description": "Sophisticated fine-gauge V-neck sweater in deep midnight navy, crafted for elegant layering over shirts and tees.",
+    "category": "men",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.7,
+    "reviewsCount": 52
+  },
+  {
     "id": "gz-w-co-o-01",
     "name": "Pure Linen Camp Shirt & Trouser Set",
     "section": "women",
