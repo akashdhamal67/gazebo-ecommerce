@@ -1,9 +1,6 @@
 /**
- * Gazebo E-Commerce Catalog Data Configuration
- * 
- * NOTE: This data structure is decoupled from UI components.
- * Real product catalog, pricing, categories, and inventory can be directly injected
- * or connected to an API/backend without altering the storefront layout.
+ * Gazebo E-Commerce Catalog Data Configuration (Snitch-Style Architecture)
+ * Estd. 1979 • M.G. Road, Pune
  */
 
 const GAZEBO_CONFIG = {
@@ -12,11 +9,14 @@ const GAZEBO_CONFIG = {
     registeredName: "Gazebo®",
     subName: "GARMENTS & ACCESSORIES",
     estd: "1979",
-    location: "M.G. Road, Pune, India",
+    location: "M.G. Road, Camp, Pune 411001, India",
     instagramHandle: "gazibo_clothing",
     instagramUrl: "https://www.instagram.com/gazibo_clothing/",
     tagline: "Pune's Iconic Fashion Landmark • Estd. 1979",
     currency: "₹",
+    phone: "+91 20 2613 0000",
+    whatsapp: "912026130000",
+    hours: "Open Daily: 10:30 AM - 9:30 PM",
     isCatalogPreview: true,
     announcement: "GAZEBO FLAGSHIP • M.G. ROAD, PUNE • ESTD. 1979 • EXPLORE THE NEW EDIT"
   },
@@ -87,6 +87,71 @@ const GAZEBO_CONFIG = {
     }
   ],
 
+  occasions: [
+    {
+      id: "resort-linen",
+      title: "Resort & Linen Edit",
+      subTitle: "Breezy Camp Collars & Pure Weaves",
+      image: "assets/images/banners/occasion-resort-linen.jpg",
+      tag: "SUMMER EDIT",
+      categoryFilter: "linen-overshirts"
+    },
+    {
+      id: "weekend-streetwear",
+      title: "Weekend Streetwear",
+      subTitle: "Boxy Drop-Shoulders & Denim",
+      image: "assets/images/banners/occasion-weekend-casual.jpg",
+      tag: "SIGNATURE",
+      categoryFilter: "tshirts-polos"
+    },
+    {
+      id: "layered-outerwear",
+      title: "Layered Outerwear",
+      subTitle: "Varsity Bombers & Oversized Denim",
+      image: "assets/images/banners/occasion-streetwear-layers.jpg",
+      tag: "POPULAR",
+      categoryFilter: "all"
+    },
+    {
+      id: "tailored-evening",
+      title: "Tailored Evening",
+      subTitle: "Relaxed Pleats & Fluid Monochrome",
+      image: "assets/images/banners/occasion-tailored-evening.jpg",
+      tag: "NEW DROP",
+      categoryFilter: "cargos-trousers"
+    }
+  ],
+
+  promos: [
+    {
+      id: "promo-bottoms",
+      title: "BUY 2 BOTTOMS & SAVE",
+      subTitle: "Flared Denim & Pleated Relaxed Trousers",
+      tag: "SPECIAL DROP",
+      image: "assets/images/banners/promo-buy2-bottoms.jpg",
+      cta: "Shop Bottomwear",
+      filter: "jeans-flares"
+    },
+    {
+      id: "promo-tees",
+      title: "HEAVYWEIGHT TEE TRIO EDIT",
+      subTitle: "240+ GSM Boxy Drop-Shoulder Essentials",
+      tag: "BEST VALUE",
+      image: "assets/images/banners/promo-buy3-tees.jpg",
+      cta: "Shop T-Shirts",
+      filter: "tshirts-polos"
+    },
+    {
+      id: "promo-signature",
+      title: "SIGNATURE HERITAGE EDITS",
+      subTitle: "Varsity Bombers & Resort Co-ord Sets",
+      tag: "FLAGSHIP EXCLUSIVE",
+      image: "assets/images/banners/promo-signature-drops.jpg",
+      cta: "Explore Edits",
+      filter: "all"
+    }
+  ],
+
   products: [
     {
       id: "gz-01",
@@ -106,7 +171,15 @@ const GAZEBO_CONFIG = {
       sizes: ["S", "M", "L", "XL"],
       primaryImage: "assets/images/products/gz-01-primary.jpg",
       secondaryImage: "assets/images/products/gz-01-secondary.jpg",
+      gallery: [
+        "assets/images/products/gz-01-primary.jpg",
+        "assets/images/products/gz-01-secondary.jpg",
+        "assets/images/store/store-01.jpg",
+        "assets/images/store/store-02.jpg"
+      ],
       description: "A contemporary drop-shoulder boxy silhouette engineered with ultra-dense 240 GSM combed cotton. Retains crisp structural drape wash after wash.",
+      modelInfo: "Model is 6'1" (185 cm) wearing size Large (Relaxed Fit)",
+      washCare: "Machine wash cold with similar colors. Bio-washed pre-shrunk fabric. Turn inside out when ironing.",
       details: [
         "240 GSM heavy combed cotton",
         "Pre-shrunk, bio-washed fabric",
@@ -131,7 +204,15 @@ const GAZEBO_CONFIG = {
       sizes: ["S", "M", "L", "XL"],
       primaryImage: "assets/images/products/gz-02-primary.jpg",
       secondaryImage: "assets/images/products/gz-02-secondary.jpg",
+      gallery: [
+        "assets/images/products/gz-02-primary.jpg",
+        "assets/images/products/gz-02-secondary.jpg",
+        "assets/images/store/store-01.jpg",
+        "assets/images/store/store-02.jpg"
+      ],
       description: "Airy resort silhouette with open camp collar and front patch pockets. Crafted for effortless layering over tees and tanks.",
+      modelInfo: "Model is 6'0" (183 cm) wearing size Medium",
+      washCare: "Hand or machine wash gentle. Do not tumble dry. Steam iron while slightly damp for crisp slub texture.",
       details: [
         "100% natural breathable weave",
         "Front zip and utility pockets",
@@ -156,7 +237,15 @@ const GAZEBO_CONFIG = {
       sizes: ["28", "30", "32", "34"],
       primaryImage: "assets/images/products/gz-03-primary.jpg",
       secondaryImage: "assets/images/products/gz-03-secondary.jpg",
+      gallery: [
+        "assets/images/products/gz-03-primary.jpg",
+        "assets/images/products/gz-03-secondary.jpg",
+        "assets/images/store/store-01.jpg",
+        "assets/images/store/store-02.jpg"
+      ],
       description: "High-rise straight cut with subtle flare at the hem. Crafted from authentic 13.5oz ring-spun cotton denim with vintage whiskering.",
+      modelInfo: "Model is 5'9" (175 cm) wearing waist size 28",
+      washCare: "Machine wash cold inside out. Wash separately during first few washes to preserve authentic indigo patina.",
       details: [
         "100% ring-spun cotton denim",
         "Classic five-pocket styling",
@@ -181,7 +270,15 @@ const GAZEBO_CONFIG = {
       sizes: ["30", "32", "34", "36"],
       primaryImage: "assets/images/products/gz-04-primary.jpg",
       secondaryImage: "assets/images/products/gz-04-secondary.jpg",
+      gallery: [
+        "assets/images/products/gz-04-primary.jpg",
+        "assets/images/products/gz-04-secondary.jpg",
+        "assets/images/store/store-01.jpg",
+        "assets/images/store/store-02.jpg"
+      ],
       description: "Double front pleats with a relaxed thigh tapering to a clean architectural break at the hem.",
+      modelInfo: "Model is 6'2" (188 cm) wearing size 32 (Relaxed Cut)",
+      washCare: "Dry clean recommended or machine wash cold gentle cycle. Warm iron.",
       details: [
         "Fluid drape Tencel blend",
         "Double front tailored pleats",
@@ -206,7 +303,15 @@ const GAZEBO_CONFIG = {
       sizes: ["XS", "S", "M", "L"],
       primaryImage: "assets/images/products/gz-05-primary.jpg",
       secondaryImage: "assets/images/products/gz-05-secondary.jpg",
+      gallery: [
+        "assets/images/products/gz-05-primary.jpg",
+        "assets/images/products/gz-05-secondary.jpg",
+        "assets/images/store/store-01.jpg",
+        "assets/images/store/store-02.jpg"
+      ],
       description: "Effortless two-piece co-ord set featuring a boxy short-sleeve camp shirt and matching pleated high-rise trousers.",
+      modelInfo: "Model is 5'8" (173 cm) wearing size Small",
+      washCare: "Gentle wash cold with mild detergent. Hang dry in shade. Iron damp.",
       details: [
         "Includes both shirt & trouser",
         "100% breathable pure linen",
@@ -231,7 +336,15 @@ const GAZEBO_CONFIG = {
       sizes: ["S", "M", "L", "XL"],
       primaryImage: "assets/images/products/gz-06-primary.jpg",
       secondaryImage: "assets/images/products/gz-06-secondary.jpg",
+      gallery: [
+        "assets/images/products/gz-06-primary.jpg",
+        "assets/images/products/gz-06-secondary.jpg",
+        "assets/images/store/store-01.jpg",
+        "assets/images/store/store-02.jpg"
+      ],
       description: "Dense 380 GSM French terry hoodie engineered with double-layered hood and relaxed drop-shoulder silhouette.",
+      modelInfo: "Model is 6'1" (185 cm) wearing size Large",
+      washCare: "Machine wash cold inside out. Do not tumble dry.",
       details: [
         "380 GSM heavy brushed fleece",
         "Seamless crossover neckline hood",
@@ -256,7 +369,15 @@ const GAZEBO_CONFIG = {
       sizes: ["XS", "S", "M", "L"],
       primaryImage: "assets/images/products/gz-07-primary.jpg",
       secondaryImage: "assets/images/products/gz-07-secondary.jpg",
+      gallery: [
+        "assets/images/products/gz-07-primary.jpg",
+        "assets/images/products/gz-07-secondary.jpg",
+        "assets/images/store/store-01.jpg",
+        "assets/images/store/store-02.jpg"
+      ],
       description: "Artisanal cable knit pattern with a modern cropped hemline and relaxed balloon sleeves.",
+      modelInfo: "Model is 5'7" (170 cm) wearing size Small",
+      washCare: "Flat dry only. Hand wash cold with wool-friendly detergent. Never hang knitwear.",
       details: [
         "Breathable 100% cotton knit",
         "Classic cable-stitch structure",
@@ -280,7 +401,15 @@ const GAZEBO_CONFIG = {
       sizes: ["S", "M", "L", "XL"],
       primaryImage: "assets/images/products/gz-08-primary.jpg",
       secondaryImage: "assets/images/products/gz-08-secondary.jpg",
+      gallery: [
+        "assets/images/products/gz-08-primary.jpg",
+        "assets/images/products/gz-08-secondary.jpg",
+        "assets/images/store/store-01.jpg",
+        "assets/images/store/store-02.jpg"
+      ],
       description: "Statement trucker silhouette with authentic artisanal abrasion, dual flap chest pockets, and relaxed dropped shoulders.",
+      modelInfo: "Model is 5'9" (175 cm) wearing size Medium (Oversized)",
+      washCare: "Machine wash cold inside out. Hang dry to maintain distressed fiber detailing.",
       details: [
         "14oz heavyweight denim",
         "Vintage enzyme stone wash",
@@ -304,7 +433,15 @@ const GAZEBO_CONFIG = {
       sizes: ["M", "L", "XL"],
       primaryImage: "assets/images/products/gz-09-primary.jpg",
       secondaryImage: "assets/images/products/gz-09-secondary.jpg",
+      gallery: [
+        "assets/images/products/gz-09-primary.jpg",
+        "assets/images/products/gz-09-secondary.jpg",
+        "assets/images/store/store-01.jpg",
+        "assets/images/store/store-02.jpg"
+      ],
       description: "Clean heritage-inspired varsity jacket with tonal snap buttons, contrast navy ribbed collar, and double-welt leatherette hand pockets.",
+      modelInfo: "Model is 6'2" (188 cm) wearing size Large",
+      washCare: "Dry clean only. Store on shaped wooden hanger.",
       details: [
         "Heavyweight wool-rich body",
         "Quilted satin thermal interior lining",
@@ -328,7 +465,15 @@ const GAZEBO_CONFIG = {
       sizes: ["4-5Y", "6-7Y", "8-9Y", "10-11Y"],
       primaryImage: "assets/images/products/gz-10-primary.jpg",
       secondaryImage: "assets/images/products/gz-10-secondary.jpg",
+      gallery: [
+        "assets/images/products/gz-10-primary.jpg",
+        "assets/images/products/gz-10-secondary.jpg",
+        "assets/images/store/store-01.jpg",
+        "assets/images/store/store-02.jpg"
+      ],
       description: "Super-soft organic fleece set built for everyday active movement. Includes relaxed pullover hoodie and elasticated joggers.",
+      modelInfo: "Junior model wearing size 6-7Y",
+      washCare: "Machine wash warm with mild detergent. Durable tumble dry low.",
       details: [
         "Includes matching hoodie and joggers",
         "GOTS certified organic cotton",
