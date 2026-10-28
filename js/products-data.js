@@ -1809,6 +1809,186 @@ window.GAZEBO_PRODUCTS = [
     "reviewsCount": 44
   },
   {
+    "id": "gz-m-j-01",
+    "name": "Gazebo Light Wash Slim Straight Jeans",
+    "section": "men",
+    "subCategory": "jeans",
+    "price": 999,
+    "mrp": 1599,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Light Wash Blue",
+        "hex": "#7BA4D0"
+      },
+      {
+        "name": "Faded Indigo",
+        "hex": "#4B739B"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/jeans/gazebo-light-wash-slim-straight-jeans.jpg",
+      "secondary": "assets/products/men/jeans/gazebo-light-wash-slim-straight-jeans.jpg"
+    },
+    "tags": [
+      "Jeans",
+      "Light Wash",
+      "Slim Straight",
+      "Denim",
+      "Straight Fit",
+      "Slim Fit",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/jeans/gazebo-light-wash-slim-straight-jeans.jpg",
+    "description": "Classic five-pocket slim straight jeans cut from premium comfort-stretch denim featuring a light vintage stone wash and subtle fading.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 86
+  },
+  {
+    "id": "gz-m-j-02",
+    "name": "Gazebo Vintage Wash Regular Fit Jeans",
+    "section": "men",
+    "subCategory": "jeans",
+    "price": 1299,
+    "mrp": 2199,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Vintage Blue",
+        "hex": "#3B6E9F"
+      },
+      {
+        "name": "Deep Indigo",
+        "hex": "#1F3C5E"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/jeans/gazebo-vintage-wash-regular-fit-jeans.jpg",
+      "secondary": "assets/products/men/jeans/gazebo-vintage-wash-regular-fit-jeans.jpg"
+    },
+    "tags": [
+      "Jeans",
+      "Vintage Wash",
+      "Regular Fit",
+      "Denim",
+      "Whiskered",
+      "Straight Fit",
+      "Bestseller",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/jeans/gazebo-vintage-wash-regular-fit-jeans.jpg",
+    "description": "Timeless regular fit jeans in a medium vintage wash with handcrafted thigh whiskering and contrast copper stitching.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 73
+  },
+  {
+    "id": "gz-m-j-03",
+    "name": "Gazebo Jet Black Slim Fit Jeans",
+    "section": "men",
+    "subCategory": "jeans",
+    "price": 1499,
+    "mrp": 2499,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Jet Black",
+        "hex": "#1F1F1F"
+      },
+      {
+        "name": "Charcoal",
+        "hex": "#383838"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/jeans/gazebo-jet-black-slim-fit-jeans.jpg",
+      "secondary": "assets/products/men/jeans/gazebo-jet-black-slim-fit-jeans.jpg"
+    },
+    "tags": [
+      "Jeans",
+      "Black Denim",
+      "Slim Fit",
+      "Clean Wash",
+      "Dark Shades",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/jeans/gazebo-jet-black-slim-fit-jeans.jpg",
+    "description": "Sleek all-black denim crafted with stay-black dye technology, tailored in a modern slim silhouette with tonal matte black hardware.",
+    "category": "men",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.7,
+    "reviewsCount": 61
+  },
+  {
+    "id": "gz-m-j-04",
+    "name": "Gazebo Mineral Washed Charcoal Jeans",
+    "section": "men",
+    "subCategory": "jeans",
+    "price": 1699,
+    "mrp": 2799,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Charcoal Grey",
+        "hex": "#4F4F54"
+      },
+      {
+        "name": "Slate Wash",
+        "hex": "#727278"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/jeans/gazebo-mineral-washed-charcoal-jeans.jpg",
+      "secondary": "assets/products/men/jeans/gazebo-mineral-washed-charcoal-jeans.jpg"
+    },
+    "tags": [
+      "Jeans",
+      "Charcoal",
+      "Mineral Wash",
+      "Straight Fit",
+      "Dark Shades"
+    ],
+    "primaryImage": "assets/products/men/jeans/gazebo-mineral-washed-charcoal-jeans.jpg",
+    "description": "Contemporary straight leg jeans featuring an authentic acid mineral wash in a smoky charcoal tone with soft brushed cotton hand-feel.",
+    "category": "men",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 54
+  },
+  {
     "id": "gz-w-co-o-01",
     "name": "Pure Linen Camp Shirt & Trouser Set",
     "section": "women",
