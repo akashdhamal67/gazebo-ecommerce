@@ -442,6 +442,223 @@ window.getProductById = (id) => {
 /* Global Products Catalog Database (products.json) */
 window.GAZEBO_PRODUCTS = [
   {
+    "id": "gz-m-t-01",
+    "name": "Gazebo Acid Wash Geometric Graphic Tee",
+    "section": "men",
+    "subCategory": "t-shirts",
+    "price": 899,
+    "mrp": 1499,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Washed Charcoal",
+        "hex": "#3A3A3C"
+      },
+      {
+        "name": "Onyx Black",
+        "hex": "#1A1A1A"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/t-shirts/gazebo-acid-wash-geometric-tee.jpg",
+      "secondary": "assets/products/men/t-shirts/gazebo-acid-wash-geometric-tee.jpg"
+    },
+    "tags": [
+      "Graphic Print",
+      "Relaxed Fit",
+      "Heavyweight",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/t-shirts/gazebo-acid-wash-geometric-tee.jpg",
+    "description": "Heavyweight 240 GSM combed cotton t-shirt with a vintage acid-washed charcoal finish and bold geometric monochromatic front print. Cut in a modern relaxed streetwear drape.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 84
+  },
+  {
+    "id": "gz-m-t-02",
+    "name": "Gazebo Coastal Sun Graphic Tee",
+    "section": "men",
+    "subCategory": "t-shirts",
+    "price": 749,
+    "mrp": 1299,
+    "badge": "New",
+    "colors": [
+      {
+        "name": "Slate Blue",
+        "hex": "#4A6B82"
+      },
+      {
+        "name": "Off White",
+        "hex": "#ECE8DF"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/t-shirts/gazebo-coastal-sun-graphic-tee.jpg",
+      "secondary": "assets/products/men/t-shirts/gazebo-coastal-sun-graphic-tee.jpg"
+    },
+    "tags": [
+      "Graphic Print",
+      "Regular Fit",
+      "New In",
+      "Under ₹999",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/t-shirts/gazebo-coastal-sun-graphic-tee.jpg",
+    "description": "Clean slate-blue pure cotton crewneck t-shirt featuring artisanal coastal sun, wave, and botanical foliage graphic illustration.",
+    "category": "men",
+    "isBestseller": false,
+    "isNew": true,
+    "rating": 4.8,
+    "reviewsCount": 39
+  },
+  {
+    "id": "gz-m-t-03",
+    "name": "Gazebo Embroidered Pique Polo Tee",
+    "section": "men",
+    "subCategory": "t-shirts",
+    "price": 999,
+    "mrp": 1699,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Forest Green",
+        "hex": "#1E4A38"
+      },
+      {
+        "name": "Khaki Sand",
+        "hex": "#D8C8B0"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/t-shirts/gazebo-embroidered-pique-polo-tee.jpg",
+      "secondary": "assets/products/men/t-shirts/gazebo-embroidered-pique-polo-tee.jpg"
+    },
+    "tags": [
+      "Embroidery",
+      "Regular Fit",
+      "Heavyweight",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/t-shirts/gazebo-embroidered-pique-polo-tee.jpg",
+    "description": "Tailored short-sleeve polo t-shirt in rich emerald green pique cotton with fine geometric gold thread embroidery at the chest.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 62
+  },
+  {
+    "id": "gz-m-t-04",
+    "name": "Gazebo Sunset Ridge Graphic Tee",
+    "section": "men",
+    "subCategory": "t-shirts",
+    "price": 699,
+    "mrp": 1199,
+    "badge": "New",
+    "colors": [
+      {
+        "name": "Ecru Off White",
+        "hex": "#F3EFE6"
+      },
+      {
+        "name": "Onyx Black",
+        "hex": "#1A1A1A"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/t-shirts/gazebo-sunset-ridge-graphic-tee.jpg",
+      "secondary": "assets/products/men/t-shirts/gazebo-sunset-ridge-graphic-tee.jpg"
+    },
+    "tags": [
+      "Graphic Print",
+      "Relaxed Fit",
+      "New In",
+      "Under ₹999",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/t-shirts/gazebo-sunset-ridge-graphic-tee.jpg",
+    "description": "Soft organic cotton jersey t-shirt in natural ecru with a multi-tone sunset mountain horizon chest screen-print.",
+    "category": "men",
+    "isBestseller": false,
+    "isNew": true,
+    "rating": 4.7,
+    "reviewsCount": 27
+  },
+  {
+    "id": "gz-m-t-05",
+    "name": "Gazebo Botanical Leaf Knit Polo Tee",
+    "section": "men",
+    "subCategory": "t-shirts",
+    "price": 1099,
+    "mrp": 1799,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Cream",
+        "hex": "#F7F3E9"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2838"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/t-shirts/gazebo-botanical-leaf-knit-polo-tee.jpg",
+      "secondary": "assets/products/men/t-shirts/gazebo-botanical-leaf-knit-polo-tee.jpg"
+    },
+    "tags": [
+      "Printed",
+      "Regular Fit",
+      "Heavyweight",
+      "Bestseller",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/men/t-shirts/gazebo-botanical-leaf-knit-polo-tee.jpg",
+    "description": "Premium fine-gauge knit polo t-shirt in warm cream featuring elegant botanical line-art leaf motifs and a structured collar.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 51
+  },
+  {
     "id": "gz-w-co-o-01",
     "name": "Pure Linen Camp Shirt & Trouser Set",
     "section": "women",
