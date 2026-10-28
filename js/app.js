@@ -1530,6 +1530,10 @@ function renderWearChips(section) {
 function renderWearContent(section) {
   const container = document.getElementById(`content_${section}`);
   if (!container) return;
+  if (section === 'men') {
+    container.innerHTML = '';
+    return;
+  }
   const allProds = window.GAZEBO_PRODUCTS || [];
   if (!allProds.length) return;
   const secProds = allProds.filter(p => p.section === section);
