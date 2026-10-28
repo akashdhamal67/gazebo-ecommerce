@@ -30,367 +30,310 @@ const GAZEBO_CONFIG = {
 
   categories: [
     {
-      id: "topwear",
-      title: "Oversized & Classic Tees",
+      id: "tshirts-polos",
+      title: "T-Shirts & Polos",
       subTitle: "Heavyweight 240+ GSM",
       itemCount: "42 Styles",
-      image: "assets/images/store/men-01.webp",
+      image: "assets/images/categories/cat-tshirts-polos.jpg",
       tag: "POPULAR"
     },
     {
-      id: "shirts",
-      title: "Resort & Linen Shirts",
-      subTitle: "Breathable Natural Weaves",
+      id: "jeans-flares",
+      title: "Jeans & Flares",
+      subTitle: "Straight & Wide-Leg",
       itemCount: "28 Styles",
-      image: "assets/images/store/men-02.webp",
-      tag: "SUMMER EDIT"
-    },
-    {
-      id: "bottomwear",
-      title: "Cargos & Relaxed Trousers",
-      subTitle: "Functional Utility Fits",
-      itemCount: "34 Styles",
-      image: "assets/images/store/women-01.webp",
+      image: "assets/images/categories/cat-jeans-flares.jpg",
       tag: "TRENDING"
     },
     {
-      id: "polos",
-      title: "Textured & Knitted Polos",
-      subTitle: "Waffle & Ribbed Textures",
-      itemCount: "19 Styles",
-      image: "assets/images/store/men-03.webp",
-      tag: "ESSENTIAL"
+      id: "cargos-trousers",
+      title: "Cargos & Relaxed Trousers",
+      subTitle: "Tailored Utility Fits",
+      itemCount: "34 Styles",
+      image: "assets/images/categories/cat-cargos-trousers.jpg",
+      tag: "SIGNATURE"
     },
     {
-      id: "coords",
-      title: "Co-ord Matching Sets",
-      subTitle: "Effortless Everyday Outfits",
+      id: "linen-overshirts",
+      title: "Linen & Overshirts",
+      subTitle: "Breathable Natural Weaves",
+      itemCount: "19 Styles",
+      image: "assets/images/categories/cat-linen-overshirts.jpg",
+      tag: "SUMMER EDIT"
+    },
+    {
+      id: "womens-coords",
+      title: "Women's Co-ords",
+      subTitle: "Effortless Matching Sets",
       itemCount: "16 Styles",
-      image: "assets/images/store/women-02.webp",
+      image: "assets/images/categories/cat-womens-coords.jpg",
       tag: "NEW DROP"
     },
     {
-      id: "outerwear",
-      title: "Overshirts & Jackets",
-      subTitle: "Structured Layering",
+      id: "womens-tops-pants",
+      title: "Women's Tops & Pants",
+      subTitle: "Cropped Knits & Trousers",
       itemCount: "22 Styles",
-      image: "assets/images/store/women-03.webp",
-      tag: "AUTUMN"
+      image: "assets/images/categories/cat-womens-tops-pants.jpg",
+      tag: "ESSENTIAL"
     },
     {
-      id: "accessories",
-      title: "Garments & Accessories",
-      subTitle: "Caps, Belts & Canvas Totes",
-      itemCount: "31 Styles",
-      image: "assets/images/store/acc-01.webp",
-      tag: "SIGNATURE"
+      id: "kids-sets",
+      title: "Kids' Sets",
+      subTitle: "Everyday Casual Sets",
+      itemCount: "18 Styles",
+      image: "assets/images/categories/cat-kids-sets.jpg",
+      tag: "FAMILY WEAR"
     }
   ],
 
   products: [
     {
       id: "gz-01",
-      name: "Heavyweight Boxy Tee",
-      subtitle: "Relaxed Drop-Shoulder Fit",
-      category: "topwear",
-      gender: ["men", "unisex"],
+      name: "Heavyweight Boxy Drop-Shoulder Tee",
+      subtitle: "240 GSM Dense Combed Cotton",
+      category: "tshirts-polos",
+      gender: ["women", "unisex", "men"],
       price: 1299,
       originalPrice: 1999,
       badge: "BESTSELLER",
       fabric: "240 GSM 100% Combed Cotton",
       colors: [
+        { name: "Vintage Ecru", hex: "#E9E5DD", inStock: true },
         { name: "Concrete Grey", hex: "#7E8287", inStock: true },
-        { name: "Washed Black", hex: "#1F1F1F", inStock: true },
-        { name: "Vintage Ecru", hex: "#E9E5DD", inStock: true }
+        { name: "Washed Black", hex: "#1F1F1F", inStock: true }
       ],
-      sizes: ["S", "M", "L", "XL", "XXL"],
-      primaryImage: "assets/images/store/men-01.webp",
-      secondaryImage: "assets/images/store/men-01.webp",
-      description: "A contemporary boxy silhouette engineered with ultra-dense 240 GSM combed cotton. Retains crisp structural drape wash after wash.",
+      sizes: ["S", "M", "L", "XL"],
+      primaryImage: "assets/images/products/gz-01-primary.jpg",
+      secondaryImage: "assets/images/products/gz-01-secondary.jpg",
+      description: "A contemporary drop-shoulder boxy silhouette engineered with ultra-dense 240 GSM combed cotton. Retains crisp structural drape wash after wash.",
       details: [
-        "100% long-staple combed cotton",
+        "240 GSM heavy combed cotton",
         "Pre-shrunk, bio-washed fabric",
         "Reinforced twin-needle ribbed neckline",
-        "Crafted for daily elevated streetwear"
+        "Drop shoulder boxy streetwear cut"
       ]
     },
     {
       id: "gz-02",
-      name: "Camp Collar French Linen Shirt",
-      subtitle: "Relaxed Resort Silhouette",
-      category: "topwear",
-      gender: ["men"],
+      name: "Camp Collar Resort Overshirt",
+      subtitle: "Relaxed Textured Layering Piece",
+      category: "linen-overshirts",
+      gender: ["men", "unisex"],
       price: 1899,
       originalPrice: 2699,
-      badge: "NEW SEASON",
-      fabric: "100% Pure French Linen",
+      badge: "NEW EDIT",
+      fabric: "100% Pure Slub Cotton-Linen",
       colors: [
-        { name: "Natural Ecru", hex: "#E3DDD2", inStock: true },
-        { name: "Aegean Slate", hex: "#5C6B73", inStock: true },
-        { name: "Terracotta Sand", hex: "#C47B5D", inStock: true }
+        { name: "Pure White", hex: "#FFFFFF", inStock: true },
+        { name: "Natural Ecru", hex: "#E3DDD2", inStock: true }
       ],
       sizes: ["S", "M", "L", "XL"],
-      primaryImage: "assets/images/store/men-02.webp",
-      secondaryImage: "assets/images/store/men-01.webp",
-      description: "Crafted from airy, breathable French flax linen with an open camp collar. Delivers natural drape and relaxed sophistication.",
+      primaryImage: "assets/images/products/gz-02-primary.jpg",
+      secondaryImage: "assets/images/products/gz-02-secondary.jpg",
+      description: "Airy resort silhouette with open camp collar and front patch pockets. Crafted for effortless layering over tees and tanks.",
       details: [
-        "100% natural European flax linen",
-        "Mother-of-pearl finish buttons",
-        "Clean straight hem with subtle side vents",
-        "Naturally thermoregulating fabric"
+        "100% natural breathable weave",
+        "Front zip and utility pockets",
+        "Straight hemline with side vents",
+        "Pre-washed for soft drape"
       ]
     },
     {
       id: "gz-03",
-      name: "Parachute Utility Cargo Pant",
-      subtitle: "Wide-Leg Tactical Silhouette",
-      category: "bottomwear",
-      gender: ["men", "unisex"],
-      price: 2299,
+      name: "High-Waist Straight Denim Jeans",
+      subtitle: "Vintage Wash Heritage Denim",
+      category: "jeans-flares",
+      gender: ["women", "unisex"],
+      price: 2499,
       originalPrice: 3499,
       badge: "TRENDING",
-      fabric: "Micro-Ripstop Cotton Twill",
+      fabric: "13.5oz Rigid Cotton Denim",
       colors: [
-        { name: "Military Olive", hex: "#4B5320", inStock: true },
-        { name: "Pitch Black", hex: "#111111", inStock: true },
-        { name: "Desert Tan", hex: "#D2B48C", inStock: true }
+        { name: "Vintage Indigo", hex: "#3B536E", inStock: true },
+        { name: "Washed Black", hex: "#222222", inStock: true }
       ],
-      sizes: ["30", "32", "34", "36"],
-      primaryImage: "assets/images/store/women-01.webp",
-      secondaryImage: "assets/images/store/men-02.webp",
-      description: "Engineered with durable micro-ripstop twill, 6 tactical ergonomic cargo pockets, and adjustable bungee toggles at the hem.",
+      sizes: ["28", "30", "32", "34"],
+      primaryImage: "assets/images/products/gz-03-primary.jpg",
+      secondaryImage: "assets/images/products/gz-03-secondary.jpg",
+      description: "High-rise straight cut with subtle flare at the hem. Crafted from authentic 13.5oz ring-spun cotton denim with vintage whiskering.",
       details: [
-        "High-density ripstop cotton blend",
-        "Articulated knee darts for unrestricted movement",
-        "Deep bellows cargo pockets with hidden snaps",
-        "Elasticated waistband with drawstring"
+        "100% ring-spun cotton denim",
+        "Classic five-pocket styling",
+        "Subtle hand-whiskering & fading",
+        "Sturdy copper rivets and shank"
       ]
     },
     {
       id: "gz-04",
-      name: "Waffle Knit Textured Polo",
-      subtitle: "Custom Collar Knitwear",
-      category: "topwear",
-      gender: ["men"],
-      price: 1599,
-      originalPrice: 2299,
-      badge: "PREMIUM",
-      fabric: "280 GSM Waffle Cotton",
+      name: "Pleated Relaxed Tailored Trouser",
+      subtitle: "Fluid Architecture Silhouette",
+      category: "cargos-trousers",
+      gender: ["men", "women"],
+      price: 2299,
+      originalPrice: 3299,
+      badge: "SIGNATURE",
+      fabric: "Tencel Cotton Twill",
       colors: [
-        { name: "Charcoal Heather", hex: "#3A3D40", inStock: true },
-        { name: "Vintage Cream", hex: "#F3EDE2", inStock: true },
-        { name: "Deep Navy", hex: "#1C2833", inStock: true }
+        { name: "Deep Navy", hex: "#1C2833", inStock: true },
+        { name: "Obsidian Black", hex: "#111111", inStock: true }
       ],
-      sizes: ["S", "M", "L", "XL", "XXL"],
-      primaryImage: "assets/images/store/men-04.webp",
-      secondaryImage: "assets/images/store/men-03.webp",
-      description: "A rich tactile waffle texture providing substantial structure and breathable comfort. Finished with a seamless open placket.",
+      sizes: ["30", "32", "34", "36"],
+      primaryImage: "assets/images/products/gz-04-primary.jpg",
+      secondaryImage: "assets/images/products/gz-04-secondary.jpg",
+      description: "Double front pleats with a relaxed thigh tapering to a clean architectural break at the hem.",
       details: [
-        "Heavyweight 280 GSM combed cotton knit",
-        "Seamless knit collar that never curls",
-        "Relaxed tailored hemline",
-        "Subtle ribbed cuffs"
+        "Fluid drape Tencel blend",
+        "Double front tailored pleats",
+        "Concealed hook-and-bar closure",
+        "Deep slant hand pockets"
       ]
     },
     {
       id: "gz-05",
-      name: "Pleated Relaxed Trouser",
-      subtitle: "Fluid Tailored Silhouette",
-      category: "bottomwear",
-      gender: ["men", "women"],
-      price: 2499,
-      originalPrice: 3599,
-      badge: "FLAGSHIP",
-      fabric: "Tencel Cotton Twill",
+      name: "Linen Camp Shirt Co-ord Set",
+      subtitle: "Two-Piece Matching Set",
+      category: "womens-coords",
+      gender: ["women"],
+      price: 3299,
+      originalPrice: 4699,
+      badge: "BESTSELLER",
+      fabric: "100% European Flax Linen",
       colors: [
-        { name: "Sandstone Beige", hex: "#C9BFB2", inStock: true },
-        { name: "Obsidian Black", hex: "#1A1A1A", inStock: true }
+        { name: "Oatmeal Beige", hex: "#DDD6C8", inStock: true },
+        { name: "Terracotta Sand", hex: "#C47B5D", inStock: true }
       ],
-      sizes: ["30", "32", "34", "36"],
-      primaryImage: "assets/images/store/women-01.webp",
-      secondaryImage: "assets/images/store/women-04.webp",
-      description: "A modern interpretation of 1970s tailoring. Double front pleats with a relaxed thigh taper down to a clean break.",
+      sizes: ["XS", "S", "M", "L"],
+      primaryImage: "assets/images/products/gz-05-primary.jpg",
+      secondaryImage: "assets/images/products/gz-05-secondary.jpg",
+      description: "Effortless two-piece co-ord set featuring a boxy short-sleeve camp shirt and matching pleated high-rise trousers.",
       details: [
-        "Breathable Tencel-cotton drape",
-        "Classic double front pleats",
-        "Internal waistband gripper",
-        "Concealed hook-and-bar closure"
+        "Includes both shirt & trouser",
+        "100% breathable pure linen",
+        "Mother-of-pearl finish buttons",
+        "Elasticated rear trouser waistband"
       ]
     },
     {
       id: "gz-06",
-      name: "Brushed Cotton Overshirt",
-      subtitle: "Heavyweight Layering Essential",
-      category: "outerwear",
+      name: "Drop-Shoulder Fleece Hoodie",
+      subtitle: "380 GSM Heavy French Terry",
+      category: "tshirts-polos",
       gender: ["men", "unisex"],
-      price: 2899,
-      originalPrice: 4199,
-      badge: "LIMITED EDIT",
-      fabric: "340 GSM Brushed Cotton",
+      price: 1999,
+      originalPrice: 2999,
+      badge: "POPULAR",
+      fabric: "380 GSM Brushed French Terry",
       colors: [
-        { name: "Tobacco Brown", hex: "#734A26", inStock: true },
-        { name: "Dark Moss", hex: "#3B4D3C", inStock: true }
+        { name: "Sage Green", hex: "#8F9D8C", inStock: true },
+        { name: "Oat Heather", hex: "#D8CFC4", inStock: true }
       ],
-      sizes: ["M", "L", "XL", "XXL"],
-      primaryImage: "assets/images/store/women-03.webp",
-      secondaryImage: "assets/images/store/women-02.webp",
-      description: "Designed for effortless seasonal transitions. Features dual chest patch pockets, matte horn buttons, and a peach-soft brushed finish.",
+      sizes: ["S", "M", "L", "XL"],
+      primaryImage: "assets/images/products/gz-06-primary.jpg",
+      secondaryImage: "assets/images/products/gz-06-secondary.jpg",
+      description: "Dense 380 GSM French terry hoodie engineered with double-layered hood and relaxed drop-shoulder silhouette.",
       details: [
-        "340 GSM heavy twill with peach finish",
-        "Oversized fit built for easy layering",
-        "Dual utility chest pockets",
-        "Heavy-gauge topstitching"
+        "380 GSM heavy brushed fleece",
+        "Seamless crossover neckline hood",
+        "Hidden kangaroo pouch pocket",
+        "Heavy ribbed cuffs and waistband"
       ]
     },
     {
       id: "gz-07",
-      name: "Monochrome Minimal Co-ord",
-      subtitle: "Matching Camp Shirt & Short",
-      category: "coords",
-      gender: ["men", "unisex"],
-      price: 3299,
-      originalPrice: 4699,
-      badge: "COMPLETE SET",
-      fabric: "Tencel-Linen Blend",
+      name: "Cable Knit Cropped Sweater",
+      subtitle: "Chunky Textured Knitwear",
+      category: "womens-tops-pants",
+      gender: ["women"],
+      price: 1699,
+      originalPrice: 2499,
+      badge: "NEW DROP",
+      fabric: "100% Combed Cotton Knit",
       colors: [
-        { name: "Ink Black", hex: "#141414", inStock: true },
-        { name: "Pebble Dune", hex: "#D8CFC4", inStock: true }
+        { name: "Vintage Cream", hex: "#F3EDE2", inStock: true },
+        { name: "Camel", hex: "#A87A51", inStock: true }
       ],
-      sizes: ["S", "M", "L", "XL"],
-      primaryImage: "assets/images/store/women-02.webp",
-      secondaryImage: "assets/images/store/women-02.webp",
-      description: "A coordinated two-piece outfit featuring a boxy short-sleeve shirt and matching relaxed drawstring shorts.",
+      sizes: ["XS", "S", "M", "L"],
+      primaryImage: "assets/images/products/gz-07-primary.jpg",
+      secondaryImage: "assets/images/products/gz-07-secondary.jpg",
+      description: "Artisanal cable knit pattern with a modern cropped hemline and relaxed balloon sleeves.",
       details: [
-        "Includes both top and bottom",
-        "Ultra-soft fluid hand-feel",
-        "Elasticated shorts with drawstring and rear pocket",
-        "Perfect for casual weekend leisure"
+        "Breathable 100% cotton knit",
+        "Classic cable-stitch structure",
+        "Ribbed crewneck and waistband",
+        "Cropped above hip silhouette"
       ]
     },
     {
       id: "gz-08",
-      name: "Vintage Mineral Wash Heavy Tee",
-      subtitle: "Heritage 1979 Archival Wash",
-      category: "topwear",
-      gender: ["men", "unisex"],
-      price: 1399,
-      originalPrice: 1999,
-      badge: "HERITAGE 1979",
-      fabric: "260 GSM Heavyweight Jersey",
+      name: "Distressed Oversized Denim Jacket",
+      subtitle: "Archival Heritage Wash",
+      category: "womens-tops-pants",
+      gender: ["women", "unisex"],
+      price: 2899,
+      originalPrice: 4199,
+      badge: "FLAGSHIP",
+      fabric: "14oz Heavyweight Cotton Denim",
       colors: [
-        { name: "Washed Navy", hex: "#2C3E50", inStock: true },
-        { name: "Faded Onyx", hex: "#2E2E2E", inStock: true }
+        { name: "Vintage Acid Wash", hex: "#5C6B73", inStock: true }
       ],
-      sizes: ["S", "M", "L", "XL", "XXL"],
-      primaryImage: "assets/images/store/kids-01.webp",
-      secondaryImage: "assets/images/store/men-01.webp",
-      description: "Individually garment-dyed and mineral washed for an authentic lived-in vintage patina with Gazebo's signature heritage heft.",
+      sizes: ["S", "M", "L", "XL"],
+      primaryImage: "assets/images/products/gz-08-primary.jpg",
+      secondaryImage: "assets/images/products/gz-08-secondary.jpg",
+      description: "Statement trucker silhouette with authentic artisanal abrasion, dual flap chest pockets, and relaxed dropped shoulders.",
       details: [
-        "260 GSM combed cotton jersey",
-        "Unique artisanal mineral wash on each piece",
-        "Durable flatlock construction",
-        "Comfortable relaxed silhouette"
+        "14oz heavyweight denim",
+        "Vintage enzyme stone wash",
+        "Subtle collar and hem abrasion",
+        "Branded antique brass hardware"
       ]
     },
     {
       id: "gz-09",
-      name: "Minimalist Harrington Jacket",
-      subtitle: "Water-Resistant City Outerwear",
-      category: "outerwear",
+      name: "Wool-Blend Varsity Bomber Jacket",
+      subtitle: "Contrast Ribbed Letterman Cut",
+      category: "linen-overshirts",
       gender: ["men"],
       price: 3499,
       originalPrice: 4999,
-      badge: "STATEMENT",
-      fabric: "High-Density Cotton Poly Twill",
+      badge: "LIMITED EDIT",
+      fabric: "Wool & Cashmere Blend",
       colors: [
-        { name: "Slate Grey", hex: "#4A525A", inStock: true },
-        { name: "Classic Navy", hex: "#1B2A4A", inStock: true }
+        { name: "Cream & Navy", hex: "#EAE7DF", inStock: true }
       ],
       sizes: ["M", "L", "XL"],
-      primaryImage: "assets/images/store/kids-03.webp",
-      secondaryImage: "assets/images/store/women-03.webp",
-      description: "A clean modern silhouette featuring a stand collar with horn buttons, two-way YKK front zipper, and internal storm flaps.",
+      primaryImage: "assets/images/products/gz-09-primary.jpg",
+      secondaryImage: "assets/images/products/gz-09-secondary.jpg",
+      description: "Clean heritage-inspired varsity jacket with tonal snap buttons, contrast navy ribbed collar, and double-welt leatherette hand pockets.",
       details: [
-        "Water-repellent matte outer shell",
-        "Two-way metal zipper closure",
-        "Dual slant hand pockets with snap flaps",
-        "Breathable cotton lining"
+        "Heavyweight wool-rich body",
+        "Quilted satin thermal interior lining",
+        "Dual interior security pockets",
+        "Athletic striped ribbed trim"
       ]
     },
     {
       id: "gz-10",
-      name: "Structured 6-Panel Cap",
-      subtitle: "Heritage Garments & Accessories",
-      category: "accessories",
-      gender: ["men", "women", "unisex"],
-      price: 899,
-      originalPrice: 1299,
-      badge: "ACCESSORY",
-      fabric: "Heavy Cotton Twill",
+      name: "Kids' Fleece Casual Streetwear Set",
+      subtitle: "Comfortable Two-Piece Tracksuit",
+      category: "kids-sets",
+      gender: ["kids", "unisex"],
+      price: 1499,
+      originalPrice: 2199,
+      badge: "KIDS FAVORITE",
+      fabric: "100% Organic Cotton Fleece",
       colors: [
-        { name: "Forest Green", hex: "#2D4B39", inStock: true },
-        { name: "Dark Walnut", hex: "#4A3B32", inStock: true },
-        { name: "Pitch Black", hex: "#1A1A1A", inStock: true }
+        { name: "Sage & Heather", hex: "#8F9D8C", inStock: true }
       ],
-      sizes: ["One Size (Adjustable)"],
-      primaryImage: "assets/images/store/acc-01.webp",
-      secondaryImage: "assets/images/store/acc-01.webp",
-      description: "Structured crown with pre-curved visor, embroidered eyelets, and an antique brass buckle adjustment strap.",
+      sizes: ["4-5Y", "6-7Y", "8-9Y", "10-11Y"],
+      primaryImage: "assets/images/products/gz-10-primary.jpg",
+      secondaryImage: "assets/images/products/gz-10-secondary.jpg",
+      description: "Super-soft organic fleece set built for everyday active movement. Includes relaxed pullover hoodie and elasticated joggers.",
       details: [
-        "100% cotton chino twill",
-        "Subtle tonal Gazebo insignia embroidery",
-        "Custom antique brass tri-glide buckle",
-        "Moisture-wicking internal sweatband"
-      ]
-    },
-    {
-      id: "gz-11",
-      name: "16oz Heavyweight Canvas Tote",
-      subtitle: "Everyday Durable Carryall",
-      category: "accessories",
-      gender: ["unisex"],
-      price: 1199,
-      originalPrice: 1699,
-      badge: "ICONIC",
-      fabric: "16oz Raw Organic Cotton Duck",
-      colors: [
-        { name: "Raw Ecru", hex: "#ECE5D8", inStock: true },
-        { name: "Washed Black", hex: "#222222", inStock: true }
-      ],
-      sizes: ["Standard (22L)"],
-      primaryImage: "assets/images/store/acc-02.webp",
-      secondaryImage: "assets/images/store/acc-01.webp",
-      description: "Built to last decades. Heavy 16oz duck canvas with reinforced box-stitched handles, key lanyard, and interior zip compartment.",
-      details: [
-        "16oz organic unbleached canvas",
-        "Interior zippered security pocket",
-        "Wide reinforced shoulder straps",
-        "Screen-printed Gazebo Estd. 1979 archival mark"
-      ]
-    },
-    {
-      id: "gz-12",
-      name: "Pure Linen Drawstring Short",
-      subtitle: "Casual Summer Tailoring",
-      category: "bottomwear",
-      gender: ["men"],
-      price: 1699,
-      originalPrice: 2399,
-      badge: "SEASONAL",
-      fabric: "100% Slub Linen",
-      colors: [
-        { name: "Oat Oatmeal", hex: "#DDD6C8", inStock: true },
-        { name: "Olive Tint", hex: "#556B2F", inStock: true }
-      ],
-      sizes: ["30", "32", "34", "36"],
-      primaryImage: "assets/images/store/men-01.webp",
-      secondaryImage: "assets/images/store/women-01.webp",
-      description: "Relaxed mid-thigh length cut from textured slub linen. Finished with an internal drawcord and deep slash side pockets.",
-      details: [
-        "100% breathable slub linen",
-        "Elasticated waist with tubular cotton drawcord",
-        "Rear patch pocket with horn button",
-        "Soft-washed for effortless comfort"
+        "Includes matching hoodie and joggers",
+        "GOTS certified organic cotton",
+        "Soft-brushed interior",
+        "Reinforced knee and seam stitching"
       ]
     }
   ]

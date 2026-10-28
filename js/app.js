@@ -405,7 +405,7 @@ function initCategorySection() {
   container.innerHTML = window.GAZEBO_CONFIG.categories.map(cat => `
     <div class="category-tile" onclick="window.filterByCategory('${cat.id}')">
       <div class="category-tile__media">
-        <img class="category-tile__img" src="${cat.image}" alt="${cat.title}" width="400" height="500" loading="lazy" decoding="async" />
+        <img class="category-tile__img" src="${cat.image}" alt="${cat.title}" width="600" height="800" loading="lazy" decoding="async" />
         <span class="category-tile__badge">${cat.tag}</span>
         <div class="category-tile__overlay">
           <span class="category-tile__cta">Explore Collection →</span>
@@ -447,7 +447,7 @@ function renderCategoryPageGrid() {
           <img class="product-card__img product-card__img--primary" 
                src="${product.image || product.primaryImage}" 
                alt="${product.name}" 
-               width="1000" height="1250" 
+               width="600" height="800" 
                loading="lazy" decoding="async"
                style="object-fit: cover; object-position: center top;" />
         </div>
@@ -506,8 +506,8 @@ function renderProducts() {
       <article class="product-card" data-product-id="${product.id}" data-category="${product.category}">
         <div class="product-card__media">
           <div class="product-card__image-wrap" onclick="window.openQuickView('${product.id}')">
-            <img class="product-card__img product-card__img--primary" src="${product.primaryImage}" alt="${product.name}" width="600" height="750" loading="lazy" decoding="async" />
-            <img class="product-card__img product-card__img--secondary" src="${product.secondaryImage}" alt="${product.name} Alternate View" width="600" height="750" loading="lazy" decoding="async" />
+            <img class="product-card__img product-card__img--primary" src="${product.primaryImage}" alt="${product.name}" width="600" height="800" loading="lazy" decoding="async" />
+            <img class="product-card__img product-card__img--secondary" src="${product.secondaryImage}" alt="${product.name} Detail View" width="600" height="800" loading="lazy" decoding="async" />
           </div>
 
           ${product.badge ? `<span class="product-card__badge">${product.badge}</span>` : ''}
@@ -518,58 +518,30 @@ function renderProducts() {
                   onclick="event.stopPropagation(); window.gazeboStore.toggleWishlist('${product.id}')"
                   title="Add to Wishlist"
                   aria-label="Add to Wishlist">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="${isWishlisted ? '#EE5824' : 'none'}" stroke="${isWishlisted ? '#EE5824' : 'currentColor'}" stroke-width="1.8">
               <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
             </svg>
           </button>
 
-          <div class="product-card__quick-actions">
-            <button class="product-card__quick-view-btn" onclick="window.openQuickView('${product.id}')">
-              Quick View
-            </button>
-            <button class="product-card__quick-add-btn" onclick="window.gazeboStore.addToCart('${product.id}', '${product.sizes[0]}', '${product.colors[0]?.name}')">
-              + Quick Add
-            </button>
+          <!-- Slide-up size bar on hover (Snitch style) -->
+          <div class="product-card__size-bar" aria-label="Select size to add">
+            <span class="product-card__size-label">Select Size:</span>
+            ${product.sizes.map(s => `
+              <button type="button" class="product-card__size-btn" onclick="event.stopPropagation(); window.gazeboStore ? window.gazeboStore.addToCart('${product.id}', '${s}', '${product.colors[0]?.name}') : (window.gazeboCart ? window.gazeboCart.addItem('${product.id}') : null);" title="Add size ${s}">${s}</button>
+            `).join('')}
           </div>
         </div>
 
         <div class="product-card__info">
-          <!-- Color Swatches -->
-          <div class="product-card__swatches">
-            ${product.colors.map((c, i) => `
-              <span class="color-dot ${i === 0 ? 'is-active' : ''}" 
-                    style="background-color: ${c.hex};" 
-                    title="${c.name}"
-                    data-color="${c.name}"></span>
-            `).join('')}
-          </div>
-
           <h3 class="product-card__title" onclick="window.openQuickView('${product.id}')">
             ${product.name}
           </h3>
-          <p class="product-card__fabric">${product.fabric || product.subtitle}</p>
-
           <div class="product-card__price-row">
             <span class="product-card__price">₹${product.price.toLocaleString('en-IN')}</span>
             ${product.originalPrice ? `
               <span class="product-card__orig-price">₹${product.originalPrice.toLocaleString('en-IN')}</span>
               <span class="product-card__discount">${discountPercent}% OFF</span>
             ` : ''}
-          </div>
-
-          <!-- Mobile + Add to Bag Button -->
-          <button class="product-card__mobile-btn" 
-                  onclick="event.stopPropagation(); window.gazeboStore.addToCart('${product.id}', '${product.sizes[0]}', '${product.colors[0]?.name}')"
-                  aria-label="Add ${product.name} to Bag">
-            + Add to Bag
-          </button>
-
-          <!-- Quick Sizes Strip -->
-          <div class="product-card__sizes">
-            <span class="sizes-label">Sizes:</span>
-            ${product.sizes.map(s => `
-              <button class="size-pill-mini" onclick="event.stopPropagation(); window.gazeboStore.addToCart('${product.id}', '${s}', '${product.colors[0]?.name}')">${s}</button>
-            `).join('')}
           </div>
         </div>
       </article>

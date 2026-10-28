@@ -195,7 +195,7 @@ const GAZEBO_PRODUCTS = [
     priceDisplay: "₹ 0.00",
     comparePriceDisplay: "₹ 0.00",
     badge: "New Arrival",
-    image: "assets/images/store/kids-01.webp",
+    image: "assets/images/products/gz-10-primary.jpg",
     sizes: ["4-5Y", "6-7Y", "8-9Y", "10-11Y", "12-13Y"],
     colors: [
       { name: "Sunshine Yellow", hex: "#F4C430" },
@@ -214,7 +214,7 @@ const GAZEBO_PRODUCTS = [
     priceDisplay: "₹ 0.00",
     comparePriceDisplay: "₹ 0.00",
     badge: "Best Seller",
-    image: "assets/images/store/kids-02.webp",
+    image: "assets/images/products/gz-10-secondary.jpg",
     sizes: ["4-5Y", "6-7Y", "8-9Y", "10-11Y"],
     colors: [
       { name: "Navy Heather", hex: "#2C3E50" },
