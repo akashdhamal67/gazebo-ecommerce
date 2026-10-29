@@ -400,7 +400,7 @@ img, video {
 
   .hero-slide__poster--hero3,
   .hero-slide__video--hero3 {
-    object-position: 75% 12% !important;
+    object-position: 75% 0% !important;
     transform: none !important;
   }
 
@@ -545,9 +545,9 @@ img, video {
     transform: none !important;
   }
 
-  /* Model head anchored in top 45% with headspace */
+  /* Model head anchored with headspace */
   .hero-slide__poster--hero2 {
-    object-position: 70% 12% !important;
+    object-position: 70% 0% !important;
   }
 
   .hero-slide__poster--hero1 {
@@ -555,7 +555,7 @@ img, video {
   }
 
   .hero-slide__poster--hero3 {
-    object-position: 75% 10% !important;
+    object-position: 75% 0% !important;
   }
 
   /* Bottom-to-top dark contrast gradient */

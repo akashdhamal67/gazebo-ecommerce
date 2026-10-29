@@ -357,7 +357,7 @@
 
 .hero-slide__poster--hero2,
 .hero-slide__video--hero2 {
-  object-position: 70% 25%;
+  object-position: 70% 0%;
 }
 
 .hero-slide__poster--hero1,
@@ -396,7 +396,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 75% 12%;
+  object-position: 75% 0%;
   margin: 0;
   transform: none;
   outline: none !important;
