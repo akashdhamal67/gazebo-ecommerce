@@ -2447,26 +2447,26 @@ window.GAZEBO_PRODUCTS = [
     "reviewsCount": 92
   },
   {
-    "id": "gz-w-top-01",
-    "name": "Gazebo Butter Yellow Square Neck Top",
+    "id": "gz-w-tp-01",
+    "name": "Gazebo Pastel Yellow Square Neck Puff Sleeve Top",
     "section": "women",
     "subCategory": "tops",
     "category": "womens",
     "gender": [
       "women"
     ],
-    "price": 699,
-    "mrp": 1199,
-    "originalPrice": 1199,
+    "price": 749,
+    "mrp": 1299,
+    "originalPrice": 1299,
     "badge": "Bestseller",
     "colors": [
       {
         "name": "Butter Yellow",
-        "hex": "#F5E8A9"
+        "hex": "#F7EAA0"
       },
       {
-        "name": "Lemon Chiffon",
-        "hex": "#FFF1B8"
+        "name": "Lemon Sorbet",
+        "hex": "#FFF3B8"
       }
     ],
     "sizes": [
@@ -2477,38 +2477,38 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/tops/gazebo-butter-yellow-square-neck-top.jpg",
-      "secondary": "assets/products/women/tops/gazebo-butter-yellow-square-neck-top.jpg"
+      "primary": "assets/products/women/tops/gazebo-pastel-yellow-square-neck-puff-sleeve-top.jpg",
+      "secondary": "assets/products/women/tops/gazebo-pastel-yellow-square-neck-puff-sleeve-top.jpg"
     },
     "tags": [
       "Tops",
       "Top",
       "Square Neck",
       "Puff Sleeve",
-      "Butter Yellow",
+      "Pastel Yellow",
       "Bestseller",
       "Under ₹999",
       "Under ₹1,499",
       "Regular Fit"
     ],
-    "primaryImage": "assets/products/women/tops/gazebo-butter-yellow-square-neck-top.jpg",
-    "secondaryImage": "assets/products/women/tops/gazebo-butter-yellow-square-neck-top.jpg",
-    "description": "Chic square-neck top in soft butter yellow featuring delicate puff sleeves and smooth breathable cotton drape.",
+    "primaryImage": "assets/products/women/tops/gazebo-pastel-yellow-square-neck-puff-sleeve-top.jpg",
+    "secondaryImage": "assets/products/women/tops/gazebo-pastel-yellow-square-neck-puff-sleeve-top.jpg",
+    "description": "Romantic square-neck top in soft pastel yellow designed with charming puff sleeves and a lightweight breathable cotton weave.",
     "isBestseller": true,
     "isNew": false,
-    "rating": 4.9,
-    "reviewsCount": 94
+    "rating": 4.8,
+    "reviewsCount": 112
   },
   {
-    "id": "gz-w-top-02",
-    "name": "Gazebo Burgundy Ribbed Knit Top",
+    "id": "gz-w-tp-02",
+    "name": "Gazebo Wine Burgundy Ribbed Crew Neck Top",
     "section": "women",
     "subCategory": "tops",
     "category": "womens",
     "gender": [
       "women"
     ],
-    "price": 899,
+    "price": 849,
     "mrp": 1499,
     "originalPrice": 1499,
     "badge": "Bestseller",
@@ -2518,8 +2518,8 @@ window.GAZEBO_PRODUCTS = [
         "hex": "#5C2434"
       },
       {
-        "name": "Deep Plum",
-        "hex": "#451A26"
+        "name": "Deep Berry",
+        "hex": "#4A1C2A"
       }
     ],
     "sizes": [
@@ -2530,8 +2530,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/tops/gazebo-burgundy-ribbed-knit-long-sleeve-top.jpg",
-      "secondary": "assets/products/women/tops/gazebo-burgundy-ribbed-knit-long-sleeve-top.jpg"
+      "primary": "assets/products/women/tops/gazebo-wine-burgundy-ribbed-crew-neck-top.jpg",
+      "secondary": "assets/products/women/tops/gazebo-wine-burgundy-ribbed-crew-neck-top.jpg"
     },
     "tags": [
       "Tops",
@@ -2543,19 +2543,20 @@ window.GAZEBO_PRODUCTS = [
       "Bestseller",
       "Under ₹999",
       "Under ₹1,499",
+      "Dark Shades",
       "Fitted"
     ],
-    "primaryImage": "assets/products/women/tops/gazebo-burgundy-ribbed-knit-long-sleeve-top.jpg",
-    "secondaryImage": "assets/products/women/tops/gazebo-burgundy-ribbed-knit-long-sleeve-top.jpg",
-    "description": "Sleek fine-ribbed knit top in rich wine burgundy cut with a classic crew neckline and flattering slim-fit silhouette.",
+    "primaryImage": "assets/products/women/tops/gazebo-wine-burgundy-ribbed-crew-neck-top.jpg",
+    "secondaryImage": "assets/products/women/tops/gazebo-wine-burgundy-ribbed-crew-neck-top.jpg",
+    "description": "Refined fine-ribbed long-sleeve knit top in deep wine burgundy with a classic fitted crewneck silhouette for effortless everyday layering.",
     "isBestseller": true,
     "isNew": false,
-    "rating": 4.8,
-    "reviewsCount": 82
+    "rating": 4.9,
+    "reviewsCount": 138
   },
   {
-    "id": "gz-w-top-03",
-    "name": "Gazebo Espresso Brown Ribbed Knit Top",
+    "id": "gz-w-tp-03",
+    "name": "Gazebo Chocolate Brown Fine Ribbed Knit Top",
     "section": "women",
     "subCategory": "tops",
     "category": "womens",
@@ -2568,12 +2569,12 @@ window.GAZEBO_PRODUCTS = [
     "badge": null,
     "colors": [
       {
-        "name": "Espresso Brown",
+        "name": "Chocolate Brown",
         "hex": "#4A2E1F"
       },
       {
-        "name": "Warm Mocha",
-        "hex": "#5C3A27"
+        "name": "Rich Mocha",
+        "hex": "#3B2215"
       }
     ],
     "sizes": [
@@ -2584,26 +2585,26 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/tops/gazebo-espresso-brown-ribbed-knit-top.jpg",
-      "secondary": "assets/products/women/tops/gazebo-espresso-brown-ribbed-knit-top.jpg"
+      "primary": "assets/products/women/tops/gazebo-chocolate-brown-fine-ribbed-knit-top.jpg",
+      "secondary": "assets/products/women/tops/gazebo-chocolate-brown-fine-ribbed-knit-top.jpg"
     },
     "tags": [
       "Tops",
       "Top",
       "Ribbed Knit",
       "Long Sleeve",
-      "Espresso Brown",
+      "Chocolate Brown",
       "Under ₹1,499",
       "Dark Shades",
       "Fitted"
     ],
-    "primaryImage": "assets/products/women/tops/gazebo-espresso-brown-ribbed-knit-top.jpg",
-    "secondaryImage": "assets/products/women/tops/gazebo-espresso-brown-ribbed-knit-top.jpg",
-    "description": "Versatile textured rib-knit long sleeve top in deep espresso brown, tailored for elevated everyday layering.",
+    "primaryImage": "assets/products/women/tops/gazebo-chocolate-brown-fine-ribbed-knit-top.jpg",
+    "secondaryImage": "assets/products/women/tops/gazebo-chocolate-brown-fine-ribbed-knit-top.jpg",
+    "description": "Chic fitted long-sleeve rib-knit top in luxurious chocolate brown tailored with a clean round crewneck and rich textured hand feel.",
     "isBestseller": false,
     "isNew": false,
     "rating": 4.7,
-    "reviewsCount": 68
+    "reviewsCount": 95
   },
   {
     "id": "gz-w-ot-01",
