@@ -1607,6 +1607,10 @@ function renderWearContent(section) {
   const allProds = window.GAZEBO_PRODUCTS || [];
   if (!allProds.length) return;
   const secProds = allProds.filter(p => p.section === section);
+  if (!secProds.length) {
+    container.innerHTML = '';
+    return;
+  }
   const cfg = WEAR_CONFIG[section];
   const activeTab = WEAR_STATE[section].activeTab;
   const activeChip = WEAR_STATE[section].activeChip;
