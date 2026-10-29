@@ -4053,5 +4053,160 @@
     "isNew": false,
     "rating": 4.7,
     "reviewsCount": 95
+  },
+  {
+    "id": "gz-w-sk-01",
+    "name": "Gazebo Sand Beige Pleated Tennis Mini Skirt",
+    "section": "women",
+    "subCategory": "skirts",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 899,
+    "mrp": 1499,
+    "originalPrice": 1499,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Sand Beige",
+        "hex": "#D0B090"
+      },
+      {
+        "name": "Warm Ecru",
+        "hex": "#C0A080"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/skirts/gazebo-sand-beige-pleated-tennis-mini-skirt.jpg",
+      "secondary": "assets/products/women/skirts/gazebo-sand-beige-pleated-tennis-mini-skirt.jpg"
+    },
+    "tags": [
+      "Skirts",
+      "Skirt",
+      "Pleated",
+      "Tennis Skirt",
+      "Mini Skirt",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499",
+      "Neutral Tones"
+    ],
+    "primaryImage": "assets/products/women/skirts/gazebo-sand-beige-pleated-tennis-mini-skirt.jpg",
+    "secondaryImage": "assets/products/women/skirts/gazebo-sand-beige-pleated-tennis-mini-skirt.jpg",
+    "description": "Chic pleated tennis mini skirt in neutral sand beige designed with crisp knife pleats, comfortable high waist, and built-in stretch lining.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 168
+  },
+  {
+    "id": "gz-w-sk-02",
+    "name": "Gazebo Olive Green Cargo Utility Mini Skirt",
+    "section": "women",
+    "subCategory": "skirts",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 1199,
+    "mrp": 1999,
+    "originalPrice": 1999,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Olive Green",
+        "hex": "#606040"
+      },
+      {
+        "name": "Military Sage",
+        "hex": "#707050"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/skirts/gazebo-olive-green-cargo-utility-mini-skirt.jpg",
+      "secondary": "assets/products/women/skirts/gazebo-olive-green-cargo-utility-mini-skirt.jpg"
+    },
+    "tags": [
+      "Skirts",
+      "Skirt",
+      "Utility",
+      "Cargo",
+      "Mini Skirt",
+      "Bestseller",
+      "Under ₹1,499",
+      "Neutral Tones"
+    ],
+    "primaryImage": "assets/products/women/skirts/gazebo-olive-green-cargo-utility-mini-skirt.jpg",
+    "secondaryImage": "assets/products/women/skirts/gazebo-olive-green-cargo-utility-mini-skirt.jpg",
+    "description": "Streetwear cargo utility mini skirt in washed olive green crafted from structured cotton twill with twin bellows flap pockets and clean waistband.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 134
+  },
+  {
+    "id": "gz-w-sk-03",
+    "name": "Gazebo Jet Black Minimalist Column Skirt",
+    "section": "women",
+    "subCategory": "skirts",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 1599,
+    "mrp": 2599,
+    "originalPrice": 2599,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Jet Black",
+        "hex": "#101010"
+      },
+      {
+        "name": "Charcoal Black",
+        "hex": "#202020"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/skirts/gazebo-jet-black-minimalist-column-skirt.jpg",
+      "secondary": "assets/products/women/skirts/gazebo-jet-black-minimalist-column-skirt.jpg"
+    },
+    "tags": [
+      "Skirts",
+      "Skirt",
+      "Minimalist",
+      "Column",
+      "Midi Skirt",
+      "Dark Shades"
+    ],
+    "primaryImage": "assets/products/women/skirts/gazebo-jet-black-minimalist-column-skirt.jpg",
+    "secondaryImage": "assets/products/women/skirts/gazebo-jet-black-minimalist-column-skirt.jpg",
+    "description": "Sleek minimalist column skirt in deep jet black tailored from smooth stretch fabric featuring clean silhouette, side slit, and comfortable concealed waist.",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.7,
+    "reviewsCount": 92
   }
 ]

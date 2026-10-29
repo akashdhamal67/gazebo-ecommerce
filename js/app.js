@@ -1412,6 +1412,9 @@ function getChipsForTab(section, tabId) {
   if (section === 'women' && tabId === 'jackets') {
     return ['All', 'Bomber', 'Puffer', 'Bestsellers', 'Under ₹1,499', 'Dark Shades', 'Neutral Tones'];
   }
+  if (section === 'women' && tabId === 'skirts') {
+    return ['All', 'Pleated', 'Utility', 'Bestsellers', 'Under ₹999', 'Under ₹1,499', 'Dark Shades', 'Neutral Tones'];
+  }
   if (['t-shirts', 'oversized-tees', 'polos'].includes(tabId)) {
     return ['All', 'Oversized', 'Regular Fit', 'Drop Shoulder', 'Heavyweight', 'Textured', 'Neutral Tones', 'Dark Shades'];
   }
@@ -1667,8 +1670,10 @@ function renderWearContent(section) {
       prodsToShow = allProds.filter(p => p.section === 'women' && p.subCategory === 'cargos');
     } else if (activeTab === 'jackets') {
       prodsToShow = allProds.filter(p => p.section === 'women' && p.subCategory === 'jackets');
+    } else if (activeTab === 'skirts') {
+      prodsToShow = allProds.filter(p => p.section === 'women' && p.subCategory === 'skirts');
     } else {
-      // Any other tab (skirts, etc.) must stay completely empty
+      // Any other tab must stay completely empty
       container.innerHTML = '';
       return;
     }
