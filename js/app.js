@@ -1385,8 +1385,11 @@ function getChipsForTab(section, tabId) {
   if (tabId === 'all') {
     return ['All Items', 'New In', 'Bestsellers', 'Under ₹999', 'Under ₹1,499', 'Heavyweight', 'Relaxed Fit'];
   }
-  if (['t-shirts', 'oversized-tees', 'polos', 'tops'].includes(tabId)) {
+  if (['t-shirts', 'oversized-tees', 'polos'].includes(tabId)) {
     return ['All', 'Oversized', 'Regular Fit', 'Drop Shoulder', 'Heavyweight', 'Textured', 'Neutral Tones', 'Dark Shades'];
+  }
+  if (tabId === 'tops') {
+    return ['All', 'Ribbed Knit', 'Square Neck', 'Long Sleeve', 'Bestsellers', 'Under ₹999', 'Under ₹1,499', 'Dark Shades'];
   }
   if (['hoodies', 'sweatshirts'].includes(tabId)) {
     return ['All', 'Varsity', 'Bomber', 'Denim', 'Heavyweight Fleece', 'Relaxed Fit', 'Zip-Up', 'Bestseller'];
@@ -1613,10 +1616,14 @@ function renderWearContent(section) {
     const allProds = window.GAZEBO_PRODUCTS || [];
 
     let prodsToShow = [];
-    if (activeTab === 'all' || activeTab === 'co-ords') {
+    if (activeTab === 'all') {
+      prodsToShow = allProds.filter(p => p.section === 'women');
+    } else if (activeTab === 'co-ords') {
       prodsToShow = allProds.filter(p => p.section === 'women' && p.subCategory === 'co-ords');
+    } else if (activeTab === 'tops') {
+      prodsToShow = allProds.filter(p => p.section === 'women' && p.subCategory === 'tops');
     } else {
-      // Any other tab (tops, dresses, etc.) must stay completely empty
+      // Any other tab (dresses, jeans, etc.) must stay completely empty
       container.innerHTML = '';
       return;
     }

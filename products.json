@@ -2440,5 +2440,164 @@
     "isNew": false,
     "rating": 4.8,
     "reviewsCount": 92
+  },
+  {
+    "id": "gz-w-top-01",
+    "name": "Gazebo Butter Yellow Square Neck Top",
+    "section": "women",
+    "subCategory": "tops",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 699,
+    "mrp": 1199,
+    "originalPrice": 1199,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Butter Yellow",
+        "hex": "#F5E8A9"
+      },
+      {
+        "name": "Lemon Chiffon",
+        "hex": "#FFF1B8"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/tops/gazebo-butter-yellow-square-neck-top.jpg",
+      "secondary": "assets/products/women/tops/gazebo-butter-yellow-square-neck-top.jpg"
+    },
+    "tags": [
+      "Tops",
+      "Top",
+      "Square Neck",
+      "Puff Sleeve",
+      "Butter Yellow",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499",
+      "Regular Fit"
+    ],
+    "primaryImage": "assets/products/women/tops/gazebo-butter-yellow-square-neck-top.jpg",
+    "secondaryImage": "assets/products/women/tops/gazebo-butter-yellow-square-neck-top.jpg",
+    "description": "Chic square-neck top in soft butter yellow featuring delicate puff sleeves and smooth breathable cotton drape.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 94
+  },
+  {
+    "id": "gz-w-top-02",
+    "name": "Gazebo Burgundy Ribbed Knit Top",
+    "section": "women",
+    "subCategory": "tops",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 899,
+    "mrp": 1499,
+    "originalPrice": 1499,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Wine Burgundy",
+        "hex": "#5C2434"
+      },
+      {
+        "name": "Deep Plum",
+        "hex": "#451A26"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/tops/gazebo-burgundy-ribbed-knit-long-sleeve-top.jpg",
+      "secondary": "assets/products/women/tops/gazebo-burgundy-ribbed-knit-long-sleeve-top.jpg"
+    },
+    "tags": [
+      "Tops",
+      "Top",
+      "Ribbed Knit",
+      "Crew Neck",
+      "Long Sleeve",
+      "Burgundy",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499",
+      "Fitted"
+    ],
+    "primaryImage": "assets/products/women/tops/gazebo-burgundy-ribbed-knit-long-sleeve-top.jpg",
+    "secondaryImage": "assets/products/women/tops/gazebo-burgundy-ribbed-knit-long-sleeve-top.jpg",
+    "description": "Sleek fine-ribbed knit top in rich wine burgundy cut with a classic crew neckline and flattering slim-fit silhouette.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 82
+  },
+  {
+    "id": "gz-w-top-03",
+    "name": "Gazebo Espresso Brown Ribbed Knit Top",
+    "section": "women",
+    "subCategory": "tops",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 1099,
+    "mrp": 1799,
+    "originalPrice": 1799,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Espresso Brown",
+        "hex": "#4A2E1F"
+      },
+      {
+        "name": "Warm Mocha",
+        "hex": "#5C3A27"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/tops/gazebo-espresso-brown-ribbed-knit-top.jpg",
+      "secondary": "assets/products/women/tops/gazebo-espresso-brown-ribbed-knit-top.jpg"
+    },
+    "tags": [
+      "Tops",
+      "Top",
+      "Ribbed Knit",
+      "Long Sleeve",
+      "Espresso Brown",
+      "Under ₹1,499",
+      "Dark Shades",
+      "Fitted"
+    ],
+    "primaryImage": "assets/products/women/tops/gazebo-espresso-brown-ribbed-knit-top.jpg",
+    "secondaryImage": "assets/products/women/tops/gazebo-espresso-brown-ribbed-knit-top.jpg",
+    "description": "Versatile textured rib-knit long sleeve top in deep espresso brown, tailored for elevated everyday layering.",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.7,
+    "reviewsCount": 68
   }
 ]
