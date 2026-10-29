@@ -20,6 +20,7 @@ function initApp() {
   try { initPDPPage(); } catch(e) {}
   try { initPLPPage(); } catch(e) {}
   try { initWearSections(); } catch(e) {}
+  try { initDepartmentRouting(); } catch(e) {}
 }
 
 if (document.readyState === 'loading') {
@@ -1849,29 +1850,111 @@ window.toggleProductWishlist = function(e, productId, btn) {
 };
 
 
-window.switchDepartment = function(dept) {
+window.switchDepartment = function(dept, options) {
+  if (!dept || !['men', 'women', 'kids'].includes(dept)) return;
+  options = options || {};
+
+  // Highlight sticky department switcher buttons
   document.querySelectorAll('.dept-nav-btn').forEach(b => {
     b.classList.toggle('is-active', b.dataset.dept === dept);
   });
+
+  // Highlight mobile drawer department buttons
+  document.querySelectorAll('.drawer-gender-tab').forEach(b => {
+    b.classList.toggle('is-active', b.dataset.dept === dept);
+  });
+
+  // Show only target wear section, hide others
   ['men', 'women', 'kids'].forEach(sec => {
     const el = document.getElementById(`section_${sec}`);
     if (el) {
-      if (sec === dept) {
-        el.style.display = 'block';
-      } else {
-        el.style.display = 'none';
-      }
+      el.style.display = (sec === dept) ? 'block' : 'none';
     }
   });
-  const activeSec = document.getElementById(`section_${dept}`);
-  if (activeSec) {
-    const headerOffset = 130;
-    const elementPosition = activeSec.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-    window.scrollTo({
-      top: Math.max(0, offsetPosition),
-      behavior: 'smooth'
-    });
+
+  // Reset section to its "ALL" tab
+  if (typeof window.switchWearTab === 'function') {
+    try {
+      window.switchWearTab(dept, 'all');
+    } catch(e) {}
   }
-  try { localStorage.setItem('gazebo_active_dept', dept); } catch(e) {}
+
+  // Close mobile drawer if open
+  if (typeof window.closeMobileMenu === 'function') {
+    try {
+      window.closeMobileMenu();
+    } catch(e) {}
+  }
+
+  // Smoothly scroll so section's title sits nicely under header
+  const shouldScroll = options.scroll !== undefined ? options.scroll : true;
+  const isSmooth = options.smooth !== undefined ? options.smooth : true;
+  if (shouldScroll) {
+    const activeSec = document.getElementById(`section_${dept}`);
+    if (activeSec) {
+      const headerOffset = 130;
+      const elementPosition = activeSec.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({
+        top: Math.max(0, offsetPosition),
+        behavior: isSmooth ? 'smooth' : 'auto'
+      });
+    }
+  }
+
+  // Update URL hash without polluting browser history on in-page tabs
+  try {
+    if (window.location.hash !== `#${dept}`) {
+      history.replaceState(null, '', `#${dept}`);
+    }
+  } catch(e) {}
+
+  try {
+    localStorage.setItem('gazebo_active_dept', dept);
+  } catch(e) {}
 };
+
+function initDepartmentRouting() {
+  function handleDeptClick(e) {
+    const link = e.target.closest('a[href*="#men"], a[href*="#women"], a[href*="#kids"], [data-dept]');
+    if (!link) return;
+
+    let dept = link.dataset.dept;
+    if (!dept) {
+      const href = link.getAttribute('href') || '';
+      const match = href.match(/#(men|women|kids)$/);
+      if (match) dept = match[1];
+    }
+
+    if (dept && ['men', 'women', 'kids'].includes(dept)) {
+      const isShopPage = document.getElementById('section_men') !== null;
+      if (isShopPage) {
+        e.preventDefault();
+        window.switchDepartment(dept, { scroll: true, smooth: true });
+      }
+    }
+  }
+
+  document.addEventListener('click', handleDeptClick);
+
+  window.addEventListener('hashchange', () => {
+    const hash = (window.location.hash || '').replace('#', '').toLowerCase();
+    if (['men', 'women', 'kids'].includes(hash)) {
+      window.switchDepartment(hash, { scroll: true, smooth: true });
+    }
+  });
+
+  const initialHash = (window.location.hash || '').replace('#', '').toLowerCase();
+  if (['men', 'women', 'kids'].includes(initialHash)) {
+    setTimeout(() => {
+      window.switchDepartment(initialHash, { scroll: true, smooth: false });
+    }, 120);
+  } else {
+    try {
+      const savedDept = localStorage.getItem('gazebo_active_dept');
+      if (savedDept && ['men', 'women', 'kids'].includes(savedDept) && savedDept !== 'men') {
+        window.switchDepartment(savedDept, { scroll: false });
+      }
+    } catch(e) {}
+  }
+}

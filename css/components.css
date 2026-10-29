@@ -260,16 +260,20 @@
 /* Department Tabs inside Hamburger Drawer */
 .drawer-gender-tabs {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 8px;
-  margin-top: 10px;
+  margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .drawer-gender-tab {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 12px;
+  height: 44px;
+  min-height: 44px;
+  padding: 0 4px;
   font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.05em;
@@ -279,6 +283,8 @@
   border-radius: 6px;
   text-decoration: none;
   transition: all 0.2s ease;
+  box-sizing: border-box;
+  white-space: nowrap;
 }
 
 .drawer-gender-tab.is-active,
