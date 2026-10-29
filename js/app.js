@@ -1385,6 +1385,9 @@ function getChipsForTab(section, tabId) {
   if (tabId === 'all') {
     return ['All Items', 'New In', 'Bestsellers', 'Under ₹999', 'Under ₹1,499', 'Heavyweight', 'Relaxed Fit'];
   }
+  if (section === 'women' && tabId === 'oversized-tees') {
+    return ['All', 'Graphic Print', 'Boxy Fit', 'Bestsellers', 'Under ₹999', 'Under ₹1,499', 'Dark Shades', 'Neutral Tones'];
+  }
   if (['t-shirts', 'oversized-tees', 'polos'].includes(tabId)) {
     return ['All', 'Oversized', 'Regular Fit', 'Drop Shoulder', 'Heavyweight', 'Textured', 'Neutral Tones', 'Dark Shades'];
   }
@@ -1622,6 +1625,8 @@ function renderWearContent(section) {
       prodsToShow = allProds.filter(p => p.section === 'women' && p.subCategory === 'co-ords');
     } else if (activeTab === 'tops') {
       prodsToShow = allProds.filter(p => p.section === 'women' && p.subCategory === 'tops');
+    } else if (activeTab === 'oversized-tees') {
+      prodsToShow = allProds.filter(p => p.section === 'women' && p.subCategory === 'oversized-tees');
     } else {
       // Any other tab (dresses, jeans, etc.) must stay completely empty
       container.innerHTML = '';

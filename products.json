@@ -2599,5 +2599,212 @@
     "isNew": false,
     "rating": 4.7,
     "reviewsCount": 68
+  },
+  {
+    "id": "gz-w-ot-01",
+    "name": "Gazebo Vintage Cream Boxy Oversized Tee",
+    "section": "women",
+    "subCategory": "oversized-tees",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 799,
+    "mrp": 1399,
+    "originalPrice": 1399,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Vintage Cream",
+        "hex": "#F4EFE6"
+      },
+      {
+        "name": "Soft Ecru",
+        "hex": "#E5DFD3"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/oversized-tees/gazebo-vintage-cream-boxy-oversized-tee.jpg",
+      "secondary": "assets/products/women/oversized-tees/gazebo-vintage-cream-boxy-oversized-tee.jpg"
+    },
+    "tags": [
+      "Oversized Tees",
+      "Oversized Tee",
+      "Boxy Fit",
+      "Vintage Cream",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499",
+      "Heavyweight"
+    ],
+    "primaryImage": "assets/products/women/oversized-tees/gazebo-vintage-cream-boxy-oversized-tee.jpg",
+    "secondaryImage": "assets/products/women/oversized-tees/gazebo-vintage-cream-boxy-oversized-tee.jpg",
+    "description": "Drop-shoulder heavyweight boxy oversized t-shirt in vintage off-white cream crafted from 240 GSM combed cotton.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 114
+  },
+  {
+    "id": "gz-w-ot-02",
+    "name": "Gazebo Burgundy Embroidered Line Art Oversized Tee",
+    "section": "women",
+    "subCategory": "oversized-tees",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 899,
+    "mrp": 1499,
+    "originalPrice": 1499,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Deep Burgundy",
+        "hex": "#5B1D28"
+      },
+      {
+        "name": "Wine Red",
+        "hex": "#702332"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/oversized-tees/gazebo-burgundy-embroidered-line-art-oversized-tee.jpg",
+      "secondary": "assets/products/women/oversized-tees/gazebo-burgundy-embroidered-line-art-oversized-tee.jpg"
+    },
+    "tags": [
+      "Oversized Tees",
+      "Oversized Tee",
+      "Graphic Print",
+      "Burgundy",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499",
+      "Relaxed Fit"
+    ],
+    "primaryImage": "assets/products/women/oversized-tees/gazebo-burgundy-embroidered-line-art-oversized-tee.jpg",
+    "secondaryImage": "assets/products/women/oversized-tees/gazebo-burgundy-embroidered-line-art-oversized-tee.jpg",
+    "description": "Relaxed oversized graphic tee in rich deep burgundy featuring minimal chest line-art embroidery and ribbed crew neck.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 96
+  },
+  {
+    "id": "gz-w-ot-03",
+    "name": "Gazebo Jet Black Botanical Graphic Oversized Tee",
+    "section": "women",
+    "subCategory": "oversized-tees",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 949,
+    "mrp": 1599,
+    "originalPrice": 1599,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Jet Black",
+        "hex": "#1B1B1E"
+      },
+      {
+        "name": "Washed Charcoal",
+        "hex": "#333337"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/oversized-tees/gazebo-jet-black-botanical-graphic-oversized-tee.jpg",
+      "secondary": "assets/products/women/oversized-tees/gazebo-jet-black-botanical-graphic-oversized-tee.jpg"
+    },
+    "tags": [
+      "Oversized Tees",
+      "Oversized Tee",
+      "Graphic Print",
+      "Botanical",
+      "Jet Black",
+      "Under ₹999",
+      "Under ₹1,499",
+      "Dark Shades"
+    ],
+    "primaryImage": "assets/products/women/oversized-tees/gazebo-jet-black-botanical-graphic-oversized-tee.jpg",
+    "secondaryImage": "assets/products/women/oversized-tees/gazebo-jet-black-botanical-graphic-oversized-tee.jpg",
+    "description": "Streetwear oversized tee in jet black finished with tonal abstract botanical screen print and dropped shoulders.",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.7,
+    "reviewsCount": 78
+  },
+  {
+    "id": "gz-w-ot-04",
+    "name": "Gazebo Sage Green Heavyweight Boxy Oversized Tee",
+    "section": "women",
+    "subCategory": "oversized-tees",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 1099,
+    "mrp": 1799,
+    "originalPrice": 1799,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Sage Green",
+        "hex": "#8FA391"
+      },
+      {
+        "name": "Muted Olive",
+        "hex": "#7A8E7C"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/oversized-tees/gazebo-sage-green-heavyweight-boxy-oversized-tee.jpg",
+      "secondary": "assets/products/women/oversized-tees/gazebo-sage-green-heavyweight-boxy-oversized-tee.jpg"
+    },
+    "tags": [
+      "Oversized Tees",
+      "Oversized Tee",
+      "Boxy Fit",
+      "Sage Green",
+      "Heavyweight",
+      "Under ₹1,499",
+      "Neutral Tones"
+    ],
+    "primaryImage": "assets/products/women/oversized-tees/gazebo-sage-green-heavyweight-boxy-oversized-tee.jpg",
+    "secondaryImage": "assets/products/women/oversized-tees/gazebo-sage-green-heavyweight-boxy-oversized-tee.jpg",
+    "description": "Premium heavyweight boxy oversized tee in muted sage green featuring structured elbow-length sleeves and dense jersey cotton.",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 65
   }
 ]
