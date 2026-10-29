@@ -1093,7 +1093,8 @@ function initPLPPage() {
    ========================================================================== */
 function initPDPPage() {
   const container = document.getElementById('pdpMainContainer');
-  if (!container || !window.GAZEBO_CONFIG?.products) return;
+  const catalog = window.GAZEBO_PRODUCTS || window.GAZEBO_CONFIG?.products;
+  if (!container || !catalog) return;
 
   const urlParams = new URLSearchParams(window.location.search);
   const prodId = urlParams.get('id') || 'gz-01';
@@ -1109,9 +1110,11 @@ function initPDPPage() {
     ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100) 
     : 0;
 
+  const pImg = product.primaryImage || (product.images && product.images.primary);
+  const sImg = product.secondaryImage || (product.images && product.images.secondary) || pImg;
   const galleryImages = product.gallery && product.gallery.length 
     ? product.gallery 
-    : [product.primaryImage, product.secondaryImage, 'assets/images/store/store-01.jpg', 'assets/images/store/store-02.jpg'];
+    : [pImg, sImg].filter(Boolean);
 
   container.innerHTML = `
     <!-- Breadcrumbs -->
@@ -1268,7 +1271,7 @@ function initPDPPage() {
         </div>
       </div>
       <div class="plp-grid-4">
-        ${window.GAZEBO_CONFIG.products.filter(p => p.id !== product.id).slice(0, 4).map(p => `
+        ${(window.GAZEBO_PRODUCTS || window.GAZEBO_CONFIG?.products || []).filter(p => p.id !== product.id).slice(0, 4).map(p => `
           <article class="product-card" onclick="location.href='product.html?id=' + encodeURIComponent('${p.id}')">
             <div class="product-card__media">
               <img class="product-card__img" src="${p.primaryImage}" alt="${p.name}" width="600" height="800" loading="lazy" decoding="async" />

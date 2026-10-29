@@ -29,8 +29,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/t-shirts/gazebo-acid-wash-geometric-tee.jpg",
-      "secondary": "assets/products/men/t-shirts/gazebo-acid-wash-geometric-tee.jpg"
+      "primary": "assets/products/men/t-shirts/gazebo-acid-wash-geometric-tee.jpg?v=20261029",
+      "secondary": "assets/products/men/t-shirts/gazebo-acid-wash-geometric-tee.jpg?v=20261029"
     },
     "tags": [
       "Graphic Print",
@@ -40,7 +40,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹999",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/t-shirts/gazebo-acid-wash-geometric-tee.jpg",
+    "primaryImage": "assets/products/men/t-shirts/gazebo-acid-wash-geometric-tee.jpg?v=20261029",
     "description": "Heavyweight 240 GSM combed cotton t-shirt with a vintage acid-washed charcoal finish and bold geometric monochromatic front print. Cut in a modern relaxed streetwear drape.",
     "category": "men",
     "isBestseller": true,
@@ -73,8 +73,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/t-shirts/gazebo-coastal-sun-graphic-tee.jpg",
-      "secondary": "assets/products/men/t-shirts/gazebo-coastal-sun-graphic-tee.jpg"
+      "primary": "assets/products/men/t-shirts/gazebo-coastal-sun-graphic-tee.jpg?v=20261029",
+      "secondary": "assets/products/men/t-shirts/gazebo-coastal-sun-graphic-tee.jpg?v=20261029"
     },
     "tags": [
       "Graphic Print",
@@ -83,7 +83,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹999",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/t-shirts/gazebo-coastal-sun-graphic-tee.jpg",
+    "primaryImage": "assets/products/men/t-shirts/gazebo-coastal-sun-graphic-tee.jpg?v=20261029",
     "description": "Clean slate-blue pure cotton crewneck t-shirt featuring artisanal coastal sun, wave, and botanical foliage graphic illustration.",
     "category": "men",
     "isBestseller": false,
@@ -116,8 +116,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/t-shirts/gazebo-embroidered-pique-polo-tee.jpg",
-      "secondary": "assets/products/men/t-shirts/gazebo-embroidered-pique-polo-tee.jpg"
+      "primary": "assets/products/men/t-shirts/gazebo-embroidered-pique-polo-tee.jpg?v=20261029",
+      "secondary": "assets/products/men/t-shirts/gazebo-embroidered-pique-polo-tee.jpg?v=20261029"
     },
     "tags": [
       "Embroidery",
@@ -127,7 +127,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹999",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/t-shirts/gazebo-embroidered-pique-polo-tee.jpg",
+    "primaryImage": "assets/products/men/t-shirts/gazebo-embroidered-pique-polo-tee.jpg?v=20261029",
     "description": "Tailored short-sleeve polo t-shirt in rich emerald green pique cotton with fine geometric gold thread embroidery at the chest.",
     "category": "men",
     "isBestseller": true,
@@ -160,8 +160,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/t-shirts/gazebo-sunset-ridge-graphic-tee.jpg",
-      "secondary": "assets/products/men/t-shirts/gazebo-sunset-ridge-graphic-tee.jpg"
+      "primary": "assets/products/men/t-shirts/gazebo-sunset-ridge-graphic-tee.jpg?v=20261029",
+      "secondary": "assets/products/men/t-shirts/gazebo-sunset-ridge-graphic-tee.jpg?v=20261029"
     },
     "tags": [
       "Graphic Print",
@@ -170,7 +170,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹999",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/t-shirts/gazebo-sunset-ridge-graphic-tee.jpg",
+    "primaryImage": "assets/products/men/t-shirts/gazebo-sunset-ridge-graphic-tee.jpg?v=20261029",
     "description": "Soft organic cotton jersey t-shirt in natural ecru with a multi-tone sunset mountain horizon chest screen-print.",
     "category": "men",
     "isBestseller": false,
@@ -203,8 +203,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/t-shirts/gazebo-botanical-leaf-knit-polo-tee.jpg",
-      "secondary": "assets/products/men/t-shirts/gazebo-botanical-leaf-knit-polo-tee.jpg"
+      "primary": "assets/products/men/t-shirts/gazebo-botanical-leaf-knit-polo-tee.jpg?v=20261029",
+      "secondary": "assets/products/men/t-shirts/gazebo-botanical-leaf-knit-polo-tee.jpg?v=20261029"
     },
     "tags": [
       "Printed",
@@ -213,7 +213,7 @@ window.GAZEBO_PRODUCTS = [
       "Bestseller",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/t-shirts/gazebo-botanical-leaf-knit-polo-tee.jpg",
+    "primaryImage": "assets/products/men/t-shirts/gazebo-botanical-leaf-knit-polo-tee.jpg?v=20261029",
     "description": "Premium fine-gauge knit polo t-shirt in warm cream featuring elegant botanical line-art leaf motifs and a structured collar.",
     "category": "men",
     "isBestseller": true,
@@ -246,8 +246,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/oversized-tees/gazebo-baroque-crest-oversized-tee.jpg",
-      "secondary": "assets/products/men/oversized-tees/gazebo-baroque-crest-oversized-tee.jpg"
+      "primary": "assets/products/men/oversized-tees/gazebo-baroque-crest-oversized-tee.jpg?v=20261029",
+      "secondary": "assets/products/men/oversized-tees/gazebo-baroque-crest-oversized-tee.jpg?v=20261029"
     },
     "tags": [
       "Oversized",
@@ -257,7 +257,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹999",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/oversized-tees/gazebo-baroque-crest-oversized-tee.jpg",
+    "primaryImage": "assets/products/men/oversized-tees/gazebo-baroque-crest-oversized-tee.jpg?v=20261029",
     "description": "Heavyweight 240 GSM dense cotton oversized t-shirt in rich vintage burgundy with an ornate antique baroque crest graphic emblem across the chest.",
     "category": "men",
     "isBestseller": true,
@@ -290,8 +290,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/oversized-tees/gazebo-abstract-fluid-oversized-tee.jpg",
-      "secondary": "assets/products/men/oversized-tees/gazebo-abstract-fluid-oversized-tee.jpg"
+      "primary": "assets/products/men/oversized-tees/gazebo-abstract-fluid-oversized-tee.jpg?v=20261029",
+      "secondary": "assets/products/men/oversized-tees/gazebo-abstract-fluid-oversized-tee.jpg?v=20261029"
     },
     "tags": [
       "Oversized",
@@ -302,7 +302,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹999",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/oversized-tees/gazebo-abstract-fluid-oversized-tee.jpg",
+    "primaryImage": "assets/products/men/oversized-tees/gazebo-abstract-fluid-oversized-tee.jpg?v=20261029",
     "description": "Drop-shoulder vintage washed black oversized tee featuring an organic fluid abstract calligraphic artwork on premium combed cotton.",
     "category": "men",
     "isBestseller": true,
@@ -335,8 +335,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/oversized-tees/gazebo-sage-mineral-oversized-tee.jpg",
-      "secondary": "assets/products/men/oversized-tees/gazebo-sage-mineral-oversized-tee.jpg"
+      "primary": "assets/products/men/oversized-tees/gazebo-sage-mineral-oversized-tee.jpg?v=20261029",
+      "secondary": "assets/products/men/oversized-tees/gazebo-sage-mineral-oversized-tee.jpg?v=20261029"
     },
     "tags": [
       "Oversized",
@@ -346,7 +346,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹999",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/oversized-tees/gazebo-sage-mineral-oversized-tee.jpg",
+    "primaryImage": "assets/products/men/oversized-tees/gazebo-sage-mineral-oversized-tee.jpg?v=20261029",
     "description": "Clean mineral-washed sage green boxy tee crafted from ultra-soft heavyweight jersey with subtle geometric architectural line art at the chest.",
     "category": "men",
     "isBestseller": false,
@@ -379,8 +379,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/oversized-tees/gazebo-alpine-horizon-oversized-tee.jpg",
-      "secondary": "assets/products/men/oversized-tees/gazebo-alpine-horizon-oversized-tee.jpg"
+      "primary": "assets/products/men/oversized-tees/gazebo-alpine-horizon-oversized-tee.jpg?v=20261029",
+      "secondary": "assets/products/men/oversized-tees/gazebo-alpine-horizon-oversized-tee.jpg?v=20261029"
     },
     "tags": [
       "Oversized",
@@ -390,7 +390,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹999",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/oversized-tees/gazebo-alpine-horizon-oversized-tee.jpg",
+    "primaryImage": "assets/products/men/oversized-tees/gazebo-alpine-horizon-oversized-tee.jpg?v=20261029",
     "description": "Relaxed street-fit ecru t-shirt screen-printed with a retro mountain sunrise landscape graphic in warm earthy brown and terracotta tones.",
     "category": "men",
     "isBestseller": false,
@@ -423,8 +423,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/oversized-tees/gazebo-ocean-swell-oversized-tee.jpg",
-      "secondary": "assets/products/men/oversized-tees/gazebo-ocean-swell-oversized-tee.jpg"
+      "primary": "assets/products/men/oversized-tees/gazebo-ocean-swell-oversized-tee.jpg?v=20261029",
+      "secondary": "assets/products/men/oversized-tees/gazebo-ocean-swell-oversized-tee.jpg?v=20261029"
     },
     "tags": [
       "Oversized",
@@ -433,7 +433,7 @@ window.GAZEBO_PRODUCTS = [
       "Relaxed Fit",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/oversized-tees/gazebo-ocean-swell-oversized-tee.jpg",
+    "primaryImage": "assets/products/men/oversized-tees/gazebo-ocean-swell-oversized-tee.jpg?v=20261029",
     "description": "Heavyweight premium cotton jersey in muted slate blue, displaying an artistic rolling ocean swell wave woodblock-inspired chest print.",
     "category": "men",
     "isBestseller": false,
@@ -466,8 +466,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/polos/gazebo-burgundy-tipped-pique-polo-tee.jpg",
-      "secondary": "assets/products/men/polos/gazebo-burgundy-tipped-pique-polo-tee.jpg"
+      "primary": "assets/products/men/polos/gazebo-burgundy-tipped-pique-polo-tee.jpg?v=20261029",
+      "secondary": "assets/products/men/polos/gazebo-burgundy-tipped-pique-polo-tee.jpg?v=20261029"
     },
     "tags": [
       "Polo",
@@ -478,7 +478,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹999",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/polos/gazebo-burgundy-tipped-pique-polo-tee.jpg",
+    "primaryImage": "assets/products/men/polos/gazebo-burgundy-tipped-pique-polo-tee.jpg?v=20261029",
     "description": "Rich burgundy combed pique cotton polo tee tailored with contrast cream tipping along the collar and cuffs, finished with fine chest embroidery.",
     "category": "men",
     "isBestseller": true,
@@ -511,8 +511,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/polos/gazebo-emerald-twin-tipped-polo-tee.jpg",
-      "secondary": "assets/products/men/polos/gazebo-emerald-twin-tipped-polo-tee.jpg"
+      "primary": "assets/products/men/polos/gazebo-emerald-twin-tipped-polo-tee.jpg?v=20261029",
+      "secondary": "assets/products/men/polos/gazebo-emerald-twin-tipped-polo-tee.jpg?v=20261029"
     },
     "tags": [
       "Polo",
@@ -521,7 +521,7 @@ window.GAZEBO_PRODUCTS = [
       "Bestseller",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/polos/gazebo-emerald-twin-tipped-polo-tee.jpg",
+    "primaryImage": "assets/products/men/polos/gazebo-emerald-twin-tipped-polo-tee.jpg?v=20261029",
     "description": "Premium emerald green pique polo shirt featuring dual contrast white stripe tipping on the spread rib collar and tailored short sleeves.",
     "category": "men",
     "isBestseller": true,
@@ -554,8 +554,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/polos/gazebo-navy-crest-pique-polo-tee.jpg",
-      "secondary": "assets/products/men/polos/gazebo-navy-crest-pique-polo-tee.jpg"
+      "primary": "assets/products/men/polos/gazebo-navy-crest-pique-polo-tee.jpg?v=20261029",
+      "secondary": "assets/products/men/polos/gazebo-navy-crest-pique-polo-tee.jpg?v=20261029"
     },
     "tags": [
       "Polo",
@@ -565,7 +565,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹999",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/polos/gazebo-navy-crest-pique-polo-tee.jpg",
+    "primaryImage": "assets/products/men/polos/gazebo-navy-crest-pique-polo-tee.jpg?v=20261029",
     "description": "Classic midnight navy polo shirt crafted from breathable cotton pique with an embroidered minimalist crest insignia at the chest.",
     "category": "men",
     "isBestseller": false,
@@ -598,8 +598,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/polos/gazebo-botanical-print-resort-polo-tee.jpg",
-      "secondary": "assets/products/men/polos/gazebo-botanical-print-resort-polo-tee.jpg"
+      "primary": "assets/products/men/polos/gazebo-botanical-print-resort-polo-tee.jpg?v=20261029",
+      "secondary": "assets/products/men/polos/gazebo-botanical-print-resort-polo-tee.jpg?v=20261029"
     },
     "tags": [
       "Polo",
@@ -608,7 +608,7 @@ window.GAZEBO_PRODUCTS = [
       "Neutral Tones",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/polos/gazebo-botanical-print-resort-polo-tee.jpg",
+    "primaryImage": "assets/products/men/polos/gazebo-botanical-print-resort-polo-tee.jpg?v=20261029",
     "description": "Breezy resort-style polo in warm cream with an all-over navy botanical leaf illustration on soft mercerized cotton jersey.",
     "category": "men",
     "isBestseller": false,
@@ -641,8 +641,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/polos/gazebo-steel-blue-textured-polo-tee.jpg",
-      "secondary": "assets/products/men/polos/gazebo-steel-blue-textured-polo-tee.jpg"
+      "primary": "assets/products/men/polos/gazebo-steel-blue-textured-polo-tee.jpg?v=20261029",
+      "secondary": "assets/products/men/polos/gazebo-steel-blue-textured-polo-tee.jpg?v=20261029"
     },
     "tags": [
       "Polo",
@@ -651,7 +651,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹999",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/polos/gazebo-steel-blue-textured-polo-tee.jpg",
+    "primaryImage": "assets/products/men/polos/gazebo-steel-blue-textured-polo-tee.jpg?v=20261029",
     "description": "Micro-textured waffle knit polo shirt in sophisticated steel blue, featuring a clean placket and structured self-fabric collar.",
     "category": "men",
     "isBestseller": false,
@@ -684,8 +684,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/hoodies/gazebo-burgundy-heavyweight-zip-up-hoodie.jpg",
-      "secondary": "assets/products/men/hoodies/gazebo-burgundy-heavyweight-zip-up-hoodie.jpg"
+      "primary": "assets/products/men/hoodies/gazebo-burgundy-heavyweight-zip-up-hoodie.jpg?v=20261029",
+      "secondary": "assets/products/men/hoodies/gazebo-burgundy-heavyweight-zip-up-hoodie.jpg?v=20261029"
     },
     "tags": [
       "Hoodie",
@@ -695,7 +695,7 @@ window.GAZEBO_PRODUCTS = [
       "Bestseller",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/hoodies/gazebo-burgundy-heavyweight-zip-up-hoodie.jpg",
+    "primaryImage": "assets/products/men/hoodies/gazebo-burgundy-heavyweight-zip-up-hoodie.jpg?v=20261029",
     "description": "Premium heavyweight fleece zip-up hoodie in deep burgundy, featuring a split kangaroo pocket, silver-finish zipper, and relaxed dropped shoulders.",
     "category": "men",
     "isBestseller": true,
@@ -728,8 +728,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/hoodies/gazebo-noir-brushstroke-graphic-hoodie.jpg",
-      "secondary": "assets/products/men/hoodies/gazebo-noir-brushstroke-graphic-hoodie.jpg"
+      "primary": "assets/products/men/hoodies/gazebo-noir-brushstroke-graphic-hoodie.jpg?v=20261029",
+      "secondary": "assets/products/men/hoodies/gazebo-noir-brushstroke-graphic-hoodie.jpg?v=20261029"
     },
     "tags": [
       "Hoodie",
@@ -741,7 +741,7 @@ window.GAZEBO_PRODUCTS = [
       "Dark Shades",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/hoodies/gazebo-noir-brushstroke-graphic-hoodie.jpg",
+    "primaryImage": "assets/products/men/hoodies/gazebo-noir-brushstroke-graphic-hoodie.jpg?v=20261029",
     "description": "Heavyweight washed black pullover hoodie showcasing an expressive ivory brushstroke calligraphy artwork across the chest with a cozy fleece lining.",
     "category": "men",
     "isBestseller": true,
@@ -774,8 +774,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/hoodies/gazebo-sunset-mountain-graphic-hoodie.jpg",
-      "secondary": "assets/products/men/hoodies/gazebo-sunset-mountain-graphic-hoodie.jpg"
+      "primary": "assets/products/men/hoodies/gazebo-sunset-mountain-graphic-hoodie.jpg?v=20261029",
+      "secondary": "assets/products/men/hoodies/gazebo-sunset-mountain-graphic-hoodie.jpg?v=20261029"
     },
     "tags": [
       "Hoodie",
@@ -786,7 +786,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹999",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/hoodies/gazebo-sunset-mountain-graphic-hoodie.jpg",
+    "primaryImage": "assets/products/men/hoodies/gazebo-sunset-mountain-graphic-hoodie.jpg?v=20261029",
     "description": "Artisan pullover hoodie crafted from warm cream fleece, featuring a detailed alpine mountain and setting sun graphic printed in earthy rust tones.",
     "category": "men",
     "isBestseller": false,
@@ -819,8 +819,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/hoodies/gazebo-forest-green-minimalist-hoodie.jpg",
-      "secondary": "assets/products/men/hoodies/gazebo-forest-green-minimalist-hoodie.jpg"
+      "primary": "assets/products/men/hoodies/gazebo-forest-green-minimalist-hoodie.jpg?v=20261029",
+      "secondary": "assets/products/men/hoodies/gazebo-forest-green-minimalist-hoodie.jpg?v=20261029"
     },
     "tags": [
       "Hoodie",
@@ -830,7 +830,7 @@ window.GAZEBO_PRODUCTS = [
       "Relaxed Fit",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/hoodies/gazebo-forest-green-minimalist-hoodie.jpg",
+    "primaryImage": "assets/products/men/hoodies/gazebo-forest-green-minimalist-hoodie.jpg?v=20261029",
     "description": "Clean, elevated pullover hoodie in rich forest green 420 GSM brushed fleece with subtle tonal geometric embroidery on the chest and a roomy kangaroo pouch.",
     "category": "men",
     "isBestseller": false,
@@ -863,8 +863,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/hoodies/gazebo-ocean-wave-graphic-oversized-hoodie.jpg",
-      "secondary": "assets/products/men/hoodies/gazebo-ocean-wave-graphic-oversized-hoodie.jpg"
+      "primary": "assets/products/men/hoodies/gazebo-ocean-wave-graphic-oversized-hoodie.jpg?v=20261029",
+      "secondary": "assets/products/men/hoodies/gazebo-ocean-wave-graphic-oversized-hoodie.jpg?v=20261029"
     },
     "tags": [
       "Hoodie",
@@ -873,7 +873,7 @@ window.GAZEBO_PRODUCTS = [
       "Heavyweight Fleece",
       "Relaxed Fit"
     ],
-    "primaryImage": "assets/products/men/hoodies/gazebo-ocean-wave-graphic-oversized-hoodie.jpg",
+    "primaryImage": "assets/products/men/hoodies/gazebo-ocean-wave-graphic-oversized-hoodie.jpg?v=20261029",
     "description": "Streetwear statement hoodie in slate blue featuring high-definition Great Wave artwork across the chest, dropped shoulders, and ultra-plush fleece interior.",
     "category": "men",
     "isBestseller": false,
@@ -906,8 +906,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/sweatshirts/gazebo-abstract-geometric-crew-neck-sweatshirt.jpg",
-      "secondary": "assets/products/men/sweatshirts/gazebo-abstract-geometric-crew-neck-sweatshirt.jpg"
+      "primary": "assets/products/men/sweatshirts/gazebo-abstract-geometric-crew-neck-sweatshirt.jpg?v=20261029",
+      "secondary": "assets/products/men/sweatshirts/gazebo-abstract-geometric-crew-neck-sweatshirt.jpg?v=20261029"
     },
     "tags": [
       "Sweatshirt",
@@ -919,7 +919,7 @@ window.GAZEBO_PRODUCTS = [
       "Dark Shades",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/sweatshirts/gazebo-abstract-geometric-crew-neck-sweatshirt.jpg",
+    "primaryImage": "assets/products/men/sweatshirts/gazebo-abstract-geometric-crew-neck-sweatshirt.jpg?v=20261029",
     "description": "Heavyweight washed black fleece sweatshirt featuring an ivory abstract geometric cutout motif, finished with a ribbed crew neckline and relaxed dropped shoulders.",
     "category": "men",
     "isBestseller": true,
@@ -952,8 +952,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/sweatshirts/gazebo-sunset-mountain-graphic-sweatshirt.jpg",
-      "secondary": "assets/products/men/sweatshirts/gazebo-sunset-mountain-graphic-sweatshirt.jpg"
+      "primary": "assets/products/men/sweatshirts/gazebo-sunset-mountain-graphic-sweatshirt.jpg?v=20261029",
+      "secondary": "assets/products/men/sweatshirts/gazebo-sunset-mountain-graphic-sweatshirt.jpg?v=20261029"
     },
     "tags": [
       "Sweatshirt",
@@ -965,7 +965,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹999",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/sweatshirts/gazebo-sunset-mountain-graphic-sweatshirt.jpg",
+    "primaryImage": "assets/products/men/sweatshirts/gazebo-sunset-mountain-graphic-sweatshirt.jpg?v=20261029",
     "description": "Vintage-inspired warm cream sweatshirt tailored with a classic triangular collar V-stitch and scenic alpine sunset ridge print on premium brushed loopback cotton.",
     "category": "men",
     "isBestseller": true,
@@ -998,8 +998,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/sweatshirts/gazebo-forest-green-minimalist-sweatshirt.jpg",
-      "secondary": "assets/products/men/sweatshirts/gazebo-forest-green-minimalist-sweatshirt.jpg"
+      "primary": "assets/products/men/sweatshirts/gazebo-forest-green-minimalist-sweatshirt.jpg?v=20261029",
+      "secondary": "assets/products/men/sweatshirts/gazebo-forest-green-minimalist-sweatshirt.jpg?v=20261029"
     },
     "tags": [
       "Sweatshirt",
@@ -1009,7 +1009,7 @@ window.GAZEBO_PRODUCTS = [
       "Relaxed Fit",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/sweatshirts/gazebo-forest-green-minimalist-sweatshirt.jpg",
+    "primaryImage": "assets/products/men/sweatshirts/gazebo-forest-green-minimalist-sweatshirt.jpg?v=20261029",
     "description": "Understated luxury crewneck sweatshirt in rich forest green 400 GSM loopback cotton, accented by tonal geometric chest embroidery and ribbed trims.",
     "category": "men",
     "isBestseller": false,
@@ -1042,8 +1042,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/sweatshirts/gazebo-baroque-crest-heavyweight-sweatshirt.jpg",
-      "secondary": "assets/products/men/sweatshirts/gazebo-baroque-crest-heavyweight-sweatshirt.jpg"
+      "primary": "assets/products/men/sweatshirts/gazebo-baroque-crest-heavyweight-sweatshirt.jpg?v=20261029",
+      "secondary": "assets/products/men/sweatshirts/gazebo-baroque-crest-heavyweight-sweatshirt.jpg?v=20261029"
     },
     "tags": [
       "Sweatshirt",
@@ -1053,7 +1053,7 @@ window.GAZEBO_PRODUCTS = [
       "Embroidered",
       "Relaxed Fit"
     ],
-    "primaryImage": "assets/products/men/sweatshirts/gazebo-baroque-crest-heavyweight-sweatshirt.jpg",
+    "primaryImage": "assets/products/men/sweatshirts/gazebo-baroque-crest-heavyweight-sweatshirt.jpg?v=20261029",
     "description": "Opulent deep burgundy heavyweight sweatshirt showcasing an elaborate antique gold baroque crest emblem across the chest in ultra-soft 450 GSM fleece.",
     "category": "men",
     "isBestseller": false,
@@ -1086,8 +1086,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/shirts/gazebo-classic-oxford-cotton-shirt.jpg",
-      "secondary": "assets/products/men/shirts/gazebo-classic-oxford-cotton-shirt.jpg"
+      "primary": "assets/products/men/shirts/gazebo-classic-oxford-cotton-shirt.jpg?v=20261029",
+      "secondary": "assets/products/men/shirts/gazebo-classic-oxford-cotton-shirt.jpg?v=20261029"
     },
     "tags": [
       "Shirt",
@@ -1099,7 +1099,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹999",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/shirts/gazebo-classic-oxford-cotton-shirt.jpg",
+    "primaryImage": "assets/products/men/shirts/gazebo-classic-oxford-cotton-shirt.jpg?v=20261029",
     "description": "Timeless off-white Oxford cotton full-sleeve shirt crafted with a button-down collar, front chest pocket, and curved hem for an effortless smart-casual drape.",
     "category": "men",
     "isBestseller": true,
@@ -1132,8 +1132,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/shirts/gazebo-forest-green-tailored-shirt.jpg",
-      "secondary": "assets/products/men/shirts/gazebo-forest-green-tailored-shirt.jpg"
+      "primary": "assets/products/men/shirts/gazebo-forest-green-tailored-shirt.jpg?v=20261029",
+      "secondary": "assets/products/men/shirts/gazebo-forest-green-tailored-shirt.jpg?v=20261029"
     },
     "tags": [
       "Shirt",
@@ -1143,7 +1143,7 @@ window.GAZEBO_PRODUCTS = [
       "Bestseller",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/shirts/gazebo-forest-green-tailored-shirt.jpg",
+    "primaryImage": "assets/products/men/shirts/gazebo-forest-green-tailored-shirt.jpg?v=20261029",
     "description": "Refined full-sleeve shirt in rich forest green premium poplin cotton, featuring a structured spread collar, tonal buttons, and sleek single patch pocket.",
     "category": "men",
     "isBestseller": true,
@@ -1176,8 +1176,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/shirts/gazebo-crimson-navy-plaid-flannel-shirt.jpg",
-      "secondary": "assets/products/men/shirts/gazebo-crimson-navy-plaid-flannel-shirt.jpg"
+      "primary": "assets/products/men/shirts/gazebo-crimson-navy-plaid-flannel-shirt.jpg?v=20261029",
+      "secondary": "assets/products/men/shirts/gazebo-crimson-navy-plaid-flannel-shirt.jpg?v=20261029"
     },
     "tags": [
       "Shirt",
@@ -1187,7 +1187,7 @@ window.GAZEBO_PRODUCTS = [
       "Full Sleeve",
       "Dark Shades"
     ],
-    "primaryImage": "assets/products/men/shirts/gazebo-crimson-navy-plaid-flannel-shirt.jpg",
+    "primaryImage": "assets/products/men/shirts/gazebo-crimson-navy-plaid-flannel-shirt.jpg?v=20261029",
     "description": "Classic heritage flannel shirt in rich crimson and navy gingham check, woven from brushed cotton yarns with a soft hand-feel and durable tailored seams.",
     "category": "men",
     "isBestseller": false,
@@ -1220,8 +1220,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/linen-shirts/gazebo-sky-blue-resort-linen-shirt.jpg",
-      "secondary": "assets/products/men/linen-shirts/gazebo-sky-blue-resort-linen-shirt.jpg"
+      "primary": "assets/products/men/linen-shirts/gazebo-sky-blue-resort-linen-shirt.jpg?v=20261029",
+      "secondary": "assets/products/men/linen-shirts/gazebo-sky-blue-resort-linen-shirt.jpg?v=20261029"
     },
     "tags": [
       "Linen Shirt",
@@ -1232,7 +1232,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹999",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/linen-shirts/gazebo-sky-blue-resort-linen-shirt.jpg",
+    "primaryImage": "assets/products/men/linen-shirts/gazebo-sky-blue-resort-linen-shirt.jpg?v=20261029",
     "description": "Breezy resort-style long sleeve linen shirt crafted from 100% natural breathable European flax linen in a crisp sky blue tone.",
     "category": "men",
     "isBestseller": true,
@@ -1265,8 +1265,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/linen-shirts/gazebo-sand-beige-relaxed-linen-shirt.jpg",
-      "secondary": "assets/products/men/linen-shirts/gazebo-sand-beige-relaxed-linen-shirt.jpg"
+      "primary": "assets/products/men/linen-shirts/gazebo-sand-beige-relaxed-linen-shirt.jpg?v=20261029",
+      "secondary": "assets/products/men/linen-shirts/gazebo-sand-beige-relaxed-linen-shirt.jpg?v=20261029"
     },
     "tags": [
       "Linen Shirt",
@@ -1277,7 +1277,7 @@ window.GAZEBO_PRODUCTS = [
       "Bestseller",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/linen-shirts/gazebo-sand-beige-relaxed-linen-shirt.jpg",
+    "primaryImage": "assets/products/men/linen-shirts/gazebo-sand-beige-relaxed-linen-shirt.jpg?v=20261029",
     "description": "Understated sand beige relaxed linen button-up shirt featuring a soft spread collar and relaxed fit for laid-back refined layering.",
     "category": "men",
     "isBestseller": true,
@@ -1310,8 +1310,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/linen-shirts/gazebo-olive-sage-casual-linen-shirt.jpg",
-      "secondary": "assets/products/men/linen-shirts/gazebo-olive-sage-casual-linen-shirt.jpg"
+      "primary": "assets/products/men/linen-shirts/gazebo-olive-sage-casual-linen-shirt.jpg?v=20261029",
+      "secondary": "assets/products/men/linen-shirts/gazebo-olive-sage-casual-linen-shirt.jpg?v=20261029"
     },
     "tags": [
       "Linen Shirt",
@@ -1320,7 +1320,7 @@ window.GAZEBO_PRODUCTS = [
       "Pure Linen",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/linen-shirts/gazebo-olive-sage-casual-linen-shirt.jpg",
+    "primaryImage": "assets/products/men/linen-shirts/gazebo-olive-sage-casual-linen-shirt.jpg?v=20261029",
     "description": "Versatile earth-toned olive sage linen shirt tailored with a structured collar, clean French placket, and garment-washed finish.",
     "category": "men",
     "isBestseller": false,
@@ -1353,8 +1353,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/linen-shirts/gazebo-charcoal-slate-tailored-linen-shirt.jpg",
-      "secondary": "assets/products/men/linen-shirts/gazebo-charcoal-slate-tailored-linen-shirt.jpg"
+      "primary": "assets/products/men/linen-shirts/gazebo-charcoal-slate-tailored-linen-shirt.jpg?v=20261029",
+      "secondary": "assets/products/men/linen-shirts/gazebo-charcoal-slate-tailored-linen-shirt.jpg?v=20261029"
     },
     "tags": [
       "Linen Shirt",
@@ -1363,7 +1363,7 @@ window.GAZEBO_PRODUCTS = [
       "Pure Linen",
       "Dark Shades"
     ],
-    "primaryImage": "assets/products/men/linen-shirts/gazebo-charcoal-slate-tailored-linen-shirt.jpg",
+    "primaryImage": "assets/products/men/linen-shirts/gazebo-charcoal-slate-tailored-linen-shirt.jpg?v=20261029",
     "description": "Sophisticated deep charcoal slate tailored linen shirt made from premium slub linen yarns with a rich textured weave.",
     "category": "men",
     "isBestseller": false,
@@ -1396,8 +1396,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/jeans/gazebo-light-wash-slim-straight-jeans.jpg",
-      "secondary": "assets/products/men/jeans/gazebo-light-wash-slim-straight-jeans.jpg"
+      "primary": "assets/products/men/jeans/gazebo-light-wash-slim-straight-jeans.jpg?v=20261029",
+      "secondary": "assets/products/men/jeans/gazebo-light-wash-slim-straight-jeans.jpg?v=20261029"
     },
     "tags": [
       "Jeans",
@@ -1410,7 +1410,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹999",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/jeans/gazebo-light-wash-slim-straight-jeans.jpg",
+    "primaryImage": "assets/products/men/jeans/gazebo-light-wash-slim-straight-jeans.jpg?v=20261029",
     "description": "Classic five-pocket slim straight jeans cut from premium comfort-stretch denim featuring a light vintage stone wash and subtle fading.",
     "category": "men",
     "isBestseller": true,
@@ -1443,8 +1443,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/jeans/gazebo-vintage-wash-regular-fit-jeans.jpg",
-      "secondary": "assets/products/men/jeans/gazebo-vintage-wash-regular-fit-jeans.jpg"
+      "primary": "assets/products/men/jeans/gazebo-vintage-wash-regular-fit-jeans.jpg?v=20261029",
+      "secondary": "assets/products/men/jeans/gazebo-vintage-wash-regular-fit-jeans.jpg?v=20261029"
     },
     "tags": [
       "Jeans",
@@ -1456,7 +1456,7 @@ window.GAZEBO_PRODUCTS = [
       "Bestseller",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/jeans/gazebo-vintage-wash-regular-fit-jeans.jpg",
+    "primaryImage": "assets/products/men/jeans/gazebo-vintage-wash-regular-fit-jeans.jpg?v=20261029",
     "description": "Timeless regular fit jeans in a medium vintage wash with handcrafted thigh whiskering and contrast copper stitching.",
     "category": "men",
     "isBestseller": true,
@@ -1489,8 +1489,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/jeans/gazebo-jet-black-slim-fit-jeans.jpg",
-      "secondary": "assets/products/men/jeans/gazebo-jet-black-slim-fit-jeans.jpg"
+      "primary": "assets/products/men/jeans/gazebo-jet-black-slim-fit-jeans.jpg?v=20261029",
+      "secondary": "assets/products/men/jeans/gazebo-jet-black-slim-fit-jeans.jpg?v=20261029"
     },
     "tags": [
       "Jeans",
@@ -1500,7 +1500,7 @@ window.GAZEBO_PRODUCTS = [
       "Dark Shades",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/jeans/gazebo-jet-black-slim-fit-jeans.jpg",
+    "primaryImage": "assets/products/men/jeans/gazebo-jet-black-slim-fit-jeans.jpg?v=20261029",
     "description": "Sleek all-black denim crafted with stay-black dye technology, tailored in a modern slim silhouette with tonal matte black hardware.",
     "category": "men",
     "isBestseller": false,
@@ -1533,8 +1533,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/jeans/gazebo-mineral-washed-charcoal-jeans.jpg",
-      "secondary": "assets/products/men/jeans/gazebo-mineral-washed-charcoal-jeans.jpg"
+      "primary": "assets/products/men/jeans/gazebo-mineral-washed-charcoal-jeans.jpg?v=20261029",
+      "secondary": "assets/products/men/jeans/gazebo-mineral-washed-charcoal-jeans.jpg?v=20261029"
     },
     "tags": [
       "Jeans",
@@ -1543,7 +1543,7 @@ window.GAZEBO_PRODUCTS = [
       "Straight Fit",
       "Dark Shades"
     ],
-    "primaryImage": "assets/products/men/jeans/gazebo-mineral-washed-charcoal-jeans.jpg",
+    "primaryImage": "assets/products/men/jeans/gazebo-mineral-washed-charcoal-jeans.jpg?v=20261029",
     "description": "Contemporary straight leg jeans featuring an authentic acid mineral wash in a smoky charcoal tone with soft brushed cotton hand-feel.",
     "category": "men",
     "isBestseller": false,
@@ -1576,8 +1576,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/cargos/gazebo-jet-black-utility-cargo.jpg",
-      "secondary": "assets/products/men/cargos/gazebo-jet-black-utility-cargo.jpg"
+      "primary": "assets/products/men/cargos/gazebo-jet-black-utility-cargo.jpg?v=20261029",
+      "secondary": "assets/products/men/cargos/gazebo-jet-black-utility-cargo.jpg?v=20261029"
     },
     "tags": [
       "Cargo",
@@ -1590,7 +1590,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Dark Shades"
     ],
-    "primaryImage": "assets/products/men/cargos/gazebo-jet-black-utility-cargo.jpg",
+    "primaryImage": "assets/products/men/cargos/gazebo-jet-black-utility-cargo.jpg?v=20261029",
     "description": "Modern tactical utility cargo pants crafted from durable cotton twill featuring dual side bellow flap pockets and a relaxed straight cut.",
     "category": "men",
     "isBestseller": true,
@@ -1623,8 +1623,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/cargos/gazebo-military-olive-utility-cargo.jpg",
-      "secondary": "assets/products/men/cargos/gazebo-military-olive-utility-cargo.jpg"
+      "primary": "assets/products/men/cargos/gazebo-military-olive-utility-cargo.jpg?v=20261029",
+      "secondary": "assets/products/men/cargos/gazebo-military-olive-utility-cargo.jpg?v=20261029"
     },
     "tags": [
       "Cargo",
@@ -1635,7 +1635,7 @@ window.GAZEBO_PRODUCTS = [
       "Bestseller",
       "Under ₹1,499"
     ],
-    "primaryImage": "assets/products/men/cargos/gazebo-military-olive-utility-cargo.jpg",
+    "primaryImage": "assets/products/men/cargos/gazebo-military-olive-utility-cargo.jpg?v=20261029",
     "description": "Heritage military-inspired cargo pants in authentic army olive green, tailored with heavy-duty pocket flaps and reinforced knee articulation.",
     "category": "men",
     "isBestseller": true,
@@ -1668,8 +1668,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/cargos/gazebo-sand-khaki-relaxed-cargo.jpg",
-      "secondary": "assets/products/men/cargos/gazebo-sand-khaki-relaxed-cargo.jpg"
+      "primary": "assets/products/men/cargos/gazebo-sand-khaki-relaxed-cargo.jpg?v=20261029",
+      "secondary": "assets/products/men/cargos/gazebo-sand-khaki-relaxed-cargo.jpg?v=20261029"
     },
     "tags": [
       "Cargo",
@@ -1678,7 +1678,7 @@ window.GAZEBO_PRODUCTS = [
       "Relaxed Fit",
       "Neutral Tones"
     ],
-    "primaryImage": "assets/products/men/cargos/gazebo-sand-khaki-relaxed-cargo.jpg",
+    "primaryImage": "assets/products/men/cargos/gazebo-sand-khaki-relaxed-cargo.jpg?v=20261029",
     "description": "Versatile desert sand khaki utility cargo trousers woven from breathable stretch cotton with spacious flap cargo compartments.",
     "category": "men",
     "isBestseller": false,
@@ -1711,8 +1711,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/trousers/gazebo-tailored-khaki-formal-trousers.jpg",
-      "secondary": "assets/products/men/trousers/gazebo-tailored-khaki-formal-trousers.jpg"
+      "primary": "assets/products/men/trousers/gazebo-tailored-khaki-formal-trousers.jpg?v=20261029",
+      "secondary": "assets/products/men/trousers/gazebo-tailored-khaki-formal-trousers.jpg?v=20261029"
     },
     "tags": [
       "Trousers",
@@ -1725,7 +1725,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Neutral Tones"
     ],
-    "primaryImage": "assets/products/men/trousers/gazebo-tailored-khaki-formal-trousers.jpg",
+    "primaryImage": "assets/products/men/trousers/gazebo-tailored-khaki-formal-trousers.jpg?v=20261029",
     "description": "Sharp tailored flat-front formal trousers in classic khaki cotton-blend with a crisp pressed crease and comfortable mid-rise fit.",
     "category": "men",
     "isBestseller": true,
@@ -1758,8 +1758,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/trousers/gazebo-charcoal-slate-formal-trousers.jpg",
-      "secondary": "assets/products/men/trousers/gazebo-charcoal-slate-formal-trousers.jpg"
+      "primary": "assets/products/men/trousers/gazebo-charcoal-slate-formal-trousers.jpg?v=20261029",
+      "secondary": "assets/products/men/trousers/gazebo-charcoal-slate-formal-trousers.jpg?v=20261029"
     },
     "tags": [
       "Trousers",
@@ -1771,7 +1771,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Dark Shades"
     ],
-    "primaryImage": "assets/products/men/trousers/gazebo-charcoal-slate-formal-trousers.jpg",
+    "primaryImage": "assets/products/men/trousers/gazebo-charcoal-slate-formal-trousers.jpg?v=20261029",
     "description": "Refined charcoal slate dress trousers woven from premium wrinkle-resistant suiting fabric, featuring slant side pockets and tapered hem.",
     "category": "men",
     "isBestseller": true,
@@ -1804,8 +1804,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/trousers/gazebo-midnight-black-slim-trousers.jpg",
-      "secondary": "assets/products/men/trousers/gazebo-midnight-black-slim-trousers.jpg"
+      "primary": "assets/products/men/trousers/gazebo-midnight-black-slim-trousers.jpg?v=20261029",
+      "secondary": "assets/products/men/trousers/gazebo-midnight-black-slim-trousers.jpg?v=20261029"
     },
     "tags": [
       "Trousers",
@@ -1815,7 +1815,7 @@ window.GAZEBO_PRODUCTS = [
       "Slim Fit",
       "Dark Shades"
     ],
-    "primaryImage": "assets/products/men/trousers/gazebo-midnight-black-slim-trousers.jpg",
+    "primaryImage": "assets/products/men/trousers/gazebo-midnight-black-slim-trousers.jpg?v=20261029",
     "description": "Modern slim-fit formal trousers in deep midnight black with clean tailored drape, concealed hook closure, and elegant rear welt pockets.",
     "category": "men",
     "isBestseller": false,
@@ -1848,8 +1848,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/jackets/gazebo-slate-quilted-puffer-jacket.jpg",
-      "secondary": "assets/products/men/jackets/gazebo-slate-quilted-puffer-jacket.jpg"
+      "primary": "assets/products/men/jackets/gazebo-slate-quilted-puffer-jacket.jpg?v=20261029",
+      "secondary": "assets/products/men/jackets/gazebo-slate-quilted-puffer-jacket.jpg?v=20261029"
     },
     "tags": [
       "Jackets",
@@ -1862,7 +1862,7 @@ window.GAZEBO_PRODUCTS = [
       "Dark Shades",
       "Outerwear"
     ],
-    "primaryImage": "assets/products/men/jackets/gazebo-slate-quilted-puffer-jacket.jpg",
+    "primaryImage": "assets/products/men/jackets/gazebo-slate-quilted-puffer-jacket.jpg?v=20261029",
     "description": "Lightweight quilted puffer jacket in slate grey featuring a stand collar, smooth zip-front closure, and heat-retaining insulation.",
     "category": "men",
     "isBestseller": true,
@@ -1895,8 +1895,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/jackets/gazebo-midnight-black-bomber-jacket.jpg",
-      "secondary": "assets/products/men/jackets/gazebo-midnight-black-bomber-jacket.jpg"
+      "primary": "assets/products/men/jackets/gazebo-midnight-black-bomber-jacket.jpg?v=20261029",
+      "secondary": "assets/products/men/jackets/gazebo-midnight-black-bomber-jacket.jpg?v=20261029"
     },
     "tags": [
       "Jackets",
@@ -1908,7 +1908,7 @@ window.GAZEBO_PRODUCTS = [
       "Minimalist",
       "Outerwear"
     ],
-    "primaryImage": "assets/products/men/jackets/gazebo-midnight-black-bomber-jacket.jpg",
+    "primaryImage": "assets/products/men/jackets/gazebo-midnight-black-bomber-jacket.jpg?v=20261029",
     "description": "Minimalist urban bomber jacket in midnight black with ribbed baseball collar, elasticated cuffs, and side zip pockets.",
     "category": "men",
     "isBestseller": true,
@@ -1941,8 +1941,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/jackets/gazebo-sand-suede-harrington-jacket.jpg",
-      "secondary": "assets/products/men/jackets/gazebo-sand-suede-harrington-jacket.jpg"
+      "primary": "assets/products/men/jackets/gazebo-sand-suede-harrington-jacket.jpg?v=20261029",
+      "secondary": "assets/products/men/jackets/gazebo-sand-suede-harrington-jacket.jpg?v=20261029"
     },
     "tags": [
       "Jackets",
@@ -1954,7 +1954,7 @@ window.GAZEBO_PRODUCTS = [
       "Tailored",
       "Outerwear"
     ],
-    "primaryImage": "assets/products/men/jackets/gazebo-sand-suede-harrington-jacket.jpg",
+    "primaryImage": "assets/products/men/jackets/gazebo-sand-suede-harrington-jacket.jpg?v=20261029",
     "description": "Premium faux suede Harrington jacket in warm sand beige featuring a spread collar, silver zip closure, and tailored welt pockets.",
     "category": "men",
     "isBestseller": false,
@@ -1987,8 +1987,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/sweaters/gazebo-burgundy-relaxed-crew-neck-sweater.jpg",
-      "secondary": "assets/products/men/sweaters/gazebo-burgundy-relaxed-crew-neck-sweater.jpg"
+      "primary": "assets/products/men/sweaters/gazebo-burgundy-relaxed-crew-neck-sweater.jpg?v=20261029",
+      "secondary": "assets/products/men/sweaters/gazebo-burgundy-relaxed-crew-neck-sweater.jpg?v=20261029"
     },
     "tags": [
       "Sweaters",
@@ -2001,7 +2001,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Dark Shades"
     ],
-    "primaryImage": "assets/products/men/sweaters/gazebo-burgundy-relaxed-crew-neck-sweater.jpg",
+    "primaryImage": "assets/products/men/sweaters/gazebo-burgundy-relaxed-crew-neck-sweater.jpg?v=20261029",
     "description": "Relaxed-fit crew neck sweater knitted from soft combed cotton blend in rich burgundy wine, featuring ribbed collar, cuffs, and hem.",
     "category": "men",
     "isBestseller": true,
@@ -2034,8 +2034,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/sweaters/gazebo-cable-knit-forest-green-sweater.jpg",
-      "secondary": "assets/products/men/sweaters/gazebo-cable-knit-forest-green-sweater.jpg"
+      "primary": "assets/products/men/sweaters/gazebo-cable-knit-forest-green-sweater.jpg?v=20261029",
+      "secondary": "assets/products/men/sweaters/gazebo-cable-knit-forest-green-sweater.jpg?v=20261029"
     },
     "tags": [
       "Sweaters",
@@ -2047,7 +2047,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Dark Shades"
     ],
-    "primaryImage": "assets/products/men/sweaters/gazebo-cable-knit-forest-green-sweater.jpg",
+    "primaryImage": "assets/products/men/sweaters/gazebo-cable-knit-forest-green-sweater.jpg?v=20261029",
     "description": "Classic heavy cable knit sweater in rich forest green with intricate vertical cable patterns and insulating ribbed trims.",
     "category": "men",
     "isBestseller": true,
@@ -2080,8 +2080,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/sweaters/gazebo-midnight-navy-v-neck-sweater.jpg",
-      "secondary": "assets/products/men/sweaters/gazebo-midnight-navy-v-neck-sweater.jpg"
+      "primary": "assets/products/men/sweaters/gazebo-midnight-navy-v-neck-sweater.jpg?v=20261029",
+      "secondary": "assets/products/men/sweaters/gazebo-midnight-navy-v-neck-sweater.jpg?v=20261029"
     },
     "tags": [
       "Sweaters",
@@ -2091,7 +2091,7 @@ window.GAZEBO_PRODUCTS = [
       "Tailored",
       "Dark Shades"
     ],
-    "primaryImage": "assets/products/men/sweaters/gazebo-midnight-navy-v-neck-sweater.jpg",
+    "primaryImage": "assets/products/men/sweaters/gazebo-midnight-navy-v-neck-sweater.jpg?v=20261029",
     "description": "Sophisticated fine-gauge V-neck sweater in deep midnight navy, crafted for elegant layering over shirts and tees.",
     "category": "men",
     "isBestseller": false,
@@ -2124,8 +2124,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/shorts/gazebo-olive-utility-cargo-shorts.jpg",
-      "secondary": "assets/products/men/shorts/gazebo-olive-utility-cargo-shorts.jpg"
+      "primary": "assets/products/men/shorts/gazebo-olive-utility-cargo-shorts.jpg?v=20261029",
+      "secondary": "assets/products/men/shorts/gazebo-olive-utility-cargo-shorts.jpg?v=20261029"
     },
     "tags": [
       "Shorts",
@@ -2137,7 +2137,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Relaxed Fit"
     ],
-    "primaryImage": "assets/products/men/shorts/gazebo-olive-utility-cargo-shorts.jpg",
+    "primaryImage": "assets/products/men/shorts/gazebo-olive-utility-cargo-shorts.jpg?v=20261029",
     "description": "Durable cotton twill utility cargo shorts in earthy olive green, equipped with deep flap pockets, sturdy belt loops, and relaxed summer silhouette.",
     "category": "men",
     "isBestseller": true,
@@ -2170,8 +2170,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/shorts/gazebo-midnight-black-drawstring-shorts.jpg",
-      "secondary": "assets/products/men/shorts/gazebo-midnight-black-drawstring-shorts.jpg"
+      "primary": "assets/products/men/shorts/gazebo-midnight-black-drawstring-shorts.jpg?v=20261029",
+      "secondary": "assets/products/men/shorts/gazebo-midnight-black-drawstring-shorts.jpg?v=20261029"
     },
     "tags": [
       "Shorts",
@@ -2183,7 +2183,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Dark Shades"
     ],
-    "primaryImage": "assets/products/men/shorts/gazebo-midnight-black-drawstring-shorts.jpg",
+    "primaryImage": "assets/products/men/shorts/gazebo-midnight-black-drawstring-shorts.jpg?v=20261029",
     "description": "Essential relaxed drawstring shorts in deep midnight black, featuring an elastic waistband with adjustable cords and breathable cotton weave.",
     "category": "men",
     "isBestseller": true,
@@ -2216,8 +2216,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/men/shorts/gazebo-tailored-khaki-chino-shorts.jpg",
-      "secondary": "assets/products/men/shorts/gazebo-tailored-khaki-chino-shorts.jpg"
+      "primary": "assets/products/men/shorts/gazebo-tailored-khaki-chino-shorts.jpg?v=20261029",
+      "secondary": "assets/products/men/shorts/gazebo-tailored-khaki-chino-shorts.jpg?v=20261029"
     },
     "tags": [
       "Shorts",
@@ -2227,7 +2227,7 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Neutral Tones"
     ],
-    "primaryImage": "assets/products/men/shorts/gazebo-tailored-khaki-chino-shorts.jpg",
+    "primaryImage": "assets/products/men/shorts/gazebo-tailored-khaki-chino-shorts.jpg?v=20261029",
     "description": "Smart tailored chino shorts in classic khaki cotton blend, cut with clean flat front, slanted side pockets, and neat button closure.",
     "category": "men",
     "isBestseller": false,
@@ -2266,8 +2266,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/co-ords/gazebo-sage-green-linen-coord-set.jpg",
-      "secondary": "assets/products/women/co-ords/gazebo-sage-green-linen-coord-set.jpg"
+      "primary": "assets/products/women/co-ords/gazebo-sage-green-linen-coord-set.jpg?v=20261029",
+      "secondary": "assets/products/women/co-ords/gazebo-sage-green-linen-coord-set.jpg?v=20261029"
     },
     "tags": [
       "Co-ords",
@@ -2280,8 +2280,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Neutral Tones"
     ],
-    "primaryImage": "assets/products/women/co-ords/gazebo-sage-green-linen-coord-set.jpg",
-    "secondaryImage": "assets/products/women/co-ords/gazebo-sage-green-linen-coord-set.jpg",
+    "primaryImage": "assets/products/women/co-ords/gazebo-sage-green-linen-coord-set.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/co-ords/gazebo-sage-green-linen-coord-set.jpg?v=20261029",
     "description": "Relaxed European linen button-down shirt paired with tailored straight-leg trousers in earthy sage green.",
     "isBestseller": true,
     "isNew": false,
@@ -2319,8 +2319,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/co-ords/gazebo-oatmeal-beige-linen-coord-set.jpg",
-      "secondary": "assets/products/women/co-ords/gazebo-oatmeal-beige-linen-coord-set.jpg"
+      "primary": "assets/products/women/co-ords/gazebo-oatmeal-beige-linen-coord-set.jpg?v=20261029",
+      "secondary": "assets/products/women/co-ords/gazebo-oatmeal-beige-linen-coord-set.jpg?v=20261029"
     },
     "tags": [
       "Co-ords",
@@ -2333,8 +2333,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Neutral Tones"
     ],
-    "primaryImage": "assets/products/women/co-ords/gazebo-oatmeal-beige-linen-coord-set.jpg",
-    "secondaryImage": "assets/products/women/co-ords/gazebo-oatmeal-beige-linen-coord-set.jpg",
+    "primaryImage": "assets/products/women/co-ords/gazebo-oatmeal-beige-linen-coord-set.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/co-ords/gazebo-oatmeal-beige-linen-coord-set.jpg?v=20261029",
     "description": "Breezy natural flax linen shirt and matching straight trousers in warm oatmeal beige for effortless resort elegance.",
     "isBestseller": true,
     "isNew": false,
@@ -2372,8 +2372,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/co-ords/gazebo-midnight-black-tailored-coord-set.jpg",
-      "secondary": "assets/products/women/co-ords/gazebo-midnight-black-tailored-coord-set.jpg"
+      "primary": "assets/products/women/co-ords/gazebo-midnight-black-tailored-coord-set.jpg?v=20261029",
+      "secondary": "assets/products/women/co-ords/gazebo-midnight-black-tailored-coord-set.jpg?v=20261029"
     },
     "tags": [
       "Co-ords",
@@ -2385,8 +2385,8 @@ window.GAZEBO_PRODUCTS = [
       "Dark Shades",
       "Crepe"
     ],
-    "primaryImage": "assets/products/women/co-ords/gazebo-midnight-black-tailored-coord-set.jpg",
-    "secondaryImage": "assets/products/women/co-ords/gazebo-midnight-black-tailored-coord-set.jpg",
+    "primaryImage": "assets/products/women/co-ords/gazebo-midnight-black-tailored-coord-set.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/co-ords/gazebo-midnight-black-tailored-coord-set.jpg?v=20261029",
     "description": "Chic minimalist short-sleeve top with center seam detailing and pleated front trousers in deep midnight black.",
     "isBestseller": false,
     "isNew": false,
@@ -2424,8 +2424,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/co-ords/gazebo-sky-blue-resort-coord-set.jpg",
-      "secondary": "assets/products/women/co-ords/gazebo-sky-blue-resort-coord-set.jpg"
+      "primary": "assets/products/women/co-ords/gazebo-sky-blue-resort-coord-set.jpg?v=20261029",
+      "secondary": "assets/products/women/co-ords/gazebo-sky-blue-resort-coord-set.jpg?v=20261029"
     },
     "tags": [
       "Co-ords",
@@ -2438,8 +2438,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Relaxed Fit"
     ],
-    "primaryImage": "assets/products/women/co-ords/gazebo-sky-blue-resort-coord-set.jpg",
-    "secondaryImage": "assets/products/women/co-ords/gazebo-sky-blue-resort-coord-set.jpg",
+    "primaryImage": "assets/products/women/co-ords/gazebo-sky-blue-resort-coord-set.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/co-ords/gazebo-sky-blue-resort-coord-set.jpg?v=20261029",
     "description": "Airy short-sleeve collared resort shirt paired with matching high-waisted shorts in refreshing pastel sky blue.",
     "isBestseller": false,
     "isNew": false,
@@ -2477,8 +2477,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/tops/gazebo-pastel-yellow-square-neck-puff-sleeve-top.jpg",
-      "secondary": "assets/products/women/tops/gazebo-pastel-yellow-square-neck-puff-sleeve-top.jpg"
+      "primary": "assets/products/women/tops/gazebo-pastel-yellow-square-neck-puff-sleeve-top.jpg?v=20261029",
+      "secondary": "assets/products/women/tops/gazebo-pastel-yellow-square-neck-puff-sleeve-top.jpg?v=20261029"
     },
     "tags": [
       "Tops",
@@ -2491,8 +2491,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Regular Fit"
     ],
-    "primaryImage": "assets/products/women/tops/gazebo-pastel-yellow-square-neck-puff-sleeve-top.jpg",
-    "secondaryImage": "assets/products/women/tops/gazebo-pastel-yellow-square-neck-puff-sleeve-top.jpg",
+    "primaryImage": "assets/products/women/tops/gazebo-pastel-yellow-square-neck-puff-sleeve-top.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/tops/gazebo-pastel-yellow-square-neck-puff-sleeve-top.jpg?v=20261029",
     "description": "Romantic square-neck top in soft pastel yellow designed with charming puff sleeves and a lightweight breathable cotton weave.",
     "isBestseller": true,
     "isNew": false,
@@ -2530,8 +2530,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/tops/gazebo-wine-burgundy-ribbed-crew-neck-top.jpg",
-      "secondary": "assets/products/women/tops/gazebo-wine-burgundy-ribbed-crew-neck-top.jpg"
+      "primary": "assets/products/women/tops/gazebo-wine-burgundy-ribbed-crew-neck-top.jpg?v=20261029",
+      "secondary": "assets/products/women/tops/gazebo-wine-burgundy-ribbed-crew-neck-top.jpg?v=20261029"
     },
     "tags": [
       "Tops",
@@ -2546,8 +2546,8 @@ window.GAZEBO_PRODUCTS = [
       "Dark Shades",
       "Fitted"
     ],
-    "primaryImage": "assets/products/women/tops/gazebo-wine-burgundy-ribbed-crew-neck-top.jpg",
-    "secondaryImage": "assets/products/women/tops/gazebo-wine-burgundy-ribbed-crew-neck-top.jpg",
+    "primaryImage": "assets/products/women/tops/gazebo-wine-burgundy-ribbed-crew-neck-top.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/tops/gazebo-wine-burgundy-ribbed-crew-neck-top.jpg?v=20261029",
     "description": "Refined fine-ribbed long-sleeve knit top in deep wine burgundy with a classic fitted crewneck silhouette for effortless everyday layering.",
     "isBestseller": true,
     "isNew": false,
@@ -2585,8 +2585,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/tops/gazebo-chocolate-brown-fine-ribbed-knit-top.jpg",
-      "secondary": "assets/products/women/tops/gazebo-chocolate-brown-fine-ribbed-knit-top.jpg"
+      "primary": "assets/products/women/tops/gazebo-chocolate-brown-fine-ribbed-knit-top.jpg?v=20261029",
+      "secondary": "assets/products/women/tops/gazebo-chocolate-brown-fine-ribbed-knit-top.jpg?v=20261029"
     },
     "tags": [
       "Tops",
@@ -2598,8 +2598,8 @@ window.GAZEBO_PRODUCTS = [
       "Dark Shades",
       "Fitted"
     ],
-    "primaryImage": "assets/products/women/tops/gazebo-chocolate-brown-fine-ribbed-knit-top.jpg",
-    "secondaryImage": "assets/products/women/tops/gazebo-chocolate-brown-fine-ribbed-knit-top.jpg",
+    "primaryImage": "assets/products/women/tops/gazebo-chocolate-brown-fine-ribbed-knit-top.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/tops/gazebo-chocolate-brown-fine-ribbed-knit-top.jpg?v=20261029",
     "description": "Chic fitted long-sleeve rib-knit top in luxurious chocolate brown tailored with a clean round crewneck and rich textured hand feel.",
     "isBestseller": false,
     "isNew": false,
@@ -2637,8 +2637,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/oversized-tees/gazebo-vintage-cream-boxy-oversized-tee.jpg",
-      "secondary": "assets/products/women/oversized-tees/gazebo-vintage-cream-boxy-oversized-tee.jpg"
+      "primary": "assets/products/women/oversized-tees/gazebo-vintage-cream-boxy-oversized-tee.jpg?v=20261029",
+      "secondary": "assets/products/women/oversized-tees/gazebo-vintage-cream-boxy-oversized-tee.jpg?v=20261029"
     },
     "tags": [
       "Oversized Tees",
@@ -2650,8 +2650,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Heavyweight"
     ],
-    "primaryImage": "assets/products/women/oversized-tees/gazebo-vintage-cream-boxy-oversized-tee.jpg",
-    "secondaryImage": "assets/products/women/oversized-tees/gazebo-vintage-cream-boxy-oversized-tee.jpg",
+    "primaryImage": "assets/products/women/oversized-tees/gazebo-vintage-cream-boxy-oversized-tee.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/oversized-tees/gazebo-vintage-cream-boxy-oversized-tee.jpg?v=20261029",
     "description": "Drop-shoulder heavyweight boxy oversized t-shirt in vintage off-white cream crafted from 240 GSM combed cotton.",
     "isBestseller": true,
     "isNew": false,
@@ -2689,8 +2689,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/oversized-tees/gazebo-burgundy-embroidered-line-art-oversized-tee.jpg",
-      "secondary": "assets/products/women/oversized-tees/gazebo-burgundy-embroidered-line-art-oversized-tee.jpg"
+      "primary": "assets/products/women/oversized-tees/gazebo-burgundy-embroidered-line-art-oversized-tee.jpg?v=20261029",
+      "secondary": "assets/products/women/oversized-tees/gazebo-burgundy-embroidered-line-art-oversized-tee.jpg?v=20261029"
     },
     "tags": [
       "Oversized Tees",
@@ -2702,8 +2702,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Relaxed Fit"
     ],
-    "primaryImage": "assets/products/women/oversized-tees/gazebo-burgundy-embroidered-line-art-oversized-tee.jpg",
-    "secondaryImage": "assets/products/women/oversized-tees/gazebo-burgundy-embroidered-line-art-oversized-tee.jpg",
+    "primaryImage": "assets/products/women/oversized-tees/gazebo-burgundy-embroidered-line-art-oversized-tee.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/oversized-tees/gazebo-burgundy-embroidered-line-art-oversized-tee.jpg?v=20261029",
     "description": "Relaxed oversized graphic tee in rich deep burgundy featuring minimal chest line-art embroidery and ribbed crew neck.",
     "isBestseller": true,
     "isNew": false,
@@ -2741,8 +2741,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/oversized-tees/gazebo-jet-black-botanical-graphic-oversized-tee.jpg",
-      "secondary": "assets/products/women/oversized-tees/gazebo-jet-black-botanical-graphic-oversized-tee.jpg"
+      "primary": "assets/products/women/oversized-tees/gazebo-jet-black-botanical-graphic-oversized-tee.jpg?v=20261029",
+      "secondary": "assets/products/women/oversized-tees/gazebo-jet-black-botanical-graphic-oversized-tee.jpg?v=20261029"
     },
     "tags": [
       "Oversized Tees",
@@ -2754,8 +2754,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Dark Shades"
     ],
-    "primaryImage": "assets/products/women/oversized-tees/gazebo-jet-black-botanical-graphic-oversized-tee.jpg",
-    "secondaryImage": "assets/products/women/oversized-tees/gazebo-jet-black-botanical-graphic-oversized-tee.jpg",
+    "primaryImage": "assets/products/women/oversized-tees/gazebo-jet-black-botanical-graphic-oversized-tee.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/oversized-tees/gazebo-jet-black-botanical-graphic-oversized-tee.jpg?v=20261029",
     "description": "Streetwear oversized tee in jet black finished with tonal abstract botanical screen print and dropped shoulders.",
     "isBestseller": false,
     "isNew": false,
@@ -2793,8 +2793,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/oversized-tees/gazebo-sage-green-heavyweight-boxy-oversized-tee.jpg",
-      "secondary": "assets/products/women/oversized-tees/gazebo-sage-green-heavyweight-boxy-oversized-tee.jpg"
+      "primary": "assets/products/women/oversized-tees/gazebo-sage-green-heavyweight-boxy-oversized-tee.jpg?v=20261029",
+      "secondary": "assets/products/women/oversized-tees/gazebo-sage-green-heavyweight-boxy-oversized-tee.jpg?v=20261029"
     },
     "tags": [
       "Oversized Tees",
@@ -2805,8 +2805,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Neutral Tones"
     ],
-    "primaryImage": "assets/products/women/oversized-tees/gazebo-sage-green-heavyweight-boxy-oversized-tee.jpg",
-    "secondaryImage": "assets/products/women/oversized-tees/gazebo-sage-green-heavyweight-boxy-oversized-tee.jpg",
+    "primaryImage": "assets/products/women/oversized-tees/gazebo-sage-green-heavyweight-boxy-oversized-tee.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/oversized-tees/gazebo-sage-green-heavyweight-boxy-oversized-tee.jpg?v=20261029",
     "description": "Premium heavyweight boxy oversized tee in muted sage green featuring structured elbow-length sleeves and dense jersey cotton.",
     "isBestseller": false,
     "isNew": false,
@@ -2844,8 +2844,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/hoodies/gazebo-jet-black-heavyweight-fleece-hoodie.jpg",
-      "secondary": "assets/products/women/hoodies/gazebo-jet-black-heavyweight-fleece-hoodie.jpg"
+      "primary": "assets/products/women/hoodies/gazebo-jet-black-heavyweight-fleece-hoodie.jpg?v=20261029",
+      "secondary": "assets/products/women/hoodies/gazebo-jet-black-heavyweight-fleece-hoodie.jpg?v=20261029"
     },
     "tags": [
       "Hoodies",
@@ -2858,8 +2858,8 @@ window.GAZEBO_PRODUCTS = [
       "Dark Shades",
       "Relaxed Fit"
     ],
-    "primaryImage": "assets/products/women/hoodies/gazebo-jet-black-heavyweight-fleece-hoodie.jpg",
-    "secondaryImage": "assets/products/women/hoodies/gazebo-jet-black-heavyweight-fleece-hoodie.jpg",
+    "primaryImage": "assets/products/women/hoodies/gazebo-jet-black-heavyweight-fleece-hoodie.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/hoodies/gazebo-jet-black-heavyweight-fleece-hoodie.jpg?v=20261029",
     "description": "Streetwear drop-shoulder fleece hoodie in deep jet black featuring a structured double-layer hood and classic kangaroo pouch pocket.",
     "isBestseller": true,
     "isNew": false,
@@ -2897,8 +2897,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/hoodies/gazebo-forest-green-embroidered-fleece-hoodie.jpg",
-      "secondary": "assets/products/women/hoodies/gazebo-forest-green-embroidered-fleece-hoodie.jpg"
+      "primary": "assets/products/women/hoodies/gazebo-forest-green-embroidered-fleece-hoodie.jpg?v=20261029",
+      "secondary": "assets/products/women/hoodies/gazebo-forest-green-embroidered-fleece-hoodie.jpg?v=20261029"
     },
     "tags": [
       "Hoodies",
@@ -2909,8 +2909,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Relaxed Fit"
     ],
-    "primaryImage": "assets/products/women/hoodies/gazebo-forest-green-embroidered-fleece-hoodie.jpg",
-    "secondaryImage": "assets/products/women/hoodies/gazebo-forest-green-embroidered-fleece-hoodie.jpg",
+    "primaryImage": "assets/products/women/hoodies/gazebo-forest-green-embroidered-fleece-hoodie.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/hoodies/gazebo-forest-green-embroidered-fleece-hoodie.jpg?v=20261029",
     "description": "Plush fleece pullover hoodie in deep forest green detailed with an artisanal chest embroidery emblem and cozy pouch pocket.",
     "isBestseller": true,
     "isNew": false,
@@ -2948,8 +2948,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/hoodies/gazebo-oatmeal-beige-drawstring-fleece-hoodie.jpg",
-      "secondary": "assets/products/women/hoodies/gazebo-oatmeal-beige-drawstring-fleece-hoodie.jpg"
+      "primary": "assets/products/women/hoodies/gazebo-oatmeal-beige-drawstring-fleece-hoodie.jpg?v=20261029",
+      "secondary": "assets/products/women/hoodies/gazebo-oatmeal-beige-drawstring-fleece-hoodie.jpg?v=20261029"
     },
     "tags": [
       "Hoodies",
@@ -2961,8 +2961,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Relaxed Fit"
     ],
-    "primaryImage": "assets/products/women/hoodies/gazebo-oatmeal-beige-drawstring-fleece-hoodie.jpg",
-    "secondaryImage": "assets/products/women/hoodies/gazebo-oatmeal-beige-drawstring-fleece-hoodie.jpg",
+    "primaryImage": "assets/products/women/hoodies/gazebo-oatmeal-beige-drawstring-fleece-hoodie.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/hoodies/gazebo-oatmeal-beige-drawstring-fleece-hoodie.jpg?v=20261029",
     "description": "Essential relaxed hoodie in soft oatmeal beige crafted from brushed fleece with tonal tubular drawstrings and ribbed trims.",
     "isBestseller": false,
     "isNew": false,
@@ -3000,8 +3000,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/sweatshirts/gazebo-jet-black-crewneck-drop-shoulder-sweatshirt.jpg",
-      "secondary": "assets/products/women/sweatshirts/gazebo-jet-black-crewneck-drop-shoulder-sweatshirt.jpg"
+      "primary": "assets/products/women/sweatshirts/gazebo-jet-black-crewneck-drop-shoulder-sweatshirt.jpg?v=20261029",
+      "secondary": "assets/products/women/sweatshirts/gazebo-jet-black-crewneck-drop-shoulder-sweatshirt.jpg?v=20261029"
     },
     "tags": [
       "Sweatshirts",
@@ -3014,8 +3014,8 @@ window.GAZEBO_PRODUCTS = [
       "Dark Shades",
       "Relaxed Fit"
     ],
-    "primaryImage": "assets/products/women/sweatshirts/gazebo-jet-black-crewneck-drop-shoulder-sweatshirt.jpg",
-    "secondaryImage": "assets/products/women/sweatshirts/gazebo-jet-black-crewneck-drop-shoulder-sweatshirt.jpg",
+    "primaryImage": "assets/products/women/sweatshirts/gazebo-jet-black-crewneck-drop-shoulder-sweatshirt.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/sweatshirts/gazebo-jet-black-crewneck-drop-shoulder-sweatshirt.jpg?v=20261029",
     "description": "Essential drop-shoulder fleece sweatshirt in jet black featuring a fine-ribbed crewneck collar, cuffs, and hem in an effortless relaxed silhouette.",
     "isBestseller": true,
     "isNew": false,
@@ -3053,8 +3053,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/sweatshirts/gazebo-vintage-ecru-relaxed-fleece-sweatshirt.jpg",
-      "secondary": "assets/products/women/sweatshirts/gazebo-vintage-ecru-relaxed-fleece-sweatshirt.jpg"
+      "primary": "assets/products/women/sweatshirts/gazebo-vintage-ecru-relaxed-fleece-sweatshirt.jpg?v=20261029",
+      "secondary": "assets/products/women/sweatshirts/gazebo-vintage-ecru-relaxed-fleece-sweatshirt.jpg?v=20261029"
     },
     "tags": [
       "Sweatshirts",
@@ -3067,8 +3067,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Relaxed Fit"
     ],
-    "primaryImage": "assets/products/women/sweatshirts/gazebo-vintage-ecru-relaxed-fleece-sweatshirt.jpg",
-    "secondaryImage": "assets/products/women/sweatshirts/gazebo-vintage-ecru-relaxed-fleece-sweatshirt.jpg",
+    "primaryImage": "assets/products/women/sweatshirts/gazebo-vintage-ecru-relaxed-fleece-sweatshirt.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/sweatshirts/gazebo-vintage-ecru-relaxed-fleece-sweatshirt.jpg?v=20261029",
     "description": "Minimalist relaxed crewneck sweatshirt in vintage off-white ecru crafted from heavyweight 320 GSM French terry cotton fleece.",
     "isBestseller": false,
     "isNew": false,
@@ -3106,8 +3106,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/shirts/gazebo-crisp-white-classic-tailored-shirt.jpg",
-      "secondary": "assets/products/women/shirts/gazebo-crisp-white-classic-tailored-shirt.jpg"
+      "primary": "assets/products/women/shirts/gazebo-crisp-white-classic-tailored-shirt.jpg?v=20261029",
+      "secondary": "assets/products/women/shirts/gazebo-crisp-white-classic-tailored-shirt.jpg?v=20261029"
     },
     "tags": [
       "Shirts",
@@ -3119,8 +3119,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Neutral Tones"
     ],
-    "primaryImage": "assets/products/women/shirts/gazebo-crisp-white-classic-tailored-shirt.jpg",
-    "secondaryImage": "assets/products/women/shirts/gazebo-crisp-white-classic-tailored-shirt.jpg",
+    "primaryImage": "assets/products/women/shirts/gazebo-crisp-white-classic-tailored-shirt.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/shirts/gazebo-crisp-white-classic-tailored-shirt.jpg?v=20261029",
     "description": "Essential classic tailored button-down shirt in crisp white poplin cotton featuring a structured spread collar and curved hem.",
     "isBestseller": true,
     "isNew": false,
@@ -3158,8 +3158,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/shirts/gazebo-sky-blue-striped-oversized-shirt.jpg",
-      "secondary": "assets/products/women/shirts/gazebo-sky-blue-striped-oversized-shirt.jpg"
+      "primary": "assets/products/women/shirts/gazebo-sky-blue-striped-oversized-shirt.jpg?v=20261029",
+      "secondary": "assets/products/women/shirts/gazebo-sky-blue-striped-oversized-shirt.jpg?v=20261029"
     },
     "tags": [
       "Shirts",
@@ -3172,8 +3172,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Relaxed Fit"
     ],
-    "primaryImage": "assets/products/women/shirts/gazebo-sky-blue-striped-oversized-shirt.jpg",
-    "secondaryImage": "assets/products/women/shirts/gazebo-sky-blue-striped-oversized-shirt.jpg",
+    "primaryImage": "assets/products/women/shirts/gazebo-sky-blue-striped-oversized-shirt.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/shirts/gazebo-sky-blue-striped-oversized-shirt.jpg?v=20261029",
     "description": "Breezy oversized cotton poplin shirt featuring classic sky-blue Bengal vertical stripes, drop shoulders, and chest patch pocket.",
     "isBestseller": true,
     "isNew": false,
@@ -3211,8 +3211,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/shirts/gazebo-olive-green-dual-pocket-utility-shirt.jpg",
-      "secondary": "assets/products/women/shirts/gazebo-olive-green-dual-pocket-utility-shirt.jpg"
+      "primary": "assets/products/women/shirts/gazebo-olive-green-dual-pocket-utility-shirt.jpg?v=20261029",
+      "secondary": "assets/products/women/shirts/gazebo-olive-green-dual-pocket-utility-shirt.jpg?v=20261029"
     },
     "tags": [
       "Shirts",
@@ -3224,8 +3224,8 @@ window.GAZEBO_PRODUCTS = [
       "Neutral Tones",
       "Relaxed Fit"
     ],
-    "primaryImage": "assets/products/women/shirts/gazebo-olive-green-dual-pocket-utility-shirt.jpg",
-    "secondaryImage": "assets/products/women/shirts/gazebo-olive-green-dual-pocket-utility-shirt.jpg",
+    "primaryImage": "assets/products/women/shirts/gazebo-olive-green-dual-pocket-utility-shirt.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/shirts/gazebo-olive-green-dual-pocket-utility-shirt.jpg?v=20261029",
     "description": "Structured workwear-inspired overshirt in olive green heavy cotton twill with dual button-flap chest pockets and point collar.",
     "isBestseller": false,
     "isNew": false,
@@ -3263,8 +3263,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/shirts/gazebo-jet-black-satin-concealed-placket-shirt.jpg",
-      "secondary": "assets/products/women/shirts/gazebo-jet-black-satin-concealed-placket-shirt.jpg"
+      "primary": "assets/products/women/shirts/gazebo-jet-black-satin-concealed-placket-shirt.jpg?v=20261029",
+      "secondary": "assets/products/women/shirts/gazebo-jet-black-satin-concealed-placket-shirt.jpg?v=20261029"
     },
     "tags": [
       "Shirts",
@@ -3275,8 +3275,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Dark Shades"
     ],
-    "primaryImage": "assets/products/women/shirts/gazebo-jet-black-satin-concealed-placket-shirt.jpg",
-    "secondaryImage": "assets/products/women/shirts/gazebo-jet-black-satin-concealed-placket-shirt.jpg",
+    "primaryImage": "assets/products/women/shirts/gazebo-jet-black-satin-concealed-placket-shirt.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/shirts/gazebo-jet-black-satin-concealed-placket-shirt.jpg?v=20261029",
     "description": "Luxe fluid satin shirt in jet black tailored with a sleek concealed button placket, sharp spread collar, and elongated cuffs.",
     "isBestseller": false,
     "isNew": false,
@@ -3314,8 +3314,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/dresses/gazebo-sage-green-belted-midi-shirt-dress.jpg",
-      "secondary": "assets/products/women/dresses/gazebo-sage-green-belted-midi-shirt-dress.jpg"
+      "primary": "assets/products/women/dresses/gazebo-sage-green-belted-midi-shirt-dress.jpg?v=20261029",
+      "secondary": "assets/products/women/dresses/gazebo-sage-green-belted-midi-shirt-dress.jpg?v=20261029"
     },
     "tags": [
       "Dresses",
@@ -3327,8 +3327,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Neutral Tones"
     ],
-    "primaryImage": "assets/products/women/dresses/gazebo-sage-green-belted-midi-shirt-dress.jpg",
-    "secondaryImage": "assets/products/women/dresses/gazebo-sage-green-belted-midi-shirt-dress.jpg",
+    "primaryImage": "assets/products/women/dresses/gazebo-sage-green-belted-midi-shirt-dress.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/dresses/gazebo-sage-green-belted-midi-shirt-dress.jpg?v=20261029",
     "description": "Sophisticated A-line midi shirt dress in sage green woven cotton featuring a point collar, button-down placket, and detachable self-tie waist belt.",
     "isBestseller": true,
     "isNew": false,
@@ -3366,8 +3366,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/dresses/gazebo-champagne-satin-cowl-neck-midi-dress.jpg",
-      "secondary": "assets/products/women/dresses/gazebo-champagne-satin-cowl-neck-midi-dress.jpg"
+      "primary": "assets/products/women/dresses/gazebo-champagne-satin-cowl-neck-midi-dress.jpg?v=20261029",
+      "secondary": "assets/products/women/dresses/gazebo-champagne-satin-cowl-neck-midi-dress.jpg?v=20261029"
     },
     "tags": [
       "Dresses",
@@ -3379,8 +3379,8 @@ window.GAZEBO_PRODUCTS = [
       "Bestseller",
       "Neutral Tones"
     ],
-    "primaryImage": "assets/products/women/dresses/gazebo-champagne-satin-cowl-neck-midi-dress.jpg",
-    "secondaryImage": "assets/products/women/dresses/gazebo-champagne-satin-cowl-neck-midi-dress.jpg",
+    "primaryImage": "assets/products/women/dresses/gazebo-champagne-satin-cowl-neck-midi-dress.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/dresses/gazebo-champagne-satin-cowl-neck-midi-dress.jpg?v=20261029",
     "description": "Glamorous bias-cut slip midi dress in lustrous champagne satin designed with a graceful draped cowl neckline and delicate adjustable spaghetti straps.",
     "isBestseller": true,
     "isNew": false,
@@ -3418,8 +3418,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/dresses/gazebo-ivory-floral-puff-sleeve-midi-dress.jpg",
-      "secondary": "assets/products/women/dresses/gazebo-ivory-floral-puff-sleeve-midi-dress.jpg"
+      "primary": "assets/products/women/dresses/gazebo-ivory-floral-puff-sleeve-midi-dress.jpg?v=20261029",
+      "secondary": "assets/products/women/dresses/gazebo-ivory-floral-puff-sleeve-midi-dress.jpg?v=20261029"
     },
     "tags": [
       "Dresses",
@@ -3431,8 +3431,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Neutral Tones"
     ],
-    "primaryImage": "assets/products/women/dresses/gazebo-ivory-floral-puff-sleeve-midi-dress.jpg",
-    "secondaryImage": "assets/products/women/dresses/gazebo-ivory-floral-puff-sleeve-midi-dress.jpg",
+    "primaryImage": "assets/products/women/dresses/gazebo-ivory-floral-puff-sleeve-midi-dress.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/dresses/gazebo-ivory-floral-puff-sleeve-midi-dress.jpg?v=20261029",
     "description": "Charming cottagecore midi dress in ivory cotton printed with delicate floral sprigs, tailored with a square neckline and romantic puff sleeves.",
     "isBestseller": false,
     "isNew": false,
@@ -3470,8 +3470,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/jeans/gazebo-light-wash-high-rise-wide-leg-jeans.jpg",
-      "secondary": "assets/products/women/jeans/gazebo-light-wash-high-rise-wide-leg-jeans.jpg"
+      "primary": "assets/products/women/jeans/gazebo-light-wash-high-rise-wide-leg-jeans.jpg?v=20261029",
+      "secondary": "assets/products/women/jeans/gazebo-light-wash-high-rise-wide-leg-jeans.jpg?v=20261029"
     },
     "tags": [
       "Jeans",
@@ -3483,8 +3483,8 @@ window.GAZEBO_PRODUCTS = [
       "Light Shades",
       "Relaxed Fit"
     ],
-    "primaryImage": "assets/products/women/jeans/gazebo-light-wash-high-rise-wide-leg-jeans.jpg",
-    "secondaryImage": "assets/products/women/jeans/gazebo-light-wash-high-rise-wide-leg-jeans.jpg",
+    "primaryImage": "assets/products/women/jeans/gazebo-light-wash-high-rise-wide-leg-jeans.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/jeans/gazebo-light-wash-high-rise-wide-leg-jeans.jpg?v=20261029",
     "description": "Vintage-inspired high-rise jeans crafted from premium rigid-feel cotton denim with a relaxed wide-leg cut and an authentic light blue wash.",
     "isBestseller": true,
     "isNew": false,
@@ -3522,8 +3522,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/jeans/gazebo-ecru-high-rise-straight-fit-jeans.jpg",
-      "secondary": "assets/products/women/jeans/gazebo-ecru-high-rise-straight-fit-jeans.jpg"
+      "primary": "assets/products/women/jeans/gazebo-ecru-high-rise-straight-fit-jeans.jpg?v=20261029",
+      "secondary": "assets/products/women/jeans/gazebo-ecru-high-rise-straight-fit-jeans.jpg?v=20261029"
     },
     "tags": [
       "Jeans",
@@ -3535,8 +3535,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Neutral Tones"
     ],
-    "primaryImage": "assets/products/women/jeans/gazebo-ecru-high-rise-straight-fit-jeans.jpg",
-    "secondaryImage": "assets/products/women/jeans/gazebo-ecru-high-rise-straight-fit-jeans.jpg",
+    "primaryImage": "assets/products/women/jeans/gazebo-ecru-high-rise-straight-fit-jeans.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/jeans/gazebo-ecru-high-rise-straight-fit-jeans.jpg?v=20261029",
     "description": "Clean minimal high-rise jeans in neutral ecru denim tailored with a flattering straight-leg silhouette and timeless five-pocket construction.",
     "isBestseller": true,
     "isNew": false,
@@ -3574,8 +3574,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/jeans/gazebo-dark-indigo-classic-straight-jeans.jpg",
-      "secondary": "assets/products/women/jeans/gazebo-dark-indigo-classic-straight-jeans.jpg"
+      "primary": "assets/products/women/jeans/gazebo-dark-indigo-classic-straight-jeans.jpg?v=20261029",
+      "secondary": "assets/products/women/jeans/gazebo-dark-indigo-classic-straight-jeans.jpg?v=20261029"
     },
     "tags": [
       "Jeans",
@@ -3586,8 +3586,8 @@ window.GAZEBO_PRODUCTS = [
       "Straight Leg",
       "Raw Denim"
     ],
-    "primaryImage": "assets/products/women/jeans/gazebo-dark-indigo-classic-straight-jeans.jpg",
-    "secondaryImage": "assets/products/women/jeans/gazebo-dark-indigo-classic-straight-jeans.jpg",
+    "primaryImage": "assets/products/women/jeans/gazebo-dark-indigo-classic-straight-jeans.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/jeans/gazebo-dark-indigo-classic-straight-jeans.jpg?v=20261029",
     "description": "Essential mid-rise straight-leg jeans in rich dark indigo rinse denim finished with signature contrast tobacco topstitching and five pockets.",
     "isBestseller": false,
     "isNew": false,
@@ -3625,8 +3625,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/wide-leg-pants/gazebo-black-pleated-high-rise-wide-leg-pants.jpg",
-      "secondary": "assets/products/women/wide-leg-pants/gazebo-black-pleated-high-rise-wide-leg-pants.jpg"
+      "primary": "assets/products/women/wide-leg-pants/gazebo-black-pleated-high-rise-wide-leg-pants.jpg?v=20261029",
+      "secondary": "assets/products/women/wide-leg-pants/gazebo-black-pleated-high-rise-wide-leg-pants.jpg?v=20261029"
     },
     "tags": [
       "Wide Leg Pants",
@@ -3638,8 +3638,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Dark Shades"
     ],
-    "primaryImage": "assets/products/women/wide-leg-pants/gazebo-black-pleated-high-rise-wide-leg-pants.jpg",
-    "secondaryImage": "assets/products/women/wide-leg-pants/gazebo-black-pleated-high-rise-wide-leg-pants.jpg",
+    "primaryImage": "assets/products/women/wide-leg-pants/gazebo-black-pleated-high-rise-wide-leg-pants.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/wide-leg-pants/gazebo-black-pleated-high-rise-wide-leg-pants.jpg?v=20261029",
     "description": "Tailored high-rise wide leg pants featuring front double pleats, clean crease detailing, and a fluid drape suited for polished day-to-night styling.",
     "isBestseller": true,
     "isNew": false,
@@ -3677,8 +3677,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/wide-leg-pants/gazebo-natural-linen-relaxed-wide-leg-pants.jpg",
-      "secondary": "assets/products/women/wide-leg-pants/gazebo-natural-linen-relaxed-wide-leg-pants.jpg"
+      "primary": "assets/products/women/wide-leg-pants/gazebo-natural-linen-relaxed-wide-leg-pants.jpg?v=20261029",
+      "secondary": "assets/products/women/wide-leg-pants/gazebo-natural-linen-relaxed-wide-leg-pants.jpg?v=20261029"
     },
     "tags": [
       "Wide Leg Pants",
@@ -3691,8 +3691,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Neutral Tones"
     ],
-    "primaryImage": "assets/products/women/wide-leg-pants/gazebo-natural-linen-relaxed-wide-leg-pants.jpg",
-    "secondaryImage": "assets/products/women/wide-leg-pants/gazebo-natural-linen-relaxed-wide-leg-pants.jpg",
+    "primaryImage": "assets/products/women/wide-leg-pants/gazebo-natural-linen-relaxed-wide-leg-pants.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/wide-leg-pants/gazebo-natural-linen-relaxed-wide-leg-pants.jpg?v=20261029",
     "description": "Breezy natural linen-blend wide leg trousers styled with subtle pleats, slanted pockets, and an effortless relaxed silhouette in neutral oatmeal.",
     "isBestseller": true,
     "isNew": false,
@@ -3730,8 +3730,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/wide-leg-pants/gazebo-charcoal-tailored-pleat-wide-leg-pants.jpg",
-      "secondary": "assets/products/women/wide-leg-pants/gazebo-charcoal-tailored-pleat-wide-leg-pants.jpg"
+      "primary": "assets/products/women/wide-leg-pants/gazebo-charcoal-tailored-pleat-wide-leg-pants.jpg?v=20261029",
+      "secondary": "assets/products/women/wide-leg-pants/gazebo-charcoal-tailored-pleat-wide-leg-pants.jpg?v=20261029"
     },
     "tags": [
       "Wide Leg Pants",
@@ -3742,8 +3742,8 @@ window.GAZEBO_PRODUCTS = [
       "Dark Shades",
       "Charcoal Grey"
     ],
-    "primaryImage": "assets/products/women/wide-leg-pants/gazebo-charcoal-tailored-pleat-wide-leg-pants.jpg",
-    "secondaryImage": "assets/products/women/wide-leg-pants/gazebo-charcoal-tailored-pleat-wide-leg-pants.jpg",
+    "primaryImage": "assets/products/women/wide-leg-pants/gazebo-charcoal-tailored-pleat-wide-leg-pants.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/wide-leg-pants/gazebo-charcoal-tailored-pleat-wide-leg-pants.jpg?v=20261029",
     "description": "Sophisticated charcoal wide leg trousers cut from premium drape fabric featuring tailored deep pleats, front belt loops, and crisp center press creases.",
     "isBestseller": false,
     "isNew": false,
@@ -3781,8 +3781,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/cargos/gazebo-navy-blue-high-rise-utility-cargo.jpg",
-      "secondary": "assets/products/women/cargos/gazebo-navy-blue-high-rise-utility-cargo.jpg"
+      "primary": "assets/products/women/cargos/gazebo-navy-blue-high-rise-utility-cargo.jpg?v=20261029",
+      "secondary": "assets/products/women/cargos/gazebo-navy-blue-high-rise-utility-cargo.jpg?v=20261029"
     },
     "tags": [
       "Cargos",
@@ -3794,8 +3794,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Dark Shades"
     ],
-    "primaryImage": "assets/products/women/cargos/gazebo-navy-blue-high-rise-utility-cargo.jpg",
-    "secondaryImage": "assets/products/women/cargos/gazebo-navy-blue-high-rise-utility-cargo.jpg",
+    "primaryImage": "assets/products/women/cargos/gazebo-navy-blue-high-rise-utility-cargo.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/cargos/gazebo-navy-blue-high-rise-utility-cargo.jpg?v=20261029",
     "description": "Modern high-rise cargo trousers in durable deep navy cotton twill featuring dual side flap utility pockets, belt loops, and clean straight-leg styling.",
     "isBestseller": true,
     "isNew": false,
@@ -3833,8 +3833,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/cargos/gazebo-olive-green-parachute-drawstring-cargo.jpg",
-      "secondary": "assets/products/women/cargos/gazebo-olive-green-parachute-drawstring-cargo.jpg"
+      "primary": "assets/products/women/cargos/gazebo-olive-green-parachute-drawstring-cargo.jpg?v=20261029",
+      "secondary": "assets/products/women/cargos/gazebo-olive-green-parachute-drawstring-cargo.jpg?v=20261029"
     },
     "tags": [
       "Cargos",
@@ -3847,8 +3847,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Neutral Tones"
     ],
-    "primaryImage": "assets/products/women/cargos/gazebo-olive-green-parachute-drawstring-cargo.jpg",
-    "secondaryImage": "assets/products/women/cargos/gazebo-olive-green-parachute-drawstring-cargo.jpg",
+    "primaryImage": "assets/products/women/cargos/gazebo-olive-green-parachute-drawstring-cargo.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/cargos/gazebo-olive-green-parachute-drawstring-cargo.jpg?v=20261029",
     "description": "Lightweight streetwear parachute cargo pants in washed olive green designed with adjustable toggle bungee cuffs, spacious flap pockets, and a relaxed fit.",
     "isBestseller": true,
     "isNew": false,
@@ -3886,8 +3886,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/cargos/gazebo-sand-khaki-straight-utility-cargo.jpg",
-      "secondary": "assets/products/women/cargos/gazebo-sand-khaki-straight-utility-cargo.jpg"
+      "primary": "assets/products/women/cargos/gazebo-sand-khaki-straight-utility-cargo.jpg?v=20261029",
+      "secondary": "assets/products/women/cargos/gazebo-sand-khaki-straight-utility-cargo.jpg?v=20261029"
     },
     "tags": [
       "Cargos",
@@ -3898,8 +3898,8 @@ window.GAZEBO_PRODUCTS = [
       "Neutral Tones",
       "Paneled"
     ],
-    "primaryImage": "assets/products/women/cargos/gazebo-sand-khaki-straight-utility-cargo.jpg",
-    "secondaryImage": "assets/products/women/cargos/gazebo-sand-khaki-straight-utility-cargo.jpg",
+    "primaryImage": "assets/products/women/cargos/gazebo-sand-khaki-straight-utility-cargo.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/cargos/gazebo-sand-khaki-straight-utility-cargo.jpg?v=20261029",
     "description": "Structured utility cargo pants in neutral sand khaki tailored from premium cotton weave with articulated knee paneling and classic twin bellows pockets.",
     "isBestseller": false,
     "isNew": false,
@@ -3937,8 +3937,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/jackets/gazebo-jet-black-minimalist-bomber-jacket.jpg",
-      "secondary": "assets/products/women/jackets/gazebo-jet-black-minimalist-bomber-jacket.jpg"
+      "primary": "assets/products/women/jackets/gazebo-jet-black-minimalist-bomber-jacket.jpg?v=20261029",
+      "secondary": "assets/products/women/jackets/gazebo-jet-black-minimalist-bomber-jacket.jpg?v=20261029"
     },
     "tags": [
       "Jackets",
@@ -3950,8 +3950,8 @@ window.GAZEBO_PRODUCTS = [
       "Dark Shades",
       "Relaxed Fit"
     ],
-    "primaryImage": "assets/products/women/jackets/gazebo-jet-black-minimalist-bomber-jacket.jpg",
-    "secondaryImage": "assets/products/women/jackets/gazebo-jet-black-minimalist-bomber-jacket.jpg",
+    "primaryImage": "assets/products/women/jackets/gazebo-jet-black-minimalist-bomber-jacket.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/jackets/gazebo-jet-black-minimalist-bomber-jacket.jpg?v=20261029",
     "description": "Clean minimalist streetwear bomber jacket in sleek jet black featuring full zip closure, ribbed cuffs and hem, and relaxed drop-shoulder tailoring.",
     "isBestseller": true,
     "isNew": false,
@@ -3989,8 +3989,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/jackets/gazebo-charcoal-quilted-stand-collar-puffer-jacket.jpg",
-      "secondary": "assets/products/women/jackets/gazebo-charcoal-quilted-stand-collar-puffer-jacket.jpg"
+      "primary": "assets/products/women/jackets/gazebo-charcoal-quilted-stand-collar-puffer-jacket.jpg?v=20261029",
+      "secondary": "assets/products/women/jackets/gazebo-charcoal-quilted-stand-collar-puffer-jacket.jpg?v=20261029"
     },
     "tags": [
       "Jackets",
@@ -4001,8 +4001,8 @@ window.GAZEBO_PRODUCTS = [
       "Bestseller",
       "Dark Shades"
     ],
-    "primaryImage": "assets/products/women/jackets/gazebo-charcoal-quilted-stand-collar-puffer-jacket.jpg",
-    "secondaryImage": "assets/products/women/jackets/gazebo-charcoal-quilted-stand-collar-puffer-jacket.jpg",
+    "primaryImage": "assets/products/women/jackets/gazebo-charcoal-quilted-stand-collar-puffer-jacket.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/jackets/gazebo-charcoal-quilted-stand-collar-puffer-jacket.jpg?v=20261029",
     "description": "Insulated horizontal-quilted streetwear puffer jacket in dark charcoal grey with protective stand collar, full front zip, and cozy heat-retentive fill.",
     "isBestseller": true,
     "isNew": false,
@@ -4040,8 +4040,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/jackets/gazebo-olive-green-four-pocket-utility-field-jacket.jpg",
-      "secondary": "assets/products/women/jackets/gazebo-olive-green-four-pocket-utility-field-jacket.jpg"
+      "primary": "assets/products/women/jackets/gazebo-olive-green-four-pocket-utility-field-jacket.jpg?v=20261029",
+      "secondary": "assets/products/women/jackets/gazebo-olive-green-four-pocket-utility-field-jacket.jpg?v=20261029"
     },
     "tags": [
       "Jackets",
@@ -4051,8 +4051,8 @@ window.GAZEBO_PRODUCTS = [
       "Cargo",
       "Neutral Tones"
     ],
-    "primaryImage": "assets/products/women/jackets/gazebo-olive-green-four-pocket-utility-field-jacket.jpg",
-    "secondaryImage": "assets/products/women/jackets/gazebo-olive-green-four-pocket-utility-field-jacket.jpg",
+    "primaryImage": "assets/products/women/jackets/gazebo-olive-green-four-pocket-utility-field-jacket.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/jackets/gazebo-olive-green-four-pocket-utility-field-jacket.jpg?v=20261029",
     "description": "Military-inspired field utility jacket in washed olive green crafted from structured cotton drill with quadruple flap bellows pockets and internal drawstring waist.",
     "isBestseller": false,
     "isNew": false,
@@ -4090,8 +4090,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/skirts/gazebo-sand-beige-pleated-tennis-mini-skirt.jpg",
-      "secondary": "assets/products/women/skirts/gazebo-sand-beige-pleated-tennis-mini-skirt.jpg"
+      "primary": "assets/products/women/skirts/gazebo-sand-beige-pleated-tennis-mini-skirt.jpg?v=20261029",
+      "secondary": "assets/products/women/skirts/gazebo-sand-beige-pleated-tennis-mini-skirt.jpg?v=20261029"
     },
     "tags": [
       "Skirts",
@@ -4104,8 +4104,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Neutral Tones"
     ],
-    "primaryImage": "assets/products/women/skirts/gazebo-sand-beige-pleated-tennis-mini-skirt.jpg",
-    "secondaryImage": "assets/products/women/skirts/gazebo-sand-beige-pleated-tennis-mini-skirt.jpg",
+    "primaryImage": "assets/products/women/skirts/gazebo-sand-beige-pleated-tennis-mini-skirt.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/skirts/gazebo-sand-beige-pleated-tennis-mini-skirt.jpg?v=20261029",
     "description": "Chic pleated tennis mini skirt in neutral sand beige designed with crisp knife pleats, comfortable high waist, and built-in stretch lining.",
     "isBestseller": true,
     "isNew": false,
@@ -4143,8 +4143,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/skirts/gazebo-olive-green-cargo-utility-mini-skirt.jpg",
-      "secondary": "assets/products/women/skirts/gazebo-olive-green-cargo-utility-mini-skirt.jpg"
+      "primary": "assets/products/women/skirts/gazebo-olive-green-cargo-utility-mini-skirt.jpg?v=20261029",
+      "secondary": "assets/products/women/skirts/gazebo-olive-green-cargo-utility-mini-skirt.jpg?v=20261029"
     },
     "tags": [
       "Skirts",
@@ -4156,8 +4156,8 @@ window.GAZEBO_PRODUCTS = [
       "Under ₹1,499",
       "Neutral Tones"
     ],
-    "primaryImage": "assets/products/women/skirts/gazebo-olive-green-cargo-utility-mini-skirt.jpg",
-    "secondaryImage": "assets/products/women/skirts/gazebo-olive-green-cargo-utility-mini-skirt.jpg",
+    "primaryImage": "assets/products/women/skirts/gazebo-olive-green-cargo-utility-mini-skirt.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/skirts/gazebo-olive-green-cargo-utility-mini-skirt.jpg?v=20261029",
     "description": "Streetwear cargo utility mini skirt in washed olive green crafted from structured cotton twill with twin bellows flap pockets and clean waistband.",
     "isBestseller": true,
     "isNew": false,
@@ -4195,8 +4195,8 @@ window.GAZEBO_PRODUCTS = [
       "XL"
     ],
     "images": {
-      "primary": "assets/products/women/skirts/gazebo-jet-black-minimalist-column-skirt.jpg",
-      "secondary": "assets/products/women/skirts/gazebo-jet-black-minimalist-column-skirt.jpg"
+      "primary": "assets/products/women/skirts/gazebo-jet-black-minimalist-column-skirt.jpg?v=20261029",
+      "secondary": "assets/products/women/skirts/gazebo-jet-black-minimalist-column-skirt.jpg?v=20261029"
     },
     "tags": [
       "Skirts",
@@ -4206,8 +4206,8 @@ window.GAZEBO_PRODUCTS = [
       "Midi Skirt",
       "Dark Shades"
     ],
-    "primaryImage": "assets/products/women/skirts/gazebo-jet-black-minimalist-column-skirt.jpg",
-    "secondaryImage": "assets/products/women/skirts/gazebo-jet-black-minimalist-column-skirt.jpg",
+    "primaryImage": "assets/products/women/skirts/gazebo-jet-black-minimalist-column-skirt.jpg?v=20261029",
+    "secondaryImage": "assets/products/women/skirts/gazebo-jet-black-minimalist-column-skirt.jpg?v=20261029",
     "description": "Sleek minimalist column skirt in deep jet black tailored from smooth stretch fabric featuring clean silhouette, side slit, and comfortable concealed waist.",
     "isBestseller": false,
     "isNew": false,
@@ -4215,3 +4215,30 @@ window.GAZEBO_PRODUCTS = [
     "reviewsCount": 92
   }
 ];
+
+// Active runtime normalizer ensuring all product image URLs have version parameter
+(function() {
+  var V = '?v=20261029';
+  function addV(url) {
+    if (!url || typeof url !== 'string' || url.indexOf('?v=') !== -1) return url;
+    return url + V;
+  }
+  if (typeof window !== 'undefined' && Array.isArray(window.GAZEBO_PRODUCTS)) {
+    window.GAZEBO_PRODUCTS.forEach(function(p) {
+      p.primaryImage = addV(p.primaryImage);
+      p.secondaryImage = addV(p.secondaryImage);
+      if (p.images) {
+        p.images.primary = addV(p.images.primary);
+        p.images.secondary = addV(p.images.secondary);
+      }
+      if (Array.isArray(p.gallery)) {
+        p.gallery = p.gallery.map(addV);
+      }
+    });
+  }
+})();
+
+window.getProductById = function(id) {
+  if (!window.GAZEBO_PRODUCTS) return null;
+  return window.GAZEBO_PRODUCTS.find(function(p) { return p.id === id; }) || window.GAZEBO_PRODUCTS[0];
+};
