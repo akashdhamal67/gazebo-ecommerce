@@ -3744,5 +3744,161 @@
     "isNew": false,
     "rating": 4.7,
     "reviewsCount": 89
+  },
+  {
+    "id": "gz-w-cg-01",
+    "name": "Gazebo Deep Navy High-Rise Utility Cargo",
+    "section": "women",
+    "subCategory": "cargos",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 1299,
+    "mrp": 2199,
+    "originalPrice": 2199,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Deep Navy",
+        "hex": "#1F2E47"
+      },
+      {
+        "name": "Midnight Blue",
+        "hex": "#152033"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/cargos/gazebo-navy-blue-high-rise-utility-cargo.jpg",
+      "secondary": "assets/products/women/cargos/gazebo-navy-blue-high-rise-utility-cargo.jpg"
+    },
+    "tags": [
+      "Cargos",
+      "Cargo",
+      "Utility",
+      "High Rise",
+      "Straight Leg",
+      "Bestseller",
+      "Under ₹1,499",
+      "Dark Shades"
+    ],
+    "primaryImage": "assets/products/women/cargos/gazebo-navy-blue-high-rise-utility-cargo.jpg",
+    "secondaryImage": "assets/products/women/cargos/gazebo-navy-blue-high-rise-utility-cargo.jpg",
+    "description": "Modern high-rise cargo trousers in durable deep navy cotton twill featuring dual side flap utility pockets, belt loops, and clean straight-leg styling.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 154
+  },
+  {
+    "id": "gz-w-cg-02",
+    "name": "Gazebo Olive Green Parachute Drawstring Cargo",
+    "section": "women",
+    "subCategory": "cargos",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 999,
+    "mrp": 1699,
+    "originalPrice": 1699,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Olive Green",
+        "hex": "#6B7A54"
+      },
+      {
+        "name": "Military Khaki",
+        "hex": "#556342"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/cargos/gazebo-olive-green-parachute-drawstring-cargo.jpg",
+      "secondary": "assets/products/women/cargos/gazebo-olive-green-parachute-drawstring-cargo.jpg"
+    },
+    "tags": [
+      "Cargos",
+      "Cargo",
+      "Parachute",
+      "Drawstring",
+      "Olive Green",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499",
+      "Neutral Tones"
+    ],
+    "primaryImage": "assets/products/women/cargos/gazebo-olive-green-parachute-drawstring-cargo.jpg",
+    "secondaryImage": "assets/products/women/cargos/gazebo-olive-green-parachute-drawstring-cargo.jpg",
+    "description": "Lightweight streetwear parachute cargo pants in washed olive green designed with adjustable toggle bungee cuffs, spacious flap pockets, and a relaxed fit.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 172
+  },
+  {
+    "id": "gz-w-cg-03",
+    "name": "Gazebo Sand Khaki Straight Utility Cargo",
+    "section": "women",
+    "subCategory": "cargos",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 1599,
+    "mrp": 2599,
+    "originalPrice": 2599,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Sand Khaki",
+        "hex": "#CBB394"
+      },
+      {
+        "name": "Desert Beige",
+        "hex": "#BFA482"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/cargos/gazebo-sand-khaki-straight-utility-cargo.jpg",
+      "secondary": "assets/products/women/cargos/gazebo-sand-khaki-straight-utility-cargo.jpg"
+    },
+    "tags": [
+      "Cargos",
+      "Cargo",
+      "Utility",
+      "Straight Leg",
+      "Khaki",
+      "Neutral Tones",
+      "Paneled"
+    ],
+    "primaryImage": "assets/products/women/cargos/gazebo-sand-khaki-straight-utility-cargo.jpg",
+    "secondaryImage": "assets/products/women/cargos/gazebo-sand-khaki-straight-utility-cargo.jpg",
+    "description": "Structured utility cargo pants in neutral sand khaki tailored from premium cotton weave with articulated knee paneling and classic twin bellows pockets.",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.7,
+    "reviewsCount": 88
   }
 ]

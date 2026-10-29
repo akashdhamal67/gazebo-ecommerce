@@ -1406,6 +1406,9 @@ function getChipsForTab(section, tabId) {
   if (section === 'women' && tabId === 'wide-leg-pants') {
     return ['All', 'High Rise', 'Pleated', 'Bestsellers', 'Under ₹999', 'Under ₹1,499', 'Dark Shades', 'Neutral Tones'];
   }
+  if (section === 'women' && tabId === 'cargos') {
+    return ['All', 'Cargo Utility', 'Parachute', 'Bestsellers', 'Under ₹999', 'Under ₹1,499', 'Dark Shades', 'Neutral Tones'];
+  }
   if (['t-shirts', 'oversized-tees', 'polos'].includes(tabId)) {
     return ['All', 'Oversized', 'Regular Fit', 'Drop Shoulder', 'Heavyweight', 'Textured', 'Neutral Tones', 'Dark Shades'];
   }
@@ -1657,8 +1660,10 @@ function renderWearContent(section) {
       prodsToShow = allProds.filter(p => p.section === 'women' && p.subCategory === 'jeans');
     } else if (activeTab === 'wide-leg-pants') {
       prodsToShow = allProds.filter(p => p.section === 'women' && p.subCategory === 'wide-leg-pants');
+    } else if (activeTab === 'cargos') {
+      prodsToShow = allProds.filter(p => p.section === 'women' && p.subCategory === 'cargos');
     } else {
-      // Any other tab (cargos, etc.) must stay completely empty
+      // Any other tab (jackets, skirts, etc.) must stay completely empty
       container.innerHTML = '';
       return;
     }
