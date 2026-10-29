@@ -2806,5 +2806,161 @@
     "isNew": false,
     "rating": 4.8,
     "reviewsCount": 65
+  },
+  {
+    "id": "gz-w-hd-01",
+    "name": "Gazebo Jet Black Heavyweight Fleece Hoodie",
+    "section": "women",
+    "subCategory": "hoodies",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 1199,
+    "mrp": 1999,
+    "originalPrice": 1999,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Jet Black",
+        "hex": "#1A1A1D"
+      },
+      {
+        "name": "Washed Charcoal",
+        "hex": "#2C2C30"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/hoodies/gazebo-jet-black-heavyweight-fleece-hoodie.jpg",
+      "secondary": "assets/products/women/hoodies/gazebo-jet-black-heavyweight-fleece-hoodie.jpg"
+    },
+    "tags": [
+      "Hoodies",
+      "Hoodie",
+      "Heavyweight Fleece",
+      "Kangaroo Pocket",
+      "Jet Black",
+      "Bestseller",
+      "Under ₹1,499",
+      "Dark Shades",
+      "Relaxed Fit"
+    ],
+    "primaryImage": "assets/products/women/hoodies/gazebo-jet-black-heavyweight-fleece-hoodie.jpg",
+    "secondaryImage": "assets/products/women/hoodies/gazebo-jet-black-heavyweight-fleece-hoodie.jpg",
+    "description": "Streetwear drop-shoulder fleece hoodie in deep jet black featuring a structured double-layer hood and classic kangaroo pouch pocket.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 128
+  },
+  {
+    "id": "gz-w-hd-02",
+    "name": "Gazebo Forest Green Embroidered Fleece Hoodie",
+    "section": "women",
+    "subCategory": "hoodies",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 1299,
+    "mrp": 2199,
+    "originalPrice": 2199,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Forest Green",
+        "hex": "#2C5D3F"
+      },
+      {
+        "name": "Pine Green",
+        "hex": "#1E432D"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/hoodies/gazebo-forest-green-embroidered-fleece-hoodie.jpg",
+      "secondary": "assets/products/women/hoodies/gazebo-forest-green-embroidered-fleece-hoodie.jpg"
+    },
+    "tags": [
+      "Hoodies",
+      "Hoodie",
+      "Embroidered",
+      "Forest Green",
+      "Bestseller",
+      "Under ₹1,499",
+      "Relaxed Fit"
+    ],
+    "primaryImage": "assets/products/women/hoodies/gazebo-forest-green-embroidered-fleece-hoodie.jpg",
+    "secondaryImage": "assets/products/women/hoodies/gazebo-forest-green-embroidered-fleece-hoodie.jpg",
+    "description": "Plush fleece pullover hoodie in deep forest green detailed with an artisanal chest embroidery emblem and cozy pouch pocket.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 112
+  },
+  {
+    "id": "gz-w-hd-03",
+    "name": "Gazebo Oatmeal Beige Drawstring Fleece Hoodie",
+    "section": "women",
+    "subCategory": "hoodies",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 999,
+    "mrp": 1599,
+    "originalPrice": 1599,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Oatmeal Beige",
+        "hex": "#E7DEC8"
+      },
+      {
+        "name": "Warm Ecru",
+        "hex": "#D8CEB6"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/hoodies/gazebo-oatmeal-beige-drawstring-fleece-hoodie.jpg",
+      "secondary": "assets/products/women/hoodies/gazebo-oatmeal-beige-drawstring-fleece-hoodie.jpg"
+    },
+    "tags": [
+      "Hoodies",
+      "Hoodie",
+      "Drawstring",
+      "Oatmeal Beige",
+      "Neutral Tones",
+      "Under ₹999",
+      "Under ₹1,499",
+      "Relaxed Fit"
+    ],
+    "primaryImage": "assets/products/women/hoodies/gazebo-oatmeal-beige-drawstring-fleece-hoodie.jpg",
+    "secondaryImage": "assets/products/women/hoodies/gazebo-oatmeal-beige-drawstring-fleece-hoodie.jpg",
+    "description": "Essential relaxed hoodie in soft oatmeal beige crafted from brushed fleece with tonal tubular drawstrings and ribbed trims.",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 94
   }
 ]
