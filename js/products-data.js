@@ -3073,5 +3073,213 @@ window.GAZEBO_PRODUCTS = [
     "isNew": false,
     "rating": 4.8,
     "reviewsCount": 89
+  },
+  {
+    "id": "gz-w-sh-01",
+    "name": "Gazebo Crisp White Classic Tailored Shirt",
+    "section": "women",
+    "subCategory": "shirts",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 899,
+    "mrp": 1499,
+    "originalPrice": 1499,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Crisp White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Soft Ecru",
+        "hex": "#F5F5F3"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/shirts/gazebo-crisp-white-classic-tailored-shirt.jpg",
+      "secondary": "assets/products/women/shirts/gazebo-crisp-white-classic-tailored-shirt.jpg"
+    },
+    "tags": [
+      "Shirts",
+      "Shirt",
+      "Classic Fit",
+      "Crisp White",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499",
+      "Neutral Tones"
+    ],
+    "primaryImage": "assets/products/women/shirts/gazebo-crisp-white-classic-tailored-shirt.jpg",
+    "secondaryImage": "assets/products/women/shirts/gazebo-crisp-white-classic-tailored-shirt.jpg",
+    "description": "Essential classic tailored button-down shirt in crisp white poplin cotton featuring a structured spread collar and curved hem.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 134
+  },
+  {
+    "id": "gz-w-sh-02",
+    "name": "Gazebo Sky Blue Striped Oversized Shirt",
+    "section": "women",
+    "subCategory": "shirts",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 999,
+    "mrp": 1699,
+    "originalPrice": 1699,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Sky Blue",
+        "hex": "#8AAFD0"
+      },
+      {
+        "name": "Crisp White",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/shirts/gazebo-sky-blue-striped-oversized-shirt.jpg",
+      "secondary": "assets/products/women/shirts/gazebo-sky-blue-striped-oversized-shirt.jpg"
+    },
+    "tags": [
+      "Shirts",
+      "Shirt",
+      "Oversized",
+      "Striped",
+      "Sky Blue",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499",
+      "Relaxed Fit"
+    ],
+    "primaryImage": "assets/products/women/shirts/gazebo-sky-blue-striped-oversized-shirt.jpg",
+    "secondaryImage": "assets/products/women/shirts/gazebo-sky-blue-striped-oversized-shirt.jpg",
+    "description": "Breezy oversized cotton poplin shirt featuring classic sky-blue Bengal vertical stripes, drop shoulders, and chest patch pocket.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 116
+  },
+  {
+    "id": "gz-w-sh-03",
+    "name": "Gazebo Olive Green Dual-Pocket Utility Shirt",
+    "section": "women",
+    "subCategory": "shirts",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 1199,
+    "mrp": 1999,
+    "originalPrice": 1999,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Olive Green",
+        "hex": "#656E4B"
+      },
+      {
+        "name": "Muted Khaki",
+        "hex": "#7C835F"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/shirts/gazebo-olive-green-dual-pocket-utility-shirt.jpg",
+      "secondary": "assets/products/women/shirts/gazebo-olive-green-dual-pocket-utility-shirt.jpg"
+    },
+    "tags": [
+      "Shirts",
+      "Shirt",
+      "Utility",
+      "Dual Pocket",
+      "Olive Green",
+      "Under ₹1,499",
+      "Neutral Tones",
+      "Relaxed Fit"
+    ],
+    "primaryImage": "assets/products/women/shirts/gazebo-olive-green-dual-pocket-utility-shirt.jpg",
+    "secondaryImage": "assets/products/women/shirts/gazebo-olive-green-dual-pocket-utility-shirt.jpg",
+    "description": "Structured workwear-inspired overshirt in olive green heavy cotton twill with dual button-flap chest pockets and point collar.",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 98
+  },
+  {
+    "id": "gz-w-sh-04",
+    "name": "Gazebo Jet Black Satin Concealed Placket Shirt",
+    "section": "women",
+    "subCategory": "shirts",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 1299,
+    "mrp": 2199,
+    "originalPrice": 2199,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Jet Black",
+        "hex": "#19191B"
+      },
+      {
+        "name": "Satin Sheen Charcoal",
+        "hex": "#29292C"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/shirts/gazebo-jet-black-satin-concealed-placket-shirt.jpg",
+      "secondary": "assets/products/women/shirts/gazebo-jet-black-satin-concealed-placket-shirt.jpg"
+    },
+    "tags": [
+      "Shirts",
+      "Shirt",
+      "Classic Fit",
+      "Satin",
+      "Jet Black",
+      "Under ₹1,499",
+      "Dark Shades"
+    ],
+    "primaryImage": "assets/products/women/shirts/gazebo-jet-black-satin-concealed-placket-shirt.jpg",
+    "secondaryImage": "assets/products/women/shirts/gazebo-jet-black-satin-concealed-placket-shirt.jpg",
+    "description": "Luxe fluid satin shirt in jet black tailored with a sleek concealed button placket, sharp spread collar, and elongated cuffs.",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 105
   }
 ];
