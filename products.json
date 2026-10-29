@@ -2962,5 +2962,111 @@
     "isNew": false,
     "rating": 4.8,
     "reviewsCount": 94
+  },
+  {
+    "id": "gz-w-sw-01",
+    "name": "Gazebo Jet Black Crewneck Drop-Shoulder Sweatshirt",
+    "section": "women",
+    "subCategory": "sweatshirts",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 1099,
+    "mrp": 1799,
+    "originalPrice": 1799,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Jet Black",
+        "hex": "#18181A"
+      },
+      {
+        "name": "Washed Charcoal",
+        "hex": "#2B2B2E"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/sweatshirts/gazebo-jet-black-crewneck-drop-shoulder-sweatshirt.jpg",
+      "secondary": "assets/products/women/sweatshirts/gazebo-jet-black-crewneck-drop-shoulder-sweatshirt.jpg"
+    },
+    "tags": [
+      "Sweatshirts",
+      "Sweatshirt",
+      "Crewneck",
+      "Drop Shoulder",
+      "Jet Black",
+      "Bestseller",
+      "Under ₹1,499",
+      "Dark Shades",
+      "Relaxed Fit"
+    ],
+    "primaryImage": "assets/products/women/sweatshirts/gazebo-jet-black-crewneck-drop-shoulder-sweatshirt.jpg",
+    "secondaryImage": "assets/products/women/sweatshirts/gazebo-jet-black-crewneck-drop-shoulder-sweatshirt.jpg",
+    "description": "Essential drop-shoulder fleece sweatshirt in jet black featuring a fine-ribbed crewneck collar, cuffs, and hem in an effortless relaxed silhouette.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 118
+  },
+  {
+    "id": "gz-w-sw-02",
+    "name": "Gazebo Vintage Ecru Relaxed Fleece Sweatshirt",
+    "section": "women",
+    "subCategory": "sweatshirts",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 999,
+    "mrp": 1599,
+    "originalPrice": 1599,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Vintage Ecru",
+        "hex": "#F5EEDB"
+      },
+      {
+        "name": "Cream Beige",
+        "hex": "#E6DFCC"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/sweatshirts/gazebo-vintage-ecru-relaxed-fleece-sweatshirt.jpg",
+      "secondary": "assets/products/women/sweatshirts/gazebo-vintage-ecru-relaxed-fleece-sweatshirt.jpg"
+    },
+    "tags": [
+      "Sweatshirts",
+      "Sweatshirt",
+      "Crewneck",
+      "Drop Shoulder",
+      "Vintage Ecru",
+      "Neutral Tones",
+      "Under ₹999",
+      "Under ₹1,499",
+      "Relaxed Fit"
+    ],
+    "primaryImage": "assets/products/women/sweatshirts/gazebo-vintage-ecru-relaxed-fleece-sweatshirt.jpg",
+    "secondaryImage": "assets/products/women/sweatshirts/gazebo-vintage-ecru-relaxed-fleece-sweatshirt.jpg",
+    "description": "Minimalist relaxed crewneck sweatshirt in vintage off-white ecru crafted from heavyweight 320 GSM French terry cotton fleece.",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 89
   }
 ]
