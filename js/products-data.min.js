@@ -2671,5 +2671,208 @@ window.GAZEBO_PRODUCTS = [
     "isNew": false,
     "rating": 4.7,
     "reviewsCount": 58
+  },
+  {
+    "id": "gz-w-co-01",
+    "name": "Gazebo Sage Green Linen Co-ord Set",
+    "section": "women",
+    "subCategory": "co-ords",
+    "category": "womens",
+    "gender": ["women"],
+    "price": 1299,
+    "mrp": 2099,
+    "originalPrice": 2099,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Sage Green",
+        "hex": "#8FA89B"
+      },
+      {
+        "name": "Mint Slate",
+        "hex": "#7B9487"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/co-ords/gazebo-sage-green-linen-coord-set.jpg",
+      "secondary": "assets/products/women/co-ords/gazebo-sage-green-linen-coord-set.jpg"
+    },
+    "tags": [
+      "Co-ords",
+      "Co-ord Set",
+      "Linen Blend",
+      "Matching Sets",
+      "Relaxed Fit",
+      "Sage Green",
+      "Bestseller",
+      "Under ₹1,499",
+      "Neutral Tones"
+    ],
+    "primaryImage": "assets/products/women/co-ords/gazebo-sage-green-linen-coord-set.jpg",
+    "secondaryImage": "assets/products/women/co-ords/gazebo-sage-green-linen-coord-set.jpg",
+    "description": "Relaxed European linen button-down shirt paired with tailored straight-leg trousers in earthy sage green.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 86
+  },
+  {
+    "id": "gz-w-co-02",
+    "name": "Gazebo Oatmeal Beige Linen Co-ord Set",
+    "section": "women",
+    "subCategory": "co-ords",
+    "category": "womens",
+    "gender": ["women"],
+    "price": 1499,
+    "mrp": 2499,
+    "originalPrice": 2499,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Oatmeal Beige",
+        "hex": "#D9CFBE"
+      },
+      {
+        "name": "Sand Dune",
+        "hex": "#C8BDA9"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/co-ords/gazebo-oatmeal-beige-linen-coord-set.jpg",
+      "secondary": "assets/products/women/co-ords/gazebo-oatmeal-beige-linen-coord-set.jpg"
+    },
+    "tags": [
+      "Co-ords",
+      "Co-ord Set",
+      "Linen Blend",
+      "Matching Sets",
+      "Relaxed Fit",
+      "Oatmeal Beige",
+      "Bestseller",
+      "Under ₹1,499",
+      "Neutral Tones"
+    ],
+    "primaryImage": "assets/products/women/co-ords/gazebo-oatmeal-beige-linen-coord-set.jpg",
+    "secondaryImage": "assets/products/women/co-ords/gazebo-oatmeal-beige-linen-coord-set.jpg",
+    "description": "Breezy natural flax linen shirt and matching straight trousers in warm oatmeal beige for effortless resort elegance.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 78
+  },
+  {
+    "id": "gz-w-co-03",
+    "name": "Gazebo Midnight Black Tailored Co-ord Set",
+    "section": "women",
+    "subCategory": "co-ords",
+    "category": "womens",
+    "gender": ["women"],
+    "price": 1699,
+    "mrp": 2699,
+    "originalPrice": 2699,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Midnight Black",
+        "hex": "#18181A"
+      },
+      {
+        "name": "Charcoal Black",
+        "hex": "#28282B"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/co-ords/gazebo-midnight-black-tailored-coord-set.jpg",
+      "secondary": "assets/products/women/co-ords/gazebo-midnight-black-tailored-coord-set.jpg"
+    },
+    "tags": [
+      "Co-ords",
+      "Co-ord Set",
+      "Matching Sets",
+      "Tailored",
+      "Minimalist",
+      "Midnight Black",
+      "Dark Shades",
+      "Crepe"
+    ],
+    "primaryImage": "assets/products/women/co-ords/gazebo-midnight-black-tailored-coord-set.jpg",
+    "secondaryImage": "assets/products/women/co-ords/gazebo-midnight-black-tailored-coord-set.jpg",
+    "description": "Chic minimalist short-sleeve top with center seam detailing and pleated front trousers in deep midnight black.",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.7,
+    "reviewsCount": 64
+  },
+  {
+    "id": "gz-w-co-04",
+    "name": "Gazebo Sky Blue Resort Linen Co-ord Set",
+    "section": "women",
+    "subCategory": "co-ords",
+    "category": "womens",
+    "gender": ["women"],
+    "price": 999,
+    "mrp": 1599,
+    "originalPrice": 1599,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Sky Blue",
+        "hex": "#9DC0E2"
+      },
+      {
+        "name": "Powder Blue",
+        "hex": "#B8D4EF"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/co-ords/gazebo-sky-blue-resort-coord-set.jpg",
+      "secondary": "assets/products/women/co-ords/gazebo-sky-blue-resort-coord-set.jpg"
+    },
+    "tags": [
+      "Co-ords",
+      "Co-ord Set",
+      "Resort Shirt",
+      "Matching Sets",
+      "Shorts",
+      "Sky Blue",
+      "Under ₹999",
+      "Under ₹1,499",
+      "Relaxed Fit"
+    ],
+    "primaryImage": "assets/products/women/co-ords/gazebo-sky-blue-resort-coord-set.jpg",
+    "secondaryImage": "assets/products/women/co-ords/gazebo-sky-blue-resort-coord-set.jpg",
+    "description": "Airy short-sleeve collared resort shirt paired with matching high-waisted shorts in refreshing pastel sky blue.",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 92
   }
 ];

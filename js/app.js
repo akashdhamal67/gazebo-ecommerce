@@ -1412,7 +1412,10 @@ function getChipsForTab(section, tabId) {
   if (['wide-leg-pants', 'skirts'].includes(tabId)) {
     return ['All', 'Wide Leg', 'Straight Fit', 'Baggy', 'Relaxed', 'Cargo Utility', 'Dark Wash', 'Light Wash'];
   }
-  if (['co-ords', 'sets', 'dresses'].includes(tabId)) {
+  if (tabId === 'co-ords') {
+    return ['All', 'Matching Sets', 'Relaxed Fit', 'Bestsellers', 'Under ₹999', 'Under ₹1,499', 'Neutral Tones', 'Dark Shades'];
+  }
+  if (['sets', 'dresses'].includes(tabId)) {
     return ['All', 'Matching Sets', 'Casual', 'Evening', 'Minimalist', 'Floral & Print', 'New In'];
   }
   if (['boys', 'girls'].includes(tabId)) {
@@ -1587,6 +1590,33 @@ function renderWearContent(section) {
       prodsToShow = allProds.filter(p => p.section === 'men' && p.subCategory === 'shorts');
     } else {
       // Any other tab must stay completely empty
+      container.innerHTML = '';
+      return;
+    }
+
+    const filtered = filterProductsByChip(prodsToShow, activeChip);
+
+    if (filtered.length) {
+      container.innerHTML = `
+        <div class="plp-grid-4">
+          ${filtered.map(p => renderProductCardHtml(p)).join('')}
+        </div>
+      `;
+    } else {
+      container.innerHTML = `<div style="padding: 60px 0; text-align: center; color: #888888; font-size: 0.88rem;">No products found matching "${activeChip}".</div>`;
+    }
+    return;
+  }
+  if (section === 'women') {
+    const activeTab = WEAR_STATE[section]?.activeTab || 'all';
+    const activeChip = WEAR_STATE[section]?.activeChip || 'All Items';
+    const allProds = window.GAZEBO_PRODUCTS || [];
+
+    let prodsToShow = [];
+    if (activeTab === 'all' || activeTab === 'co-ords') {
+      prodsToShow = allProds.filter(p => p.section === 'women' && p.subCategory === 'co-ords');
+    } else {
+      // Any other tab (tops, dresses, etc.) must stay completely empty
       container.innerHTML = '';
       return;
     }
