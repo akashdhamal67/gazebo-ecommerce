@@ -3592,5 +3592,161 @@ window.GAZEBO_PRODUCTS = [
     "isNew": false,
     "rating": 4.7,
     "reviewsCount": 98
+  },
+  {
+    "id": "gz-w-wlp-01",
+    "name": "Gazebo Black Pleated High-Rise Wide Leg Pants",
+    "section": "women",
+    "subCategory": "wide-leg-pants",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 1299,
+    "mrp": 2199,
+    "originalPrice": 2199,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Jet Black",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Charcoal Black",
+        "hex": "#2B2B2B"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/wide-leg-pants/gazebo-black-pleated-high-rise-wide-leg-pants.jpg",
+      "secondary": "assets/products/women/wide-leg-pants/gazebo-black-pleated-high-rise-wide-leg-pants.jpg"
+    },
+    "tags": [
+      "Wide Leg Pants",
+      "Wide Leg",
+      "High Rise",
+      "Pleated",
+      "Tailored",
+      "Bestseller",
+      "Under ₹1,499",
+      "Dark Shades"
+    ],
+    "primaryImage": "assets/products/women/wide-leg-pants/gazebo-black-pleated-high-rise-wide-leg-pants.jpg",
+    "secondaryImage": "assets/products/women/wide-leg-pants/gazebo-black-pleated-high-rise-wide-leg-pants.jpg",
+    "description": "Tailored high-rise wide leg pants featuring front double pleats, clean crease detailing, and a fluid drape suited for polished day-to-night styling.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 142
+  },
+  {
+    "id": "gz-w-wlp-02",
+    "name": "Gazebo Natural Linen Relaxed Wide Leg Pants",
+    "section": "women",
+    "subCategory": "wide-leg-pants",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 999,
+    "mrp": 1699,
+    "originalPrice": 1699,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Oatmeal Beige",
+        "hex": "#D3BA9E"
+      },
+      {
+        "name": "Flax Cream",
+        "hex": "#E8DCBE"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/wide-leg-pants/gazebo-natural-linen-relaxed-wide-leg-pants.jpg",
+      "secondary": "assets/products/women/wide-leg-pants/gazebo-natural-linen-relaxed-wide-leg-pants.jpg"
+    },
+    "tags": [
+      "Wide Leg Pants",
+      "Wide Leg",
+      "Linen",
+      "High Rise",
+      "Pleated",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499",
+      "Neutral Tones"
+    ],
+    "primaryImage": "assets/products/women/wide-leg-pants/gazebo-natural-linen-relaxed-wide-leg-pants.jpg",
+    "secondaryImage": "assets/products/women/wide-leg-pants/gazebo-natural-linen-relaxed-wide-leg-pants.jpg",
+    "description": "Breezy natural linen-blend wide leg trousers styled with subtle pleats, slanted pockets, and an effortless relaxed silhouette in neutral oatmeal.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 168
+  },
+  {
+    "id": "gz-w-wlp-03",
+    "name": "Gazebo Charcoal Tailored Pleat Wide Leg Pants",
+    "section": "women",
+    "subCategory": "wide-leg-pants",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 1599,
+    "mrp": 2599,
+    "originalPrice": 2599,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Charcoal Grey",
+        "hex": "#52565E"
+      },
+      {
+        "name": "Slate Grey",
+        "hex": "#6B7280"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/wide-leg-pants/gazebo-charcoal-tailored-pleat-wide-leg-pants.jpg",
+      "secondary": "assets/products/women/wide-leg-pants/gazebo-charcoal-tailored-pleat-wide-leg-pants.jpg"
+    },
+    "tags": [
+      "Wide Leg Pants",
+      "Wide Leg",
+      "Tailored",
+      "Pleated",
+      "High Rise",
+      "Dark Shades",
+      "Charcoal Grey"
+    ],
+    "primaryImage": "assets/products/women/wide-leg-pants/gazebo-charcoal-tailored-pleat-wide-leg-pants.jpg",
+    "secondaryImage": "assets/products/women/wide-leg-pants/gazebo-charcoal-tailored-pleat-wide-leg-pants.jpg",
+    "description": "Sophisticated charcoal wide leg trousers cut from premium drape fabric featuring tailored deep pleats, front belt loops, and crisp center press creases.",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.7,
+    "reviewsCount": 89
   }
 ];
