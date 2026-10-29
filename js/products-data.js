@@ -2537,6 +2537,142 @@ window.GAZEBO_PRODUCTS = [
     "reviewsCount": 52
   },
   {
+    "id": "gz-m-shrt-01",
+    "name": "Gazebo Olive Utility Cargo Shorts",
+    "section": "men",
+    "subCategory": "shorts",
+    "price": 899,
+    "mrp": 1499,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Olive Green",
+        "hex": "#626D4D"
+      },
+      {
+        "name": "Army Green",
+        "hex": "#4F593E"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/shorts/gazebo-olive-utility-cargo-shorts.jpg",
+      "secondary": "assets/products/men/shorts/gazebo-olive-utility-cargo-shorts.jpg"
+    },
+    "tags": [
+      "Shorts",
+      "Cargo Utility",
+      "Olive Green",
+      "Cotton Twill",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499",
+      "Relaxed Fit"
+    ],
+    "primaryImage": "assets/products/men/shorts/gazebo-olive-utility-cargo-shorts.jpg",
+    "description": "Durable cotton twill utility cargo shorts in earthy olive green, equipped with deep flap pockets, sturdy belt loops, and relaxed summer silhouette.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 82
+  },
+  {
+    "id": "gz-m-shrt-02",
+    "name": "Gazebo Midnight Black Drawstring Shorts",
+    "section": "men",
+    "subCategory": "shorts",
+    "price": 699,
+    "mrp": 1199,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Midnight Black",
+        "hex": "#1A1A1C"
+      },
+      {
+        "name": "Pitch Black",
+        "hex": "#101011"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/shorts/gazebo-midnight-black-drawstring-shorts.jpg",
+      "secondary": "assets/products/men/shorts/gazebo-midnight-black-drawstring-shorts.jpg"
+    },
+    "tags": [
+      "Shorts",
+      "Drawstring",
+      "Midnight Black",
+      "Relaxed Fit",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499",
+      "Dark Shades"
+    ],
+    "primaryImage": "assets/products/men/shorts/gazebo-midnight-black-drawstring-shorts.jpg",
+    "description": "Essential relaxed drawstring shorts in deep midnight black, featuring an elastic waistband with adjustable cords and breathable cotton weave.",
+    "category": "men",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 94
+  },
+  {
+    "id": "gz-m-shrt-03",
+    "name": "Gazebo Tailored Khaki Chino Shorts",
+    "section": "men",
+    "subCategory": "shorts",
+    "price": 1099,
+    "mrp": 1799,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Tailored Khaki",
+        "hex": "#CBB89D"
+      },
+      {
+        "name": "Sand Dune",
+        "hex": "#DFD3BF"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/men/shorts/gazebo-tailored-khaki-chino-shorts.jpg",
+      "secondary": "assets/products/men/shorts/gazebo-tailored-khaki-chino-shorts.jpg"
+    },
+    "tags": [
+      "Shorts",
+      "Chino",
+      "Tailored",
+      "Khaki",
+      "Under ₹1,499",
+      "Neutral Tones"
+    ],
+    "primaryImage": "assets/products/men/shorts/gazebo-tailored-khaki-chino-shorts.jpg",
+    "description": "Smart tailored chino shorts in classic khaki cotton blend, cut with clean flat front, slanted side pockets, and neat button closure.",
+    "category": "men",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.7,
+    "reviewsCount": 58
+  },
+  {
     "id": "gz-w-co-o-01",
     "name": "Pure Linen Camp Shirt & Trouser Set",
     "section": "women",

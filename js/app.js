@@ -1406,7 +1406,10 @@ function getChipsForTab(section, tabId) {
   if (tabId === 'sweaters') {
     return ['All', 'Cable Knit', 'Crew Neck', 'V-Neck', 'Bestsellers', 'Under ₹999', 'Under ₹1,499', 'Dark Shades'];
   }
-  if (['wide-leg-pants', 'shorts', 'skirts'].includes(tabId)) {
+  if (tabId === 'shorts') {
+    return ['All', 'Cargo Utility', 'Drawstring', 'Chino', 'Bestsellers', 'Under ₹999', 'Under ₹1,499', 'Dark Shades'];
+  }
+  if (['wide-leg-pants', 'skirts'].includes(tabId)) {
     return ['All', 'Wide Leg', 'Straight Fit', 'Baggy', 'Relaxed', 'Cargo Utility', 'Dark Wash', 'Light Wash'];
   }
   if (['co-ords', 'sets', 'dresses'].includes(tabId)) {
@@ -1580,8 +1583,10 @@ function renderWearContent(section) {
       prodsToShow = allProds.filter(p => p.section === 'men' && p.subCategory === 'jackets');
     } else if (activeTab === 'sweaters') {
       prodsToShow = allProds.filter(p => p.section === 'men' && p.subCategory === 'sweaters');
+    } else if (activeTab === 'shorts') {
+      prodsToShow = allProds.filter(p => p.section === 'men' && p.subCategory === 'shorts');
     } else {
-      // Any other tab (shorts, etc.) must stay completely empty
+      // Any other tab must stay completely empty
       container.innerHTML = '';
       return;
     }
