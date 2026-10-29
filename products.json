@@ -3276,5 +3276,161 @@
     "isNew": false,
     "rating": 4.9,
     "reviewsCount": 105
+  },
+  {
+    "id": "gz-w-dr-01",
+    "name": "Gazebo Sage Green Belted Midi Shirt Dress",
+    "section": "women",
+    "subCategory": "dresses",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 1299,
+    "mrp": 2199,
+    "originalPrice": 2199,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Sage Green",
+        "hex": "#8FA391"
+      },
+      {
+        "name": "Muted Olive",
+        "hex": "#7C8F7E"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/dresses/gazebo-sage-green-belted-midi-shirt-dress.jpg",
+      "secondary": "assets/products/women/dresses/gazebo-sage-green-belted-midi-shirt-dress.jpg"
+    },
+    "tags": [
+      "Dresses",
+      "Dress",
+      "Midi Dress",
+      "Shirt Dress",
+      "Sage Green",
+      "Bestseller",
+      "Under ₹1,499",
+      "Neutral Tones"
+    ],
+    "primaryImage": "assets/products/women/dresses/gazebo-sage-green-belted-midi-shirt-dress.jpg",
+    "secondaryImage": "assets/products/women/dresses/gazebo-sage-green-belted-midi-shirt-dress.jpg",
+    "description": "Sophisticated A-line midi shirt dress in sage green woven cotton featuring a point collar, button-down placket, and detachable self-tie waist belt.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 122
+  },
+  {
+    "id": "gz-w-dr-02",
+    "name": "Gazebo Champagne Satin Cowl Neck Midi Dress",
+    "section": "women",
+    "subCategory": "dresses",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 1799,
+    "mrp": 2999,
+    "originalPrice": 2999,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Champagne Gold",
+        "hex": "#D8C4AA"
+      },
+      {
+        "name": "Nude Beige",
+        "hex": "#CBB79B"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/dresses/gazebo-champagne-satin-cowl-neck-midi-dress.jpg",
+      "secondary": "assets/products/women/dresses/gazebo-champagne-satin-cowl-neck-midi-dress.jpg"
+    },
+    "tags": [
+      "Dresses",
+      "Dress",
+      "Midi Dress",
+      "Satin",
+      "Slip Dress",
+      "Champagne Gold",
+      "Bestseller",
+      "Neutral Tones"
+    ],
+    "primaryImage": "assets/products/women/dresses/gazebo-champagne-satin-cowl-neck-midi-dress.jpg",
+    "secondaryImage": "assets/products/women/dresses/gazebo-champagne-satin-cowl-neck-midi-dress.jpg",
+    "description": "Glamorous bias-cut slip midi dress in lustrous champagne satin designed with a graceful draped cowl neckline and delicate adjustable spaghetti straps.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 145
+  },
+  {
+    "id": "gz-w-dr-03",
+    "name": "Gazebo Ivory Floral Puff Sleeve Midi Dress",
+    "section": "women",
+    "subCategory": "dresses",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 999,
+    "mrp": 1599,
+    "originalPrice": 1599,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Ivory Cream",
+        "hex": "#FAF5EE"
+      },
+      {
+        "name": "Dusty Rose Floral",
+        "hex": "#C99A9A"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/dresses/gazebo-ivory-floral-puff-sleeve-midi-dress.jpg",
+      "secondary": "assets/products/women/dresses/gazebo-ivory-floral-puff-sleeve-midi-dress.jpg"
+    },
+    "tags": [
+      "Dresses",
+      "Dress",
+      "Midi Dress",
+      "Floral & Print",
+      "Ivory Cream",
+      "Under ₹999",
+      "Under ₹1,499",
+      "Neutral Tones"
+    ],
+    "primaryImage": "assets/products/women/dresses/gazebo-ivory-floral-puff-sleeve-midi-dress.jpg",
+    "secondaryImage": "assets/products/women/dresses/gazebo-ivory-floral-puff-sleeve-midi-dress.jpg",
+    "description": "Charming cottagecore midi dress in ivory cotton printed with delicate floral sprigs, tailored with a square neckline and romantic puff sleeves.",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 110
   }
 ]

@@ -1397,6 +1397,9 @@ function getChipsForTab(section, tabId) {
   if (section === 'women' && tabId === 'shirts') {
     return ['All', 'Classic Fit', 'Oversized', 'Bestsellers', 'Under ₹999', 'Under ₹1,499', 'Dark Shades', 'Neutral Tones'];
   }
+  if (section === 'women' && tabId === 'dresses') {
+    return ['All', 'Midi Dress', 'Floral & Print', 'Bestsellers', 'Under ₹999', 'Under ₹1,499', 'Neutral Tones'];
+  }
   if (['t-shirts', 'oversized-tees', 'polos'].includes(tabId)) {
     return ['All', 'Oversized', 'Regular Fit', 'Drop Shoulder', 'Heavyweight', 'Textured', 'Neutral Tones', 'Dark Shades'];
   }
@@ -1642,6 +1645,8 @@ function renderWearContent(section) {
       prodsToShow = allProds.filter(p => p.section === 'women' && p.subCategory === 'sweatshirts');
     } else if (activeTab === 'shirts') {
       prodsToShow = allProds.filter(p => p.section === 'women' && p.subCategory === 'shirts');
+    } else if (activeTab === 'dresses') {
+      prodsToShow = allProds.filter(p => p.section === 'women' && p.subCategory === 'dresses');
     } else {
       // Any other tab (dresses, jeans, etc.) must stay completely empty
       container.innerHTML = '';
