@@ -1875,10 +1875,11 @@ window.switchDepartment = function(dept, options) {
     }
   });
 
-  // Reset section to its "ALL" tab
+  // Set section tab: default to "ALL" unless options.tab is specified
+  const targetTab = options.tab || 'all';
   if (typeof window.switchWearTab === 'function') {
     try {
-      window.switchWearTab(dept, 'all');
+      window.switchWearTab(dept, targetTab);
     } catch(e) {}
   }
 
@@ -1920,20 +1921,38 @@ window.switchDepartment = function(dept, options) {
 function initDepartmentRouting() {
   function handleDeptClick(e) {
     const link = e.target.closest('a[href*="#men"], a[href*="#women"], a[href*="#kids"], [data-dept]');
-    if (!link) return;
+    if (link) {
+      let dept = link.dataset.dept;
+      if (!dept) {
+        const href = link.getAttribute('href') || '';
+        const match = href.match(/#(men|women|kids)$/);
+        if (match) dept = match[1];
+      }
 
-    let dept = link.dataset.dept;
-    if (!dept) {
-      const href = link.getAttribute('href') || '';
-      const match = href.match(/#(men|women|kids)$/);
-      if (match) dept = match[1];
+      if (dept && ['men', 'women', 'kids'].includes(dept)) {
+        const isShopPage = document.getElementById('section_men') !== null;
+        if (isShopPage) {
+          e.preventDefault();
+          const targetTab = link.dataset.tab || 'all';
+          window.switchDepartment(dept, { scroll: true, smooth: true, tab: targetTab });
+        }
+      }
+      return;
     }
 
-    if (dept && ['men', 'women', 'kids'].includes(dept)) {
-      const isShopPage = document.getElementById('section_men') !== null;
-      if (isShopPage) {
+    // Smoothly handle in-page anchor navigation to #mainContent (e.g. "Browse Categories")
+    const mainContentLink = e.target.closest('a[href="#mainContent"], a[href$="/#mainContent"], a[href$="index.html#mainContent"]');
+    if (mainContentLink) {
+      const mainEl = document.getElementById('mainContent');
+      if (mainEl) {
         e.preventDefault();
-        window.switchDepartment(dept, { scroll: true, smooth: true });
+        const headerOffset = 70;
+        const elementPosition = mainEl.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: Math.max(0, offsetPosition),
+          behavior: 'smooth'
+        });
       }
     }
   }
@@ -1944,6 +1963,17 @@ function initDepartmentRouting() {
     const hash = (window.location.hash || '').replace('#', '').toLowerCase();
     if (['men', 'women', 'kids'].includes(hash)) {
       window.switchDepartment(hash, { scroll: true, smooth: true });
+    } else if (hash === 'maincontent') {
+      const mainEl = document.getElementById('mainContent');
+      if (mainEl) {
+        const headerOffset = 70;
+        const elementPosition = mainEl.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: Math.max(0, offsetPosition),
+          behavior: 'smooth'
+        });
+      }
     }
   });
 
@@ -1951,6 +1981,19 @@ function initDepartmentRouting() {
   if (['men', 'women', 'kids'].includes(initialHash)) {
     setTimeout(() => {
       window.switchDepartment(initialHash, { scroll: true, smooth: false });
+    }, 120);
+  } else if (initialHash === 'maincontent') {
+    setTimeout(() => {
+      const mainEl = document.getElementById('mainContent');
+      if (mainEl) {
+        const headerOffset = 70;
+        const elementPosition = mainEl.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: Math.max(0, offsetPosition),
+          behavior: 'smooth'
+        });
+      }
     }, 120);
   } else {
     try {

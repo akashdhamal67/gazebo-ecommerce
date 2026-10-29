@@ -77,6 +77,7 @@ body {
 
 main, #mainContent {
   flex: 1 0 auto;
+  scroll-margin-top: 72px;
 }
 
 body.drawer-locked {
