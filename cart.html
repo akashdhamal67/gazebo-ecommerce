@@ -156,16 +156,79 @@
   </main>
 
   <!-- Site Footer -->
-  <footer class="site-footer" role="contentinfo">
+  <footer class="snitch-footer" role="contentinfo">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand"><a href="index.html"><img src="images/logo.png" alt="Gazebo Clothing" width="56" height="56" class="brand-logo-img" /></a><p>Gazebo Garments &amp; Accessories — Established 1979, M.G. Road, Pune.</p></div>
-        <div><h4 class="footer-col-title">Shop</h4><ul class="footer-links-list"><li><a href="men.html" class="footer-link-item">Men</a></li><li><a href="women.html" class="footer-link-item">Women</a></li><li><a href="kids.html" class="footer-link-item">Kids</a></li></ul></div>
-        <div><h4 class="footer-col-title">About</h4><ul class="footer-links-list"><li><a href="about.html" class="footer-link-item">Heritage Story</a></li><li><a href="contact.html" class="footer-link-item">Store Locator</a></li></ul></div>
-        <div><h4 class="footer-col-title">Customer Care</h4><ul class="footer-links-list"><li><a href="shipping-returns.html" class="footer-link-item">Shipping</a></li><li><a href="faq.html" class="footer-link-item">FAQ</a></li></ul></div>
-        <div><h4 class="footer-col-title">Store</h4><p style="font-size: 0.84rem; color: var(--color-gray-dark);">M.G. Road, Camp, Pune 411001</p></div>
+      <div class="snitch-footer__grid">
+        <!-- Col 1: Categories -->
+        <div>
+          <h4 class="snitch-footer__col-title">Collection</h4>
+          <ul class="snitch-footer__links">
+            <li><a href="men.html" class="snitch-footer__link">Men's Streetwear</a></li>
+            <li><a href="women.html" class="snitch-footer__link">Women &amp; Girls</a></li>
+            <li><a href="kids.html" class="snitch-footer__link">Kids' Garments</a></li>
+            <li><a href="men.html" class="snitch-footer__link">Heavyweight Tees</a></li>
+            <li><a href="men.html" class="snitch-footer__link">Linen Overshirts</a></li>
+            <li><a href="men.html" class="snitch-footer__link">Cargos &amp; Trousers</a></li>
+            <li><a href="about.html" class="snitch-footer__link">Heritage 1979 Archive</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: Customer Care -->
+        <div>
+          <h4 class="snitch-footer__col-title">Customer Care</h4>
+          <ul class="snitch-footer__links">
+            <li><a href="javascript:void(0)" onclick="window.gazeboStore ? window.gazeboStore.showToast('Track order module ready.', 'info') : alert('Track order ready.')" class="snitch-footer__link">Track Order</a></li>
+            <li><a href="javascript:void(0)" onclick="window.gazeboStore ? window.gazeboStore.showToast('Easy 7-day exchanges available.', 'info') : alert('7-day exchange available.')" class="snitch-footer__link">Exchange &amp; Returns</a></li>
+            <li><a href="shipping-returns.html" class="snitch-footer__link">Shipping Information</a></li>
+            <li><a href="javascript:void(0)" onclick="window.openSizeGuideModal ? window.openSizeGuideModal() : null" class="snitch-footer__link">Size &amp; Fit Guide</a></li>
+            <li><a href="faq.html" class="snitch-footer__link">Frequently Asked Questions</a></li>
+            <li><a href="contact.html" class="snitch-footer__link">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Pune Flagship -->
+        <div>
+          <h4 class="snitch-footer__col-title">Pune Flagship</h4>
+          <ul class="snitch-footer__links">
+            <li style="color: rgba(255,255,255,0.85); font-weight: 700;">GAZEBO CLOTHING</li>
+            <li>M.G. Road, Camp, Pune</li>
+            <li>Maharashtra 411001, India</li>
+            <li style="margin-top: 6px; color: #EE5824; font-weight: 700;">Daily: 10:30 AM &ndash; 9:30 PM</li>
+            <li><a href="https://wa.me/912026130000" target="_blank" rel="noopener noreferrer" class="snitch-footer__link" style="color: #4CAF50; font-weight: 700;">WhatsApp: +91 20 2613 0000</a></li>
+            <li><a href="about.html" class="snitch-footer__link">Our Story (Since 1979)</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter & Social -->
+        <div>
+          <h4 class="snitch-footer__col-title">Stay In The Loop</h4>
+          <p class="snitch-footer__newsletter-desc">Subscribe to unlock private drops, archival restocks, and Pune flagship invitations.</p>
+          <form id="snitchFooterForm" class="snitch-footer__form" onsubmit="event.preventDefault(); window.gazeboStore ? window.gazeboStore.showToast('Thank you for subscribing!', 'success') : alert('Thank you for subscribing!'); this.reset();">
+            <input type="email" class="snitch-footer__input" placeholder="Enter your email" required />
+            <button type="submit" class="snitch-footer__submit">Join</button>
+          </form>
+          <div class="snitch-footer__social-row">
+            <a href="https://www.instagram.com/gazibo_clothing/" target="_blank" rel="noopener noreferrer" class="snitch-footer__social-btn" aria-label="Gazebo Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://wa.me/912026130000" target="_blank" rel="noopener noreferrer" class="snitch-footer__social-btn" aria-label="Gazebo WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"/></svg>
+            </a>
+            <a href="contact.html" class="snitch-footer__social-btn" aria-label="Store Location">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="footer-bottom-row"><div>© 2026 GAZEBO CLOTHING. All rights reserved. • Established 1979, Pune.</div></div>
+
+      <div class="snitch-footer__bottom">
+        <div>&copy; 2026 GAZEBO CLOTHING. All rights reserved. &bull; Established 1979 &bull; M.G. Road, Pune.</div>
+        <div style="display: flex; gap: 16px;">
+          <a href="privacy.html" class="snitch-footer__link">Privacy Policy</a>
+          <a href="terms.html" class="snitch-footer__link">Terms of Service</a>
+          <a href="sitemap.xml" class="snitch-footer__link">Sitemap</a>
+        </div>
+      </div>
     </div>
   </footer>
 

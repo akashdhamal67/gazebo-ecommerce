@@ -70,6 +70,13 @@ body {
   color: var(--gz-black);
   line-height: 1.5;
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main, #mainContent {
+  flex: 1 0 auto;
 }
 
 body.drawer-locked {
