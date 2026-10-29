@@ -259,24 +259,26 @@
 }
 
 /* Mobile Menu Drawer */
-.mobile-nav-drawer {
+.mobile-nav-drawer,
+.mobile-menu-drawer {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 85%;
+  width: min(340px, 86vw);
   max-width: 360px;
-  background-color: var(--color-white);
-  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
-  z-index: 210;
+  background-color: #FFFFFF !important;
+  box-shadow: 8px 0 32px rgba(0, 0, 0, 0.25) !important;
+  z-index: 2500 !important;
   transform: translateX(-100%);
-  transition: transform var(--trans-base);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
 }
 
-.mobile-nav-drawer.is-open {
-  transform: translateX(0);
+.mobile-nav-drawer.is-open,
+.mobile-menu-drawer.is-open {
+  transform: translateX(0) !important;
 }
 
 .mobile-drawer-header {
@@ -322,21 +324,25 @@
 }
 
 /* Drawer Overlay */
-.drawer-overlay {
+.drawer-overlay,
+.mobile-menu-overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.55) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
   opacity: 0;
   visibility: hidden;
-  transition: opacity var(--trans-base), visibility var(--trans-base);
-  z-index: 200;
+  pointer-events: none;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  z-index: 2400 !important;
 }
 
-.drawer-overlay.is-visible {
-  opacity: 1;
-  visibility: visible;
+.drawer-overlay.is-visible,
+.mobile-menu-overlay.is-visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
 }
 
 /* ==========================================================================

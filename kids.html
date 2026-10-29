@@ -242,7 +242,45 @@
   <div id="searchModal" class="search-modal" role="dialog" aria-modal="true"><div class="search-modal-header"><div class="container"><div class="search-input-wrap"><input id="searchInput" class="search-input" type="text" placeholder="Search catalog..." /><button id="searchCloseBtn" class="modal-close" style="position: static;">✕</button></div></div></div><div class="container"><div id="searchResults" class="search-results-list"></div></div></div>
   <div id="quickViewModal" class="modal-dialog" role="dialog" aria-modal="true"><button id="quickViewClose" class="modal-close">✕</button><div id="quickViewContent"></div></div>
   <div id="sizeGuideModal" class="modal-dialog" role="dialog" aria-modal="true"><button id="sizeGuideClose" class="modal-close">✕</button><h3 style="font-size: 1.3rem; font-weight: 800; text-transform: uppercase;">Size Guide</h3><table class="size-table"><thead><tr><th>Age/Size</th><th>Chest (in)</th><th>Height (cm)</th></tr></thead><tbody><tr><td>4-5Y</td><td>22 - 23"</td><td>104 - 110 cm</td></tr><tr><td>6-7Y</td><td>24 - 25"</td><td>116 - 122 cm</td></tr><tr><td>8-9Y</td><td>26 - 27"</td><td>128 - 134 cm</td></tr><tr><td>10-11Y</td><td>28 - 29"</td><td>140 - 146 cm</td></tr></tbody></table></div>
-  <aside id="mobileMenuDrawer" class="mobile-nav-drawer" aria-label="Mobile Navigation"><div class="mobile-drawer-header"><div style="display: flex; align-items: center; gap: 10px;"><img src="images/logo.png" alt="Gazebo" width="36" height="36" /><span style="font-weight: 900; font-size: 1.2rem;">GAZEBO</span></div><button id="mobileMenuClose" class="drawer-close">✕</button></div><div class="mobile-drawer-body"><div class="mobile-drawer-links"><a href="index.html#men" class="mobile-drawer-link" data-dept="men">Men's Apparel</a><a href="index.html#women" class="mobile-drawer-link" data-dept="women">Women &amp; Girls</a><a href="index.html#kids" class="mobile-drawer-link" data-dept="kids">Kids' Garments</a><a href="about.html" class="mobile-drawer-link">Heritage Story (1979)</a><a href="contact.html" class="mobile-drawer-link">Store Locator</a></div></div></aside>
+  <!-- Mobile Menu Drawer (Hamburger) -->
+  <aside id="mobileMenuDrawer" class="mobile-menu-drawer" aria-label="Navigation Menu">
+    <div class="mobile-menu-header">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <img src="assets/images/gazebo-logo-round.png" width="40" height="40" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;" alt="Gazebo" />
+        <img src="assets/images/gazebo-wordmark.png" alt="Gazebo®" style="height: 28px; width: auto; object-fit: contain; filter: brightness(0);" />
+      </div>
+      <button id="mobileMenuClose" class="drawer-close-btn" aria-label="Close menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-menu-body">
+      <div class="mobile-nav-group">
+        <div class="mobile-nav-group-title">Departments</div>
+        <div class="drawer-gender-tabs">
+          <a href="index.html#men" class="drawer-gender-tab" data-dept="men">MEN</a>
+          <a href="index.html#women" class="drawer-gender-tab" data-dept="women">WOMEN</a>
+          <a href="index.html#kids" class="drawer-gender-tab" data-dept="kids">KIDS</a>
+        </div>
+      </div>
+      <div class="mobile-nav-group">
+        <div class="mobile-nav-group-title">Shop Collection</div>
+        <div class="mobile-nav-links">
+          <a class="mobile-nav-link" href="index.html#men" data-dept="men"><span>Men's Streetwear</span><span>&rarr;</span></a>
+          <a class="mobile-nav-link" href="index.html#women" data-dept="women"><span>Women &amp; Girls</span><span>&rarr;</span></a>
+          <a class="mobile-nav-link" href="index.html#kids" data-dept="kids"><span>Kids' Garments</span><span>&rarr;</span></a>
+          <a class="mobile-nav-link" href="contact.html"><span>Store Locator &amp; Visit</span><span>&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-menu-footer">
+      <div style="font-size: 0.78rem; color: #666666; text-align: center; font-weight: 600;">
+        Pune's Family Fashion Landmark &bull; Estd. 1979 &bull; M.G. Road
+      </div>
+    </div>
+  </aside>
 
   <!-- Scripts -->
   <script src="js/products-data.js"></script>

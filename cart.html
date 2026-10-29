@@ -242,7 +242,45 @@
   <aside id="cartDrawer" class="slide-drawer" aria-label="Shopping Bag"><div class="drawer-header"><div class="drawer-title">Shopping Bag <span id="cartDrawerItemCount">(0)</span></div><button class="drawer-close" onclick="window.gazeboCart.closeCartDrawer()">✕</button></div><div class="drawer-body"><div id="cartDrawerEmpty" style="text-align: center; padding: 48px 16px;"><p style="color: var(--color-gray-med); margin-bottom: 16px;">Your bag is empty.</p></div><div id="cartDrawerItems"></div></div><div id="cartDrawerFooter" class="drawer-footer" style="display: none;"><a href="checkout.html" class="btn btn-accent w-100">Checkout</a></div></aside>
   <aside id="wishlistDrawer" class="slide-drawer" aria-label="Wishlist"><div class="drawer-header"><div class="drawer-title">Wishlist <span id="wishlistDrawerItemCount">(0)</span></div><button class="drawer-close" onclick="window.gazeboCart.closeWishlistDrawer()">✕</button></div><div class="drawer-body"><div id="wishlistDrawerEmpty" style="text-align: center; padding: 48px 16px;"><p>No items saved.</p></div><div id="wishlistDrawerItems"></div></div></aside>
   <div id="searchModal" class="search-modal" role="dialog" aria-modal="true"><div class="search-modal-header"><div class="container"><div class="search-input-wrap"><input id="searchInput" class="search-input" type="text" placeholder="Search catalog..." /><button id="searchCloseBtn" class="modal-close" style="position: static;">✕</button></div></div></div><div class="container"><div id="searchResults" class="search-results-list"></div></div></div>
-  <aside id="mobileMenuDrawer" class="mobile-nav-drawer" aria-label="Mobile Navigation"><div class="mobile-drawer-header"><div style="display: flex; align-items: center; gap: 10px;"><img src="images/logo.png" alt="Gazebo" width="36" height="36" /><span style="font-weight: 900; font-size: 1.2rem;">GAZEBO</span></div><button id="mobileMenuClose" class="drawer-close">✕</button></div><div class="mobile-drawer-body"><div class="mobile-drawer-links"><a href="index.html#men" class="mobile-drawer-link" data-dept="men">Men</a><a href="index.html#women" class="mobile-drawer-link" data-dept="women">Women</a><a href="index.html#kids" class="mobile-drawer-link" data-dept="kids">Kids</a><a href="about.html" class="mobile-drawer-link">Heritage</a><a href="contact.html" class="mobile-drawer-link">Contact</a></div></div></aside>
+  <!-- Mobile Menu Drawer (Hamburger) -->
+  <aside id="mobileMenuDrawer" class="mobile-menu-drawer" aria-label="Navigation Menu">
+    <div class="mobile-menu-header">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <img src="assets/images/gazebo-logo-round.png" width="40" height="40" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;" alt="Gazebo" />
+        <img src="assets/images/gazebo-wordmark.png" alt="Gazebo®" style="height: 28px; width: auto; object-fit: contain; filter: brightness(0);" />
+      </div>
+      <button id="mobileMenuClose" class="drawer-close-btn" aria-label="Close menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-menu-body">
+      <div class="mobile-nav-group">
+        <div class="mobile-nav-group-title">Departments</div>
+        <div class="drawer-gender-tabs">
+          <a href="index.html#men" class="drawer-gender-tab" data-dept="men">MEN</a>
+          <a href="index.html#women" class="drawer-gender-tab" data-dept="women">WOMEN</a>
+          <a href="index.html#kids" class="drawer-gender-tab" data-dept="kids">KIDS</a>
+        </div>
+      </div>
+      <div class="mobile-nav-group">
+        <div class="mobile-nav-group-title">Shop Collection</div>
+        <div class="mobile-nav-links">
+          <a class="mobile-nav-link" href="index.html#men" data-dept="men"><span>Men's Streetwear</span><span>&rarr;</span></a>
+          <a class="mobile-nav-link" href="index.html#women" data-dept="women"><span>Women &amp; Girls</span><span>&rarr;</span></a>
+          <a class="mobile-nav-link" href="index.html#kids" data-dept="kids"><span>Kids' Garments</span><span>&rarr;</span></a>
+          <a class="mobile-nav-link" href="contact.html"><span>Store Locator &amp; Visit</span><span>&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-menu-footer">
+      <div style="font-size: 0.78rem; color: #666666; text-align: center; font-weight: 600;">
+        Pune's Family Fashion Landmark &bull; Estd. 1979 &bull; M.G. Road
+      </div>
+    </div>
+  </aside>
 
   <!-- Scripts -->
   <script src="js/data.js"></script>

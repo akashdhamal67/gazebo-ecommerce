@@ -905,7 +905,7 @@ function initMobileMenu() {
   const toggleBtn = document.getElementById('mobileMenuToggle');
   const drawer = document.getElementById('mobileMenuDrawer');
   const closeBtn = document.getElementById('mobileMenuClose');
-  const overlay = document.getElementById('mobileMenuOverlay');
+  const overlay = document.getElementById('mobileMenuOverlay') || document.getElementById('drawerOverlay');
 
   window.closeMobileMenu = function() {
     if (drawer) drawer.classList.remove('is-open');
