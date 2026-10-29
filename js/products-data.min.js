@@ -3437,5 +3437,160 @@ window.GAZEBO_PRODUCTS = [
     "isNew": false,
     "rating": 4.8,
     "reviewsCount": 110
+  },
+  {
+    "id": "gz-w-jn-01",
+    "name": "Gazebo Light Wash High-Rise Wide-Leg Jeans",
+    "section": "women",
+    "subCategory": "jeans",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 1299,
+    "mrp": 2199,
+    "originalPrice": 2199,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Light Blue Wash",
+        "hex": "#7C9BBF"
+      },
+      {
+        "name": "Vintage Indigo",
+        "hex": "#5879A2"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/jeans/gazebo-light-wash-high-rise-wide-leg-jeans.jpg",
+      "secondary": "assets/products/women/jeans/gazebo-light-wash-high-rise-wide-leg-jeans.jpg"
+    },
+    "tags": [
+      "Jeans",
+      "Wide Leg",
+      "High Rise",
+      "Light Wash",
+      "Bestseller",
+      "Under ₹1,499",
+      "Light Shades",
+      "Relaxed Fit"
+    ],
+    "primaryImage": "assets/products/women/jeans/gazebo-light-wash-high-rise-wide-leg-jeans.jpg",
+    "secondaryImage": "assets/products/women/jeans/gazebo-light-wash-high-rise-wide-leg-jeans.jpg",
+    "description": "Vintage-inspired high-rise jeans crafted from premium rigid-feel cotton denim with a relaxed wide-leg cut and an authentic light blue wash.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 162
+  },
+  {
+    "id": "gz-w-jn-02",
+    "name": "Gazebo Ecru High-Rise Straight Fit Jeans",
+    "section": "women",
+    "subCategory": "jeans",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 999,
+    "mrp": 1699,
+    "originalPrice": 1699,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Off-White Ecru",
+        "hex": "#F5EEDB"
+      },
+      {
+        "name": "Cream Beige",
+        "hex": "#E6DFCC"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/jeans/gazebo-ecru-high-rise-straight-fit-jeans.jpg",
+      "secondary": "assets/products/women/jeans/gazebo-ecru-high-rise-straight-fit-jeans.jpg"
+    },
+    "tags": [
+      "Jeans",
+      "Straight Fit",
+      "High Rise",
+      "Ecru",
+      "Bestseller",
+      "Under ₹999",
+      "Under ₹1,499",
+      "Neutral Tones"
+    ],
+    "primaryImage": "assets/products/women/jeans/gazebo-ecru-high-rise-straight-fit-jeans.jpg",
+    "secondaryImage": "assets/products/women/jeans/gazebo-ecru-high-rise-straight-fit-jeans.jpg",
+    "description": "Clean minimal high-rise jeans in neutral ecru denim tailored with a flattering straight-leg silhouette and timeless five-pocket construction.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 184
+  },
+  {
+    "id": "gz-w-jn-03",
+    "name": "Gazebo Dark Indigo Classic Straight Jeans",
+    "section": "women",
+    "subCategory": "jeans",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 1599,
+    "mrp": 2599,
+    "originalPrice": 2599,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Dark Indigo",
+        "hex": "#263E5C"
+      },
+      {
+        "name": "Raw Navy",
+        "hex": "#1C2A3D"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/jeans/gazebo-dark-indigo-classic-straight-jeans.jpg",
+      "secondary": "assets/products/women/jeans/gazebo-dark-indigo-classic-straight-jeans.jpg"
+    },
+    "tags": [
+      "Jeans",
+      "Straight Fit",
+      "Classic Fit",
+      "Dark Indigo",
+      "Dark Shades",
+      "Straight Leg",
+      "Raw Denim"
+    ],
+    "primaryImage": "assets/products/women/jeans/gazebo-dark-indigo-classic-straight-jeans.jpg",
+    "secondaryImage": "assets/products/women/jeans/gazebo-dark-indigo-classic-straight-jeans.jpg",
+    "description": "Essential mid-rise straight-leg jeans in rich dark indigo rinse denim finished with signature contrast tobacco topstitching and five pockets.",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.7,
+    "reviewsCount": 98
   }
 ];
