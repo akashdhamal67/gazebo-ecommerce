@@ -3905,5 +3905,158 @@ window.GAZEBO_PRODUCTS = [
     "isNew": false,
     "rating": 4.7,
     "reviewsCount": 88
+  },
+  {
+    "id": "gz-w-jk-01",
+    "name": "Gazebo Jet Black Minimalist Bomber Jacket",
+    "section": "women",
+    "subCategory": "jackets",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 1499,
+    "mrp": 2499,
+    "originalPrice": 2499,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Jet Black",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Charcoal Black",
+        "hex": "#2B2B2B"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/jackets/gazebo-jet-black-minimalist-bomber-jacket.jpg",
+      "secondary": "assets/products/women/jackets/gazebo-jet-black-minimalist-bomber-jacket.jpg"
+    },
+    "tags": [
+      "Jackets",
+      "Jacket",
+      "Bomber",
+      "Zip-Up",
+      "Bestseller",
+      "Under ₹1,499",
+      "Dark Shades",
+      "Relaxed Fit"
+    ],
+    "primaryImage": "assets/products/women/jackets/gazebo-jet-black-minimalist-bomber-jacket.jpg",
+    "secondaryImage": "assets/products/women/jackets/gazebo-jet-black-minimalist-bomber-jacket.jpg",
+    "description": "Clean minimalist streetwear bomber jacket in sleek jet black featuring full zip closure, ribbed cuffs and hem, and relaxed drop-shoulder tailoring.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 186
+  },
+  {
+    "id": "gz-w-jk-02",
+    "name": "Gazebo Charcoal Quilted Stand-Collar Puffer Jacket",
+    "section": "women",
+    "subCategory": "jackets",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 1999,
+    "mrp": 3299,
+    "originalPrice": 3299,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Charcoal Grey",
+        "hex": "#52575D"
+      },
+      {
+        "name": "Slate Grey",
+        "hex": "#6B7280"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/jackets/gazebo-charcoal-quilted-stand-collar-puffer-jacket.jpg",
+      "secondary": "assets/products/women/jackets/gazebo-charcoal-quilted-stand-collar-puffer-jacket.jpg"
+    },
+    "tags": [
+      "Jackets",
+      "Jacket",
+      "Puffer",
+      "Quilted",
+      "Stand Collar",
+      "Bestseller",
+      "Dark Shades"
+    ],
+    "primaryImage": "assets/products/women/jackets/gazebo-charcoal-quilted-stand-collar-puffer-jacket.jpg",
+    "secondaryImage": "assets/products/women/jackets/gazebo-charcoal-quilted-stand-collar-puffer-jacket.jpg",
+    "description": "Insulated horizontal-quilted streetwear puffer jacket in dark charcoal grey with protective stand collar, full front zip, and cozy heat-retentive fill.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 142
+  },
+  {
+    "id": "gz-w-jk-03",
+    "name": "Gazebo Olive Green Four-Pocket Utility Field Jacket",
+    "section": "women",
+    "subCategory": "jackets",
+    "category": "womens",
+    "gender": [
+      "women"
+    ],
+    "price": 2199,
+    "mrp": 3599,
+    "originalPrice": 3599,
+    "badge": null,
+    "colors": [
+      {
+        "name": "Olive Green",
+        "hex": "#6F7D5C"
+      },
+      {
+        "name": "Military Moss",
+        "hex": "#5B664B"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": {
+      "primary": "assets/products/women/jackets/gazebo-olive-green-four-pocket-utility-field-jacket.jpg",
+      "secondary": "assets/products/women/jackets/gazebo-olive-green-four-pocket-utility-field-jacket.jpg"
+    },
+    "tags": [
+      "Jackets",
+      "Jacket",
+      "Utility",
+      "Field Jacket",
+      "Cargo",
+      "Neutral Tones"
+    ],
+    "primaryImage": "assets/products/women/jackets/gazebo-olive-green-four-pocket-utility-field-jacket.jpg",
+    "secondaryImage": "assets/products/women/jackets/gazebo-olive-green-four-pocket-utility-field-jacket.jpg",
+    "description": "Military-inspired field utility jacket in washed olive green crafted from structured cotton drill with quadruple flap bellows pockets and internal drawstring waist.",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.7,
+    "reviewsCount": 95
   }
 ];
