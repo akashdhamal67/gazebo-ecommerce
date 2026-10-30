@@ -81,16 +81,11 @@ function initGenderTabs() {
 }
 
 /* ==========================================================================
-   3. Hero Banner Slider (Triple Video Backgrounds + Lazy Loading)
+   3. Hero Banner Slider (Active Slide Video Playback & Mobile Optimization)
    ========================================================================== */
 let heroCurrentSlide = 0;
 let heroTimer = null;
 let isHeroUserPaused = false;
-let heroVideo1Ready = false;
-let heroVideo2Loaded = false;
-let heroVideo2Ready = false;
-let heroVideo3Loaded = false;
-let heroVideo3Ready = false;
 
 function initHeroSlider() {
   const slider = document.querySelector('.hero-slider');
@@ -98,140 +93,139 @@ function initHeroSlider() {
   const dots = document.querySelectorAll('.hero-dot');
   const prevBtn = document.querySelector('.hero-arrow--prev');
   const nextBtn = document.querySelector('.hero-arrow--next');
-  const heroVideo1 = document.getElementById('heroVideo1');
-  const heroVideo2 = document.getElementById('heroVideo2');
-  const heroVideo3 = document.getElementById('heroVideo3');
   const playbackBtn = document.getElementById('heroPlaybackBtn');
 
   if (!slides.length) return;
 
-  // Gate video playback based on mobile (<=768px unless fast connection and no data saver), prefers-reduced-motion, or data saver
-  const isMobile = window.innerWidth <= 768;
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const saveData = Boolean(navigator.connection && navigator.connection.saveData);
-  const isFastConnection = Boolean(navigator.connection && navigator.connection.effectiveType === '4g');
-  const canPlayVideo = (!isMobile || (isFastConnection && !saveData)) && !prefersReducedMotion && !saveData;
 
-  function loadSlideImage(slide) {
-    if (!slide) return;
-    const img = slide.querySelector('img[data-src]');
-    if (img) {
-      img.src = img.getAttribute('data-src');
-      img.removeAttribute('data-src');
-    }
-    const sources = slide.querySelectorAll('source[data-srcset]');
-    sources.forEach(s => {
-      s.srcset = s.getAttribute('data-srcset');
-      s.removeAttribute('data-srcset');
-    });
-  }
+  const videos = [
+    document.getElementById('heroVideo1'),
+    document.getElementById('heroVideo2'),
+    document.getElementById('heroVideo3')
+  ];
 
-  // Load Slide 2's video on demand (when it becomes the next slide or is navigated to)
-  function loadHeroVideo2() {
-    if (heroVideo2Loaded || !heroVideo2 || !canPlayVideo) return;
-    heroVideo2Loaded = true;
+  const centerPlayBtns = [
+    document.getElementById('centerPlay1'),
+    document.getElementById('centerPlay2'),
+    document.getElementById('centerPlay3')
+  ];
 
-    const sources = heroVideo2.querySelectorAll('source[data-src]');
-    sources.forEach(s => {
-      s.src = s.getAttribute('data-src');
-      s.removeAttribute('data-src');
-    });
+  // Helper to safely play active slide video and pause inactive videos
+  function playActiveVideo(index) {
+    if (prefersReducedMotion || saveData) return;
 
-    heroVideo2.preload = 'metadata';
-    heroVideo2.load();
+    videos.forEach((video, i) => {
+      if (!video) return;
+      const centerBtn = centerPlayBtns[i];
 
-    heroVideo2.addEventListener('playing', () => {
-      heroVideo2.classList.add('is-ready');
-      heroVideo2Ready = true;
-    }, { once: true });
-
-    heroVideo2.addEventListener('canplay', () => {
-      if (!isHeroUserPaused && heroCurrentSlide === 1) {
-        heroVideo2.play().catch(() => {});
-      }
-    });
-  }
-
-  // Load Slide 3's video on demand (when it becomes the next slide or is navigated to)
-  function loadHeroVideo3() {
-    if (heroVideo3Loaded || !heroVideo3 || !canPlayVideo) return;
-    heroVideo3Loaded = true;
-
-    const sources = heroVideo3.querySelectorAll('source[data-src]');
-    sources.forEach(s => {
-      s.src = s.getAttribute('data-src');
-      s.removeAttribute('data-src');
-    });
-
-    heroVideo3.preload = 'metadata';
-    heroVideo3.load();
-
-    heroVideo3.addEventListener('playing', () => {
-      heroVideo3.classList.add('is-ready');
-      heroVideo3Ready = true;
-    }, { once: true });
-
-    heroVideo3.addEventListener('canplay', () => {
-      if (!isHeroUserPaused && heroCurrentSlide === 2) {
-        heroVideo3.play().catch(() => {});
-      }
-    });
-  }
-
-  function setupHeroVideos() {
-    if (!canPlayVideo) {
-      // Under 768px, reduced motion, or data saver: show only posters, never download video
-      if (heroVideo1) heroVideo1.style.display = 'none';
-      if (heroVideo2) heroVideo2.style.display = 'none';
-      if (heroVideo3) heroVideo3.style.display = 'none';
-      return;
-    }
-
-    // Populate Slide 1's video sources immediately on page load
-    if (heroVideo1) {
-      const sources1 = heroVideo1.querySelectorAll('source[data-src]');
-      sources1.forEach(s => {
-        s.src = s.getAttribute('data-src');
-        s.removeAttribute('data-src');
-      });
-
-      heroVideo1.preload = 'metadata';
-      heroVideo1.load();
-
-      const onVideo1Ready = () => {
-        heroVideo1.classList.add('is-ready');
-        heroVideo1Ready = true;
-        if (!isHeroUserPaused && !heroTimer) {
-          startAutoPlay();
+      if (i === index) {
+        if (!isHeroUserPaused && !document.hidden) {
+          video.muted = true;
+          const playPromise = video.play();
+          if (playPromise !== undefined) {
+            playPromise
+              .then(() => {
+                video.classList.add('is-ready', 'is-playing');
+                if (centerBtn) centerBtn.style.display = 'none';
+              })
+              .catch(() => {
+                // Autoplay blocked (e.g. Low Power Mode or browser policy)
+                // Reveal center play button over poster
+                if (centerBtn) centerBtn.style.display = 'flex';
+              });
+          }
         }
-        // Preload next slide's video (Slide 2) after Slide 1 is playing smoothly
-        setTimeout(loadHeroVideo2, 1200);
-      };
-
-      heroVideo1.addEventListener('playing', onVideo1Ready, { once: true });
-      heroVideo1.addEventListener('canplay', () => {
-        if (!isHeroUserPaused && heroCurrentSlide === 0) {
-          heroVideo1.play().catch(() => {});
+      } else {
+        if (!video.paused) {
+          video.pause();
         }
-      });
-
-      const p1 = heroVideo1.play();
-      if (p1 !== undefined) {
-        p1.then(onVideo1Ready).catch(() => {
-          // Autoplay policy fallback: preload video 2 anyway after initial delay
-          setTimeout(loadHeroVideo2, 2000);
-        });
+        video.classList.remove('is-playing');
+        if (centerBtn) centerBtn.style.display = 'none';
       }
+    });
+  }
+
+  // Hook center play buttons (one per slide)
+  centerPlayBtns.forEach((btn, i) => {
+    if (!btn) return;
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const video = videos[i];
+      if (video) {
+        video.muted = true;
+        video.play().then(() => {
+          video.classList.add('is-ready', 'is-playing');
+          btn.style.display = 'none';
+          if (isHeroUserPaused) {
+            isHeroUserPaused = false;
+            updatePlaybackButton(false);
+          }
+        }).catch(() => {});
+      }
+    });
+  });
+
+  // Retry play on first touch or scroll (user gesture unlocks mobile autoplay / low power mode)
+  let userInteracted = false;
+  function onFirstUserGesture() {
+    if (userInteracted) return;
+    userInteracted = true;
+    window.removeEventListener('touchstart', onFirstUserGesture, { capture: true, passive: true });
+    window.removeEventListener('scroll', onFirstUserGesture, { capture: true, passive: true });
+
+    if (!isHeroUserPaused && !document.hidden) {
+      playActiveVideo(heroCurrentSlide);
     }
   }
+  window.addEventListener('touchstart', onFirstUserGesture, { capture: true, passive: true });
+  window.addEventListener('scroll', onFirstUserGesture, { capture: true, passive: true });
+
+  // Update playback toggle button state
+  function updatePlaybackButton(paused) {
+    if (!playbackBtn) return;
+    const pauseIcon = playbackBtn.querySelector('.icon-pause');
+    const playIcon = playbackBtn.querySelector('.icon-play');
+    if (paused) {
+      if (pauseIcon) pauseIcon.style.display = 'none';
+      if (playIcon) playIcon.style.display = 'block';
+      playbackBtn.setAttribute('aria-label', 'Play slideshow');
+      playbackBtn.setAttribute('title', 'Play slideshow');
+    } else {
+      if (pauseIcon) pauseIcon.style.display = 'block';
+      if (playIcon) playIcon.style.display = 'none';
+      playbackBtn.setAttribute('aria-label', 'Pause slideshow');
+      playbackBtn.setAttribute('title', 'Pause slideshow');
+    }
+  }
+
+  // Set muted, pause inactive videos, and attach event listeners to prevent decoding multiple videos
+  videos.forEach((video, i) => {
+    if (!video) return;
+    video.muted = true;
+    if (i !== 0) {
+      video.pause();
+    }
+    video.addEventListener('play', () => {
+      if (i !== heroCurrentSlide) {
+        video.pause();
+      }
+    });
+    video.addEventListener('playing', () => {
+      if (i === heroCurrentSlide) {
+        video.classList.add('is-ready', 'is-playing');
+      } else {
+        video.pause();
+        video.classList.remove('is-playing');
+      }
+    });
+  });
 
   function showSlide(index) {
     if (index >= slides.length) index = 0;
     if (index < 0) index = slides.length - 1;
     heroCurrentSlide = index;
-
-    // Load active slide media on-demand
-    loadSlideImage(slides[index]);
 
     slides.forEach((slide, i) => {
       slide.classList.toggle('is-active', i === index);
@@ -241,47 +235,18 @@ function initHeroSlider() {
       dot.classList.toggle('is-active', i === index);
     });
 
-    // Handle Slide Video Playback & Switching
-    if (canPlayVideo) {
-      if (index === 0) {
-        // Slide 1 active: play heroVideo1, pause others, preload next slide video
-        loadHeroVideo2();
-        if (heroVideo2 && !heroVideo2.paused) heroVideo2.pause();
-        if (heroVideo3 && !heroVideo3.paused) heroVideo3.pause();
-        if (heroVideo1 && !isHeroUserPaused && !document.hidden) {
-          heroVideo1.play().catch(() => {});
-        }
-      } else if (index === 1) {
-        // Slide 2 active: make sure video 2 is loaded, play heroVideo2, preload video 3
-        loadHeroVideo2();
-        loadHeroVideo3();
-        if (heroVideo1 && !heroVideo1.paused) heroVideo1.pause();
-        if (heroVideo3 && !heroVideo3.paused) heroVideo3.pause();
-        if (heroVideo2 && !isHeroUserPaused && !document.hidden) {
-          heroVideo2.play().catch(() => {});
-        }
-      } else if (index === 2) {
-        // Slide 3 active: make sure video 3 is loaded, play heroVideo3, pause others
-        loadHeroVideo3();
-        if (heroVideo1 && !heroVideo1.paused) heroVideo1.pause();
-        if (heroVideo2 && !heroVideo2.paused) heroVideo2.pause();
-        if (heroVideo3 && !isHeroUserPaused && !document.hidden) {
-          heroVideo3.play().catch(() => {});
-        }
-      }
-    }
+    // Play active video and pause others
+    playActiveVideo(heroCurrentSlide);
   }
 
   function startAutoPlay() {
     stopAutoPlay();
     if (isHeroUserPaused) return;
 
-    // 8.2s for video slides on desktop, 5.5s on mobile/reduced motion
-    const interval = canPlayVideo ? 8200 : 5500;
     heroTimer = setTimeout(() => {
       showSlide(heroCurrentSlide + 1);
       startAutoPlay();
-    }, interval);
+    }, 7500);
   }
 
   function stopAutoPlay() {
@@ -294,32 +259,19 @@ function initHeroSlider() {
   // Playback & Pause Accessibility Button
   if (playbackBtn) {
     playbackBtn.addEventListener('click', () => {
-      const pauseIcon = playbackBtn.querySelector('.icon-pause');
-      const playIcon = playbackBtn.querySelector('.icon-play');
-
-      // Identify active video for current slide
-      const activeVideo = (heroCurrentSlide === 0) ? heroVideo1 : (heroCurrentSlide === 1 ? heroVideo2 : heroVideo3);
-
       if (isHeroUserPaused) {
         isHeroUserPaused = false;
-        if (activeVideo && canPlayVideo) {
-          activeVideo.play().catch(() => {});
-        }
+        playActiveVideo(heroCurrentSlide);
         startAutoPlay();
-        if (pauseIcon) pauseIcon.style.display = 'block';
-        if (playIcon) playIcon.style.display = 'none';
-        playbackBtn.setAttribute('aria-label', 'Pause slideshow');
-        playbackBtn.setAttribute('title', 'Pause slideshow');
+        updatePlaybackButton(false);
       } else {
         isHeroUserPaused = true;
-        if (heroVideo1) heroVideo1.pause();
-        if (heroVideo2) heroVideo2.pause();
-        if (heroVideo3) heroVideo3.pause();
+        videos.forEach(v => {
+          if (v && !v.paused) v.pause();
+          if (v) v.classList.remove('is-playing');
+        });
         stopAutoPlay();
-        if (pauseIcon) pauseIcon.style.display = 'none';
-        if (playIcon) playIcon.style.display = 'block';
-        playbackBtn.setAttribute('aria-label', 'Play slideshow');
-        playbackBtn.setAttribute('title', 'Play slideshow');
+        updatePlaybackButton(true);
       }
     });
   }
@@ -375,31 +327,19 @@ function initHeroSlider() {
   // Page Visibility API: Pause video and slider when tab is hidden, resume when tab returns
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
-      if (heroVideo1 && !heroVideo1.paused) heroVideo1.pause();
-      if (heroVideo2 && !heroVideo2.paused) heroVideo2.pause();
-      if (heroVideo3 && !heroVideo3.paused) heroVideo3.pause();
+      videos.forEach(v => { if (v && !v.paused) v.pause(); });
       stopAutoPlay();
     } else {
       if (!isHeroUserPaused) {
-        if (heroCurrentSlide === 0 && heroVideo1 && canPlayVideo) {
-          heroVideo1.play().catch(() => {});
-        } else if (heroCurrentSlide === 1 && heroVideo2 && canPlayVideo) {
-          heroVideo2.play().catch(() => {});
-        } else if (heroCurrentSlide === 2 && heroVideo3 && canPlayVideo) {
-          heroVideo3.play().catch(() => {});
-        }
+        playActiveVideo(heroCurrentSlide);
         startAutoPlay();
       }
     }
   });
 
-  // Initialize videos asynchronously without delaying first paint
-  setupHeroVideos();
-
-  // If video is not loaded (mobile / reduced motion), start autoplay after initial paint
-  if (!canPlayVideo) {
-    setTimeout(startAutoPlay, 5000);
-  }
+  // Start active video and slideshow
+  playActiveVideo(0);
+  startAutoPlay();
 }
 
 /* ==========================================================================
@@ -1967,9 +1907,25 @@ window.switchDepartment = function(dept, options) {
   if (!dept || !['men', 'women', 'kids'].includes(dept)) return;
   options = options || {};
 
-  // Highlight sticky department switcher buttons
+  // Highlight sticky department switcher buttons & scroll active into view
   document.querySelectorAll('.dept-nav-btn').forEach(b => {
-    b.classList.toggle('is-active', b.dataset.dept === dept);
+    const isActive = b.dataset.dept === dept;
+    b.classList.toggle('is-active', isActive);
+    if (isActive) {
+      const container = b.closest('.dept-nav-inner');
+      if (container) {
+        const btnLeft = b.offsetLeft;
+        const btnRight = btnLeft + b.offsetWidth;
+        const scrollLeft = container.scrollLeft;
+        const clientWidth = container.clientWidth;
+        if (btnLeft < scrollLeft + 16 || btnRight > scrollLeft + clientWidth - 16) {
+          container.scrollTo({
+            left: Math.max(0, btnLeft - 16),
+            behavior: 'smooth'
+          });
+        }
+      }
+    }
   });
 
   // Highlight mobile drawer department buttons
