@@ -1389,6 +1389,18 @@ function getChipsForTab(section, tabId) {
   if (tabId === 'all') {
     return ['All Items', 'New In', 'Bestsellers', 'Under ₹999', 'Under ₹1,499', 'Heavyweight', 'Relaxed Fit'];
   }
+  if (section === 'kids') {
+    if (tabId === 'boys') {
+      return ['All', 'T-Shirts', 'Graphic Print', 'Everyday Cotton', 'Active Casual', 'Under ₹999', 'Under ₹1,499', 'Bestsellers', 'New In'];
+    }
+    if (tabId === 'girls') {
+      return ['All', 'T-Shirts', 'Floral Print', 'Graphic Print', 'Under ₹999', 'Under ₹1,499', 'Bestsellers', 'New In'];
+    }
+    if (tabId === 't-shirts') {
+      return ['All', 'Boys', 'Girls', 'Graphic Print', 'Under ₹999', 'Under ₹1,499', 'Bestsellers', 'New In'];
+    }
+    return ['All', 'Under ₹999', 'Under ₹1,499', 'Bestsellers', 'New In'];
+  }
   if (section === 'women' && tabId === 'oversized-tees') {
     return ['All', 'Graphic Print', 'Boxy Fit', 'Bestsellers', 'Under ₹999', 'Under ₹1,499', 'Dark Shades', 'Neutral Tones'];
   }
@@ -1482,6 +1494,15 @@ function filterProductsByChip(products, chip) {
   if (chip === 'Under ₹1,499') {
     const res = products.filter(p => p.price <= 1499);
     return res.length ? res : products;
+  }
+  if (chip === 'Boys') {
+    return products.filter(p => p.gender === 'boys' || (p.tags && p.tags.includes('Boys')) || (p.name && /boys/i.test(p.name)));
+  }
+  if (chip === 'Girls') {
+    return products.filter(p => p.gender === 'girls' || (p.tags && p.tags.includes('Girls')) || (p.name && /girls/i.test(p.name)));
+  }
+  if (chip === 'T-Shirts') {
+    return products.filter(p => p.subCategory === 't-shirts' || (p.tags && p.tags.includes('T-Shirts')) || (p.name && /t-shirt/i.test(p.name)));
   }
   if (chip === 'Dark Shades') {
     const res = products.filter(p => p.colors && p.colors.some(c => /black|charcoal|onyx|navy|dark/i.test(c.name)));
@@ -1676,6 +1697,51 @@ function renderWearContent(section) {
       prodsToShow = allProds.filter(p => p.section === 'women' && p.subCategory === 'jackets');
     } else if (activeTab === 'skirts') {
       prodsToShow = allProds.filter(p => p.section === 'women' && p.subCategory === 'skirts');
+    } else {
+      // Any other tab must stay completely empty
+      container.innerHTML = '';
+      return;
+    }
+
+    const filtered = filterProductsByChip(prodsToShow, activeChip);
+
+    if (filtered.length) {
+      container.innerHTML = `
+        <div class="plp-grid-4">
+          ${filtered.map(p => renderProductCardHtml(p)).join('')}
+        </div>
+      `;
+    } else {
+      container.innerHTML = `<div style="padding: 60px 0; text-align: center; color: #888888; font-size: 0.88rem;">No products found matching "${activeChip}".</div>`;
+    }
+    return;
+  }
+  if (section === 'kids') {
+    const activeTab = WEAR_STATE[section]?.activeTab || 'all';
+    const activeChip = WEAR_STATE[section]?.activeChip || 'All Items';
+    const allProds = window.GAZEBO_PRODUCTS || [];
+
+    let prodsToShow = [];
+    if (activeTab === 'all') {
+      prodsToShow = allProds.filter(p => p.section === 'kids');
+    } else if (activeTab === 'boys') {
+      prodsToShow = allProds.filter(p => p.section === 'kids' && p.gender === 'boys');
+    } else if (activeTab === 'girls') {
+      prodsToShow = allProds.filter(p => p.section === 'kids' && p.gender === 'girls');
+    } else if (activeTab === 't-shirts') {
+      prodsToShow = allProds.filter(p => p.section === 'kids' && p.subCategory === 't-shirts');
+    } else if (activeTab === 'hoodies') {
+      prodsToShow = allProds.filter(p => p.section === 'kids' && p.subCategory === 'hoodies');
+    } else if (activeTab === 'sets') {
+      prodsToShow = allProds.filter(p => p.section === 'kids' && p.subCategory === 'sets');
+    } else if (activeTab === 'jeans') {
+      prodsToShow = allProds.filter(p => p.section === 'kids' && p.subCategory === 'jeans');
+    } else if (activeTab === 'cargos') {
+      prodsToShow = allProds.filter(p => p.section === 'kids' && p.subCategory === 'cargos');
+    } else if (activeTab === 'dresses') {
+      prodsToShow = allProds.filter(p => p.section === 'kids' && p.subCategory === 'dresses');
+    } else if (activeTab === 'jackets') {
+      prodsToShow = allProds.filter(p => p.section === 'kids' && p.subCategory === 'jackets');
     } else {
       // Any other tab must stay completely empty
       container.innerHTML = '';

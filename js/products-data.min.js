@@ -4213,6 +4213,159 @@ window.GAZEBO_PRODUCTS = [
     "isNew": false,
     "rating": 4.7,
     "reviewsCount": 92
+  },
+  {
+    "id": "gz-k-b-t-01",
+    "name": "Gazebo Boys Botanical Graphic Forest Green T-Shirt",
+    "section": "kids",
+    "subCategory": "t-shirts",
+    "category": "kids",
+    "gender": "boys",
+    "price": 449,
+    "mrp": 799,
+    "originalPrice": 799,
+    "badge": "",
+    "colors": [
+      {
+        "name": "Forest Green",
+        "hex": "#2D5A3D"
+      },
+      {
+        "name": "White",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "sizes": [
+      "4-5Y",
+      "6-7Y",
+      "8-9Y",
+      "10-11Y"
+    ],
+    "images": {
+      "primary": "assets/products/kids/boys/boys-botanical-graphic-forest-green-t-shirt-1.webp?v=20261029",
+      "secondary": "assets/products/kids/boys/boys-botanical-graphic-forest-green-t-shirt-2.webp?v=20261029"
+    },
+    "tags": [
+      "Boys",
+      "T-Shirts",
+      "T-Shirt",
+      "Graphic Print",
+      "Botanical",
+      "Forest Green",
+      "Regular Fit",
+      "Breathable Cotton",
+      "Under ₹999",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/kids/boys/boys-botanical-graphic-forest-green-t-shirt-1.webp?v=20261029",
+    "secondaryImage": "assets/products/kids/boys/boys-botanical-graphic-forest-green-t-shirt-2.webp?v=20261029",
+    "description": "Premium 100% breathable combed cotton boys graphic t-shirt in rich forest green featuring botanical illustration and typography. Designed with durable ribbed crew neck and soft-touch feel for all-day comfort.",
+    "isBestseller": false,
+    "isNew": false,
+    "rating": 4.8,
+    "reviewsCount": 24
+  },
+  {
+    "id": "gz-k-b-t-02",
+    "name": "Gazebo Boys Abstract Geometric Graphic Black T-Shirt",
+    "section": "kids",
+    "subCategory": "t-shirts",
+    "category": "kids",
+    "gender": "boys",
+    "price": 499,
+    "mrp": 899,
+    "originalPrice": 899,
+    "badge": "New",
+    "colors": [
+      {
+        "name": "Onyx Black",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "White",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "sizes": [
+      "4-5Y",
+      "6-7Y",
+      "8-9Y",
+      "10-11Y"
+    ],
+    "images": {
+      "primary": "assets/products/kids/boys/boys-abstract-geometric-black-t-shirt-1.webp?v=20261029",
+      "secondary": "assets/products/kids/boys/boys-abstract-geometric-black-t-shirt-2.webp?v=20261029"
+    },
+    "tags": [
+      "Boys",
+      "T-Shirts",
+      "T-Shirt",
+      "Graphic Print",
+      "Geometric",
+      "Streetwear",
+      "Onyx Black",
+      "New In",
+      "Under ₹999",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/kids/boys/boys-abstract-geometric-black-t-shirt-1.webp?v=20261029",
+    "secondaryImage": "assets/products/kids/boys/boys-abstract-geometric-black-t-shirt-2.webp?v=20261029",
+    "description": "Modern streetwear-inspired abstract geometric graphic t-shirt for boys in deep onyx black. Made from ultra-soft combed cotton jersey with reinforced stitching for active wear.",
+    "isBestseller": false,
+    "isNew": true,
+    "rating": 4.9,
+    "reviewsCount": 19
+  },
+  {
+    "id": "gz-k-g-t-01",
+    "name": "Gazebo Girls Butterfly Floral Lavender T-Shirt",
+    "section": "kids",
+    "subCategory": "t-shirts",
+    "category": "kids",
+    "gender": "girls",
+    "price": 479,
+    "mrp": 799,
+    "originalPrice": 799,
+    "badge": "Bestseller",
+    "colors": [
+      {
+        "name": "Soft Lavender",
+        "hex": "#C4B5FD"
+      },
+      {
+        "name": "White",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "sizes": [
+      "4-5Y",
+      "6-7Y",
+      "8-9Y",
+      "10-11Y"
+    ],
+    "images": {
+      "primary": "assets/products/kids/girls/girls-butterfly-floral-lavender-t-shirt-1.webp?v=20261029",
+      "secondary": "assets/products/kids/girls/girls-butterfly-floral-lavender-t-shirt-2.webp?v=20261029"
+    },
+    "tags": [
+      "Girls",
+      "T-Shirts",
+      "T-Shirt",
+      "Floral Print",
+      "Graphic Print",
+      "Butterfly",
+      "Soft Lavender",
+      "Bestsellers",
+      "Under ₹999",
+      "Under ₹1,499"
+    ],
+    "primaryImage": "assets/products/kids/girls/girls-butterfly-floral-lavender-t-shirt-1.webp?v=20261029",
+    "secondaryImage": "assets/products/kids/girls/girls-butterfly-floral-lavender-t-shirt-2.webp?v=20261029",
+    "description": "Delicate butterfly and floral artwork on a dreamy soft lavender crew-neck tee for girls. Crafted from 100% bio-washed organic cotton with a gentle drape and lasting color fastness.",
+    "isBestseller": true,
+    "isNew": false,
+    "rating": 4.9,
+    "reviewsCount": 38
   }
 ];
 
