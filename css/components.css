@@ -766,11 +766,13 @@
 }
 
 /* Product Grid (Snitch Style: 5 columns desktop, small gaps, edge-to-edge feel) */
+/* Product Grid (Unified 4 columns desktop, equal width cards) */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
   width: 100%;
+  align-items: stretch;
 }
 
 .product-card {
@@ -782,6 +784,10 @@
   overflow: hidden;
   transition: transform var(--trans-base);
   position: relative;
+  height: 100%;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .product-card:hover {
@@ -792,17 +798,25 @@
 
 .product-card__media {
   position: relative;
-  aspect-ratio: 3 / 4;
+  width: 100%;
+  aspect-ratio: 4 / 5 !important;
   overflow: hidden;
   background-color: #F5F5F5;
   border-radius: 4px;
+  flex-shrink: 0;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .product-card__image-wrap {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   cursor: pointer;
-  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: inherit;
 }
 
 .product-card__img {
@@ -934,18 +948,30 @@
   padding: 8px 2px 4px;
   display: flex;
   flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .product-card__title {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--gz-black);
   cursor: pointer;
-  line-height: 1.3;
-  margin-bottom: 4px;
-  white-space: nowrap;
+  line-height: 1.35;
+  margin: 0 0 4px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: normal;
+  min-height: calc(2 * 1.35em);
+  height: calc(2 * 1.35em);
+  min-width: 0;
+  width: 100%;
+  word-break: break-word;
 }
 
 .product-card__title:hover {
@@ -2907,9 +2933,10 @@
 }
 .plp-grid-4 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
   width: 100%;
+  align-items: stretch;
 }
 
 /* 8. PDP (Product Detail Page) Snitch-Style Layout */
@@ -3326,13 +3353,14 @@
 .subcat-rail {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc(20% - 11.2px);
-  gap: 14px;
+  grid-auto-columns: calc(25% - 12px);
+  gap: 16px;
   overflow-x: auto;
   scrollbar-width: none;
   scroll-snap-type: x mandatory;
   padding: 4px 2px 14px;
   -webkit-overflow-scrolling: touch;
+  align-items: stretch;
 }
 .subcat-rail::-webkit-scrollbar {
   display: none;
@@ -3370,35 +3398,47 @@
   right: -16px;
 }
 
-/* 5-Column Grid on Specific Tab */
+/* 4-Column Grid on Specific Tab (Unified) */
 .subcat-grid-5 {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
   margin-top: 16px;
+  align-items: stretch;
+  width: 100%;
 }
 
-/* Product Card (Snitch proportions & design) */
+/* Product Card (Snitch proportions & design - Fixed 4:5 Aspect Ratio) */
 .p-card {
   display: flex;
   flex-direction: column;
   position: relative;
   background: transparent;
+  height: 100%;
+  min-width: 0;
+  width: 100%;
   scroll-snap-align: start;
+  box-sizing: border-box;
 }
 .p-card__media {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 5 !important;
   background-color: #F5F5F5;
   border-radius: 3px;
   overflow: hidden;
+  flex-shrink: 0;
+  min-width: 0;
+  box-sizing: border-box;
 }
 .p-card__img-wrap {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
+  display: block;
+  overflow: hidden;
+  border-radius: inherit;
   cursor: pointer;
 }
 .p-card__img {
@@ -3408,6 +3448,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center top;
+  display: block;
   transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .p-card:hover .p-card__img {
@@ -3433,6 +3474,7 @@
   text-transform: uppercase;
   padding: 3px 8px;
   border-radius: 2px;
+  pointer-events: none;
 }
 
 .p-card__wishlist-btn {
@@ -3460,21 +3502,34 @@
   padding: 8px 2px 4px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 .p-card__title-row {
   width: 100%;
+  min-width: 0;
 }
 .p-card__title {
   font-size: 0.82rem;
   font-weight: 500;
   color: #111111;
   cursor: pointer;
-  line-height: 1.25;
+  line-height: 1.35;
   margin: 0;
-  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: normal;
+  min-height: calc(2 * 1.35em);
+  height: calc(2 * 1.35em);
+  min-width: 0;
+  width: 100%;
+  word-break: break-word;
+  transition: color 0.15s ease;
 }
 .p-card__title:hover {
   color: #EE5824;
@@ -3484,22 +3539,25 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 2px;
+  min-height: 24px;
+  margin-top: 6px;
 }
 .p-card__price-wrap {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 6px;
 }
 .p-card__price {
   font-size: 0.88rem;
   font-weight: 800;
   color: #000000;
+  line-height: 1.2;
 }
 .p-card__mrp {
   font-size: 0.74rem;
   color: #888888;
   text-decoration: line-through;
+  line-height: 1.2;
 }
 
 .p-card__plus-btn {
@@ -3511,7 +3569,13 @@
   line-height: 1;
   padding: 0 4px;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
   transition: transform 0.15s ease, color 0.15s ease;
+  touch-action: manipulation;
 }
 .p-card__plus-btn:hover {
   transform: scale(1.25);
@@ -3522,7 +3586,8 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  margin-top: 2px;
+  min-height: 10px;
+  margin-top: 6px;
 }
 .p-card__color-dot {
   width: 7px;
@@ -3530,6 +3595,7 @@
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.15);
   display: inline-block;
+  flex-shrink: 0;
 }
 
 /* Quick Add Size Drawer on Product Card */
@@ -3680,12 +3746,14 @@
   transition: top 0.2s ease;
 }
 
-.p-card__img {
+.p-card__img,
+.product-card__img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center top !important; /* PREVENTS CROPPED HEADS */
+  display: block !important;
   transition: opacity 0.3s ease;
 }

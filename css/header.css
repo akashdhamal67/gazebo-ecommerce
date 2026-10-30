@@ -382,8 +382,10 @@
 
   .header-hamburger-btn,
   .mobile-hamburger-btn {
-    width: 38px !important;
-    height: 38px !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
   }
 
   .header-wordmark-img {
@@ -404,8 +406,11 @@
 
   .header-action-btn,
   .header-icon-btn {
-    width: 38px !important;
-    height: 38px !important;
+    width: 42px !important;
+    height: 44px !important;
+    min-width: 42px !important;
+    min-height: 44px !important;
+    touch-action: manipulation;
   }
 
   .header-action-btn--account,
@@ -417,7 +422,7 @@
 @media (max-width: 375px) {
   .header-container,
   .header-main {
-    padding: 12px 12px !important;
+    padding: 10px 12px !important;
   }
 
   .header-wordmark-img {
@@ -431,10 +436,21 @@
     font-size: 8px;
   }
 
+  .header-hamburger-btn,
+  .mobile-hamburger-btn {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+  }
+
   .header-action-btn,
   .header-icon-btn {
-    width: 34px !important;
-    height: 34px !important;
+    width: 40px !important;
+    height: 44px !important;
+    min-width: 40px !important;
+    min-height: 44px !important;
+    touch-action: manipulation;
   }
 
   .header-zone-right,
