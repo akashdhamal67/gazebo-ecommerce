@@ -1379,11 +1379,35 @@ const WEAR_CONFIG = {
   }
 };
 
+function parseHashRoute(hashStr) {
+  if (!hashStr) return null;
+  const clean = hashStr.replace(/^#\/?/, '').trim().toLowerCase();
+  if (!clean) return null;
+  const parts = clean.split('/').filter(Boolean);
+  const dept = parts[0];
+  const tab = parts[1] || 'all';
+  if (['men', 'women', 'kids'].includes(dept)) {
+    return { dept, tab };
+  }
+  if (dept === 'maincontent') {
+    return { isMainContent: true };
+  }
+  return null;
+}
+
 const WEAR_STATE = {
   men: { activeTab: 'all', activeChip: 'All Items' },
   women: { activeTab: 'all', activeChip: 'All Items' },
   kids: { activeTab: 'all', activeChip: 'All Items' }
 };
+
+try {
+  const _initR = parseHashRoute(typeof window !== 'undefined' ? window.location.hash : '');
+  if (_initR && _initR.dept && _initR.tab) {
+    WEAR_STATE[_initR.dept].activeTab = _initR.tab;
+    WEAR_STATE[_initR.dept].activeChip = (_initR.tab === 'all' ? 'All Items' : 'All');
+  }
+} catch(e) {}
 
 function getChipsForTab(section, tabId) {
   if (tabId === 'all') {
@@ -1845,12 +1869,38 @@ function initWearSections() {
 }
 
 // Global Handlers
-window.switchWearTab = function(section, tabId) {
+window.switchWearTab = function(section, tabId, options) {
+  options = options || {};
   WEAR_STATE[section].activeTab = tabId;
   WEAR_STATE[section].activeChip = (tabId === 'all' ? 'All Items' : 'All');
   renderWearTabs(section);
   renderWearChips(section);
   renderWearContent(section);
+
+  // Scroll active tab button into view within the horizontal tabs container
+  try {
+    const tabsContainer = document.getElementById(`tabs_${section}`);
+    if (tabsContainer) {
+      const activeBtn = tabsContainer.querySelector('.is-active, .is-active-subcat');
+      if (activeBtn) {
+        activeBtn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
+    }
+  } catch(e) {}
+
+  // Update URL hash
+  if (options.updateHash !== false) {
+    const targetHash = (tabId && tabId !== 'all') ? `#${section}/${tabId}` : `#${section}`;
+    try {
+      if (window.location.hash !== targetHash) {
+        if (options.replaceState) {
+          history.replaceState(null, '', targetHash);
+        } else {
+          history.pushState(null, '', targetHash);
+        }
+      }
+    } catch(e) {}
+  }
 };
 
 window.switchWearChip = function(section, chipLabel) {
@@ -1941,11 +1991,11 @@ window.switchDepartment = function(dept, options) {
     }
   });
 
-  // Set section tab: default to "ALL" unless options.tab is specified
+  // Set section tab: default to "all" unless options.tab is specified
   const targetTab = options.tab || 'all';
   if (typeof window.switchWearTab === 'function') {
     try {
-      window.switchWearTab(dept, targetTab);
+      window.switchWearTab(dept, targetTab, { updateHash: false });
     } catch(e) {}
   }
 
@@ -1962,22 +2012,34 @@ window.switchDepartment = function(dept, options) {
   if (shouldScroll) {
     const activeSec = document.getElementById(`section_${dept}`);
     if (activeSec) {
-      const headerOffset = 130;
+      const header = document.querySelector('.site-header');
+      const deptNav = document.querySelector('.dept-nav-bar');
+      const headerHeight = header ? header.getBoundingClientRect().height : 72;
+      const deptNavHeight = deptNav ? deptNav.getBoundingClientRect().height : 58;
+      const totalOffset = headerHeight + deptNavHeight;
+
       const elementPosition = activeSec.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      const offsetPosition = elementPosition + window.pageYOffset - totalOffset;
       window.scrollTo({
-        top: Math.max(0, offsetPosition),
+        top: Math.max(0, Math.round(offsetPosition)),
         behavior: isSmooth ? 'smooth' : 'auto'
       });
     }
   }
 
-  // Update URL hash without polluting browser history on in-page tabs
-  try {
-    if (window.location.hash !== `#${dept}`) {
-      history.replaceState(null, '', `#${dept}`);
-    }
-  } catch(e) {}
+  // Update URL hash
+  if (options.updateHistory !== false) {
+    const targetHash = (targetTab && targetTab !== 'all') ? `#${dept}/${targetTab}` : `#${dept}`;
+    try {
+      if (window.location.hash !== targetHash) {
+        if (options.replaceState) {
+          history.replaceState(null, '', targetHash);
+        } else {
+          history.pushState(null, '', targetHash);
+        }
+      }
+    } catch(e) {}
+  }
 
   try {
     localStorage.setItem('gazebo_active_dept', dept);
@@ -1986,21 +2048,25 @@ window.switchDepartment = function(dept, options) {
 
 function initDepartmentRouting() {
   function handleDeptClick(e) {
-    const link = e.target.closest('a[href*="#men"], a[href*="#women"], a[href*="#kids"], [data-dept]');
+    const link = e.target.closest('a[href*="#men"], a[href*="#women"], a[href*="#kids"], a[data-dept]');
     if (link) {
       let dept = link.dataset.dept;
-      if (!dept) {
-        const href = link.getAttribute('href') || '';
-        const match = href.match(/#(men|women|kids)$/);
-        if (match) dept = match[1];
+      let targetTab = link.dataset.tab || 'all';
+      const href = link.getAttribute('href') || '';
+
+      const route = parseHashRoute(href.includes('#') ? href.substring(href.indexOf('#')) : '');
+      if (route && route.dept) {
+        dept = route.dept;
+        if (route.tab && route.tab !== 'all') {
+          targetTab = route.tab;
+        }
       }
 
       if (dept && ['men', 'women', 'kids'].includes(dept)) {
         const isShopPage = document.getElementById('section_men') !== null;
         if (isShopPage) {
           e.preventDefault();
-          const targetTab = link.dataset.tab || 'all';
-          window.switchDepartment(dept, { scroll: true, smooth: true, tab: targetTab });
+          window.switchDepartment(dept, { scroll: true, smooth: true, tab: targetTab, updateHistory: true });
         }
       }
       return;
@@ -2026,10 +2092,10 @@ function initDepartmentRouting() {
   document.addEventListener('click', handleDeptClick);
 
   window.addEventListener('hashchange', () => {
-    const hash = (window.location.hash || '').replace('#', '').toLowerCase();
-    if (['men', 'women', 'kids'].includes(hash)) {
-      window.switchDepartment(hash, { scroll: true, smooth: true });
-    } else if (hash === 'maincontent') {
+    const route = parseHashRoute(window.location.hash);
+    if (route && route.dept) {
+      window.switchDepartment(route.dept, { scroll: true, smooth: true, tab: route.tab, updateHistory: false });
+    } else if (route && route.isMainContent) {
       const mainEl = document.getElementById('mainContent');
       if (mainEl) {
         const headerOffset = 70;
@@ -2040,15 +2106,34 @@ function initDepartmentRouting() {
           behavior: 'smooth'
         });
       }
+    } else {
+      // If the hash is missing or does not match anything, leave the default view (Men's Wear > All) as it is today
+      window.switchDepartment('men', { scroll: false, tab: 'all', updateHistory: false });
     }
   });
 
-  const initialHash = (window.location.hash || '').replace('#', '').toLowerCase();
-  if (['men', 'women', 'kids'].includes(initialHash)) {
+  // On page load
+  const initialRoute = parseHashRoute(window.location.hash);
+  if (initialRoute && initialRoute.dept) {
+    // Immediately set active section and tab so the correct compartment and products show right away
+    window.switchDepartment(initialRoute.dept, { scroll: false, tab: initialRoute.tab, updateHistory: false });
     setTimeout(() => {
-      window.switchDepartment(initialHash, { scroll: true, smooth: false });
-    }, 120);
-  } else if (initialHash === 'maincontent') {
+      const activeSec = document.getElementById(`section_${initialRoute.dept}`);
+      if (activeSec) {
+        const header = document.querySelector('.site-header');
+        const deptNav = document.querySelector('.dept-nav-bar');
+        const headerHeight = header ? header.getBoundingClientRect().height : 72;
+        const deptNavHeight = deptNav ? deptNav.getBoundingClientRect().height : 58;
+        const totalOffset = headerHeight + deptNavHeight;
+        const elementPosition = activeSec.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - totalOffset;
+        window.scrollTo({
+          top: Math.max(0, Math.round(offsetPosition)),
+          behavior: 'smooth'
+        });
+      }
+    }, 150);
+  } else if (initialRoute && initialRoute.isMainContent) {
     setTimeout(() => {
       const mainEl = document.getElementById('mainContent');
       if (mainEl) {
@@ -2060,13 +2145,6 @@ function initDepartmentRouting() {
           behavior: 'smooth'
         });
       }
-    }, 120);
-  } else {
-    try {
-      const savedDept = localStorage.getItem('gazebo_active_dept');
-      if (savedDept && ['men', 'women', 'kids'].includes(savedDept) && savedDept !== 'men') {
-        window.switchDepartment(savedDept, { scroll: false });
-      }
-    } catch(e) {}
+    }, 150);
   }
 }
