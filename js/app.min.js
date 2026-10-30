@@ -23,12 +23,6 @@ function initApp() {
   try { initDepartmentRouting(); } catch(e) {}
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initApp);
-} else {
-  initApp();
-}
-
 /* ==========================================================================
    1. Announcement Bar
    ========================================================================== */
@@ -2147,4 +2141,11 @@ function initDepartmentRouting() {
       }
     }, 150);
   }
+}
+
+// Bootstrap application once all module definitions and global handlers are ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
 }
