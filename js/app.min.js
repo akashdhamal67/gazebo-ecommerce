@@ -7,6 +7,7 @@ function initApp() {
   try { initHeaderScroll(); } catch(e) {}
   try { initGenderTabs(); } catch(e) {}
   try { initHeroSlider(); } catch(e) {}
+  try { initHomepageBestsellers(); } catch(e) {}
   try { initCategorySection(); } catch(e) {}
   try { initOccasionSection(); } catch(e) {}
   try { initPromosSection(); } catch(e) {}
@@ -910,115 +911,298 @@ function initNewsletter() {
 
 
 /* ==========================================================================
-   16. PLP (Category Page) 4-Column Grid & Dynamic Filter Logic
+   16. Bestsellers & PLP (Category Page) Logic with Universal Product-Type Support
    ========================================================================== */
+
+function initHomepageBestsellers() {
+  const container = document.getElementById('bestsellersGrid');
+  if (!container) return;
+
+  const catalog = window.GAZEBO_PRODUCTS || (window.GAZEBO_CONFIG && window.GAZEBO_CONFIG.products) || [];
+  let bestsellers = catalog.filter(p => p.isBestseller === true || p.badge === 'Bestseller' || p.badge === 'BESTSELLER');
+  if (bestsellers.length < 8) {
+    const existingIds = new Set(bestsellers.map(p => p.id));
+    for (const p of catalog) {
+      if (!existingIds.has(p.id)) {
+        bestsellers.push(p);
+        existingIds.add(p.id);
+        if (bestsellers.length === 8) break;
+      }
+    }
+  }
+  const items = bestsellers.slice(0, 8);
+  container.innerHTML = items.map(p => renderProductCardHtml(p)).join('');
+}
+
+const PLP_METADATA = {
+  men: {
+    name: "Men's Collection",
+    shortName: "Men",
+    desc: "Heavyweight drop-shoulder tees, relaxed straight-leg denim, tailored linen overshirts, and tactical utilitarian cargos.",
+    link: "men.html",
+    subcats: [
+      { id: 'all', label: 'All Men' },
+      { id: 'oversized-tees', label: 'Oversized Tees' },
+      { id: 't-shirts', label: 'T-Shirts' },
+      { id: 'polos', label: 'Polos' },
+      { id: 'linen-shirts', label: 'Linen Shirts' },
+      { id: 'shirts', label: 'Casual Shirts' },
+      { id: 'hoodies', label: 'Hoodies' },
+      { id: 'sweatshirts', label: 'Sweatshirts' },
+      { id: 'jeans', label: 'Jeans' },
+      { id: 'cargos', label: 'Cargos' },
+      { id: 'trousers', label: 'Trousers' },
+      { id: 'shorts', label: 'Shorts' },
+      { id: 'sweaters', label: 'Sweaters' },
+      { id: 'jackets', label: 'Jackets' }
+    ]
+  },
+  women: {
+    name: "Women's Collection",
+    shortName: "Women",
+    desc: "Sculpted ribbed tops, modern streetwear dresses, fluid wide-leg pants, and elevated coordinates.",
+    link: "women.html",
+    subcats: [
+      { id: 'all', label: 'All Women' },
+      { id: 'oversized-tees', label: 'Oversized Tees' },
+      { id: 'tops', label: 'Tops' },
+      { id: 'dresses', label: 'Dresses' },
+      { id: 'co-ords', label: 'Co-Ords' },
+      { id: 'jeans', label: 'Jeans' },
+      { id: 'wide-leg-pants', label: 'Wide-Leg Pants' },
+      { id: 'cargos', label: 'Cargos' },
+      { id: 'skirts', label: 'Skirts' },
+      { id: 'shirts', label: 'Shirts' },
+      { id: 'hoodies', label: 'Hoodies' },
+      { id: 'sweatshirts', label: 'Sweatshirts' },
+      { id: 'jackets', label: 'Jackets' }
+    ]
+  },
+  kids: {
+    name: "Kids' Collection",
+    shortName: "Kids",
+    desc: "Everyday playground-ready cotton graphic tees, durable utility bottoms, and easy two-piece coordinated sets.",
+    link: "kids.html",
+    subcats: [
+      { id: 'all', label: 'All Kids' },
+      { id: 't-shirts', label: 'T-Shirts' },
+      { id: 'sets', label: 'Co-Ord Sets' },
+      { id: 'hoodies', label: 'Hoodies' },
+      { id: 'jeans', label: 'Jeans' },
+      { id: 'cargos', label: 'Cargos' },
+      { id: 'dresses', label: 'Dresses' },
+      { id: 'jackets', label: 'Jackets' }
+    ]
+  }
+};
+
+function normalizeSubcat(type) {
+  if (!type) return 'all';
+  const t = type.toLowerCase().trim();
+  if (t === 'tshirts' || t === 'tshirt' || t === 't-shirt') return 't-shirts';
+  if (t === 'oversized' || t === 'oversizedtees' || t === 'oversized-tee') return 'oversized-tees';
+  if (t === 'linen' || t === 'linenshirts') return 'linen-shirts';
+  if (t === 'coords' || t === 'coord' || t === 'co-ord') return 'co-ords';
+  if (t === 'pants' || t === 'wideleg' || t === 'wide-leg') return 'wide-leg-pants';
+  return t;
+}
+
 function initPLPPage() {
   const catGrid = document.getElementById('categoryProductGrid');
   if (!catGrid) return;
 
-  const pageCategory = catGrid.dataset.category || 'all';
-  let plpSizeFilter = 'all';
-  let plpSortFilter = 'featured';
+  const urlParams = new URLSearchParams(window.location.search);
+  let currentCat = urlParams.get('cat');
+  if (!currentCat) {
+    if (catGrid.dataset.category) {
+      currentCat = catGrid.dataset.category;
+    } else if (window.location.pathname.includes('women')) {
+      currentCat = 'women';
+    } else if (window.location.pathname.includes('kids')) {
+      currentCat = 'kids';
+    } else {
+      currentCat = 'men';
+    }
+  }
+  let currentSubcat = normalizeSubcat(urlParams.get('type') || catGrid.dataset.subcat || 'all');
+  let filterSize = 'all';
+  let filterColor = 'all';
+  let filterPrice = 'all';
+  let sortVal = 'featured';
+
+  const meta = PLP_METADATA[currentCat] || PLP_METADATA.men;
+
+  function renderChips() {
+    const chipsBar = document.getElementById('plpChipsBar');
+    if (!chipsBar) return;
+    chipsBar.innerHTML = (meta.subcats || []).map(s => `
+      <button type="button" class="plp-chip ${s.id === currentSubcat ? 'is-active' : ''}" onclick="window.switchPLPSubcat('${s.id}')">
+        ${s.label}
+      </button>
+    `).join('');
+  }
+
+  function renderHeaderAndBreadcrumbs() {
+    const crumbEl = document.getElementById('plpBreadcrumbs');
+    const titleEl = document.getElementById('plpTitle');
+    const descEl = document.getElementById('plpDesc');
+
+    const activeObj = (meta.subcats || []).find(s => s.id === currentSubcat);
+    const subLabel = activeObj ? activeObj.label : currentSubcat;
+
+    if (crumbEl) {
+      if (currentSubcat === 'all') {
+        crumbEl.innerHTML = `
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <strong>${meta.shortName}</strong>
+        `;
+      } else {
+        crumbEl.innerHTML = `
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="${meta.link}">${meta.shortName}</a>
+          <span>/</span>
+          <strong>${subLabel}</strong>
+        `;
+      }
+    }
+
+    if (titleEl) {
+      if (currentSubcat === 'all') {
+        titleEl.textContent = meta.name;
+      } else {
+        titleEl.textContent = `${meta.shortName}'s ${subLabel}`;
+      }
+    }
+
+    if (descEl) {
+      descEl.textContent = meta.desc;
+    }
+  }
 
   function renderPLP() {
-    let list = (window.GAZEBO_CONFIG && window.GAZEBO_CONFIG.products) ? [...window.GAZEBO_CONFIG.products] : [];
-    
-    // Filter by gender or category
-    if (pageCategory !== 'all') {
-      list = list.filter(p => {
-        if (p.gender && p.gender.includes(pageCategory)) return true;
-        if (pageCategory === 'men' && (p.category === 'tshirts-polos' || p.category === 'linen-overshirts' || p.category === 'cargos-trousers')) return true;
-        if (pageCategory === 'women' && (p.category === 'womens-coords' || p.category === 'womens-tops-pants' || p.category === 'jeans-flares')) return true;
-        if (pageCategory === 'kids' && p.category === 'kids-sets') return true;
+    renderHeaderAndBreadcrumbs();
+
+    const catalog = window.GAZEBO_PRODUCTS || (window.GAZEBO_CONFIG && window.GAZEBO_CONFIG.products) || [];
+    let list = catalog.filter(p => {
+      if (currentCat && p.section !== currentCat) return false;
+      if (currentSubcat && currentSubcat !== 'all') {
+        if (currentCat === 'women' && currentSubcat === 't-shirts' && p.subCategory === 'oversized-tees') {
+          // allow match
+        } else if (p.subCategory !== currentSubcat) {
+          return false;
+        }
+      }
+      if (filterSize !== 'all' && (!p.sizes || !p.sizes.includes(filterSize))) {
         return false;
-      });
-    }
+      }
+      if (filterColor !== 'all') {
+        const hasColor = p.colors && p.colors.some(c => c.name.toLowerCase().includes(filterColor.toLowerCase()));
+        if (!hasColor) return false;
+      }
+      if (filterPrice === 'under-999' && p.price > 999) return false;
+      if (filterPrice === 'under-1499' && p.price > 1499) return false;
+      if (filterPrice === 'above-1499' && p.price < 1500) return false;
+      return true;
+    });
 
-    if (plpSizeFilter !== 'all') {
-      list = list.filter(p => p.sizes && p.sizes.includes(plpSizeFilter));
-    }
-
-    if (plpSortFilter === 'price-low') {
+    if (sortVal === 'price-low') {
       list.sort((a, b) => a.price - b.price);
-    } else if (plpSortFilter === 'price-high') {
+    } else if (sortVal === 'price-high') {
       list.sort((a, b) => b.price - a.price);
+    } else if (sortVal === 'rating') {
+      list.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+    } else if (sortVal === 'new') {
+      list.sort((a, b) => (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0));
     }
 
-    const badge = document.getElementById('plpCountBadge') || document.querySelector('.category-mobile-filter-bar span');
+    const badge = document.getElementById('plpCountBadge');
     if (badge) {
       badge.textContent = `${list.length} Styles Available`;
     }
 
-    catGrid.className = 'plp-grid-4';
-    catGrid.innerHTML = list.map(product => {
-      const isWishlisted = window.gazeboStore ? window.gazeboStore.isInWishlist(product.id) : false;
-      const discount = product.originalPrice 
-        ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100) 
-        : 0;
-
-      return `
-        <article class="product-card" data-product-id="${product.id}" data-category="${product.category}">
-          <div class="product-card__media">
-            <div class="product-card__image-wrap" onclick="location.href='product.html?id=' + encodeURIComponent('${product.id}')">
-              <img class="product-card__img product-card__img--primary" src="${product.primaryImage}" alt="${product.name}" width="600" height="800" loading="lazy" decoding="async" />
-              <img class="product-card__img product-card__img--secondary" src="${product.secondaryImage}" alt="${product.name} Detail" width="600" height="800" loading="lazy" decoding="async" />
-            </div>
-
-            ${product.badge ? `<span class="product-card__badge">${product.badge}</span>` : ''}
-
-            <button class="product-card__wishlist-btn ${isWishlisted ? 'is-active' : ''}" 
-                    onclick="event.stopPropagation(); window.gazeboStore ? window.gazeboStore.toggleWishlist('${product.id}') : (window.gazeboCart ? window.gazeboCart.toggleWishlist('${product.id}') : null)"
-                    title="Add to Wishlist"
-                    aria-label="Add to Wishlist">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="${isWishlisted ? '#EE5824' : 'none'}" stroke="${isWishlisted ? '#EE5824' : 'currentColor'}" stroke-width="1.8">
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-              </svg>
-            </button>
-
-            <div class="product-card__size-bar" aria-label="Select size to add">
-              <span class="product-card__size-label">Select Size:</span>
-              ${(product.sizes || ['S', 'M', 'L', 'XL']).map(s => `
-                <button type="button" class="product-card__size-btn" onclick="event.stopPropagation(); window.gazeboStore ? window.gazeboStore.addToCart('${product.id}', '${s}', '${product.colors[0]?.name}') : (window.gazeboCart ? window.gazeboCart.addItem('${product.id}') : null);" title="Add size ${s}">${s}</button>
-              `).join('')}
-            </div>
-          </div>
-
-          <div class="product-card__info">
-            <h3 class="product-card__title" onclick="location.href='product.html?id=' + encodeURIComponent('${product.id}')">
-              ${product.name}
-            </h3>
-            <div class="product-card__price-row">
-              <span class="product-card__price">₹${product.price.toLocaleString('en-IN')}</span>
-              ${product.originalPrice ? `
-                <span class="product-card__orig-price">₹${product.originalPrice.toLocaleString('en-IN')}</span>
-                <span class="product-card__discount">${discount}% OFF</span>
-              ` : ''}
-            </div>
-          </div>
-        </article>
+    if (list.length === 0) {
+      catGrid.innerHTML = `
+        <div class="plp-empty-state" style="grid-column: 1 / -1;">
+          <div class="plp-empty-state__icon">🔍</div>
+          <h3 class="plp-empty-state__title">No Matching Styles Found</h3>
+          <p class="plp-empty-state__desc">Try adjusting your filters or search criteria to see more products.</p>
+          <button type="button" class="btn btn--outline" onclick="window.resetPLPFilters()">Reset All Filters</button>
+        </div>
       `;
-    }).join('');
+    } else {
+      catGrid.innerHTML = list.map(p => renderProductCardHtml(p)).join('');
+    }
   }
 
-  // Bind size filters
+  window.switchPLPSubcat = function(subcatId) {
+    currentSubcat = subcatId;
+    const isDedicatedCatPage = window.location.pathname.endsWith('men.html') || window.location.pathname.endsWith('women.html') || window.location.pathname.endsWith('kids.html');
+    const newUrl = isDedicatedCatPage
+      ? (subcatId === 'all' ? `${meta.link}` : `${meta.link}?type=${subcatId}`)
+      : `category.html?cat=${currentCat}&type=${subcatId}`;
+    try {
+      history.pushState(null, '', newUrl);
+    } catch(e) {}
+    renderChips();
+    renderPLP();
+  };
+
+  window.resetPLPFilters = function() {
+    currentSubcat = 'all';
+    filterSize = 'all';
+    filterColor = 'all';
+    filterPrice = 'all';
+    sortVal = 'featured';
+    if (document.getElementById('filterSize')) document.getElementById('filterSize').value = 'all';
+    if (document.getElementById('filterColor')) document.getElementById('filterColor').value = 'all';
+    if (document.getElementById('filterPrice')) document.getElementById('filterPrice').value = 'all';
+    if (document.getElementById('categorySortSelect')) document.getElementById('categorySortSelect').value = 'featured';
+    renderChips();
+    renderPLP();
+  };
+
+  const selSize = document.getElementById('filterSize');
+  if (selSize) {
+    selSize.addEventListener('change', (e) => {
+      filterSize = e.target.value;
+      renderPLP();
+    });
+  }
+  const selColor = document.getElementById('filterColor');
+  if (selColor) {
+    selColor.addEventListener('change', (e) => {
+      filterColor = e.target.value;
+      renderPLP();
+    });
+  }
+  const selPrice = document.getElementById('filterPrice');
+  if (selPrice) {
+    selPrice.addEventListener('change', (e) => {
+      filterPrice = e.target.value;
+      renderPLP();
+    });
+  }
+  const selSort = document.getElementById('categorySortSelect');
+  if (selSort) {
+    selSort.addEventListener('change', (e) => {
+      sortVal = e.target.value;
+      renderPLP();
+    });
+  }
+
   document.querySelectorAll('[data-filter-size]').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('[data-filter-size]').forEach(b => b.classList.remove('is-active'));
       btn.classList.add('is-active');
-      plpSizeFilter = btn.dataset.filterSize || 'all';
+      filterSize = btn.dataset.filterSize || 'all';
+      if (selSize) selSize.value = filterSize;
       renderPLP();
     });
   });
 
-  // Bind sort
-  const sortSelect = document.getElementById('categorySortSelect');
-  if (sortSelect) {
-    sortSelect.addEventListener('change', (e) => {
-      plpSortFilter = e.target.value;
-      renderPLP();
-    });
-  }
-
+  renderChips();
   renderPLP();
 }
 
@@ -1031,17 +1215,17 @@ function initPDPPage() {
   if (!container || !catalog) return;
 
   const urlParams = new URLSearchParams(window.location.search);
-  const prodId = urlParams.get('id') || 'gz-01';
+  const prodId = urlParams.get('id') || 'gz-m-t-01';
   const product = (typeof window.getProductById === 'function') 
-    ? (window.getProductById(prodId) || window.GAZEBO_CONFIG.products[0])
-    : (window.GAZEBO_CONFIG.products.find(p => p.id === prodId) || window.GAZEBO_CONFIG.products[0]);
+    ? (window.getProductById(prodId) || catalog[0])
+    : (catalog.find(p => p.id === prodId) || catalog[0]);
 
   if (!product) return;
 
   let selectedSize = product.sizes ? product.sizes[0] : 'M';
   let selectedColor = product.colors ? product.colors[0].name : '';
-  const discount = product.originalPrice 
-    ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100) 
+  const discount = (product.mrp || product.originalPrice) 
+    ? Math.round((((product.mrp || product.originalPrice) - product.price) / (product.mrp || product.originalPrice)) * 100) 
     : 0;
 
   const pImg = product.primaryImage || (product.images && product.images.primary);
@@ -1050,12 +1234,19 @@ function initPDPPage() {
     ? product.gallery 
     : [pImg, sImg].filter(Boolean);
 
+  const catMeta = PLP_METADATA[product.section] || { shortName: "Men", link: "men.html" };
+  const subcatObj = (catMeta.subcats || []).find(s => s.id === product.subCategory);
+  const typeName = subcatObj ? subcatObj.label : (product.subCategory || 'Clothing');
+  const typeLink = `category.html?cat=${product.section}&type=${product.subCategory}`;
+
   container.innerHTML = `
     <!-- Breadcrumbs -->
     <nav class="breadcrumbs" aria-label="Breadcrumb">
       <a href="index.html">Home</a>
       <span>/</span>
-      <a href="men.html">Catalog</a>
+      <a href="${catMeta.link}">${catMeta.shortName}</a>
+      <span>/</span>
+      <a href="${typeLink}">${typeName}</a>
       <span>/</span>
       <strong>${product.name}</strong>
     </nav>
@@ -1081,14 +1272,14 @@ function initPDPPage() {
         <h1 class="pdp-title">${product.name}</h1>
         
         <div class="pdp-rating-row">
-          <span class="pdp-rating-badge">4.8 ★</span>
-          <span class="pdp-reviews-count">(142 Verified Reviews)</span>
+          <span class="pdp-rating-badge">${product.rating || '4.8'} ★</span>
+          <span class="pdp-reviews-count">(${product.reviewsCount || 142} Verified Reviews)</span>
           <span style="color: #4CAF50; font-size: 0.78rem; font-weight: 700;">• In Stock (Flagship Dispatch)</span>
         </div>
 
         <div class="pdp-price-row">
           <span class="pdp-price">₹${product.price.toLocaleString('en-IN')}</span>
-          ${product.originalPrice ? `<span class="pdp-mrp">₹${product.originalPrice.toLocaleString('en-IN')}</span>` : ''}
+          ${(product.mrp || product.originalPrice) ? `<span class="pdp-mrp">₹${(product.mrp || product.originalPrice).toLocaleString('en-IN')}</span>` : ''}
           ${discount > 0 ? `<span class="pdp-discount">${discount}% OFF</span>` : ''}
         </div>
         <p class="pdp-tax-note">Inclusive of all taxes. Free express shipping on all orders.</p>
@@ -1149,10 +1340,10 @@ function initPDPPage() {
               <span class="pdp-accordion-icon">+</span>
             </button>
             <div class="pdp-accordion-body">
-              <p style="margin-bottom: 10px;">${product.description}</p>
+              <p style="margin-bottom: 10px;">${product.description || 'Premium heavyweight garment crafted with signature comfort, authentic pre-shrunk cotton, and reinforced twin-needle stitching.'}</p>
               <ul style="padding-left: 18px; margin: 0;">
-                ${(product.details || []).map(d => `<li style="margin-bottom: 4px;">${d}</li>`).join('')}
-                <li>Fabric Composition: ${product.fabric}</li>
+                ${(product.tags || []).map(d => `<li style="margin-bottom: 4px;">${d}</li>`).join('')}
+                <li>Fabric: Heavyweight combed bio-washed cotton</li>
                 <li>Origin: Pune Flagship Atelier (Estd. 1979)</li>
               </ul>
             </div>
@@ -1201,24 +1392,11 @@ function initPDPPage() {
       <div class="section-header--snitch">
         <div>
           <span class="section-eyebrow">Pair It With</span>
-          <h2 class="section-main-title">Complete The Look</h2>
+          <h2 class="section-main-title">You May Also Like</h2>
         </div>
       </div>
-      <div class="plp-grid-4">
-        ${(window.GAZEBO_PRODUCTS || window.GAZEBO_CONFIG?.products || []).filter(p => p.id !== product.id).slice(0, 4).map(p => `
-          <article class="product-card" onclick="location.href='product.html?id=' + encodeURIComponent('${p.id}')">
-            <div class="product-card__media">
-              <img class="product-card__img" src="${p.primaryImage}" alt="${p.name}" width="600" height="800" loading="lazy" decoding="async" />
-            </div>
-            <div class="product-card__info">
-              <h3 class="product-card__title">${p.name}</h3>
-              <div class="product-card__price-row">
-                <span class="product-card__price">₹${p.price.toLocaleString('en-IN')}</span>
-                ${p.originalPrice ? `<span class="product-card__orig-price">₹${p.originalPrice.toLocaleString('en-IN')}</span>` : ''}
-              </div>
-            </div>
-          </article>
-        `).join('')}
+      <div class="bestsellers-grid">
+        ${(window.GAZEBO_PRODUCTS || catalog).filter(p => p.id !== product.id && (p.section === product.section || !p.section)).slice(0, 4).map(p => renderProductCardHtml(p)).join('')}
       </div>
     </section>
   `;

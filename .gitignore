@@ -2,3 +2,7 @@
 /gazebo:assets:videos:hero1.mp4
 /hero1.mp4
 /hero3.mp4
+backup-original-images/
+backup-original-images-v2/
+remove_watermarks.py
+test-output/
