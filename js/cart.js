@@ -110,6 +110,18 @@ class GazeboStore {
     this.openCartDrawer();
   }
 
+  addItem(...args) {
+    return this.addToCart(...args);
+  }
+
+  openCart() {
+    return this.openCartDrawer();
+  }
+
+  closeCart() {
+    return this.closeCartDrawer();
+  }
+
   removeFromCart(cartItemId) {
     const item = this.cart.find(i => i.id === cartItemId);
     this.cart = this.cart.filter(item => item.id !== cartItemId);
@@ -599,4 +611,23 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initGazeboStore);
 } else {
   initGazeboStore();
+}
+
+if (!window.quickAddProduct) {
+  window.quickAddProduct = function(e, productId) {
+    if (typeof e === 'string' && !productId) {
+      productId = e;
+      e = null;
+    }
+    if (e && typeof e.stopPropagation === 'function') {
+      e.stopPropagation();
+      e.preventDefault();
+    }
+    const store = window.gazeboStore || window.gazeboCart;
+    if (!store) return;
+    const prod = store.findProduct(productId);
+    const selSize = (prod && prod.sizes && prod.sizes[0]) || 'M';
+    const colorName = (prod && prod.colors && prod.colors[0]?.name) || 'Default';
+    store.addToCart(productId, selSize, colorName, 1);
+  };
 }

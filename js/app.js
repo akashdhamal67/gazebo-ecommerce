@@ -2050,7 +2050,11 @@ window.scrollSubcatRail = function(railId, direction) {
 };
 
 window.quickAddProduct = function(e, productId) {
-  if (e) {
+  if (typeof e === 'string' && !productId) {
+    productId = e;
+    e = null;
+  }
+  if (e && typeof e.stopPropagation === 'function') {
     e.stopPropagation();
     e.preventDefault();
   }

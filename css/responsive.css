@@ -33,6 +33,7 @@ img, video {
    -------------------------------------------------------------------------- */
 .whatsapp-float-btn {
   position: fixed;
+  top: auto !important;
   bottom: 24px;
   right: 24px;
   width: 52px;
@@ -534,6 +535,8 @@ img, video {
     opacity: 1 !important;
   }
 
+  .header-action-btn--wishlist,
+  .header-icon-btn--wishlist,
   .header-action-btn--account,
   .header-icon-btn--account {
     display: none !important;
@@ -1368,7 +1371,8 @@ img, video {
 
   /* Floating WhatsApp Placement on Mobile */
   .whatsapp-float-btn {
-    bottom: calc(68px + env(safe-area-inset-bottom, 0px)) !important;
+    top: auto !important;
+    bottom: 76px !important;
     right: 16px !important;
     width: 46px !important;
     height: 46px !important;
@@ -1382,7 +1386,8 @@ img, video {
   /* On product page, lift WhatsApp above the sticky bar */
   .product-template-grid ~ .whatsapp-float-btn,
   .product-page-active .whatsapp-float-btn {
-    bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
+    top: auto !important;
+    bottom: 84px !important;
   }
 }
 
