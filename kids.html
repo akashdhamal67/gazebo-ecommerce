@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/bundle.min.css?v=42.0" />
+  <link rel="stylesheet" href="css/bundle.min.css?v=44.0" />
 </head>
 <body>
 
@@ -52,13 +52,13 @@
           </svg>
         </button>
 
-        <button class="header-action-btn header-action-btn--cart" onclick="window.gazeboStore ? window.gazeboStore.openCartDrawer() : null" title="View Shopping Bag" aria-label="Cart">
+        <button class="header-action-btn header-action-btn--cart" onclick="window.gazeboStore ? window.gazeboStore.openCartDrawer() : (window.gazeboCart ? window.gazeboCart.openCartDrawer() : null)" title="View Shopping Bag" aria-label="Cart">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
             <line x1="3" y1="6" x2="21" y2="6"></line>
             <path d="M16 10a4 4 0 0 1-8 0"></path>
           </svg>
-          <span class="header-badge cart-badge-count" style="display: none;">0</span>
+          <span class="header-badge cart-badge-count">0</span>
         </button>
 
         <button class="header-action-btn header-action-btn--wishlist" onclick="window.gazeboStore ? window.gazeboStore.openWishlistDrawer() : null" title="View Wishlist" aria-label="Wishlist">
@@ -273,10 +273,10 @@
   </aside>
 
   <!-- Shopping Bag Slide-out Drawer -->
-  <aside id="cartDrawer" class="slide-drawer" aria-label="Shopping Bag">
+  <aside id="cartDrawer" class="slide-drawer" aria-label="Your Cart">
     <div class="drawer-header">
       <div class="drawer-title">
-        <span>Shopping Bag</span>
+        <span>Your Cart</span>
         <span id="cartDrawerTotalCount" class="drawer-count">(0 items)</span>
       </div>
       <button class="drawer-close-btn" onclick="window.gazeboStore ? window.gazeboStore.closeCartDrawer() : null" aria-label="Close cart drawer">
@@ -295,10 +295,24 @@
             <path d="M16 10a4 4 0 0 1-8 0"></path>
           </svg>
         </div>
-        <h3>Your Bag Is Empty</h3>
-        <p>Explore the Gazebo flagship collection to add signature pieces.</p>
+        <h3>Your cart is empty</h3>
+        <p>Explore our signature garments and curated collections.</p>
+        <button class="btn btn--primary btn--sm" onclick="window.gazeboStore ? window.gazeboStore.closeCartDrawer() : null" style="margin-top: 14px;">
+          Continue Shopping
+        </button>
       </div>
       <div id="cartDrawerItems"></div>
+    </div>
+    <div id="cartDrawerFooter" class="drawer-footer" style="display: none;">
+      <div class="drawer-summary-row drawer-summary-row--subtotal">
+        <span>Subtotal</span>
+        <span id="cartSummarySubtotal" class="drawer-subtotal-val">₹0</span>
+      </div>
+      <p class="drawer-tax-note">Shipping &amp; taxes calculated at checkout</p>
+      <div class="drawer-actions">
+        <a href="checkout.html" class="btn btn--accent btn--full drawer-checkout-btn">Checkout</a>
+        <a href="cart.html" class="btn btn--outline btn--full drawer-viewcart-btn">View Cart</a>
+      </div>
     </div>
   </aside>
 
@@ -356,9 +370,9 @@
     </div>
   </div>
 
-  <script defer src="js/products-data.min.js?v=42.0"></script>
-  <script defer src="js/cart.min.js?v=42.0"></script>
-  <script defer src="js/search.min.js?v=42.0"></script>
-  <script defer src="js/app.min.js?v=42.0"></script>
+  <script defer src="js/products-data.min.js?v=44.0"></script>
+  <script defer src="js/cart.min.js?v=44.0"></script>
+  <script defer src="js/search.min.js?v=44.0"></script>
+  <script defer src="js/app.min.js?v=44.0"></script>
 </body>
 </html>

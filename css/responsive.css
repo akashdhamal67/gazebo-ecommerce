@@ -236,13 +236,11 @@ img, video {
 .drawer-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5) !important;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease;
-  z-index: 2400;
+  z-index: 998 !important;
 }
 
 .mobile-menu-overlay.is-visible,
@@ -381,31 +379,11 @@ img, video {
   /* Slide 3 Headline and Framing under 1024px */
   .hero-slide--slide3 .hero-slide__content,
   .hero-slide__content--slide3 {
-    max-width: 100% !important;
-    width: 100% !important;
-    justify-content: flex-end !important;
-    padding-bottom: 56px !important;
-  }
-
-  .hero-slide--slide3 .hero-slide__overlay,
-  .hero-slide__overlay--slide3 {
-    background: linear-gradient(
-      180deg,
-      rgba(14, 14, 14, 0.05) 0%,
-      rgba(14, 14, 14, 0.20) 38%,
-      rgba(14, 14, 14, 0.85) 68%,
-      rgba(14, 14, 14, 0.96) 100%
-    ) !important;
-  }
-
-  .hero-slide__poster--hero3,
-  .hero-slide__video--hero3 {
-    object-position: 75% 0% !important;
-    transform: none !important;
+    max-width: 55%;
   }
 
   .hero-slide__content--slide3 .hero-slide__title {
-    font-size: clamp(1.8rem, 5.5vw, 2.4rem);
+    font-size: clamp(1.8rem, 4.5vw, 3rem);
   }
 
   .product-grid {
@@ -466,7 +444,14 @@ img, video {
   .header-main,
   .header-container {
     height: auto !important;
-    padding: 14px 16px !important;
+    padding: 12px 14px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   /* On mobile: round logo hidden, wordmark centered, hamburger on left */
@@ -475,6 +460,9 @@ img, video {
   }
 
   .header-zone-left {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
     gap: 0 !important;
   }
 
@@ -484,6 +472,15 @@ img, video {
     height: 44px !important;
     min-width: 44px !important;
     min-height: 44px !important;
+  }
+
+  .header-zone-center {
+    flex: 1 1 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 0 !important;
+    text-align: center !important;
   }
 
   .header-wordmark-img {
@@ -507,16 +504,34 @@ img, video {
 
   .header-actions,
   .header-zone-right {
-    gap: 6px !important;
+    flex: 0 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 4px !important;
+    min-width: 0 !important;
+    margin-left: auto !important;
+    flex-shrink: 0 !important;
   }
 
   .header-action-btn,
   .header-icon-btn {
-    width: 42px !important;
-    height: 44px !important;
-    min-width: 42px !important;
-    min-height: 44px !important;
-    touch-action: manipulation;
+    width: 38px !important;
+    height: 40px !important;
+    min-width: 38px !important;
+    min-height: 40px !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    touch-action: manipulation !important;
+  }
+
+  .header-action-btn--cart {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   .header-action-btn--account,
@@ -544,17 +559,48 @@ img, video {
   }
 
   /* ------------------------------------------------------------------------
-     Hero Slider Mobile Optimization
+     Hero Slider Mobile Optimization (16:9 Full Frame Video - Zero Crop)
      ------------------------------------------------------------------------ */
   .hero-slider {
-    height: 85vh !important;
-    height: 85svh !important;
-    min-height: 85svh !important;
+    aspect-ratio: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
     max-height: none !important;
     width: 100% !important;
+    background: var(--gz-black, #0E0E0E) !important;
+    overflow: visible !important;
   }
 
-  /* Video enabled on mobile with hardware acceleration */
+  .hero-slide {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    overflow: visible !important;
+    transition: opacity 0.4s ease;
+  }
+
+  .hero-slide.is-active {
+    position: relative !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  /* 16:9 Uncropped Video Media Area on Mobile */
+  .hero-slide__media {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    aspect-ratio: 16 / 9 !important;
+    background: #000000 !important;
+    overflow: hidden !important;
+  }
+
+  .hero-slide__poster,
   .hero-slide__video {
     display: block !important;
     position: absolute !important;
@@ -562,9 +608,20 @@ img, video {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
+    object-position: center center !important;
     transform: none !important;
+    border: none !important;
+  }
+
+  .hero-slide__poster {
+    z-index: 0 !important;
+    filter: brightness(0.92) !important;
+  }
+
+  .hero-slide__video {
     z-index: 1 !important;
     opacity: 0;
+    filter: brightness(0.95) !important;
     transition: opacity 0.35s ease;
   }
 
@@ -573,41 +630,14 @@ img, video {
     opacity: 1 !important;
   }
 
-  .hero-slide__poster {
-    display: block !important;
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    transform: none !important;
-    z-index: 0 !important;
-  }
-
-  /* Model head and body centered in frame for portrait crops */
-  .hero-slide__poster--hero2,
-  .hero-slide__video--hero2 {
-    object-position: center top !important;
-  }
-
-  .hero-slide__poster--hero1,
-  .hero-slide__video--hero1 {
-    object-position: center top !important;
-  }
-
-  .hero-slide__poster--hero3,
-  .hero-slide__video--hero3 {
-    object-position: center top !important;
-  }
-
   /* Center play button fallback for blocked autoplay / Low Power Mode */
   .hero-slide__center-play {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 54px;
-    height: 54px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background: rgba(14, 14, 14, 0.65);
     backdrop-filter: blur(8px);
@@ -632,122 +662,128 @@ img, video {
     margin-left: 2px;
   }
 
-  /* Bottom-to-top dark contrast gradient */
+  /* No dark overlay gradient on mobile so the video stays 100% clear & bright */
   .hero-slide__overlay,
   .hero-slide__overlay--slide3 {
-    background: linear-gradient(
-      180deg,
-      rgba(14, 14, 14, 0.0) 0%,
-      rgba(14, 14, 14, 0.15) 30%,
-      rgba(14, 14, 14, 0.75) 58%,
-      rgba(14, 14, 14, 0.94) 85%,
-      rgba(14, 14, 14, 0.98) 100%
-    ) !important;
+    display: none !important;
   }
 
-  /* Text positioned in lower half */
+  /* Campaign Content Card directly below the video on mobile */
   .hero-slide__content,
+  .hero-slide--slide3 .hero-slide__content,
   .hero-slide__content--slide3 {
     position: relative !important;
-    height: 100% !important;
-    max-width: 100% !important;
     width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-end !important;
-    padding-top: 0 !important;
-    padding-bottom: max(60px, calc(50px + env(safe-area-inset-bottom, 0px))) !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    padding: 16px 16px 22px !important;
+    background: var(--gz-black, #0E0E0E) !important;
+    justify-content: flex-start !important;
     z-index: 2 !important;
   }
 
   .hero-slide__eyebrow {
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
-    margin-bottom: 8px;
-    display: inline-block;
+    font-size: 0.68rem !important;
+    letter-spacing: 0.12em !important;
+    margin-bottom: 6px !important;
+    color: var(--gz-orange, #EE5824) !important;
+    display: inline-block !important;
   }
 
   .hero-slide__title,
   .hero-slide__content--slide3 .hero-slide__title {
-    font-size: clamp(1.7rem, 7vw, 2.4rem) !important;
-    line-height: 1.08 !important;
-    margin-bottom: 10px !important;
-    letter-spacing: -0.02em !important;
+    font-size: clamp(1.2rem, 5vw, 1.45rem) !important;
+    line-height: 1.15 !important;
+    margin-bottom: 8px !important;
+    letter-spacing: -0.01em !important;
+    text-transform: uppercase !important;
+    word-break: normal !important;
   }
 
   .hero-slide__desc {
-    font-size: clamp(14px, 3.8vw, 15px) !important;
+    font-size: 0.8rem !important;
     line-height: 1.45 !important;
-    margin-bottom: 16px !important;
+    margin-bottom: 14px !important;
     max-width: 100% !important;
+    color: rgba(255, 255, 255, 0.78) !important;
     display: -webkit-box !important;
-    -webkit-line-clamp: 3 !important;
+    -webkit-line-clamp: 2 !important;
     -webkit-box-orient: vertical !important;
     overflow: hidden !important;
-    opacity: 0.92;
   }
 
-  /* Two buttons stacked vertically at full width, 48px high */
+  /* Two CTA buttons side-by-side on mobile */
   .hero-slide__actions {
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: row !important;
     gap: 10px !important;
     width: 100% !important;
   }
 
   .hero-slide__actions .btn {
-    width: 100% !important;
-    height: 48px !important;
-    min-height: 48px !important;
+    flex: 1 1 0 !important;
+    width: auto !important;
+    height: 42px !important;
+    min-height: 42px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    font-size: 0.92rem !important;
+    font-size: 0.74rem !important;
     font-weight: 800 !important;
-    letter-spacing: 0.04em !important;
+    letter-spacing: 0.02em !important;
+    padding: 0 6px !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
     border-radius: var(--radius-xs, 4px) !important;
   }
 
-  /* Arrows hidden on mobile; swipe gesture supported */
+  /* Arrows hidden on mobile */
   .hero-arrow {
     display: none !important;
   }
 
-  /* Centered, tappable navigation dots */
+  /* Centered navigation dots anchored at video bottom */
   .hero-dots {
-    bottom: max(16px, env(safe-area-inset-bottom, 0px)) !important;
-    gap: 14px !important;
+    position: absolute !important;
+    bottom: auto !important;
+    top: calc(100vw * 9 / 16 - 16px) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 10 !important;
+    display: flex !important;
+    gap: 8px !important;
   }
 
   .hero-dot {
-    position: relative;
-    width: 10px;
-    height: 10px;
-    padding: 6px;
+    position: relative !important;
+    width: 20px !important;
+    height: 3px !important;
+    border-radius: 2px !important;
+    background: rgba(255, 255, 255, 0.4) !important;
+    padding: 0 !important;
+    transition: width 0.25s ease, background 0.25s ease !important;
   }
 
-  .hero-dot::after {
-    content: '';
-    position: absolute;
-    top: -12px;
-    bottom: -12px;
-    left: -10px;
-    right: -10px;
-    min-width: 44px;
-    min-height: 44px;
+  .hero-dot.is-active {
+    background: var(--gz-orange, #EE5824) !important;
+    width: 28px !important;
   }
 
-  /* Pause/play toggle button placed bottom-left, 32px, semi-transparent */
+  /* Play/pause button anchored on video bottom-left */
   .hero-playback-btn {
     position: absolute !important;
-    bottom: max(14px, env(safe-area-inset-bottom, 0px)) !important;
-    left: 16px !important;
+    bottom: auto !important;
+    top: calc(100vw * 9 / 16 - 36px) !important;
+    left: 12px !important;
     right: auto !important;
-    width: 32px !important;
-    height: 32px !important;
-    opacity: 0.65 !important;
+    width: 28px !important;
+    height: 28px !important;
+    background: rgba(14, 14, 14, 0.6) !important;
+    backdrop-filter: blur(6px) !important;
+    -webkit-backdrop-filter: blur(6px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    opacity: 0.85 !important;
     z-index: 10 !important;
   }
 
@@ -1087,9 +1123,14 @@ img, video {
   /* ------------------------------------------------------------------------
      Cart & Wishlist Drawers (Full Width on Mobile)
      ------------------------------------------------------------------------ */
+  .drawer-overlay {
+    z-index: 2550 !important;
+  }
+
   .slide-drawer {
     width: 100% !important;
     max-width: 100% !important;
+    z-index: 2600 !important;
   }
 
   /* ------------------------------------------------------------------------
@@ -1371,13 +1412,25 @@ img, video {
     font-size: 0.50rem !important;
   }
 
-  .header-actions {
-    gap: 4px !important;
+  .header-actions,
+  .header-zone-right {
+    gap: 2px !important;
   }
 
   .header-action-btn {
-    width: 36px !important;
-    height: 36px !important;
+    width: 34px !important;
+    height: 38px !important;
+    min-width: 34px !important;
+    min-height: 38px !important;
+  }
+
+  .header-badge,
+  .cart-badge-count {
+    min-width: 16px;
+    height: 16px;
+    font-size: 0.6rem;
+    top: 1px;
+    right: 1px;
   }
 
   .product-grid,

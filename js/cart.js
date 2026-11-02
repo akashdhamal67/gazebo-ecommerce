@@ -11,7 +11,7 @@ class GazeboStore {
     this.cart = this.loadCart();
     this.wishlist = this.loadWishlist();
     this.promoCode = localStorage.getItem(this.promoKey) || null;
-    this.discountPercentage = this.promoCode === 'GAZEBO10' ? 0.10 : 0;
+    this.discountPercentage = (this.promoCode === 'GAZEBO10' || this.promoCode === 'GAZEBO1979') ? 0.10 : 0;
     
     this.initListeners();
     this.updateCounters();
@@ -31,6 +31,8 @@ class GazeboStore {
       localStorage.setItem(this.cartKey, JSON.stringify(this.cart));
       this.updateCounters();
       this.renderCartDrawer();
+      this.renderCartPage();
+      this.renderCheckoutSummary();
     } catch (e) {
       console.error('Failed to save cart', e);
     }
@@ -56,12 +58,33 @@ class GazeboStore {
     }
   }
 
-  addToCart(productId, size, colorName, quantity = 1) {
-    const product = window.getProductById ? window.getProductById(productId) : null;
-    if (!product) return;
+  findProduct(productId) {
+    if (typeof window.getProductById === 'function') {
+      const p = window.getProductById(productId);
+      if (p) return p;
+    }
+    if (Array.isArray(window.GAZEBO_PRODUCTS)) {
+      const p = window.GAZEBO_PRODUCTS.find(item => item.id === productId);
+      if (p) return p;
+    }
+    return null;
+  }
 
-    const defaultSize = size || (product.sizes && product.sizes[0]) || 'M';
-    const defaultColor = colorName || (product.colors && product.colors[0]?.name) || 'Default';
+  addToCart(productId, size, colorName, quantity = 1) {
+    const product = this.findProduct(productId);
+    const existingInCart = this.cart.find(i => i.productId === productId);
+
+    const prodName = product?.name || existingInCart?.name || 'Garment';
+    const prodPrice = Number(product?.price || existingInCart?.price || 999);
+    const prodOrigPrice = Number(product?.originalPrice || product?.mrp || existingInCart?.originalPrice || 0);
+    const prodImage = (product?.images && (product.images.primary || product.images.secondary))
+      || product?.primaryImage
+      || existingInCart?.image
+      || 'assets/images/favicon.png';
+    const prodFabric = product?.fabric || existingInCart?.fabric || '';
+
+    const defaultSize = size || (product?.sizes && product.sizes[0]) || 'M';
+    const defaultColor = colorName || (product?.colors && product.colors[0]?.name) || 'Default';
     const cartItemId = `${productId}-${defaultSize}-${defaultColor}`;
 
     const existingIndex = this.cart.findIndex(item => item.id === cartItemId);
@@ -70,20 +93,20 @@ class GazeboStore {
     } else {
       this.cart.push({
         id: cartItemId,
-        productId: product.id,
-        name: product.name,
-        price: product.price,
-        originalPrice: product.originalPrice,
+        productId: productId,
+        name: prodName,
+        price: prodPrice,
+        originalPrice: prodOrigPrice,
         size: defaultSize,
         color: defaultColor,
-        image: product.primaryImage,
-        fabric: product.fabric,
+        image: prodImage,
+        fabric: prodFabric,
         quantity: quantity
       });
     }
 
     this.saveCart();
-    this.showToast(`Added "${product.name}" to Bag!`, 'success');
+    this.showToast(`Added "${prodName}" to Bag!`, 'success');
     this.openCartDrawer();
   }
 
@@ -109,18 +132,18 @@ class GazeboStore {
   }
 
   toggleWishlist(productId) {
-    const product = window.getProductById ? window.getProductById(productId) : null;
-    if (!product) return;
+    const product = this.findProduct(productId);
+    const prodName = product ? product.name : 'Item';
 
     const index = this.wishlist.indexOf(productId);
     if (index > -1) {
       this.wishlist.splice(index, 1);
       this.saveWishlist();
-      this.showToast(`Removed "${product.name}" from Wishlist`, 'info');
+      this.showToast(`Removed "${prodName}" from Wishlist`, 'info');
     } else {
       this.wishlist.push(productId);
       this.saveWishlist();
-      this.showToast(`Added "${product.name}" to Wishlist!`, 'success');
+      this.showToast(`Added "${prodName}" to Wishlist!`, 'success');
     }
   }
 
@@ -129,13 +152,13 @@ class GazeboStore {
   }
 
   applyPromo(code) {
-    const clean = code.trim().toUpperCase();
-    if (clean === 'GAZEBO10') {
+    const clean = (code || '').trim().toUpperCase();
+    if (clean === 'GAZEBO10' || clean === 'GAZEBO1979') {
       this.promoCode = clean;
       this.discountPercentage = 0.10;
       localStorage.setItem(this.promoKey, clean);
       this.saveCart();
-      this.showToast('Promo code "GAZEBO10" applied (10% OFF)!', 'success');
+      this.showToast(`Promo code "${clean}" applied (10% OFF)!`, 'success');
       return { success: true, message: '10% Discount Applied' };
     } else {
       this.showToast('Invalid promo code. Try "GAZEBO10"', 'error');
@@ -152,12 +175,12 @@ class GazeboStore {
   }
 
   getTotals() {
-    const subtotal = this.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const subtotal = this.cart.reduce((sum, item) => sum + (Number(item.price) * Number(item.quantity)), 0);
     const discount = Math.round(subtotal * this.discountPercentage);
     const freeShippingThreshold = 1999;
     const shipping = subtotal === 0 ? 0 : (subtotal >= freeShippingThreshold ? 0 : 99);
     const total = subtotal - discount + shipping;
-    const totalCount = this.cart.reduce((sum, item) => sum + item.quantity, 0);
+    const totalCount = this.cart.reduce((sum, item) => sum + Number(item.quantity), 0);
 
     return {
       subtotal,
@@ -175,7 +198,7 @@ class GazeboStore {
     const cartCountEls = document.querySelectorAll('.cart-badge-count');
     cartCountEls.forEach(el => {
       el.textContent = totalCount;
-      el.style.display = totalCount > 0 ? 'inline-flex' : 'none';
+      el.style.display = 'inline-flex';
     });
 
     const wishlistCountEls = document.querySelectorAll('.wishlist-badge-count');
@@ -207,6 +230,10 @@ class GazeboStore {
       drawer.classList.add('is-open');
       overlay.classList.add('is-visible');
       document.body.classList.add('drawer-locked');
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Fallback if drawer elements are not on this page
+      window.location.href = 'cart.html';
     }
   }
 
@@ -216,6 +243,7 @@ class GazeboStore {
     if (drawer) drawer.classList.remove('is-open');
     if (overlay) overlay.classList.remove('is-visible');
     document.body.classList.remove('drawer-locked');
+    document.body.style.overflow = '';
   }
 
   openWishlistDrawer() {
@@ -226,6 +254,7 @@ class GazeboStore {
       drawer.classList.add('is-open');
       overlay.classList.add('is-visible');
       document.body.classList.add('drawer-locked');
+      document.body.style.overflow = 'hidden';
     }
   }
 
@@ -236,18 +265,33 @@ class GazeboStore {
     if (overlay && !document.getElementById('cartDrawer')?.classList.contains('is-open')) {
       overlay.classList.remove('is-visible');
       document.body.classList.remove('drawer-locked');
+      document.body.style.overflow = '';
     }
   }
 
   renderCartDrawer() {
+    const drawer = document.getElementById('cartDrawer');
+    if (!drawer) return;
+
+    // Ensure header title is "Your Cart" with item count
+    const titleEl = drawer.querySelector('.drawer-title');
+    if (titleEl) {
+      let countSpan = titleEl.querySelector('#cartDrawerTotalCount');
+      if (!countSpan) {
+        countSpan = document.createElement('span');
+        countSpan.id = 'cartDrawerTotalCount';
+        countSpan.className = 'drawer-count';
+      }
+      titleEl.innerHTML = `<span>Your Cart</span> `;
+      titleEl.appendChild(countSpan);
+    }
+
     const container = document.getElementById('cartDrawerItems');
-    const footer = document.getElementById('cartDrawerFooter');
-    const emptyState = document.getElementById('cartEmptyState');
+    let footer = document.getElementById('cartDrawerFooter');
+    let emptyState = document.getElementById('cartEmptyState');
     const countEl = document.getElementById('cartDrawerTotalCount');
     const freeShippingProgress = document.getElementById('freeShippingProgressBar');
     const freeShippingNotice = document.getElementById('freeShippingNotice');
-
-    if (!container) return;
 
     const totals = this.getTotals();
     if (countEl) countEl.textContent = `(${totals.totalCount} items)`;
@@ -264,8 +308,34 @@ class GazeboStore {
       }
     }
 
+    // Ensure empty state has the required copy and button
+    if (emptyState) {
+      emptyState.innerHTML = `
+        <div class="drawer-empty-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+        </div>
+        <h3 style="font-size: 1.15rem; font-weight: 800; text-transform: uppercase; margin: 12px 0 6px;">Your cart is empty</h3>
+        <p style="font-size: 0.85rem; color: #666666; margin-bottom: 16px;">Explore our signature garments and curated collections.</p>
+        <button type="button" class="btn btn--primary btn--sm" onclick="window.gazeboStore.closeCartDrawer()" style="padding: 10px 24px; font-weight: 800; cursor: pointer;">
+          Continue Shopping
+        </button>
+      `;
+    }
+
+    // Ensure footer exists
+    if (!footer) {
+      footer = document.createElement('div');
+      footer.id = 'cartDrawerFooter';
+      footer.className = 'drawer-footer';
+      drawer.appendChild(footer);
+    }
+
     if (this.cart.length === 0) {
-      container.innerHTML = '';
+      if (container) container.innerHTML = '';
       if (emptyState) emptyState.style.display = 'flex';
       if (footer) footer.style.display = 'none';
       return;
@@ -274,67 +344,131 @@ class GazeboStore {
     if (emptyState) emptyState.style.display = 'none';
     if (footer) footer.style.display = 'block';
 
-    container.innerHTML = this.cart.map(item => `
-      <div class="cart-item" data-cart-id="${item.id}">
-        <img class="cart-item__img" src="${item.image}" alt="${item.name}" loading="lazy" />
-        <div class="cart-item__details">
-          <div class="cart-item__top">
-            <h4 class="cart-item__title">${item.name}</h4>
-            <button class="cart-item__remove" onclick="window.gazeboStore.removeFromCart('${item.id}')" title="Remove item" aria-label="Remove item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
-            </button>
-          </div>
-          <p class="cart-item__meta">Size: <strong>${item.size}</strong> | Color: <strong>${item.color}</strong></p>
-          <div class="cart-item__price-row">
-            <span class="cart-item__price">₹${(item.price * item.quantity).toLocaleString('en-IN')}</span>
-            ${item.originalPrice ? `<span class="cart-item__orig-price">₹${(item.originalPrice * item.quantity).toLocaleString('en-IN')}</span>` : ''}
-          </div>
-          <div class="cart-item__qty-selector">
-            <button class="qty-btn" onclick="window.gazeboStore.updateQuantity('${item.id}', -1)" aria-label="Decrease quantity">−</button>
-            <span class="qty-val">${item.quantity}</span>
-            <button class="qty-btn" onclick="window.gazeboStore.updateQuantity('${item.id}', 1)" aria-label="Increase quantity">+</button>
+    if (container) {
+      container.innerHTML = this.cart.map(item => `
+        <div class="cart-item" data-cart-id="${item.id}">
+          <img class="cart-item__img" src="${item.image}" alt="${item.name}" loading="lazy" />
+          <div class="cart-item__details">
+            <div class="cart-item__top">
+              <h4 class="cart-item__title">${item.name}</h4>
+              <button class="cart-item__remove" onclick="window.gazeboStore.removeFromCart('${item.id}')" title="Remove item" aria-label="Remove item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+            <p class="cart-item__meta">Size: <strong>${item.size}</strong> &bull; Color: <strong>${item.color}</strong></p>
+            <div class="cart-item__price-row">
+              <span class="cart-item__price">₹${(item.price * item.quantity).toLocaleString('en-IN')}</span>
+              ${item.originalPrice ? `<span class="cart-item__orig-price">₹${(item.originalPrice * item.quantity).toLocaleString('en-IN')}</span>` : ''}
+            </div>
+            <div class="cart-item__qty-selector">
+              <button class="qty-btn" onclick="window.gazeboStore.updateQuantity('${item.id}', -1)" aria-label="Decrease quantity">−</button>
+              <span class="qty-val">${item.quantity}</span>
+              <button class="qty-btn" onclick="window.gazeboStore.updateQuantity('${item.id}', 1)" aria-label="Increase quantity">+</button>
+            </div>
           </div>
         </div>
+      `).join('');
+    }
+
+    // Populate footer: Subtotal + Checkout + View Cart
+    footer.innerHTML = `
+      <div class="drawer-summary-row drawer-summary-row--subtotal">
+        <span>Subtotal</span>
+        <span id="cartSummarySubtotal" class="drawer-subtotal-val">₹${totals.subtotal.toLocaleString('en-IN')}</span>
       </div>
-    `).join('');
+      <p class="drawer-tax-note">Shipping &amp; taxes calculated at checkout</p>
+      <div class="drawer-actions">
+        <a href="checkout.html" class="btn btn--accent btn--full drawer-checkout-btn">Checkout</a>
+        <a href="cart.html" class="btn btn--outline btn--full drawer-viewcart-btn">View Cart</a>
+      </div>
+    `;
+  }
 
-    // Update Totals Summary in footer
-    const subtotalEl = document.getElementById('cartSummarySubtotal');
-    const discountEl = document.getElementById('cartSummaryDiscount');
-    const discountRow = document.getElementById('cartSummaryDiscountRow');
-    const shippingEl = document.getElementById('cartSummaryShipping');
-    const totalEl = document.getElementById('cartSummaryTotal');
-    const promoInput = document.getElementById('cartPromoInput');
-    const promoApplied = document.getElementById('cartPromoApplied');
+  renderCartPage() {
+    const emptyNotice = document.getElementById('cartPageEmptyNotice');
+    const contentWrap = document.getElementById('cartPageContentWrap');
+    const tableBody = document.getElementById('cartPageTableBody');
+    const subtotalEl = document.getElementById('cartPageSubtotal');
+    const totalEl = document.getElementById('cartPageTotal');
 
-    if (subtotalEl) subtotalEl.textContent = `₹${totals.subtotal.toLocaleString('en-IN')}`;
-    if (shippingEl) shippingEl.textContent = totals.shipping === 0 ? 'FREE' : `₹${totals.shipping}`;
-    if (totalEl) totalEl.textContent = `₹${totals.total.toLocaleString('en-IN')}`;
+    if (!contentWrap && !tableBody) return;
 
-    if (discountRow) {
-      if (totals.discount > 0) {
-        discountRow.style.display = 'flex';
-        if (discountEl) discountEl.textContent = `-₹${totals.discount.toLocaleString('en-IN')}`;
+    const totals = this.getTotals();
+
+    if (this.cart.length === 0) {
+      if (emptyNotice) emptyNotice.style.display = 'block';
+      if (contentWrap) contentWrap.style.display = 'none';
+      return;
+    }
+
+    if (emptyNotice) emptyNotice.style.display = 'none';
+    if (contentWrap) contentWrap.style.display = 'grid';
+
+    if (tableBody) {
+      tableBody.innerHTML = this.cart.map(item => `
+        <tr>
+          <td>
+            <div style="display: flex; gap: 16px; align-items: center;">
+              <img src="${item.image}" alt="${item.name}" style="width: 70px; height: 88px; object-fit: cover; border-radius: 4px;" />
+              <div>
+                <a href="product.html?id=${encodeURIComponent(item.productId)}" style="font-weight: 800; font-size: 0.95rem; text-decoration: none; color: inherit; display: block; margin-bottom: 4px;">${item.name}</a>
+                <div style="font-size: 0.80rem; color: #666666;">Size: <strong>${item.size}</strong> &bull; Color: <strong>${item.color}</strong></div>
+                <button type="button" onclick="window.gazeboStore.removeFromCart('${item.id}')" style="background: none; border: none; color: #EE5824; font-size: 0.76rem; font-weight: 700; cursor: pointer; padding: 0; margin-top: 6px; text-decoration: underline;">
+                  Remove
+                </button>
+              </div>
+            </div>
+          </td>
+          <td style="font-weight: 700;">₹${item.price.toLocaleString('en-IN')}</td>
+          <td>
+            <div style="display: inline-flex; align-items: center; border: 1px solid #DDDDDD; border-radius: 4px; overflow: hidden;">
+              <button type="button" class="qty-btn" onclick="window.gazeboStore.updateQuantity('${item.id}', -1)" style="width: 32px; height: 32px; border: none; background: #F8F8F8; cursor: pointer; font-size: 1rem; font-weight: 700;">−</button>
+              <span style="min-width: 36px; text-align: center; font-weight: 700; font-size: 0.88rem;">${item.quantity}</span>
+              <button type="button" class="qty-btn" onclick="window.gazeboStore.updateQuantity('${item.id}', 1)" style="width: 32px; height: 32px; border: none; background: #F8F8F8; cursor: pointer; font-size: 1rem; font-weight: 700;">+</button>
+            </div>
+          </td>
+          <td style="font-weight: 800; color: #111111;">₹${(item.price * item.quantity).toLocaleString('en-IN')}</td>
+        </tr>
+      `).join('');
+    }
+
+    if (subtotalEl) subtotalEl.textContent = `₹ ${totals.subtotal.toLocaleString('en-IN')}`;
+    if (totalEl) totalEl.textContent = `₹ ${totals.total.toLocaleString('en-IN')}`;
+  }
+
+  renderCheckoutSummary() {
+    const itemsContainer = document.getElementById('checkoutSummaryItems');
+    const subtotalEl = document.getElementById('checkoutSubtotal');
+    const totalEl = document.getElementById('checkoutTotal');
+    const stickyTotalEl = document.getElementById('checkoutStickyTotal');
+
+    if (!itemsContainer && !subtotalEl && !totalEl) return;
+
+    const totals = this.getTotals();
+
+    if (itemsContainer) {
+      if (this.cart.length === 0) {
+        itemsContainer.innerHTML = '<p style="color: #666; font-size: 0.88rem; padding: 12px 0;">Your shopping bag is empty.</p>';
       } else {
-        discountRow.style.display = 'none';
+        itemsContainer.innerHTML = this.cart.map(item => `
+          <div style="display: flex; gap: 12px; margin-bottom: 12px; align-items: center;">
+            <img src="${item.image}" alt="${item.name}" style="width: 52px; height: 65px; object-fit: cover; border-radius: 3px;" />
+            <div style="flex: 1; min-width: 0;">
+              <div style="font-weight: 700; font-size: 0.84rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.name}</div>
+              <div style="font-size: 0.74rem; color: #666;">Qty: ${item.quantity} &bull; Size: ${item.size}</div>
+            </div>
+            <div style="font-weight: 800; font-size: 0.84rem;">₹${(item.price * item.quantity).toLocaleString('en-IN')}</div>
+          </div>
+        `).join('');
       }
     }
 
-    if (promoApplied) {
-      if (this.promoCode) {
-        promoApplied.style.display = 'flex';
-        promoApplied.innerHTML = `
-          <span>Code <strong>${this.promoCode}</strong> applied (-10%)</span>
-          <button class="promo-remove-btn" onclick="window.gazeboStore.removePromo()">Remove</button>
-        `;
-        if (promoInput) promoInput.value = '';
-      } else {
-        promoApplied.style.display = 'none';
-      }
-    }
+    if (subtotalEl) subtotalEl.textContent = `₹ ${totals.subtotal.toLocaleString('en-IN')}`;
+    if (totalEl) totalEl.textContent = `₹ ${totals.total.toLocaleString('en-IN')}`;
+    if (stickyTotalEl) stickyTotalEl.textContent = `₹ ${totals.total.toLocaleString('en-IN')}`;
   }
 
   renderWishlistDrawer() {
@@ -355,17 +489,20 @@ class GazeboStore {
     if (emptyState) emptyState.style.display = 'none';
 
     container.innerHTML = this.wishlist.map(productId => {
-      const p = window.getProductById(productId);
+      const p = this.findProduct(productId);
       if (!p) return '';
+      const pImg = (p.images && (p.images.primary || p.images.secondary)) || p.primaryImage || 'assets/images/favicon.png';
+      const pSize = (p.sizes && p.sizes[0]) || 'M';
+      const pColor = (p.colors && p.colors[0]?.name) || 'Default';
       return `
         <div class="wishlist-item" data-product-id="${p.id}">
-          <img class="wishlist-item__img" src="${p.primaryImage}" alt="${p.name}" loading="lazy" />
+          <img class="wishlist-item__img" src="${pImg}" alt="${p.name}" loading="lazy" />
           <div class="wishlist-item__details">
             <h4 class="wishlist-item__title">${p.name}</h4>
-            <p class="wishlist-item__subtitle">${p.fabric || p.subtitle}</p>
-            <div class="wishlist-item__price">₹${p.price.toLocaleString('en-IN')}</div>
+            <p class="wishlist-item__subtitle">${p.fabric || p.subtitle || ''}</p>
+            <div class="wishlist-item__price">₹${Number(p.price).toLocaleString('en-IN')}</div>
             <div class="wishlist-item__actions">
-              <button class="btn btn--outline btn--sm" onclick="window.gazeboStore.addToCart('${p.id}', '${p.sizes[0]}', '${p.colors[0]?.name}'); window.gazeboStore.toggleWishlist('${p.id}')">
+              <button class="btn btn--outline btn--sm" onclick="window.gazeboStore.addToCart('${p.id}', '${pSize}', '${pColor}'); window.gazeboStore.toggleWishlist('${p.id}')">
                 Move to Bag
               </button>
               <button class="wishlist-item__remove" onclick="window.gazeboStore.toggleWishlist('${p.id}')" title="Remove">
@@ -405,10 +542,12 @@ class GazeboStore {
   initListeners() {
     // Drawer overlay close
     document.addEventListener('click', (e) => {
-      if (e.target.id === 'drawerOverlay') {
+      if (e.target && (e.target.id === 'drawerOverlay' || e.target.classList.contains('drawer-overlay'))) {
         this.closeCartDrawer();
         this.closeWishlistDrawer();
         if (window.closeSearchModal) window.closeSearchModal();
+        if (window.closeMobileMenu) window.closeMobileMenu();
+        if (window.closeQuickView) window.closeQuickView();
       }
     });
 
@@ -422,11 +561,42 @@ class GazeboStore {
         if (window.closeMobileMenu) window.closeMobileMenu();
       }
     });
+
+    // Real-time multi-tab localStorage synchronization
+    window.addEventListener('storage', (e) => {
+      if (e.key === this.cartKey) {
+        this.cart = this.loadCart();
+        this.updateCounters();
+        this.renderCartDrawer();
+        this.renderCartPage();
+        this.renderCheckoutSummary();
+      } else if (e.key === this.wishlistKey) {
+        this.wishlist = this.loadWishlist();
+        this.updateCounters();
+        this.renderWishlistDrawer();
+        this.updateWishlistButtons();
+      }
+    });
   }
 }
 
-// Global initialization
-window.addEventListener('DOMContentLoaded', () => {
-  window.gazeboStore = new GazeboStore();
-  window.gazeboCart = window.gazeboStore;
-});
+// Global initialization - runs immediately or on DOM ready
+function initGazeboStore() {
+  if (!window.gazeboStore) {
+    window.gazeboStore = new GazeboStore();
+    window.gazeboCart = window.gazeboStore;
+  }
+  window.gazeboStore.updateCounters();
+  if (typeof window.gazeboStore.renderCartPage === 'function') {
+    window.gazeboStore.renderCartPage();
+  }
+  if (typeof window.gazeboStore.renderCheckoutSummary === 'function') {
+    window.gazeboStore.renderCheckoutSummary();
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initGazeboStore);
+} else {
+  initGazeboStore();
+}

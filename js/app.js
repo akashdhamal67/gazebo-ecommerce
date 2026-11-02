@@ -1400,6 +1400,27 @@ function initPDPPage() {
       </div>
     </section>
   `;
+
+  // Wire up mobile bottom sticky bar for active PDP item
+  const stickyBar = document.getElementById('productStickyBar');
+  if (stickyBar) {
+    const sTitle = stickyBar.querySelector('.product-sticky-title');
+    const sPrice = stickyBar.querySelector('.product-sticky-price');
+    const sBtn = stickyBar.querySelector('.product-sticky-btn');
+    if (sTitle) sTitle.textContent = product.name;
+    if (sPrice) sPrice.textContent = `₹ ${Number(product.price).toLocaleString('en-IN')}`;
+    if (sBtn) {
+      sBtn.onclick = function() {
+        const selSize = window.pdpSelectedSize || (product.sizes && product.sizes[0]) || 'M';
+        const selColor = window.pdpSelectedColor || (product.colors && product.colors[0]?.name) || 'Default';
+        if (window.gazeboStore) {
+          window.gazeboStore.addToCart(product.id, selSize, selColor, 1);
+        } else if (window.gazeboCart) {
+          window.gazeboCart.addToCart(product.id, selSize, selColor, 1);
+        }
+      };
+    }
+  }
 }
 
 window.switchPDPImage = function(imgSrc, btn) {
@@ -1711,7 +1732,7 @@ function renderProductCardHtml(p) {
             <span class="p-card__price">₹${p.price.toLocaleString('en-IN')}</span>
             ${p.mrp ? `<span class="p-card__mrp">₹${p.mrp.toLocaleString('en-IN')}</span>` : ''}
           </div>
-          <button type="button" class="p-card__plus-btn" onclick="window.toggleCardQuickAdd(event, '${p.id}')" aria-label="Quick Add to Bag">+</button>
+          <button type="button" class="p-card__plus-btn" onclick="window.quickAddProduct(event, '${p.id}')" aria-label="Add to Bag" title="Add to Bag">+</button>
         </div>
         ${colorsHtml}
       </div>
@@ -2026,6 +2047,22 @@ window.scrollSubcatRail = function(railId, direction) {
   if (!rail) return;
   const scrollAmount = Math.max(300, rail.clientWidth * 0.75) * direction;
   rail.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+};
+
+window.quickAddProduct = function(e, productId) {
+  if (e) {
+    e.stopPropagation();
+    e.preventDefault();
+  }
+  const prod = (typeof window.getProductById === 'function' ? window.getProductById(productId) : null)
+    || (window.GAZEBO_PRODUCTS || []).find(p => p.id === productId);
+  const selSize = (prod && prod.sizes && prod.sizes[0]) || 'M';
+  const colorName = (prod && prod.colors && prod.colors[0]?.name) || 'Default';
+  if (window.gazeboStore) {
+    window.gazeboStore.addToCart(productId, selSize, colorName, 1);
+  } else if (window.gazeboCart) {
+    window.gazeboCart.addToCart(productId, selSize, colorName, 1);
+  }
 };
 
 window.toggleCardQuickAdd = function(e, productId) {

@@ -21,7 +21,7 @@
   background-color: #FFFFFF !important;
   color: #000000;
   border-bottom: 1px solid #E5E5E5;
-  z-index: 1000;
+  z-index: 900;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
   transition: background-color var(--trans-base), box-shadow var(--trans-base);
 }
@@ -239,16 +239,17 @@
 }
 
 .header-badge,
-.header-icon-badge {
+.header-icon-badge,
+.cart-badge-count {
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: 2px;
+  right: 2px;
   background-color: var(--color-primary, #EE5824);
   color: #ffffff;
   font-size: 0.65rem;
   font-weight: 800;
-  min-width: 17px;
-  height: 17px;
+  min-width: 18px;
+  height: 18px;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
@@ -256,6 +257,9 @@
   padding: 0 4px;
   border: 1.5px solid #FFFFFF;
   line-height: 1;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  z-index: 3;
 }
 
 /* Mobile Menu Drawer */
@@ -328,14 +332,13 @@
 .mobile-menu-overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.55) !important;
-  backdrop-filter: blur(4px) !important;
-  -webkit-backdrop-filter: blur(4px) !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  background: rgba(0, 0, 0, 0.5) !important;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.25s ease, visibility 0.25s ease;
-  z-index: 2400 !important;
+  z-index: 998 !important;
 }
 
 .drawer-overlay.is-visible,
@@ -380,12 +383,40 @@
     gap: 0 !important;
   }
 
+  .header-main,
+  .header-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 12px 14px !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .header-zone-left {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    gap: 0 !important;
+  }
+
   .header-hamburger-btn,
   .mobile-hamburger-btn {
     width: 44px !important;
     height: 44px !important;
     min-width: 44px !important;
     min-height: 44px !important;
+  }
+
+  .header-zone-center {
+    flex: 1 1 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 0 !important;
+    text-align: center !important;
   }
 
   .header-wordmark-img {
@@ -401,16 +432,34 @@
 
   .header-zone-right,
   .header-actions {
-    gap: 6px !important;
+    flex: 0 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 4px !important;
+    min-width: 0 !important;
+    margin-left: auto !important;
+    flex-shrink: 0 !important;
   }
 
   .header-action-btn,
   .header-icon-btn {
-    width: 42px !important;
-    height: 44px !important;
-    min-width: 42px !important;
-    min-height: 44px !important;
-    touch-action: manipulation;
+    width: 38px !important;
+    height: 40px !important;
+    min-width: 38px !important;
+    min-height: 40px !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    touch-action: manipulation !important;
+  }
+
+  .header-action-btn--cart {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   .header-action-btn--account,
@@ -422,7 +471,8 @@
 @media (max-width: 375px) {
   .header-container,
   .header-main {
-    padding: 10px 12px !important;
+    padding: 10px 10px !important;
+    gap: 6px !important;
   }
 
   .header-wordmark-img {
@@ -438,23 +488,33 @@
 
   .header-hamburger-btn,
   .mobile-hamburger-btn {
-    width: 44px !important;
-    height: 44px !important;
-    min-width: 44px !important;
-    min-height: 44px !important;
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
   }
 
   .header-action-btn,
   .header-icon-btn {
-    width: 40px !important;
-    height: 44px !important;
-    min-width: 40px !important;
-    min-height: 44px !important;
-    touch-action: manipulation;
+    width: 34px !important;
+    height: 38px !important;
+    min-width: 34px !important;
+    min-height: 38px !important;
+    touch-action: manipulation !important;
   }
 
   .header-zone-right,
   .header-actions {
-    gap: 4px !important;
+    gap: 2px !important;
+  }
+
+  .header-badge,
+  .header-icon-badge,
+  .cart-badge-count {
+    min-width: 16px;
+    height: 16px;
+    font-size: 0.6rem;
+    top: 1px;
+    right: 1px;
   }
 }
