@@ -1876,10 +1876,18 @@ img, video {
 @media (max-width: 992px) {
   .category-cards-grid {
     grid-template-columns: 1fr !important;
-    gap: 16px !important;
+    gap: 20px !important;
+    max-width: 440px !important;
+    margin: 24px auto 0 !important;
   }
   .category-card {
-    height: 320px !important;
+    aspect-ratio: 4 / 5 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    width: 100% !important;
+  }
+  .category-card__bg {
+    object-position: center top !important;
   }
   .bestsellers-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -1895,7 +1903,12 @@ img, video {
     padding: 36px 0 !important;
   }
   .category-card {
-    height: 280px !important;
+    aspect-ratio: 4 / 5 !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+  .category-card__bg {
+    object-position: center top !important;
   }
   .category-card__title {
     font-size: 1.4rem !important;
@@ -1984,10 +1997,15 @@ img, video {
 
 @media (max-width: 480px) {
   .category-card {
-    height: 240px !important;
+    aspect-ratio: 4 / 5 !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+  .category-card__bg {
+    object-position: center top !important;
   }
   .category-card__content {
-    padding: 20px 18px !important;
+    padding: 22px 18px !important;
   }
   .category-card__title {
     font-size: 1.25rem !important;
