@@ -114,7 +114,7 @@ function initHeroSlider() {
   ];
 
   // Helper to safely play active slide video and pause inactive videos
-  function playActiveVideo(index) {
+  function playActiveVideo(index, restartFromStart = false) {
     if (prefersReducedMotion || saveData) return;
 
     videos.forEach((video, i) => {
@@ -124,6 +124,9 @@ function initHeroSlider() {
       if (i === index) {
         if (!isHeroUserPaused && !document.hidden) {
           video.muted = true;
+          if (restartFromStart) {
+            try { video.currentTime = 0; } catch(e) {}
+          }
           const playPromise = video.play();
           if (playPromise !== undefined) {
             playPromise
@@ -156,14 +159,17 @@ function initHeroSlider() {
       const video = videos[i];
       if (video) {
         video.muted = true;
-        video.play().then(() => {
-          video.classList.add('is-ready', 'is-playing');
-          btn.style.display = 'none';
-          if (isHeroUserPaused) {
-            isHeroUserPaused = false;
-            updatePlaybackButton(false);
-          }
-        }).catch(() => {});
+        const p = video.play();
+        if (p !== undefined) {
+          p.then(() => {
+            video.classList.add('is-ready', 'is-playing');
+            btn.style.display = 'none';
+            if (isHeroUserPaused) {
+              isHeroUserPaused = false;
+              updatePlaybackButton(false);
+            }
+          }).catch(() => {});
+        }
       }
     });
   });
@@ -177,7 +183,7 @@ function initHeroSlider() {
     window.removeEventListener('scroll', onFirstUserGesture, { capture: true, passive: true });
 
     if (!isHeroUserPaused && !document.hidden) {
-      playActiveVideo(heroCurrentSlide);
+      playActiveVideo(heroCurrentSlide, false);
     }
   }
   window.addEventListener('touchstart', onFirstUserGesture, { capture: true, passive: true });
@@ -236,18 +242,19 @@ function initHeroSlider() {
       dot.classList.toggle('is-active', i === index);
     });
 
-    // Play active video and pause others
-    playActiveVideo(heroCurrentSlide);
+    // Play active video from start and pause others
+    playActiveVideo(heroCurrentSlide, true);
   }
 
   function startAutoPlay() {
     stopAutoPlay();
     if (isHeroUserPaused) return;
 
+    // Auto-advance every 5.5 seconds (between 5 and 6 seconds)
     heroTimer = setTimeout(() => {
       showSlide(heroCurrentSlide + 1);
       startAutoPlay();
-    }, 7500);
+    }, 5500);
   }
 
   function stopAutoPlay() {
@@ -262,7 +269,7 @@ function initHeroSlider() {
     playbackBtn.addEventListener('click', () => {
       if (isHeroUserPaused) {
         isHeroUserPaused = false;
-        playActiveVideo(heroCurrentSlide);
+        playActiveVideo(heroCurrentSlide, false);
         startAutoPlay();
         updatePlaybackButton(false);
       } else {
@@ -301,7 +308,7 @@ function initHeroSlider() {
     });
   });
 
-  // Slider Mouse & Touch Gestures
+  // Slider Mouse & Touch Gestures (Swipe support)
   if (slider) {
     slider.addEventListener('mouseenter', stopAutoPlay);
     slider.addEventListener('mouseleave', () => {
@@ -309,21 +316,46 @@ function initHeroSlider() {
     });
 
     let touchStartX = 0;
+    let touchStartY = 0;
     slider.addEventListener('touchstart', (e) => {
-      touchStartX = e.changedTouches[0].screenX;
+      if (e.touches && e.touches.length > 0) {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+      }
       stopAutoPlay();
     }, { passive: true });
 
     slider.addEventListener('touchend', (e) => {
-      const touchEndX = e.changedTouches[0].screenX;
-      const diff = touchStartX - touchEndX;
-      if (Math.abs(diff) > 40) {
-        if (diff > 0) showSlide(heroCurrentSlide + 1);
-        else showSlide(heroCurrentSlide - 1);
+      if (e.changedTouches && e.changedTouches.length > 0) {
+        const touchEndX = e.changedTouches[0].clientX;
+        const touchEndY = e.changedTouches[0].clientY;
+        const diffX = touchStartX - touchEndX;
+        const diffY = touchStartY - touchEndY;
+        // Ensure horizontal swipe is dominant and exceeds 35px threshold
+        if (Math.abs(diffX) > 35 && Math.abs(diffX) > Math.abs(diffY)) {
+          if (diffX > 0) {
+            showSlide(heroCurrentSlide + 1);
+          } else {
+            showSlide(heroCurrentSlide - 1);
+          }
+        }
       }
       if (!isHeroUserPaused) startAutoPlay();
     }, { passive: true });
   }
+
+  // Window resize or orientation change: re-align and ensure active video plays
+  let resizeDebounce = null;
+  function onHeroResizeOrOrientation() {
+    clearTimeout(resizeDebounce);
+    resizeDebounce = setTimeout(() => {
+      if (!isHeroUserPaused && !document.hidden) {
+        playActiveVideo(heroCurrentSlide, false);
+      }
+    }, 150);
+  }
+  window.addEventListener('resize', onHeroResizeOrOrientation, { passive: true });
+  window.addEventListener('orientationchange', onHeroResizeOrOrientation, { passive: true });
 
   // Page Visibility API: Pause video and slider when tab is hidden, resume when tab returns
   document.addEventListener('visibilitychange', () => {
@@ -332,14 +364,14 @@ function initHeroSlider() {
       stopAutoPlay();
     } else {
       if (!isHeroUserPaused) {
-        playActiveVideo(heroCurrentSlide);
+        playActiveVideo(heroCurrentSlide, false);
         startAutoPlay();
       }
     }
   });
 
   // Start active video and slideshow
-  playActiveVideo(0);
+  playActiveVideo(0, false);
   startAutoPlay();
 }
 

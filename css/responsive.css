@@ -562,45 +562,37 @@ img, video {
   }
 
   /* ------------------------------------------------------------------------
-     Hero Slider Mobile Optimization (16:9 Full Frame Video - Zero Crop)
+     Hero Slider Mobile Optimization (Edge-to-Edge Video Slider & Content)
      ------------------------------------------------------------------------ */
   .hero-slider {
-    aspect-ratio: auto !important;
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
+    position: relative !important;
     width: 100% !important;
+    max-width: 100% !important;
+    height: 100svh !important;
+    height: 100dvh !important;
+    min-height: 70vh !important;
+    max-height: none !important;
     background: var(--gz-black, #0E0E0E) !important;
-    overflow: visible !important;
+    overflow: hidden !important;
   }
 
   .hero-slide {
     position: absolute !important;
     inset: 0 !important;
     width: 100% !important;
-    height: auto !important;
+    height: 100% !important;
     opacity: 0 !important;
     visibility: hidden !important;
     pointer-events: none !important;
-    overflow: visible !important;
-    transition: opacity 0.4s ease;
+    overflow: hidden !important;
+    transition: opacity 0.5s ease;
   }
 
   .hero-slide.is-active {
-    position: relative !important;
+    position: absolute !important;
     opacity: 1 !important;
     visibility: visible !important;
     pointer-events: auto !important;
-  }
-
-  /* 16:9 Uncropped Video Media Area on Mobile */
-  .hero-slide__media {
-    position: relative !important;
-    inset: auto !important;
-    width: 100% !important;
-    aspect-ratio: 16 / 9 !important;
-    background: #000000 !important;
-    overflow: hidden !important;
   }
 
   .hero-slide__poster,
@@ -611,7 +603,7 @@ img, video {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-    object-position: center center !important;
+    object-position: center top !important;
     transform: none !important;
     border: none !important;
   }
@@ -635,109 +627,120 @@ img, video {
 
   /* Center play button fallback for blocked autoplay / Low Power Mode */
   .hero-slide__center-play {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: rgba(14, 14, 14, 0.65);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1.5px solid rgba(255, 255, 255, 0.45);
-    color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 5;
-    padding: 0;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-    transition: transform 0.15s ease, background 0.15s ease;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 54px !important;
+    height: 54px !important;
+    border-radius: 50% !important;
+    background: rgba(14, 14, 14, 0.65) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.45) !important;
+    color: #FFFFFF !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    z-index: 5 !important;
+    padding: 0 !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+    transition: transform 0.15s ease, background 0.15s ease !important;
   }
 
   .hero-slide__center-play:active {
-    transform: translate(-50%, -50%) scale(0.92);
+    transform: translate(-50%, -50%) scale(0.92) !important;
   }
 
   .hero-slide__center-play svg {
     margin-left: 2px;
   }
 
-  /* No dark overlay gradient on mobile so the video stays 100% clear & bright */
+  /* Dark gradient overlay behind text on mobile for premium readability */
   .hero-slide__overlay,
   .hero-slide__overlay--slide3 {
-    display: none !important;
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(180deg, rgba(14, 14, 14, 0.1) 0%, rgba(14, 14, 14, 0.25) 35%, rgba(14, 14, 14, 0.78) 65%, rgba(14, 14, 14, 0.95) 90%, rgba(14, 14, 14, 0.98) 100%) !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
   }
 
-  /* Campaign Content Card directly below the video on mobile */
+  /* Campaign Content Overlay anchored at bottom on mobile */
   .hero-slide__content,
   .hero-slide--slide3 .hero-slide__content,
   .hero-slide__content--slide3 {
-    position: relative !important;
+    position: absolute !important;
+    inset: auto 0 0 0 !important;
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
-    padding: 16px 16px 22px !important;
-    background: var(--gz-black, #0E0E0E) !important;
-    justify-content: flex-start !important;
-    z-index: 2 !important;
+    padding: 0 20px max(58px, calc(46px + env(safe-area-inset-bottom, 0px))) !important;
+    background: transparent !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    z-index: 3 !important;
   }
 
   .hero-slide__eyebrow {
-    font-size: 0.68rem !important;
-    letter-spacing: 0.12em !important;
-    margin-bottom: 6px !important;
+    font-size: 0.74rem !important;
+    letter-spacing: 0.14em !important;
+    margin-bottom: 8px !important;
     color: var(--gz-orange, #EE5824) !important;
+    text-transform: uppercase !important;
+    font-weight: 800 !important;
     display: inline-block !important;
   }
 
   .hero-slide__title,
   .hero-slide__content--slide3 .hero-slide__title {
-    font-size: clamp(1.2rem, 5vw, 1.45rem) !important;
-    line-height: 1.15 !important;
-    margin-bottom: 8px !important;
-    letter-spacing: -0.01em !important;
+    font-size: clamp(1.75rem, 7.5vw, 2.25rem) !important;
+    line-height: 1.08 !important;
+    margin-bottom: 10px !important;
+    letter-spacing: -0.02em !important;
     text-transform: uppercase !important;
     word-break: normal !important;
+    color: #FFFFFF !important;
+    font-weight: 900 !important;
   }
 
   .hero-slide__desc {
-    font-size: 0.8rem !important;
+    font-size: clamp(13px, 3.6vw, 15px) !important;
     line-height: 1.45 !important;
-    margin-bottom: 14px !important;
+    margin-bottom: 16px !important;
     max-width: 100% !important;
-    color: rgba(255, 255, 255, 0.78) !important;
+    color: rgba(255, 255, 255, 0.88) !important;
     display: -webkit-box !important;
-    -webkit-line-clamp: 2 !important;
+    -webkit-line-clamp: 3 !important;
     -webkit-box-orient: vertical !important;
     overflow: hidden !important;
   }
 
-  /* Two CTA buttons side-by-side on mobile */
+  /* CTA buttons on mobile - stacked, min 44px tall */
   .hero-slide__actions {
     display: flex !important;
-    flex-direction: row !important;
+    flex-direction: column !important;
     gap: 10px !important;
     width: 100% !important;
   }
 
   .hero-slide__actions .btn {
-    flex: 1 1 0 !important;
-    width: auto !important;
-    height: 42px !important;
-    min-height: 42px !important;
+    width: 100% !important;
+    height: 46px !important;
+    min-height: 44px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    font-size: 0.74rem !important;
+    font-size: 0.88rem !important;
     font-weight: 800 !important;
-    letter-spacing: 0.02em !important;
-    padding: 0 6px !important;
+    letter-spacing: 0.04em !important;
+    padding: 0 16px !important;
     white-space: nowrap !important;
-    text-overflow: ellipsis !important;
-    overflow: hidden !important;
     border-radius: var(--radius-xs, 4px) !important;
   }
 
@@ -746,42 +749,60 @@ img, video {
     display: none !important;
   }
 
-  /* Centered navigation dots anchored at video bottom */
+  /* Centered thumb-friendly navigation dots anchored above safe area */
   .hero-dots {
     position: absolute !important;
-    bottom: auto !important;
-    top: calc(100vw * 9 / 16 - 16px) !important;
+    bottom: max(16px, env(safe-area-inset-bottom, 0px)) !important;
+    top: auto !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     z-index: 10 !important;
     display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     gap: 8px !important;
   }
 
   .hero-dot {
     position: relative !important;
-    width: 20px !important;
-    height: 3px !important;
-    border-radius: 2px !important;
+    width: 12px !important;
+    height: 12px !important;
+    min-width: 12px !important;
+    min-height: 12px !important;
+    border-radius: 9999px !important;
     background: rgba(255, 255, 255, 0.4) !important;
+    border: none !important;
     padding: 0 !important;
+    cursor: pointer !important;
+    touch-action: manipulation !important;
     transition: width 0.25s ease, background 0.25s ease !important;
+  }
+
+  /* Expanded tap area (at least 32x32px hit area via pseudo-element) */
+  .hero-dot::after {
+    content: '' !important;
+    position: absolute !important;
+    top: -10px !important;
+    bottom: -10px !important;
+    left: -10px !important;
+    right: -10px !important;
   }
 
   .hero-dot.is-active {
     background: var(--gz-orange, #EE5824) !important;
     width: 28px !important;
+    border-radius: 6px !important;
   }
 
-  /* Play/pause button anchored on video bottom-left */
+  /* Play/pause button anchored on mobile bottom-left */
   .hero-playback-btn {
     position: absolute !important;
-    bottom: auto !important;
-    top: calc(100vw * 9 / 16 - 36px) !important;
-    left: 12px !important;
+    bottom: max(12px, env(safe-area-inset-bottom, 0px)) !important;
+    top: auto !important;
+    left: 14px !important;
     right: auto !important;
-    width: 28px !important;
-    height: 28px !important;
+    width: 32px !important;
+    height: 32px !important;
     background: rgba(14, 14, 14, 0.6) !important;
     backdrop-filter: blur(6px) !important;
     -webkit-backdrop-filter: blur(6px) !important;
